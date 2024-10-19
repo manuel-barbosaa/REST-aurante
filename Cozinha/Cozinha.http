@@ -1,0 +1,6 @@
+@Cozinha_HostAddress = http://localhost:5230
+
+GET {{Cozinha_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
