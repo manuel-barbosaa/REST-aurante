@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\manue\\Documents\\Uni\\3_Ano\\1o_Semestre\\SINF2\\REST-aurante\\Cozinha\\Cozinha.csproj": {}
+    "/Users/tatianateixeira/Desktop/ISEP/3ºANO/SINF2/REST-aurante/Cozinha/Cozinha.csproj": {}
   },
   "projects": {
-    "C:\\Users\\manue\\Documents\\Uni\\3_Ano\\1o_Semestre\\SINF2\\REST-aurante\\Cozinha\\Cozinha.csproj": {
+    "/Users/tatianateixeira/Desktop/ISEP/3ºANO/SINF2/REST-aurante/Cozinha/Cozinha.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\manue\\Documents\\Uni\\3_Ano\\1o_Semestre\\SINF2\\REST-aurante\\Cozinha\\Cozinha.csproj",
+        "projectUniqueName": "/Users/tatianateixeira/Desktop/ISEP/3ºANO/SINF2/REST-aurante/Cozinha/Cozinha.csproj",
         "projectName": "Cozinha",
-        "projectPath": "C:\\Users\\manue\\Documents\\Uni\\3_Ano\\1o_Semestre\\SINF2\\REST-aurante\\Cozinha\\Cozinha.csproj",
-        "packagesPath": "C:\\Users\\manue\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\manue\\Documents\\Uni\\3_Ano\\1o_Semestre\\SINF2\\REST-aurante\\Cozinha\\obj\\",
+        "projectPath": "/Users/tatianateixeira/Desktop/ISEP/3ºANO/SINF2/REST-aurante/Cozinha/Cozinha.csproj",
+        "packagesPath": "/Users/tatianateixeira/.nuget/packages/",
+        "outputPath": "/Users/tatianateixeira/Desktop/ISEP/3ºANO/SINF2/REST-aurante/Cozinha/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\manue\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/tatianateixeira/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -47,6 +47,10 @@
               "target": "Package",
               "version": "[8.0.10, )"
             },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.4.0, )"
@@ -71,7 +75,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

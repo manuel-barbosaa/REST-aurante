@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Cozinha")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1f1ae4bb514469e3b4f4e746935b0237c73cf812")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cae54d49c2efc39c15626d596049efb602d1612d")]
 [assembly: System.Reflection.AssemblyProductAttribute("Cozinha")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Cozinha")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -3,9 +3,9 @@ using REST_aurante.Cozinha.Model;
 
 namespace Cozinha.Model;
 
-public class IngredienteContext : DbContext
+public class CozinhaContext : DbContext
 {
-    public IngredienteContext(DbContextOptions<IngredienteContext> opt) : base(opt) { }
+    public CozinhaContext(DbContextOptions<CozinhaContext> opt) : base(opt) { }
 
     public DbSet<Ingrediente> Ingredientes { get; set; }
     
