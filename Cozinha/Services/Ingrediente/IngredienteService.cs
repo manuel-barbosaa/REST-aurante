@@ -1,16 +1,15 @@
 using Microsoft.EntityFrameworkCore;
 using Cozinha.Repositories;
 using Cozinha.Model;
-using REST_aurante.Cozinha.Model;
 using Cozinha.Model.DTO;
 
-namespace REST_aurante.Services;
+namespace Cozinha.Services;
     public class IngredienteService
     {
-        private IngredienteContext _context;
+        private CozinhaContext _context;
         private IngredienteRepository _repo;
 
-        public IngredienteService(IngredienteContext context)
+        public IngredienteService(CozinhaContext context)
         {
             _context = context;
             _repo = new IngredienteRepository(_context);
