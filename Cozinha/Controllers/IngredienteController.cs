@@ -7,26 +7,26 @@ using Cozinha.Model.DTO;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using REST_aurante.Services;
+using Cozinha.Services;
 
 
-namespace REST_aurante.Controllers
+namespace Cozinha.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
     public class IngredienteController : ControllerBase
     {
-        private readonly IngredienteContext _context;
+        private readonly CozinhaContext _context;
         private IngredienteService _service;
 
-        public IngredienteController(IngredienteContext context)
+        public IngredienteController(CozinhaContext context)
         {
             _context = context;
             _service = new IngredienteService(context);
         }
 
         // GET: api/Ingrediente
-        [HttpGet]
+        [HttpGet("all")]
         public async Task<ActionResult<IEnumerable<ListarIngredienteDTO>>> GetIngredientes()
         {
             return await _service.GetIngredientesList();
@@ -36,14 +36,14 @@ namespace REST_aurante.Controllers
         [HttpGet("available")]
         public async Task<ActionResult<IEnumerable<ListarIngredienteDTO>>> GetAvailableIngredientes()
         {
-            return await _service.GetIngredientesAtivosList(true);
+            return await _service.GetIngredientesAtivosList();
         }
 
         // GET: api/Ingrediente/unavailable
         [HttpGet("unavailable")]
         public async Task<ActionResult<IEnumerable<ListarIngredienteDTO>>> GetUnavailableIngredientes()
         {
-            return await _service.GetIngredientesAtivosList(false);
+            return await _service.GetIngredientesAtivosList();
         }
 
     
