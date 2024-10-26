@@ -1,13 +1,12 @@
 using Cozinha.Model;
 using Microsoft.EntityFrameworkCore;
-using REST_aurante.Cozinha.Model;
 
 namespace Cozinha.Repositories
 {
     public class IngredienteRepository
     {
-        private IngredienteContext _context;
-        public IngredienteRepository(IngredienteContext context)
+        private CozinhaContext _context;
+        public IngredienteRepository(CozinhaContext context)
         {
             _context = context;
         }
