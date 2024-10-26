@@ -1,6 +1,4 @@
 using Microsoft.EntityFrameworkCore;
-using REST_aurante.Cozinha.Model;
-
 namespace Cozinha.Model;
 
 public class CozinhaContext : DbContext
@@ -9,5 +7,6 @@ public class CozinhaContext : DbContext
 
     public DbSet<Ingrediente> Ingredientes { get; set; }
     public DbSet<TipoPrato> TiposPrato { get; set; }
+    public DbSet<Prato> Pratos { get; set; }
     
 }
