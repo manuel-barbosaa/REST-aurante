@@ -1,0 +1,7 @@
+commit e387852725c3af96082cbae19332de167fc912b8	refs/heads/main
+Author: TiagoPereira32 <1221034@isep.ipp.pt>
+Date:   Wed Oct 23 14:57:36 2024 +0100
+
+    Create .gitignore
+
+A	.gitignore

@@ -1,0 +1,21 @@
+commit b5580e0dfe330b00664b0090fd42869550d5a2e8	refs/heads/main (HEAD -> main, origin/main)
+Author: beamsteixeira <1220824@isep.ipp.pt>
+Date:   Sat Oct 26 21:00:04 2024 +0100
+
+    feat: model e repository do prato; DTO para listagem do prato
+
+A	Cozinha/Controllers/PratoController.cs
+M	Cozinha/Model/CozinhaContext.cs
+A	Cozinha/Model/DTO/ListarPratoDTO.cs
+M	Cozinha/Model/Ingrediente.cs
+A	Cozinha/Model/Prato.cs
+A	Cozinha/Repositories/PratoRepository.cs
+A	Cozinha/Services/PratoService.cs
+
+commit d5e5e6b0b0fe5887b7b0d9acad9db9bf76e01d8d	refs/heads/main
+Author: beamsteixeira <1220824@isep.ipp.pt>
+Date:   Thu Oct 24 01:13:51 2024 +0100
+
+    feat: esboço diagrama UML
+
+A	DiagramaUML.jpg

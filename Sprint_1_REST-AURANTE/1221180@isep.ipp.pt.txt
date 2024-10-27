@@ -1,0 +1,41 @@
+commit 34a1bf656344aff727708444aad5a29752223fb4	refs/heads/main
+Author: Franciscs Soares <1221180@isep.ipp.pt>
+Date:   Mon Oct 21 16:07:20 2024 +0100
+
+    Controller Ingrediente
+
+A	Cozinha/Controllers/IngredienteController.cs
+
+commit 82d1cc6c00717b775437fda72836a70cdf22fa98	refs/heads/main
+Author: Franciscs Soares <1221180@isep.ipp.pt>
+Date:   Sat Oct 19 22:41:10 2024 +0100
+
+    criação do repositório
+
+A	Cozinha/Repositories/IngredienteRepository.cs
+
+commit be5fd469c7e13c711c93f58a4681b93302d21373	refs/heads/main
+Author: Franciscs Soares <1221180@isep.ipp.pt>
+Date:   Sat Oct 19 22:40:52 2024 +0100
+
+    criação dos dtos criar e listar
+
+A	Cozinha/Model/DTO/CriarIngredienteDTO.cs
+A	Cozinha/Model/DTO/ListarIngredienteDTO.cs
+
+commit 2050ebab42971b1032b094d7347ddb2590b47cb1	refs/heads/main
+Author: Franciscs Soares <1221180@isep.ipp.pt>
+Date:   Sat Oct 19 22:39:28 2024 +0100
+
+    criação da classe service para os ingredientes bem como o context
+
+A	Cozinha/Model/IngredienteContext.cs
+A	Cozinha/Services/Ingrediente/IngredienteService.cs
+
+commit c8bfaa8c572c790fd181781792675639128545c7	refs/heads/main
+Author: Franciscs Soares <1221180@isep.ipp.pt>
+Date:   Sat Oct 19 22:38:27 2024 +0100
+
+    criar classe ingredientes
+
+A	Cozinha/Model/Ingrediente.cs

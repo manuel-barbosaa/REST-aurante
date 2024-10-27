@@ -1,0 +1,19 @@
+commit 690f39eb5b580ee683d074ce57cef2b8e8f5bb51	refs/heads/main
+Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
+Date:   Wed Oct 23 16:25:25 2024 +0100
+
+    SQlite Database
+
+M	Cozinha/Cozinha.csproj
+R055	Cozinha/Model/IngredienteContext.cs	Cozinha/Model/CozinhaContext.cs
+M	Cozinha/Program.cs
+M	Cozinha/obj/Cozinha.csproj.nuget.dgspec.json
+M	Cozinha/obj/Cozinha.csproj.nuget.g.props
+M	Cozinha/obj/Cozinha.csproj.nuget.g.targets
+M	Cozinha/obj/Debug/net8.0/Cozinha.AssemblyInfo.cs
+M	Cozinha/obj/Debug/net8.0/Cozinha.AssemblyInfoInputs.cache
+M	Cozinha/obj/Debug/net8.0/Cozinha.GeneratedMSBuildEditorConfig.editorconfig
+M	Cozinha/obj/Debug/net8.0/Cozinha.assets.cache
+M	Cozinha/obj/Debug/net8.0/Cozinha.csproj.AssemblyReference.cache
+M	Cozinha/obj/project.assets.json
+M	Cozinha/obj/project.nuget.cache

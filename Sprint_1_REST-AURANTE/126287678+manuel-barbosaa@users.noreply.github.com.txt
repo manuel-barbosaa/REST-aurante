@@ -1,0 +1,7 @@
+commit 1f1ae4bb514469e3b4f4e746935b0237c73cf812	refs/heads/main
+Author: manuel-barbosaa <126287678+manuel-barbosaa@users.noreply.github.com>
+Date:   Wed Oct 16 21:50:17 2024 +0100
+
+    Initial commit
+
+A	README.md

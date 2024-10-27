@@ -1,0 +1,16 @@
+b5580e0,2024-10-26 21:00:04 +0100,beamsteixeira,1220824@isep.ipp.pt,feat: model e repository do prato; DTO para listagem do prato
+94876d7,2024-10-25 20:29:14 +0100,manuel barbosa,1220973@isep.ipp.pt,feat: repository, service e controller do tipo de prato
+557182e,2024-10-25 19:45:32 +0100,manuel barbosa,1220973@isep.ipp.pt,criação dos ficheiros DTO para a listagem e a obtenção de informação detalhada de tipos de prato
+3fc2b5a,2024-10-25 19:44:34 +0100,manuel barbosa,1220973@isep.ipp.pt,criação do ficheiro model do tipo de prato
+d5e5e6b,2024-10-24 01:13:51 +0100,beamsteixeira,1220824@isep.ipp.pt,feat: esboço diagrama UML
+96441c4,2024-10-23 16:40:51 +0100,franciscasoares,162152413+franciscasoares@users.noreply.github.com,apagar obj directory
+690f39e,2024-10-23 16:25:25 +0100,Tatiana Patricia Loureiro Teixeira,1221260@isep.ipp.pt,SQlite Database
+cae54d4,2024-10-23 15:27:38 +0100,TigasCOD,tiagojose.ramospereira@gmail.com,Update do Gitignore
+e387852,2024-10-23 14:57:36 +0100,TiagoPereira32,1221034@isep.ipp.pt,Create .gitignore
+34a1bf6,2024-10-21 16:07:20 +0100,Franciscs Soares,1221180@isep.ipp.pt,Controller Ingrediente
+82d1cc6,2024-10-19 22:41:10 +0100,Franciscs Soares,1221180@isep.ipp.pt,criação do repositório
+be5fd46,2024-10-19 22:40:52 +0100,Franciscs Soares,1221180@isep.ipp.pt,criação dos dtos criar e listar
+2050eba,2024-10-19 22:39:28 +0100,Franciscs Soares,1221180@isep.ipp.pt,criação da classe service para os ingredientes bem como o context
+c8bfaa8,2024-10-19 22:38:27 +0100,Franciscs Soares,1221180@isep.ipp.pt,criar classe ingredientes
+9204b1b,2024-10-19 16:41:46 +0100,manuel barbosa,1220973@isep.ipp.pt,chore: inicializar projeto de Web API em ASP.NET Core
+1f1ae4b,2024-10-16 21:50:17 +0100,manuel-barbosaa,126287678+manuel-barbosaa@users.noreply.github.com,Initial commit
