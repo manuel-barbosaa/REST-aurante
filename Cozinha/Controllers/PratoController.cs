@@ -1,36 +1,76 @@
-// using Microsoft.AspNetCore.Mvc;
-// using Cozinha.Model;
-// using Cozinha.Services;
-// using Cozinha.Model.DTO;
-
-// namespace Cozinha.Controllers {
-//     [Route("api/[controller]")]
-//     [ApiController]
-//     public class PratoController : ControllerBase {
-//         private readonly CozinhaContext _context;
-//         private PratoService _service;
-
-//         public PratoController (CozinhaContext context) {
-//             _context = context;
-//             _service = new PratoService(_context);
-//         }
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Cozinha.Model;
+using Cozinha.Model.DTO;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Cozinha.Services;
 
 
-//         // GET: api/TiposPrato
-//         [HttpGet]
-//         public async Task<ActionResult<IEnumerable<ListarPratoDTO>>> GetTiposPrato()
-//         {
-//             return await _service.GetPrato();
-//         }
+namespace Cozinha.Controllers
+{
+    [Route("api/[controller]")]
+    [ApiController]
+    public class PratoController : ControllerBase
+    {
+        private readonly CozinhaContext _context;
+        private PratoService _service;
 
-//         // GET: api/Heroes/1
-//         // GET: api/Heroes/vegetariano 
-//         [HttpGet("{value}")]
-//         public async Task<ActionResult<DetalharPratoDTO>> GetHeroByValue(string value)
-//         {
-//             var Prato = await _service.GetPratoByValor(value);
+        public PratoController(CozinhaContext context)
+        {
+            _context = context;
+            _service = new PratoService(context);
+        }
 
-//             return (Prato == null)? NotFound() : Prato;
-//         }
-//     }
-// }
+        // GET: api/Prato
+        [HttpGet("all")]
+        public async Task<ActionResult<IEnumerable<ListarPratoDTO>>> GetPratos()
+        {
+            return await _service.GetPratos();
+        }
+
+        // GET: api/Prato/available
+        [HttpGet("available")]
+        public async Task<ActionResult<IEnumerable<ListarPratoDTO>>> GetAvailablePratos()
+        {
+            return await _service.GetPratosAtivosList();
+        }
+
+         // GET /api/Prato/1
+        [HttpGet("{id}")]  
+        public async Task<ActionResult<ListarPratoDTO>> GetPrato(long id)
+        {
+            return await _service.GetPrato(id);
+        }
+
+        // POST: api/Prato
+        [HttpPost]
+        public async Task<ActionResult<ListarPratoDTO>> PostPrato(CriarPratoDTO prato)
+        {
+            return await _service.CreateNewPrato(prato);
+        }
+
+        // PUT: api/Prato/5
+        // [HttpPut("{id}")]
+        // public async Task<ActionResult<ListarPratoDTO>> PutPrato(long id, Prato prato)
+        // {
+        //     if (id != prato.Id)
+        //     {
+        //         return BadRequest();
+        //     }
+
+        //     try
+        //     {
+        //         return await _service.UpdatePrato(prato);
+        //     }
+        //     catch (DbUpdateConcurrencyException)
+        //     {
+        //         throw;
+        //     }
+        // }
+        
+    }
+}

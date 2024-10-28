@@ -19,6 +19,15 @@ namespace Cozinha.Services {
             return Pratos.Select(x => PratoListItem(x)).ToList();
         }
 
+        public async Task<ListarPratoDTO> GetPrato(long id) {
+            Prato ?p = await _repo.GetPratoById(id);
+            if (p == null)
+            {
+                throw new Exception("Prato not found");
+            }
+            return PratoDetail(p);
+        }
+
         public async Task<List<ListarPratoDTO>> GetPratosAtivosList()
         {
             List<Prato> allActivePratos = await _repo.GetPratosByState(true);
