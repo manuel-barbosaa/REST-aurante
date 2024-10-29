@@ -8,5 +8,7 @@ public class CozinhaContext : DbContext
     public DbSet<Ingrediente> Ingredientes { get; set; }
     public DbSet<TipoPrato> TiposPrato { get; set; }
     public DbSet<Prato> Pratos { get; set; }
+
+    public DbSet<TipoRefeicao> TipoRefeicao{get; set;}
     
 }
