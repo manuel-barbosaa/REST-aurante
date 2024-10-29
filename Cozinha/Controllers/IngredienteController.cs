@@ -48,20 +48,7 @@ namespace Cozinha.Controllers
 
     
 
-        // // PUT: api/Ingrediente/5
-        // [HttpPut("{id}")]
-        // public async Task<ActionResult<Ingrediente2detail_dto>> PutIngrediente(long id, Ingrediente2update_dto info)
-        // {
-        //     if (!ModelState.IsValid)
-        //     {
-        //         return BadRequest();
-        //     }
-
-        //     var updatedIngrediente = await _service.PutIngrediente(id, info);
-
-        //     return (updatedIngrediente == null) ? NotFound() : updatedIngrediente;
-        // }
-
+        
        
 
         
