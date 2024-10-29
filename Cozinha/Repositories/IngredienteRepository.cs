@@ -21,17 +21,17 @@ namespace Cozinha.Repositories
             return await _context.Ingredientes.Where(i => i.Ativo == state).ToListAsync();
         }
 
-        /*
-                public async Task<Ingrediente?> GetIngredienteById(int id)
-                {
-                    return await _context.Ingredientes.FindAsync(id);
-                }
+        
+                // public async Task<Ingrediente?> GetIngredienteById(int id)
+                // {
+                //     return await _context.Ingredientes.FindAsync(id);
+                // }
 
-                public async Task<Ingrediente?> GetIngredienteByName(string name)
-                {
-                    return await _context.Ingredientes.FirstOrDefaultAsync(i => i.Nome.Equals(name, StringComparison.OrdinalIgnoreCase));
-                }
-        */
+                // public async Task<Ingrediente?> GetIngredienteByName(string name)
+                // {
+                //     return await _context.Ingredientes.FirstOrDefaultAsync(i => i.Nome.Equals(name, StringComparison.OrdinalIgnoreCase));
+                // }
+        
 
         public async Task<Ingrediente> UpdateIngrediente(Ingrediente ingrediente)
         {
