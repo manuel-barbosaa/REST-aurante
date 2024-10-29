@@ -22,14 +22,14 @@ namespace Cozinha.Repositories
         }
 
         /*
-                public async Task<Ingrediente?> GetIngredienteById(long id)
+                public async Task<Ingrediente?> GetIngredienteById(int id)
                 {
-                    return await _context.Ingredientes.Include(p => p.Produto).FirstOrDefaultAsync(i => i.Id == id);
+                    return await _context.Ingredientes.FindAsync(id);
                 }
 
                 public async Task<Ingrediente?> GetIngredienteByName(string name)
                 {
-                    return await _context.Ingredientes.Include(p => p.Produto).FirstOrDefaultAsync(i => i.Name.Equals(name));
+                    return await _context.Ingredientes.FirstOrDefaultAsync(i => i.Nome.Equals(name, StringComparison.OrdinalIgnoreCase));
                 }
         */
 
