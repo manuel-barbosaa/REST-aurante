@@ -47,25 +47,25 @@ namespace Cozinha.Controllers
             return await _service.GetIngredientesAtivosList();
         }
 
-        //     // GET: api/Ingrediente/{id}
-        // [HttpGet("{id}")]
-        // public async Task<ActionResult<ListarIngredienteDTO>> GetIngredienteById(int id) // Adicionado método para buscar por ID
-        // {
-        //     var ingrediente = await _service.GetIngredienteById(id);
-        //     if (ingrediente == null)
-        //     {
-        //         return NotFound(); // Retorna 404 se não encontrar
-        //     }
-        //     return ingrediente;
-        // }
+            // GET: api/Ingrediente/{id}
+        [HttpGet("{id}")]
+        public async Task<ActionResult<ListarIngredienteDTO>> GetIngredienteById(int id) 
+        {
+            var ingrediente = await _service.GetIngredienteById(id);
+            if (ingrediente == null)
+            {
+                return NotFound(); 
+            }
+            return ingrediente;
+        }
 
-        // // POST: api/Ingrediente
-        // [HttpPost]
-        // public async Task<ActionResult<ListarIngredienteDTO>> CreateIngrediente(CriarIngredienteDTO info)
-        // {
-        //     var createdIngrediente = await _service.CreateNewIngrediente(info);
-        //     return CreatedAtAction(nameof(GetIngredienteById), new { id = createdIngrediente.Nome }, createdIngrediente); // Usando o ID retornado
-        // }
+        // POST: api/Ingrediente
+        [HttpPost]
+        public async Task<ActionResult<ListarIngredienteDTO>> CreateIngrediente(CriarIngredienteDTO info)
+        {
+            var createdIngrediente = await _service.CreateNewIngrediente(info);
+            return CreatedAtAction(nameof(GetIngredienteById), new { id = createdIngrediente.Nome }, createdIngrediente); 
+        }
     }
 }
 
