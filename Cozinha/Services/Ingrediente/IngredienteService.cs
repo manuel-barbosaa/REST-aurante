@@ -50,10 +50,10 @@ namespace Cozinha.Services;
         {
             return new ListarIngredienteDTO
             {
-                // Id = i.Id,
+                Id = i.Id,
                 Nome = i.Nome,
-                // CategoriaAlimenticia = i.CategoriaAlimenticia,
-                // Ativo = i.Ativo
+                CategoriaAlimenticia = i.CategoriaAlimenticia,
+                Ativo = i.Ativo
             };
         }
 
@@ -61,7 +61,7 @@ namespace Cozinha.Services;
         {
             return new ListarIngredienteDTO
             {
-                // Id = i.Id,
+                Id = i.Id,
                 Nome = i.Nome,
                 CategoriaAlimenticia = i.CategoriaAlimenticia,
                 Ativo = i.Ativo
