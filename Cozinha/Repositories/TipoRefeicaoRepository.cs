@@ -20,5 +20,24 @@ namespace Cozinha.Repositories{
         public async Task<TipoRefeicao?> GetTipoRefeicaoByNome(string nome) {
             return await _context.TipoRefeicao.FirstOrDefaultAsync(tp => tp.Nome.Equals(nome));
         }
+
+
+         public async Task<TipoRefeicao> GetTiposRefeicaoById(long Id)
+        {
+            return await _context.TipoRefeicao.FindAsync(Id);
+        }
+
+        public async Task AddTipoRefeicao(TipoRefeicao tipoRefeicao)
+        {
+            _context.TipoRefeicao.Add(tipoRefeicao);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task UpdateTipoRefeicao(TipoRefeicao tipoRefeicao)
+        {
+            _context.Entry(tipoRefeicao).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+        }
+    }
     } 
-}
+    

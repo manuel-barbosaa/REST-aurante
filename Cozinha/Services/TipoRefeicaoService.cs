@@ -27,6 +27,79 @@ namespace Cozinha.Services{
             };
         }
 
+public async Task<ListarTipoRefeicaoDTO> DefinirTipoRefeicao(long id, DefinirTipoRefeicaoDTO dto)
+{
+    // Localizar o TipoRefeicao pelo ID fornecido
+    var tipoRefeicao = await _context.TipoRefeicao.FindAsync(id);
 
+    // Verificar se o tipo de refeição existe no banco de dados
+    if (tipoRefeicao == null)
+    {
+        throw new KeyNotFoundException("Tipo de Refeição não encontrado.");
     }
+
+    // Atualizar os campos com os valores do DTO
+    tipoRefeicao.Nome = dto.Nome;
+    tipoRefeicao.Descricao = dto.Descricao;
+
+    // Salvar as alterações no banco de dados
+    await _context.SaveChangesAsync();
+
+    // Retornar o tipo de refeição atualizado como DTO
+    return TipoRefeicaoListItem(tipoRefeicao);
 }
+
+
+// Método para obter um tipo de refeição específico pelo ID
+        public async Task<ListarTipoRefeicaoDTO> GetTipoRefeicaoById(long id)
+        {
+            var tipo = await _repo.GetTipoRefeicaoById(id);
+            return tipo == null ? null : new ListarTipoRefeicaoDTO
+            {
+                Id = tipo.Id,
+                Nome = tipo.Nome,
+               
+            };
+        }
+
+        // Método para criar um novo tipo de refeição
+        public async Task<ListarTipoRefeicaoDTO> AddTipoRefeicao(DefinirTipoRefeicaoDTO dto)
+        {
+            var novoTipoRefeicao = new TipoRefeicao
+            {
+                Nome = dto.Nome,
+                Descricao = dto.Descricao
+            };
+
+            await _repo.AddTipoRefeicao(novoTipoRefeicao);
+
+            return new ListarTipoRefeicaoDTO
+            {
+                Id = novoTipoRefeicao.Id,
+                Nome = novoTipoRefeicao.Nome,
+             
+            };
+        }
+
+        // Método para atualizar um tipo de refeição
+        public async Task<ListarTipoRefeicaoDTO> UpdateTipoRefeicao(long id, DefinirTipoRefeicaoDTO dto)
+        {
+            var tipoRefeicao = await _repo.GetTiposRefeicaoById(id);
+            if (tipoRefeicao == null) return null;
+
+            tipoRefeicao.Nome = dto.Nome;
+            tipoRefeicao.Descricao = dto.Descricao;
+
+            await _repo.UpdateTipoRefeicao(tipoRefeicao);
+
+            return new ListarTipoRefeicaoDTO
+            {
+                Id = tipoRefeicao.Id,
+                Nome = tipoRefeicao.Nome,
+              
+            };
+        }
+    }
+    }
+    
+    

@@ -25,5 +25,50 @@ namespace Cozinha.Controllers
         {
             return await _service.GetTiposRefeicao();
         }
+
+
+
+      // GET: api/TipoRefeicao/{id}
+        [HttpGet("{id}")]
+        public async Task<ActionResult<ListarTipoRefeicaoDTO>> GetTiposRefeicaoById(long id)
+        {
+            var tipo = await _service.GetTipoRefeicaoById(id);
+            return tipo == null ? NotFound() : Ok(tipo);
+        }
+
+        // POST: api/TipoRefeicao
+        [HttpPost]
+        public async Task<ActionResult<ListarTipoRefeicaoDTO>> PostTipoRefeicao(DefinirTipoRefeicaoDTO dto)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var novoTipoRefeicao = await _service.AddTipoRefeicao(dto);
+
+            return CreatedAtAction(nameof(GetTiposRefeicaoById), new { id = novoTipoRefeicao.Id }, novoTipoRefeicao);
+        }
+
+        // PUT: api/TipoRefeicao/{id}
+        [HttpPut("{id}")]
+        public async Task<ActionResult<ListarTipoRefeicaoDTO>> PutTipoRefeicao(long id, DefinirTipoRefeicaoDTO dto)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var tipoRefeicaoAtualizado = await _service.UpdateTipoRefeicao(id, dto);
+            return tipoRefeicaoAtualizado == null ? NotFound() : Ok(tipoRefeicaoAtualizado);
+        }
     }
-}
+
+
+
+    }
+
+    
+
+
+
