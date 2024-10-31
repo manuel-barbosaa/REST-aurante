@@ -13,13 +13,13 @@ namespace Cozinha.Services {
             _repo = new TipoPratoRepository(_context);
         }
 
-        public async Task<List<ListarTipoPratoDTO>> GetTiposPrato() {
+        public async Task<List<TipoPratoDTO>> GetTiposPrato() {
             List<TipoPrato> TiposPrato = await _repo.GetTiposPrato();
 
-            return TiposPrato.Select(x => TipoPratoListItem(x)).ToList();
+            return TiposPrato.Select(x => TipoPratoItem(x)).ToList();
         }
 
-        public async Task<DetalharTipoPratoDTO?> GetTipoPratoByValor(string value)
+        public async Task<TipoPratoDTO?> GetTipoPratoByValor(string value)
         {
             TipoPrato? tipoPrato;
 
@@ -33,20 +33,20 @@ namespace Cozinha.Services {
                 return null;
             }
 
-            return DetalharTipoPrato(tipoPrato);
+            return TipoPratoItem(tipoPrato);
         }
 
-        private ListarTipoPratoDTO TipoPratoListItem(TipoPrato tp) {
-            return new ListarTipoPratoDTO {
+        public async Task<TipoPratoDTO> CreateNewTipoPrato(TipoPrato tp)
+        {
+            return TipoPratoItem(await _repo.AddTipoPrato(tp));
+        }
+
+        private TipoPratoDTO TipoPratoItem(TipoPrato tp) {
+            return new TipoPratoDTO {
                 Id = tp.Id,
                 Nome = tp.Nome
             };
         }
 
-        private DetalharTipoPratoDTO DetalharTipoPrato (TipoPrato tp) {
-            return new DetalharTipoPratoDTO {
-                Nome = tp.Nome
-            };
-        }
     }
 }

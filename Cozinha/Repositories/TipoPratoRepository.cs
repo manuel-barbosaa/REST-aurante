@@ -20,5 +20,14 @@ namespace Cozinha.Repositories{
         public async Task<TipoPrato?> GetTipoPratoByNome(string nome) {
             return await _context.TiposPrato.FirstOrDefaultAsync(tp => tp.Nome.Equals(nome));
         }
+
+        public async Task<TipoPrato> AddTipoPrato(TipoPrato tp)
+        {
+            System.Console.WriteLine("in");
+            var newTipoPrato = await _context.TiposPrato.AddAsync(tp);
+            
+            await _context.SaveChangesAsync();
+            return newTipoPrato.Entity;
+        }
     } 
 }

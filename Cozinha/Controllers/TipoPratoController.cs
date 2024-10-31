@@ -16,21 +16,28 @@ namespace Cozinha.Controllers {
         }
 
 
-        // GET: api/TiposPrato
+        // GET: api/TipoPrato
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<ListarTipoPratoDTO>>> GetTiposPrato()
+        public async Task<ActionResult<IEnumerable<TipoPratoDTO>>> GetTiposPrato()
         {
             return await _service.GetTiposPrato();
         }
 
-        // GET: api/Heroes/1
-        // GET: api/Heroes/vegetariano
+        // GET: api/TipoPrato/1
+        // GET: api/TipoPrato/vegetariano
         [HttpGet("{value}")]
-        public async Task<ActionResult<DetalharTipoPratoDTO>> GetHeroByValue(string value)
+        public async Task<ActionResult<TipoPratoDTO>> GetTipoPratoByValue(string value)
         {
             var tipoPrato = await _service.GetTipoPratoByValor(value);
 
             return (tipoPrato == null)? NotFound() : tipoPrato;
+        }
+
+        // POST: api/TipoPrato
+        [HttpPost]
+        public async Task<ActionResult<TipoPratoDTO>> PostTipoPrato(TipoPrato tp)
+        {
+            return await _service.CreateNewTipoPrato(tp);
         }
     }
 }
