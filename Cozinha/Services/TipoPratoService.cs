@@ -41,6 +41,19 @@ namespace Cozinha.Services {
             return TipoPratoItem(await _repo.AddTipoPrato(tp));
         }
 
+        public async Task<bool> DeleteTipoPrato(long id)
+        {
+            var tp = await _repo.GetTipoPratoById(id);
+            if (tp == null)
+            {
+                return false;
+            }
+
+            await _repo.RemoveTipoPrato(tp);
+
+            return true;
+        }
+
         private TipoPratoDTO TipoPratoItem(TipoPrato tp) {
             return new TipoPratoDTO {
                 Id = tp.Id,

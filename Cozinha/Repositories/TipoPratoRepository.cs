@@ -29,5 +29,12 @@ namespace Cozinha.Repositories{
             await _context.SaveChangesAsync();
             return newTipoPrato.Entity;
         }
+
+        public async Task<bool> RemoveTipoPrato(TipoPrato tp)
+        {
+            _context.TiposPrato.Remove(tp);
+            await _context.SaveChangesAsync();
+            return true;
+        }
     } 
 }

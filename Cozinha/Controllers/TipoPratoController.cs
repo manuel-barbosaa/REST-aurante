@@ -39,5 +39,14 @@ namespace Cozinha.Controllers {
         {
             return await _service.CreateNewTipoPrato(tp);
         }
+
+        // DELETE: api/TipoPrato/1
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteTipoPrato(long id)
+        {
+            bool deleteAction = await _service.DeleteTipoPrato(id);
+
+            return deleteAction? Ok() : NotFound();
+        }
     }
 }
