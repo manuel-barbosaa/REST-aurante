@@ -1,4 +1,5 @@
 using Cozinha.Model;
+using Cozinha.Model.DTO;
 using Microsoft.EntityFrameworkCore;
 
 namespace Cozinha.Repositories{
@@ -9,6 +10,7 @@ namespace Cozinha.Repositories{
         public RefeicaoRepository(CozinhaContext context) {
             _context = context;
         }
+        //adiciona uma nova refeição no banco de dados
         public async Task<Refeicao> AddRefeicao(Refeicao refeicao) {
             var newRefeicao = await _context.Refeicao.AddAsync(refeicao);
 
@@ -25,17 +27,17 @@ namespace Cozinha.Repositories{
         }
         //obtem Refeicao pelo tipo de refeicao 
         public async Task<List<Refeicao>> GetRefeicaoByTipoRefeicao(TipoRefeicao tipoRefeicao) {
-            return await _context.Refeicao.Where(p => p.tipoRefeicao.Equals(tipoRefeicao)).ToListAsync();
+            return await _context.Refeicao.Where(p => p.TipoRefeicao.Equals(tipoRefeicao)).ToListAsync();
         }
-        //adiciona uma nova refeição no banco de dados
-        public async Task<Refeicao> AddPrato(Refeicao refeicao)
-        {
-            var newRefeicao = await _context.Refeicao.AddAsync(refeicao);
-
-            await _context.SaveChangesAsync();
-            return newRefeicao.Entity;
+        //Apagar uma refeicao
+        public async Task DeleteRefeicao(long id) {
+            var refeicao = await _context.Refeicao.FindAsync(id);
+            if (refeicao != null) {
+                _context.Refeicao.Remove(refeicao);
+                await _context.SaveChangesAsync();
+            }
         }
-    }
+    }  
 
 
 }
