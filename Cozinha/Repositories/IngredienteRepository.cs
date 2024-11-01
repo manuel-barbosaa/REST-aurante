@@ -22,7 +22,7 @@ public class IngredienteRepository
         return await _context.Ingredientes.Where(i => i.Ativo == state).ToListAsync();
     }
 
-    public async Task<Ingrediente?> GetIngredienteById(int id)
+    public async Task<Ingrediente?> GetIngredienteById(long id)
     {
         return await _context.Ingredientes.FindAsync(id);
     }
