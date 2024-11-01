@@ -30,7 +30,7 @@ namespace Cozinha.Services {
                 Id = info.Id,
                 Data = info.data,                    
                 TipoRefeicao = info.tipo,
-                Quantidade = info.quantidade,
+                Quantidade = 1,
                 Prato = prato
             };
 
@@ -62,13 +62,88 @@ namespace Cozinha.Services {
                 Data = r.Data
             };
         }
-        public async Task<List<ListarRefeicaoDTO>> GetRefeicao() {
-            List<Refeicao> Refeicoes = await _repo.GetRefeicao();
+        public async Task<List<ListarRefeicaoDTO>> GetRefeicoes() {
+            List<Refeicao> Refeicoes = await _repo.GetRefeicoes();
 
             return Refeicoes.Select(x => RefeicaoListItem(x)).ToList();
         }
+        //Retorna uma refeição específica pelo seu id; lança uma exceção se a refeição não for encontrada
+        public async Task<ListarRefeicaoDTO> GetRefeicao(long id) {
+            Refeicao ?r = await _repo.GetRefeicaoById(id);
+            if (r == null)
+            {
+                throw new Exception("Refeição not found");
+            }
+            return RefeicaoDetail(r);
+        }
+        //Servir uma refeição (decrementar quantidade)
+        public async Task<ListarRefeicaoDTO> ServirRefeicao(long refeicaoId)
+        {
+            var refeicao = await _repo.GetRefeicaoById(refeicaoId);
+            if (refeicao == null)
+            {
+                throw new Exception("Refeição não encontrada.");
+            }
 
-            public async Task<ListarEmentaDTO> GetEmentaDisponivel(DateTime data, long tipoRefeicaoId)
+            if (refeicao.Quantidade <= 0)
+            {
+                throw new Exception("Não há quantidade suficiente para servir esta refeição.");
+            }
+
+            refeicao.Quantidade -= 1;
+            var refeicaoAtualizada = await _repo.UpdateRefeicao(refeicao);
+
+            return new ListarRefeicaoDTO
+            {
+                Id = refeicaoAtualizada.Id,
+                Prato = refeicaoAtualizada.Prato,
+                Data = refeicaoAtualizada.Data,
+                TipoRefeicao = refeicaoAtualizada.TipoRefeicao,
+                Quantidade = refeicaoAtualizada.Quantidade
+            };
+        }
+        //Remover uma refeição futura
+        public async Task RemoverRefeicaoFutura(long refeicaoId)
+        {
+            var refeicao = await _repo.GetRefeicaoById(refeicaoId);
+            if (refeicao == null)
+            {
+                throw new Exception("Refeição não encontrada.");
+            }
+
+            if (refeicao.Data <= DateTime.Now)
+            {
+                throw new Exception("A refeição já ocorreu ou está em andamento e não pode ser removida.");
+            }
+
+            await _repo.DeleteRefeicao(refeicao);
+        }
+        //Produzir mais quantidade de uma refeição
+        public async Task<ListarRefeicaoDTO> ProduzirRefeicao(int refeicaoId, int quantidadeExtra)
+        {
+            // Valida quantidade adicional
+            if (quantidadeExtra < 1) throw new ArgumentException("A quantidade extra deve ser maior que zero.");
+
+            // Obtém a refeição pelo ID
+            var refeicao = await _repo.GetRefeicaoById(refeicaoId);
+            if (refeicao == null) throw new Exception("Refeição não encontrada.");
+
+            // Incrementa a quantidade e atualiza no banco de dados
+            refeicao.Quantidade += quantidadeExtra;
+            await _repo.UpdateRefeicao(refeicao);
+
+            // Retorna o DTO da refeição atualizada
+            return new ListarRefeicaoDTO
+            {
+                Id = refeicao.Id,
+                Prato = refeicao.Prato,
+                Data = refeicao.Data,
+                TipoRefeicao = refeicao.TipoRefeicao,
+                Quantidade = refeicao.Quantidade
+            };
+        }
+
+        public async Task<ListarEmentaDTO> GetEmentaDisponivel(DateTime data, long tipoRefeicaoId)
         {
             var refeicoes = await _repo.GetEmentaDisponivel(data, tipoRefeicaoId);
 
@@ -83,5 +158,6 @@ namespace Cozinha.Services {
 
             return new ListarEmentaDTO{ Refeicoes = listaRefeicoes};
         }
+        
     }
 }

@@ -18,7 +18,7 @@ namespace Cozinha.Repositories{
             return newRefeicao.Entity;
         }
         //obtem todas as refeições
-        public async Task<List<Refeicao>> GetRefeicao() {
+        public async Task<List<Refeicao>> GetRefeicoes() {
             return await _context.Refeicao.ToListAsync();
         }
         //obtem uma refeição pelo seu id
@@ -29,13 +29,19 @@ namespace Cozinha.Repositories{
         public async Task<List<Refeicao>> GetRefeicaoByTipoRefeicao(TipoRefeicao tipoRefeicao) {
             return await _context.Refeicao.Where(p => p.TipoRefeicao.Equals(tipoRefeicao)).ToListAsync();
         }
-        //Apagar uma refeicao
-        public async Task DeleteRefeicao(long id) {
-            var refeicao = await _context.Refeicao.FindAsync(id);
-            if (refeicao != null) {
-                _context.Refeicao.Remove(refeicao);
-                await _context.SaveChangesAsync();
-            }
+        // Remover uma refeição específica
+        public async Task DeleteRefeicao(Refeicao refeicao)
+        {
+            _context.Refeicao.Remove(refeicao);
+            await _context.SaveChangesAsync();
+        }
+
+        // Atualizar uma refeição existente
+        public async Task<Refeicao> UpdateRefeicao(Refeicao refeicao)
+        {
+            _context.Refeicao.Update(refeicao);
+            await _context.SaveChangesAsync();
+            return refeicao;
         }
         
         public async Task<List<Refeicao>> GetEmentaDisponivel(DateTime data, long tipoRefeicaoId)
