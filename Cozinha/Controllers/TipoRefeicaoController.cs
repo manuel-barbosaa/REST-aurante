@@ -38,9 +38,9 @@ namespace Cozinha.Controllers
 
         // POST: api/TipoRefeicao
         [HttpPost]
-        public async Task<ActionResult<TipoPratoDTO>> PostTipoRefeicao(TipoRefeicao tr)
+        public async Task<ActionResult<ListarTipoRefeicaoDTO>> PostTipoRefeicao(DefinirTipoRefeicaoDTO tr)
         {
-            return await _service.CreateNewTipoRefeicao(tr);
+            return await _service.AddTipoRefeicao(tr);
         }
         // PUT: api/TipoRefeicao/{id}
         [HttpPut("{id}")]
