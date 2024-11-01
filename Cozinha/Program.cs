@@ -1,4 +1,6 @@
 using Cozinha.Model;
+using Cozinha.Repositories;
+using Cozinha.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,6 +14,9 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<CozinhaContext>(
 opt=>  opt.UseSqlite("Data Source=Database/CozinhaDB"));
+
+builder.Services.AddScoped<IngredienteService>();
+builder.Services.AddScoped<IngredienteRepository>();
 
 var app = builder.Build();
 
