@@ -38,7 +38,7 @@ public class IngredienteController : ControllerBase
 
     // GET: api/Ingrediente/{id}
     [HttpGet("{id}")]
-    public async Task<ActionResult<ListarIngredienteDTO>> GetIngredienteById(int id) 
+    public async Task<ActionResult<ListarIngredienteDTO>> GetIngredienteById(long id) 
     {
         var ingrediente = await _service.GetIngredienteById(id);
         if (ingrediente == null)
