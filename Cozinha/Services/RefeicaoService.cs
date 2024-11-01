@@ -68,18 +68,20 @@ namespace Cozinha.Services {
             return Refeicoes.Select(x => RefeicaoListItem(x)).ToList();
         }
 
-            public async Task<List<ListarRefeicaoDTO>> GetEmentaDisponivel(DateTime data, long tipoRefeicaoId)
+            public async Task<ListarEmentaDTO> GetEmentaDisponivel(DateTime data, long tipoRefeicaoId)
         {
             var refeicoes = await _repo.GetEmentaDisponivel(data, tipoRefeicaoId);
 
-            return refeicoes.Select(r => new ListarEmentaDTO
+            var listaRefeicoes = refeicoes.Select(r => new ListarRefeicaoDTO
             {
                 Id = r.Id,
-                NomePrato = r.Prato.Nome,
-                TipoRefeicao = r.TipoRefeicao.Nome,
+                Prato = r.Prato,
+                TipoRefeicao = r.TipoRefeicao,
                 Quantidade = r.Quantidade,
                 Data = r.Data
             }).ToList();
+
+            return new ListarEmentaDTO{ Refeicoes = listaRefeicoes};
         }
     }
 }

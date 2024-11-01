@@ -51,7 +51,7 @@ namespace Cozinha.Controllers{
         {
             return await _service.AddRefeicao(newRefeicao);
         }
-    }
+    
 //Método get ementa disponivel
 
      [HttpGet("EmentaDisponivel")]
@@ -60,4 +60,5 @@ namespace Cozinha.Controllers{
             var ementa = await _service.GetEmentaDisponivel(data, tipoRefeicaoId);
             return Ok(ementa);
         }
+    }
 }
