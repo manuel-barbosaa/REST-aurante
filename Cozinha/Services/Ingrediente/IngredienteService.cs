@@ -33,7 +33,7 @@ public class IngredienteService
         return allInactiveIngredientes.Select(x => IngredienteListItem(x)).ToList();
     }
 
-    public async Task<ListarIngredienteDTO?> GetIngredienteById(int id)
+    public async Task<ListarIngredienteDTO?> GetIngredienteById(long id)
     {
         var ingrediente = await _repo.GetIngredienteById(id);
         if (ingrediente == null)
