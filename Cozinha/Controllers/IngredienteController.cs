@@ -88,8 +88,9 @@ public class IngredienteController : ControllerBase
     public async Task<IActionResult> DeleteAllIngredientes()
     {
         await _service.DeleteAllIngredientes();
-        return NoContent();
+        return Ok(new { message = "Todos os ingredientes foram eliminados com sucesso." });
     }
+
 
     // PUT: api/Ingrediente/{id}/available
     [HttpPut("{id}/available")]
