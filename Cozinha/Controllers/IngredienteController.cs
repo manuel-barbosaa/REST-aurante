@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Cozinha.Model.DTO;
 using Cozinha.Services;
+using Cozinha.Model;
 
 namespace Cozinha.Controllers;
 
@@ -8,12 +9,13 @@ namespace Cozinha.Controllers;
 [ApiController]
 public class IngredienteController : ControllerBase
 {
-    private readonly IngredienteService _service;
-
-    public IngredienteController(IngredienteService service)
-    {
-        _service = service;
-    }
+    private readonly CozinhaContext _context;
+    private readonly IngredienteService _service; 
+        
+        public IngredienteController (CozinhaContext context) {
+            _context = context;
+            _service = new IngredienteService(_context);
+        }
 
     // GET: api/Ingrediente/
     [HttpGet("all")]

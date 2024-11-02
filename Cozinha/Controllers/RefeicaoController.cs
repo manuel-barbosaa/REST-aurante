@@ -15,12 +15,13 @@ namespace Cozinha.Controllers{
     [ApiController]
     public class RefeicaoController : ControllerBase
     {
+        private readonly CozinhaContext _context;
         private readonly RefeicaoService _service; // serviço para gerenciar refeições
 
         // Construtor do controller, inicializa o serviço
-        public RefeicaoController(RefeicaoService service)
-        {
-            _service = service;
+        public RefeicaoController (CozinhaContext context) {
+            _context = context;
+            _service = new RefeicaoService(_context);
         }
 
         // Método GET para retornar todas as refeições
