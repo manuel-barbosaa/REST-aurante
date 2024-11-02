@@ -55,4 +55,11 @@ public class IngredienteRepository
         await _context.SaveChangesAsync();
         return true;
     }
+    
+    public async Task RemoveAll()
+    {
+        _context.Ingredientes.RemoveRange(_context.Ingredientes);
+        await _context.SaveChangesAsync();
+    }
+
 }

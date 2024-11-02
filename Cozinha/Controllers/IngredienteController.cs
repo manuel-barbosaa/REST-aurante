@@ -12,12 +12,13 @@ public class IngredienteController : ControllerBase
     private readonly CozinhaContext _context;
     private readonly IngredienteService _service; 
         
-        public IngredienteController (CozinhaContext context) {
-            _context = context;
-            _service = new IngredienteService(_context);
-        }
+    public IngredienteController(CozinhaContext context)
+    {
+        _context = context;
+        _service = new IngredienteService(_context);
+    }
 
-    // GET: api/Ingrediente/
+    // GET: api/Ingrediente/all
     [HttpGet("all")]
     public async Task<ActionResult<IEnumerable<ListarIngredienteDTO>>> GetIngredientes()
     {
@@ -28,15 +29,26 @@ public class IngredienteController : ControllerBase
     [HttpGet("available")]
     public async Task<ActionResult<IEnumerable<ListarIngredienteDTO>>> GetAvailableIngredientes()
     {
-        return await _service.GetIngredientesAtivosList();
+        var ingredientes = await _service.GetIngredientesAtivosList();
+        if (ingredientes == null || !ingredientes.Any())
+        {
+            return NotFound(new { message = "Não há ingredientes disponíveis no momento." });
+        }
+        return Ok(ingredientes);
     }
 
-    // GET: api/Ingrediente/unavailable
+// GET: api/Ingrediente/unavailable
     [HttpGet("unavailable")]
     public async Task<ActionResult<IEnumerable<ListarIngredienteDTO>>> GetUnavailableIngredientes()
     {
-        return await _service.GetIngredientesInativosList();
+        var ingredientes = await _service.GetIngredientesInativosList();
+        if (ingredientes == null || !ingredientes.Any())
+        {
+            return NotFound(new { message = "Não há ingredientes indisponíveis no momento." });
+        }
+        return Ok(ingredientes);
     }
+
 
     // GET: api/Ingrediente/{id}
     [HttpGet("{id}")]
@@ -56,5 +68,51 @@ public class IngredienteController : ControllerBase
     {
         var createdIngrediente = await _service.CreateNewIngrediente(info);
         return CreatedAtAction(nameof(GetIngredienteById), new { id = createdIngrediente.Id }, createdIngrediente); 
+    }
+
+    // DELETE: api/Ingrediente/{id}
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> DeleteIngredienteById(long id)
+    {
+        bool deleted = await _service.DeleteIngredienteById(id);
+        if (!deleted)
+        {
+            return NotFound();
+        }
+        return Ok(new { message = $"Ingrediente com ID {id} foi eliminado com sucesso." });
+    }
+
+
+    // DELETE: api/Ingrediente/all
+    [HttpDelete("all")]
+    public async Task<IActionResult> DeleteAllIngredientes()
+    {
+        await _service.DeleteAllIngredientes();
+        return Ok(new { message = "Todos os ingredientes foram eliminados com sucesso." });
+    }
+
+
+    // PUT: api/Ingrediente/{id}/available
+    [HttpPut("{id}/available")]
+    public async Task<IActionResult> SetIngredienteAvailable(long id)
+    {
+        var updated = await _service.UpdateIngredienteStatus(id, true);
+        if (updated == null)
+        {
+            return NotFound();
+        }
+        return Ok(updated);
+    }
+
+    // PUT: api/Ingrediente/{id}/unavailable
+    [HttpPut("{id}/unavailable")]
+    public async Task<IActionResult> SetIngredienteUnavailable(long id)
+    {
+        var updated = await _service.UpdateIngredienteStatus(id, false);
+        if (updated == null)
+        {
+            return NotFound();
+        }
+        return Ok(updated);
     }
 }

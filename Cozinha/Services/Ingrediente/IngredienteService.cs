@@ -77,4 +77,33 @@ public class IngredienteService
             Ativo = i.Ativo
         };
     }
+    
+    public async Task<bool> DeleteIngredienteById(long id)
+    {
+        var ingrediente = await _repo.GetIngredienteById(id);
+        if (ingrediente == null)
+        {
+            return false;
+        }
+        return await _repo.Remove(ingrediente);
+    }
+
+    public async Task DeleteAllIngredientes()
+    {
+        await _repo.RemoveAll();
+    }
+
+    public async Task<ListarIngredienteDTO?> UpdateIngredienteStatus(long id, bool status)
+    {
+        var ingrediente = await _repo.GetIngredienteById(id);
+        if (ingrediente == null)
+        {
+            return null;
+        }
+
+        ingrediente.Ativo = status;
+        var updatedIngrediente = await _repo.UpdateIngrediente(ingrediente);
+        return IngredienteDetail(updatedIngrediente);
+    }
+
 }
