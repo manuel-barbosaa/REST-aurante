@@ -29,15 +29,26 @@ public class IngredienteController : ControllerBase
     [HttpGet("available")]
     public async Task<ActionResult<IEnumerable<ListarIngredienteDTO>>> GetAvailableIngredientes()
     {
-        return await _service.GetIngredientesAtivosList();
+        var ingredientes = await _service.GetIngredientesAtivosList();
+        if (ingredientes == null || !ingredientes.Any())
+        {
+            return NotFound(new { message = "Não há ingredientes disponíveis no momento." });
+        }
+        return Ok(ingredientes);
     }
 
-    // GET: api/Ingrediente/unavailable
+// GET: api/Ingrediente/unavailable
     [HttpGet("unavailable")]
     public async Task<ActionResult<IEnumerable<ListarIngredienteDTO>>> GetUnavailableIngredientes()
     {
-        return await _service.GetIngredientesInativosList();
+        var ingredientes = await _service.GetIngredientesInativosList();
+        if (ingredientes == null || !ingredientes.Any())
+        {
+            return NotFound(new { message = "Não há ingredientes indisponíveis no momento." });
+        }
+        return Ok(ingredientes);
     }
+
 
     // GET: api/Ingrediente/{id}
     [HttpGet("{id}")]
