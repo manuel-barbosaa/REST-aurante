@@ -43,16 +43,51 @@ namespace Cozinha.Services {
         }
 
         //cria um novo prato com os dados recebidos em CriarPratoDTO e salva no banco de dados
+
+
         public async Task<ListarPratoDTO> CreateNewPrato(CriarPratoDTO info)
         {
+            if (info.TipoPratoId <= 0)
+            {
+                throw new Exception("TipoPratoId must be provided and greater than 0.");
+            }
+
+            TipoPrato tipoPrato = await _context.TiposPrato.FindAsync(info.TipoPratoId);
+            if (tipoPrato == null)
+            {
+                throw new Exception("TipoPrato not found");
+            }
+
+            List<Ingrediente> ingredientesToSave = new List<Ingrediente>();
+
+            if (info.Ingredientes.Any())
+            {
+                foreach (var existingId in info.Ingredientes)
+                {
+                    var existingIngredient = await _context.Ingredientes.FindAsync(existingId);
+                    if (existingIngredient != null)
+                    {
+                        ingredientesToSave.Add(existingIngredient);
+                    }
+                    else
+                    {
+                        throw new Exception($"Ingrediente with Id {existingId} not found");
+                    }
+                }
+            }
+            else
+            {
+                throw new Exception("ExistingIngredientIds must be provided");
+            }
+
             Prato newPrato = new Prato
             {
-                Id = info.Id,
                 Nome = info.Nome,
                 IsAtivo = info.IsAtivo,
-                TipoPrato = info.TipoPrato,
-                Ingredientes = info.Ingredientes
+                TipoPrato = tipoPrato,
+                Ingredientes = ingredientesToSave 
             };
+
             return PratoDetail(await _repo.AddPrato(newPrato));
         }
 
