@@ -1,103 +1,95 @@
 using Cozinha.Model.DTO;
 using Cozinha.Model;
 using Cozinha.Repositories;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
+namespace Cozinha.Services
+{
+    public class EmentaService
+    {
+        private readonly EmentaRepository _repo;
 
-
-namespace Cozinha.Services{
-    public class EmentaService{
-         private CozinhaContext _context;
-        private EmentaRepository _repo;
-
-        public EmentaService(CozinhaContext context) {
-            _context = context;
-            _repo = new EmentaRepository(_context);
+        public EmentaService(EmentaRepository repo)
+        {
+            _repo = repo;
         }
 
-        // Método para buscar e converter uma ementa com suas refeições para DTO
-        public async Task<ListarEmentaDTO?> GetEmentaDisponivel(string tipo, DateTime dataInicio, DateTime dataFim)
+        // Método para buscar uma ementa pelo ID
+        public async Task<ListarEmentaDTO?> GetEmentaDisponivelById(long id)
         {
-            var ementa = await _repo.GetEmentaByTipoEData(tipo, dataInicio, dataFim);
+            var ementa = await _repo.GetEmentaById(id);
 
             if (ementa == null) return null;
 
             return new ListarEmentaDTO
             {
-                Tipo = ementa.Frequencia,
-                Refeicoes = ementa.Refeicoes.Select(r => new ListarRefeicaoDTO
-                {
-                    Id = r.Id,
-                    Prato = r.Prato,
-                    TipoRefeicao = r.TipoRefeicao,
-                    Quantidade = r.Quantidade,
-                    Data = r.Data
-                }).ToList()
+                Id = ementa.Id,
+                Frequencia = ementa.Frequencia,
+                DataInicio = ementa.DataInicio,
+                DataFim = ementa.DataFim,
+                TipoRefeicao = ementa.TipoRefeicao,
+                Quantidade = ementa.Quantidade
             };
         }
+
+        // // Método para buscar ementas disponíveis para um tipo de refeição, quantidade > 0 e data específica
+        // public async Task<List<ListarEmentaDTO>> GetEmentaDisponivel(long tipoRefeicaoId, DateTime data)
+        // {
+        //     var ementas = await _repo.GetEmentaByTipoQuantidadeData(tipoRefeicaoId, data);
+
+        //     return ementas.Select(e => new ListarEmentaDTO
+        //     {
+        //         Id = e.Id,
+        //         Frequencia = e.Frequencia,
+        //         DataInicio = e.DataInicio,
+        //         DataFim = e.DataFim,
+        //         TipoRefeicao = e.TipoRefeicao,
+        //         Quantidade = e.Quantidade
+        //     }).ToList();
+        // }
+    
 
         // Método para adicionar uma nova ementa
-        public async Task<ListarEmentaDTO> CreateNewEmenta(CriarEmentaDTO info)
+        public async Task<ListarEmentaDTO> AddEmenta(CriarEmentaDTO dto)
         {
-            List<Refeicao> refeicoes = new List<Refeicao>();
-
-            // Verifica se os ingredientes existem
-            if (info.Refeicoes.Any())
+            var novaEmenta = new Ementa
             {
-                foreach (var existingId in info.Refeicoes)
-                {
-                    var existingRefeicao = await _context.Refeicao.FindAsync(existingId);
-                    if (existingRefeicao != null)
-                    {
-                        refeicoes.Add(existingRefeicao);
-                    }
-                    else
-                    {
-                        throw new Exception($"Refeicao with Id {existingId} not found");
-                    }
-                }
-            }
-            else
-            {
-                throw new Exception("ExistingRefeicoesIds must be provided");
-            }
-
-            // Cria o prato incluindo a receita
-            Ementa newEmenta = new Ementa
-            {
-                Frequencia = info.Frequencia,
-                DataInicio = info.DataInicio,
-                DataFim = info.DataFim,
-                Refeicoes = refeicoes
+                Frequencia = dto.Frequencia,
+                DataInicio = dto.DataInicio,
+                DataFim = dto.DataFim,
+                TipoRefeicao = dto.TipoRefeicao,
+                Quantidade = dto.Quantidade
             };
 
-            return EmentaDetail(await _repo.AddEmenta(newEmenta));
-        }
-
-        private ListarEmentaDTO EmentaDetail(Ementa e)
-        {
+            var addedEmenta = await _repo.AddEmenta(novaEmenta);
             return new ListarEmentaDTO
             {
-                Id = e.Id,
-                Frequencia = e.Frequencia,
-                DataInicio = e.DataInicio,
-                DataFim = e.DataFim,
-                Refeicoes = e.Refeicoes
+                Id = addedEmenta.Id,
+                Frequencia = addedEmenta.Frequencia,
+                DataInicio = addedEmenta.DataInicio,
+                DataFim = addedEmenta.DataFim,
+                TipoRefeicao = addedEmenta.TipoRefeicao,
+                Quantidade = addedEmenta.Quantidade
             };
         }
 
-         public async Task<bool> DeleteEmenta(long id)
+
+        public async Task<bool> DeleteEmenta(long id)
         {
             var ementa = await _repo.GetEmentaById(id);
-            if (ementa == null)
-            {
-                return false;
-            }
+            if (ementa == null) return false;
 
             await _repo.RemoveEmenta(ementa);
-
             return true;
         }
-    }
-}
 
-        
+
+    }
+
+
+
+
+}

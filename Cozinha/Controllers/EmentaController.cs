@@ -1,7 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
-using Cozinha.Model;
 using Cozinha.Model.DTO;
 using Cozinha.Services;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Cozinha.Controllers
 {
@@ -9,30 +11,39 @@ namespace Cozinha.Controllers
     [ApiController]
     public class EmentaController : ControllerBase
     {
-       
-        private readonly CozinhaContext _context;
-       private EmentaService _service;
+        private readonly EmentaService _service;
 
-        public EmentaController (CozinhaContext context) {
-            _context = context;
-            _service = new EmentaService(_context);
-        }
-        // GET: api/Ementa/Disponivel?tipo=Diaria&dataInicio=2024-10-30&dataFim=2024-10-30
-        [HttpGet("Disponivel")]
-        public async Task<ActionResult<ListarEmentaDTO>> GetEmentaDisponivel([FromQuery] string tipo, [FromQuery] DateTime dataInicio, [FromQuery] DateTime dataFim)
+        // Injeção de dependência para o EmentaService
+        public EmentaController(EmentaService service)
         {
-            var ementa = await _service.GetEmentaDisponivel(tipo, dataInicio, dataFim);
+            _service = service;
+        }
+
+        // // GET: api/Ementa/Disponivel?tipoRefeicaoId=1&data=2024-10-01
+        // [HttpGet("Disponivel")]
+        // public async Task<ActionResult<IEnumerable<ListarEmentaDTO>>> GetEmentaDisponivel([FromQuery] long tipoRefeicaoId, [FromQuery] DateTime data)
+        // {
+        //     var ementas = await _service.GetEmentaDisponivel(tipoRefeicaoId, data);
+        //     return Ok(ementas);
+        // }
+       
+        // POST: api/Ementa
+        [HttpPost]
+        public async Task<ActionResult<ListarEmentaDTO>> AddEmenta([FromBody] CriarEmentaDTO ementaInfo)
+        {
+            var novaEmenta = await _service.AddEmenta(ementaInfo);
+            return CreatedAtAction(nameof(GetEmentaDisponivelById), new { id = novaEmenta.Id }, novaEmenta);
+        }
+
+        // GET: api/Ementa/{id}
+        [HttpGet("{id}")]
+        public async Task<ActionResult<ListarEmentaDTO>> GetEmentaDisponivelById(long id)
+        {
+            var ementa = await _service.GetEmentaDisponivelById(id);
             return ementa == null ? NotFound() : Ok(ementa);
         }
 
-        // POST: api/Ementa
-        [HttpPost]
-        public async Task<IActionResult> AddEmenta([FromBody] Ementa ementa)
-        {
-            await _service.AddEmenta(ementa);
-            return CreatedAtAction(nameof(GetEmentaDisponivel), new { tipo = ementa.Frequencia, dataInicio = ementa.DataInicio, dataFim = ementa.DataFim }, ementa);
-        }
-        // DELETE: api/Prato/{id}
+         // DELETE: api/Prato/{id}
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteEmenta(long id)
         {
@@ -45,8 +56,6 @@ namespace Cozinha.Controllers
 
             return NoContent(); // Retorna 204 se o prato for removido com sucesso
         }
-
-
 
     }
 }

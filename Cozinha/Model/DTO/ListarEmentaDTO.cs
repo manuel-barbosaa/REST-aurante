@@ -6,6 +6,6 @@ public class ListarEmentaDTO{
     public required DateTime DataInicio { get; set; }
     public required DateTime DataFim { get; set; }
         
-    // Relação com as refeições incluídas na ementa
-    public required List<Refeicao> Refeicoes { get; set; } = new List<Refeicao>();
+    public required TipoRefeicao TipoRefeicao { get; set;}
+    public int Quantidade { get; set;}
 }
