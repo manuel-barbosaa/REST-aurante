@@ -80,14 +80,18 @@ namespace Cozinha.Controllers{
                 return BadRequest(ex.Message);
             }
         }
+        public class ProduzirRefeicaoRequest
+        {
+            public int QuantidadeExtra { get; set; }
+        }
         // Método PUT para produzir mais refeições
         // Rota: api/refeicao/{id}/produzir
         [HttpPut("{id}/produzir")]
-        public async Task<ActionResult<ListarRefeicaoDTO>> ProduzirRefeicao(int id, int quantidadeExtra)
+        public async Task<ActionResult<ListarRefeicaoDTO>> ProduzirRefeicao(int id, [FromBody] ProduzirRefeicaoRequest request)
         {
             try
             {
-                var refeicaoAtualizada = await _service.ProduzirRefeicao(id, quantidadeExtra);
+                var refeicaoAtualizada = await _service.ProduzirRefeicao(id,  request.QuantidadeExtra);
                 return Ok(refeicaoAtualizada);
             }
             catch (Exception ex)
