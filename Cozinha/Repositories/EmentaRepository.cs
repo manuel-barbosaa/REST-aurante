@@ -17,7 +17,7 @@ namespace Cozinha.Repositories
         // Método para obter uma ementa por tipo e intervalo de datas
         public async Task<Ementa?> GetEmentaByTipoEData(string tipo, DateTime dataInicio, DateTime dataFim)
         {
-            return await _context.Ementa
+            return await _context.Ementas
                 .Include(e => e.Refeicoes)
                 .ThenInclude(r => r.Prato)
                 .Include(e => e.Refeicoes)
@@ -28,7 +28,7 @@ namespace Cozinha.Repositories
         // Método para adicionar uma nova ementa
         public async Task AddEmenta(Ementa ementa)
         {
-            _context.Ementa.Add(ementa);
+            _context.Ementas.Add(ementa);
             await _context.SaveChangesAsync();
         }
 
@@ -40,7 +40,7 @@ namespace Cozinha.Repositories
 
          public async Task<bool> RemoveEmenta(Ementa ementa)
         {
-            _context.Ementa.Remove(ementa);
+            _context.Ementas.Remove(ementa);
             await _context.SaveChangesAsync();
             return true;
         }
