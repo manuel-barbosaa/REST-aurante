@@ -1,20 +1,17 @@
 using Cozinha.Model.DTO;
 using Cozinha.Model;
 using Cozinha.Repositories;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace Cozinha.Services
-{
-    public class EmentaService
-    {
-        private readonly EmentaRepository _repo;
 
-        public EmentaService(EmentaRepository repo)
-        {
-            _repo = repo;
+
+namespace Cozinha.Services{
+    public class EmentaService{
+         private CozinhaContext _context;
+        private EmentaRepository _repo;
+
+        public EmentaService(CozinhaContext context) {
+            _context = context;
+            _repo = new EmentaRepository(_context);
         }
 
         // Método para buscar e converter uma ementa com suas refeições para DTO

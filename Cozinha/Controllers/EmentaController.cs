@@ -1,9 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
-using Cozinha.Services;
 using Cozinha.Model;
 using Cozinha.Model.DTO;
-using System;
-using System.Threading.Tasks;
+using Cozinha.Services;
 
 namespace Cozinha.Controllers
 {
@@ -11,13 +9,14 @@ namespace Cozinha.Controllers
     [ApiController]
     public class EmentaController : ControllerBase
     {
-        private readonly EmentaService _service;
+       
+        private readonly CozinhaContext _context;
+       private EmentaService _service;
 
-        public EmentaController(EmentaService service)
-        {
-            _service = service;
+        public EmentaController (CozinhaContext context) {
+            _context = context;
+            _service = new EmentaService(_context);
         }
-
         // GET: api/Ementa/Disponivel?tipo=Diaria&dataInicio=2024-10-30&dataFim=2024-10-30
         [HttpGet("Disponivel")]
         public async Task<ActionResult<ListarEmentaDTO>> GetEmentaDisponivel([FromQuery] string tipo, [FromQuery] DateTime dataInicio, [FromQuery] DateTime dataFim)
