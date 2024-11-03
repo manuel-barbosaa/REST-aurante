@@ -63,7 +63,7 @@ public class IngredienteController : ControllerBase
     }
 
     // POST: api/Ingrediente
-    [HttpPost]
+    [HttpPost ("create")]
     public async Task<ActionResult<ListarIngredienteDTO>> CreateIngrediente(CriarIngredienteDTO info)
     {
         var createdIngrediente = await _service.CreateNewIngrediente(info);
@@ -71,7 +71,7 @@ public class IngredienteController : ControllerBase
     }
 
     // DELETE: api/Ingrediente/{id}
-    [HttpDelete("{id}")]
+    [HttpDelete("delete/{id}")]
     public async Task<IActionResult> DeleteIngredienteById(long id)
     {
         bool deleted = await _service.DeleteIngredienteById(id);
@@ -84,7 +84,7 @@ public class IngredienteController : ControllerBase
 
 
     // DELETE: api/Ingrediente/all
-    [HttpDelete("all")]
+    [HttpDelete("deleteAll")]
     public async Task<IActionResult> DeleteAllIngredientes()
     {
         await _service.DeleteAllIngredientes();
