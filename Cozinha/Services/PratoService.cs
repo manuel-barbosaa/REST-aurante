@@ -85,6 +85,7 @@ namespace Cozinha.Services {
             // Cria o prato incluindo a receita
             Prato newPrato = new Prato
             {
+    
                 Nome = info.Nome,
                 IsAtivo = info.IsAtivo,
                 TipoPrato = tipoPrato,

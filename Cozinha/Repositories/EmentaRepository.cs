@@ -26,10 +26,12 @@ namespace Cozinha.Repositories
         }
 
         // Método para adicionar uma nova ementa
-        public async Task AddEmenta(Ementa ementa)
+        public async Task<Ementa> AddEmenta(Ementa ementa)
         {
-            _context.Ementas.Add(ementa);
+            var newEmenta = await _context.Ementas.AddAsync(ementa);
+
             await _context.SaveChangesAsync();
+            return newEmenta.Entity;
         }
 
          public async Task<TipoRefeicao?> GetEmentayId(long id) {

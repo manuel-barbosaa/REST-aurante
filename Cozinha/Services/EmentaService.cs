@@ -36,12 +36,54 @@ namespace Cozinha.Services{
         }
 
         // Método para adicionar uma nova ementa
-        public async Task AddEmenta(Ementa ementa)
+        public async Task<ListarEmentaDTO> CreateNewEmenta(CriarEmentaDTO info)
         {
-            await _repo.AddEmenta(ementa);
+            List<Refeicao> refeicoes = new List<Refeicao>();
+
+            // Verifica se os ingredientes existem
+            if (info.Refeicoes.Any())
+            {
+                foreach (var existingId in info.Refeicoes)
+                {
+                    var existingRefeicao = await _context.Refeicao.FindAsync(existingId);
+                    if (existingRefeicao != null)
+                    {
+                        refeicoes.Add(existingRefeicao);
+                    }
+                    else
+                    {
+                        throw new Exception($"Refeicao with Id {existingId} not found");
+                    }
+                }
+            }
+            else
+            {
+                throw new Exception("ExistingRefeicoesIds must be provided");
+            }
+
+            // Cria o prato incluindo a receita
+            Ementa newEmenta = new Ementa
+            {
+                Frequencia = info.Frequencia,
+                DataInicio = info.DataInicio,
+                DataFim = info.DataFim,
+                Refeicoes = refeicoes
+            };
+
+            return EmentaDetail(await _repo.AddEmenta(newEmenta));
         }
 
-
+        private ListarEmentaDTO EmentaDetail(Ementa e)
+        {
+            return new ListarEmentaDTO
+            {
+                Id = e.Id,
+                Frequencia = e.Frequencia,
+                DataInicio = e.DataInicio,
+                DataFim = e.DataFim,
+                Refeicoes = e.Refeicoes
+            };
+        }
 
          public async Task<bool> DeleteEmenta(long id)
         {
