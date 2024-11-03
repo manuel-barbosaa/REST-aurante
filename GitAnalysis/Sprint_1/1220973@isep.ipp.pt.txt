@@ -1,0 +1,171 @@
+commit abf610ec9ed9b6570f8f841ead53d85f3da5d0e4	refs/heads/main
+Author: manuel barbosa <1220973@isep.ipp.pt>
+Date:   Sun Nov 3 19:31:07 2024 +0000
+
+    alterações na lógica de funcionamento da ementa
+
+A	Cozinha/Model/DTO/CriarEmentaDTO.cs
+M	Cozinha/Model/DTO/ListarEmentaDTO.cs
+M	Cozinha/Model/Ementa.cs
+M	Cozinha/Repositories/EmentaRepository.cs
+M	Cozinha/Services/EmentaService.cs
+M	Cozinha/Services/PratoService.cs
+
+commit b208d3412f4914b3c62559a1476f62ff25482883	refs/heads/main
+Author: manuel barbosa <1220973@isep.ipp.pt>
+Date:   Sun Nov 3 14:06:23 2024 +0000
+
+    implementação da receita no prato
+
+M	Cozinha/Database/CozinhaDB
+M	Cozinha/Model/DTO/CriarPratoDTO.cs
+M	Cozinha/Model/DTO/ListarPratoDTO.cs
+M	Cozinha/Model/Prato.cs
+M	Cozinha/Services/PratoService.cs
+
+commit 90c5292aa50872cad11ddd4c43ad1a8d9aac1bac	refs/heads/main
+Author: manuel barbosa <1220973@isep.ipp.pt>
+Date:   Sun Nov 3 12:16:56 2024 +0000
+
+    correção da lógica de criação da refeicao
+
+M	Cozinha/Database/CozinhaDB
+M	Cozinha/Model/DTO/CriarRefeicaoDTO.cs
+M	Cozinha/Services/RefeicaoService.cs
+
+commit 3a486dce0bae23a8b81eb0023fc55d47224563a1	refs/heads/main
+Author: manuel barbosa <1220973@isep.ipp.pt>
+Date:   Sun Nov 3 11:45:32 2024 +0000
+
+    correção de lógica de funcionamento dos pratos
+
+M	Cozinha/Database/CozinhaDB
+M	Cozinha/Model/DTO/CriarPratoDTO.cs
+M	Cozinha/Model/DTO/ListarPratoDTO.cs
+M	Cozinha/Model/Prato.cs
+D	Cozinha/Model/Receita.cs
+M	Cozinha/Services/PratoService.cs
+
+commit bc256f98da44377f1bec4ef1b5e7710c12ab6b9a	refs/heads/main
+Author: manuel barbosa <1220973@isep.ipp.pt>
+Date:   Sat Nov 2 16:50:12 2024 +0000
+
+    correção do metodo POST do prato para aceitar apenas ingredientes e tipos de pratos existentes e por ID
+
+M	Cozinha/Database/CozinhaDB
+M	Cozinha/Database/CozinhaDB-shm
+M	Cozinha/Database/CozinhaDB-wal
+M	Cozinha/Model/DTO/CriarPratoDTO.cs
+M	Cozinha/Model/DTO/ListarPratoDTO.cs
+M	Cozinha/Services/PratoService.cs
+
+commit fdb5b5e739880bf5d6f5857d27a91ae1becdd8a4	refs/heads/main
+Author: manuel barbosa <1220973@isep.ipp.pt>
+Date:   Sat Nov 2 15:45:31 2024 +0000
+
+    atualização do git ignore para a pasta da database
+
+M	Cozinha/.gitignore
+
+commit 2a718671a4a2bb837478dbfedb540f64019311db	refs/heads/main
+Author: manuel barbosa <1220973@isep.ipp.pt>
+Date:   Sat Nov 2 15:43:45 2024 +0000
+
+    correção de erro nos construtores dos controllers do ingrediente e da refeicao
+
+M	Cozinha/Controllers/IngredienteController.cs
+M	Cozinha/Controllers/RefeicaoController.cs
+
+commit abda982e8da1cccb45660326823ebe002eaf9d27	refs/heads/main
+Author: manuel barbosa <1220973@isep.ipp.pt>
+Date:   Thu Oct 31 12:01:18 2024 +0000
+
+    criação de migrations e implementação da database
+
+M	Cozinha/Cozinha.csproj
+A	Cozinha/Database/CozinhaDB
+A	Cozinha/Database/CozinhaDB-shm
+A	Cozinha/Database/CozinhaDB-wal
+A	Cozinha/Migrations/20241031115717_CozinhaCreation.Designer.cs
+A	Cozinha/Migrations/20241031115717_CozinhaCreation.cs
+A	Cozinha/Migrations/CozinhaContextModelSnapshot.cs
+
+commit c68a23d35dc2fc83b8f5616ef89fa149f5c6b3ac	refs/heads/main
+Author: manuel barbosa <1220973@isep.ipp.pt>
+Date:   Thu Oct 31 10:21:30 2024 +0000
+
+    implementação do método DELETE do tipo de prato
+
+M	Cozinha/Controllers/TipoPratoController.cs
+M	Cozinha/Repositories/TipoPratoRepository.cs
+M	Cozinha/Services/TipoPratoService.cs
+
+commit 3e6d02da0d3dddd9edb9ae2df36b0a4a0f580b16	refs/heads/main
+Author: manuel barbosa <1220973@isep.ipp.pt>
+Date:   Thu Oct 31 10:06:47 2024 +0000
+
+    correção de ficheiros DTO do tipo de prato e implementação do método POST para o tipo de prato
+
+M	Cozinha/Controllers/TipoPratoController.cs
+D	Cozinha/Model/DTO/DetalharTipoPratoDTO.cs
+R077	Cozinha/Model/DTO/ListarTipoPratoDTO.cs	Cozinha/Model/DTO/TipoPratoDTO.cs
+M	Cozinha/Repositories/TipoPratoRepository.cs
+M	Cozinha/Services/TipoPratoService.cs
+
+commit 94876d7ca2ab60e4261d7c6e5933f31143fdad4e	refs/heads/main
+Author: manuel barbosa <1220973@isep.ipp.pt>
+Date:   Fri Oct 25 20:29:14 2024 +0100
+
+    feat: repository, service e controller do tipo de prato
+
+A	Cozinha/Controllers/TipoPratoController.cs
+A	Cozinha/Cozinha.sln
+M	Cozinha/Model/CozinhaContext.cs
+M	Cozinha/Model/DTO/ListarTipoPratoDTO.cs
+M	Cozinha/Model/TipoPrato.cs
+A	Cozinha/Repositories/TipoPratoRepository.cs
+A	Cozinha/Services/TipoPratoService.cs
+
+commit 557182e8e586c6a8f5014b24db41c9dc9b68b1d0	refs/heads/main
+Author: manuel barbosa <1220973@isep.ipp.pt>
+Date:   Fri Oct 25 19:45:32 2024 +0100
+
+    criação dos ficheiros DTO para a listagem e a obtenção de informação detalhada de tipos de prato
+
+A	Cozinha/Model/DTO/DetalharTipoPratoDTO.cs
+A	Cozinha/Model/DTO/ListarTipoPratoDTO.cs
+
+commit 3fc2b5ab87824252da0f5baae272d88cac4958a0	refs/heads/main
+Author: manuel barbosa <1220973@isep.ipp.pt>
+Date:   Fri Oct 25 19:44:34 2024 +0100
+
+    criação do ficheiro model do tipo de prato
+
+A	Cozinha/Model/TipoPrato.cs
+
+commit 9204b1b58e95a7061f163d650aea0f4c77c20c7e	refs/heads/main
+Author: manuel barbosa <1220973@isep.ipp.pt>
+Date:   Sat Oct 19 16:41:46 2024 +0100
+
+    chore: inicializar projeto de Web API em ASP.NET Core
+
+A	Cozinha/Controllers/WeatherForecastController.cs
+A	Cozinha/Cozinha.csproj
+A	Cozinha/Cozinha.http
+A	Cozinha/Program.cs
+A	Cozinha/Properties/launchSettings.json
+A	Cozinha/appsettings.Development.json
+A	Cozinha/appsettings.json
+A	Cozinha/obj/Cozinha.csproj.nuget.dgspec.json
+A	Cozinha/obj/Cozinha.csproj.nuget.g.props
+A	Cozinha/obj/Cozinha.csproj.nuget.g.targets
+A	Cozinha/obj/Debug/net8.0/.NETCoreApp,Version=v8.0.AssemblyAttributes.cs
+A	Cozinha/obj/Debug/net8.0/Cozinha.AssemblyInfo.cs
+A	Cozinha/obj/Debug/net8.0/Cozinha.AssemblyInfoInputs.cache
+A	Cozinha/obj/Debug/net8.0/Cozinha.GeneratedMSBuildEditorConfig.editorconfig
+A	Cozinha/obj/Debug/net8.0/Cozinha.GlobalUsings.g.cs
+A	Cozinha/obj/Debug/net8.0/Cozinha.assets.cache
+A	Cozinha/obj/Debug/net8.0/Cozinha.csproj.AssemblyReference.cache
+A	Cozinha/obj/project.assets.json
+A	Cozinha/obj/project.nuget.cache
+A	REST-aurante.sln

@@ -1,0 +1,110 @@
+commit 5cc494aed4e1490aedf4b129de373231086ead93	refs/heads/main (HEAD -> main, origin/main)
+Author: beamsteixeira <1220824@isep.ipp.pt>
+Date:   Sun Nov 3 20:28:23 2024 +0000
+
+    fix: delete endpoint Prato
+
+M	Cozinha/Controllers/PratoController.cs
+
+commit fc561e73a915b12efcf999cb749e5dcbc57e8e7f	refs/heads/main
+Author: beamsteixeira <1220824@isep.ipp.pt>
+Date:   Sun Nov 3 03:53:26 2024 +0000
+
+    fix: update classe Prato para incluir tipoPrato e Ingredientes; adicionar receita
+
+A	Cozinha/.idea/.idea.Cozinha/.idea/.gitignore
+A	Cozinha/.idea/.idea.Cozinha/.idea/encodings.xml
+A	Cozinha/.idea/.idea.Cozinha/.idea/indexLayout.xml
+A	Cozinha/.idea/.idea.Cozinha/.idea/vcs.xml
+M	Cozinha/Controllers/PratoController.cs
+M	Cozinha/Cozinha.csproj
+M	Cozinha/Database/CozinhaDB
+D	Cozinha/Database/CozinhaDB-shm
+D	Cozinha/Database/CozinhaDB-wal
+A	Cozinha/Migrations/20241102193219_UpdatePratoIngredienteRelationship.Designer.cs
+A	Cozinha/Migrations/20241102193219_UpdatePratoIngredienteRelationship.cs
+A	Cozinha/Migrations/20241103024617_UpdateTipoPratoMappingNew.Designer.cs
+A	Cozinha/Migrations/20241103024617_UpdateTipoPratoMappingNew.cs
+A	Cozinha/Migrations/20241103033838_UpdatePratoReceitaa.Designer.cs
+A	Cozinha/Migrations/20241103033838_UpdatePratoReceitaa.cs
+A	Cozinha/Migrations/20241103034612_UpdatePratoReceitaaa.Designer.cs
+A	Cozinha/Migrations/20241103034612_UpdatePratoReceitaaa.cs
+M	Cozinha/Migrations/CozinhaContextModelSnapshot.cs
+M	Cozinha/Model/DTO/CriarPratoDTO.cs
+M	Cozinha/Model/DTO/ListarPratoDTO.cs
+M	Cozinha/Model/Prato.cs
+A	Cozinha/Model/Receita.cs
+M	Cozinha/Model/TipoPrato.cs
+M	Cozinha/Repositories/PratoRepository.cs
+M	Cozinha/Services/PratoService.cs
+A	Sprint_1_REST-AURANTE/.idea/.gitignore
+A	Sprint_1_REST-AURANTE/.idea/encodings.xml
+A	Sprint_1_REST-AURANTE/.idea/indexLayout.xml
+A	Sprint_1_REST-AURANTE/.idea/vcs.xml
+
+commit 7fde1497ec2143d672e665fe21bfc00a04d4b70a	refs/heads/main
+Author: beamsteixeira <1220824@isep.ipp.pt>
+Date:   Tue Oct 29 00:00:38 2024 +0000
+
+    fix: controller, repository e service do prato; ativar/inativar um prato; inativar e ativar ingrediente
+
+M	Cozinha/Controllers/PratoController.cs
+M	Cozinha/Repositories/PratoRepository.cs
+M	Cozinha/Services/PratoService.cs
+
+commit ae06738760a034bfbd297fa2f6444400eebffa18	refs/heads/main
+Author: beamsteixeira <1220824@isep.ipp.pt>
+Date:   Mon Oct 28 20:36:03 2024 +0000
+
+    fix: prato controller
+
+M	Cozinha/Controllers/PratoController.cs
+M	Cozinha/Cozinha.csproj
+M	Cozinha/Program.cs
+M	Cozinha/Services/PratoService.cs
+
+commit bda4ba75dab6141b1286c46162019fb4777b5fb1	refs/heads/main
+Author: beamsteixeira <1220824@isep.ipp.pt>
+Date:   Mon Oct 28 19:58:06 2024 +0000
+
+    feat: prato service
+
+M	Cozinha/Services/PratoService.cs
+
+commit c433f4945ed3f065233e2952a7689ee51f361463	refs/heads/main
+Author: beamsteixeira <1220824@isep.ipp.pt>
+Date:   Mon Oct 28 19:46:56 2024 +0000
+
+    feat: prato repository
+
+M	Cozinha/Repositories/PratoRepository.cs
+
+commit 2f714987514dcd0d88b177f132a6c6871c1c0ec0	refs/heads/main
+Author: beamsteixeira <1220824@isep.ipp.pt>
+Date:   Mon Oct 28 19:36:08 2024 +0000
+
+    feat: criar prato dto
+
+A	Cozinha/Model/DTO/CriarPratoDTO.cs
+
+commit b5580e0dfe330b00664b0090fd42869550d5a2e8	refs/heads/main
+Author: beamsteixeira <1220824@isep.ipp.pt>
+Date:   Sat Oct 26 21:00:04 2024 +0100
+
+    feat: model e repository do prato; DTO para listagem do prato
+
+A	Cozinha/Controllers/PratoController.cs
+M	Cozinha/Model/CozinhaContext.cs
+A	Cozinha/Model/DTO/ListarPratoDTO.cs
+M	Cozinha/Model/Ingrediente.cs
+A	Cozinha/Model/Prato.cs
+A	Cozinha/Repositories/PratoRepository.cs
+A	Cozinha/Services/PratoService.cs
+
+commit d5e5e6b0b0fe5887b7b0d9acad9db9bf76e01d8d	refs/heads/main
+Author: beamsteixeira <1220824@isep.ipp.pt>
+Date:   Thu Oct 24 01:13:51 2024 +0100
+
+    feat: esboço diagrama UML
+
+A	DiagramaUML.jpg
