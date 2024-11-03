@@ -3,6 +3,7 @@ using System;
 using Cozinha.Model;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace REST_aurante.Cozinha.Migrations
 {
     [DbContext(typeof(CozinhaContext))]
-    partial class CozinhaContextModelSnapshot : ModelSnapshot
+    [Migration("20241103034612_UpdatePratoReceitaaa")]
+    partial class UpdatePratoReceitaaa
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.10");

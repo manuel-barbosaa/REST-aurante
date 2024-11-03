@@ -17,4 +17,10 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.9.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Remove="Migrations\20241102193219_UpdatePratoIngredienteRelationship.cs" />
+    <Compile Remove="Migrations\20241102193219_UpdatePratoIngredienteRelationship.Designer.cs" />
+    <Compile Remove="Model\Receita.cs" />
+  </ItemGroup>
+
 </Project>

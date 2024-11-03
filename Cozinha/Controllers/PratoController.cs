@@ -101,6 +101,21 @@ namespace Cozinha.Controllers
             await _service.AtivarIngrediente(nome);
             return NoContent();
         }
+        
+        // DELETE: api/Prato/{id}
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeletePrato(long id)
+        {
+            var deleted = await _service.DeletePrato(id);
+
+            if (!deleted)
+            {
+                return NotFound(); // Retorna 404 se o prato não for encontrado
+            }
+
+            return NoContent(); // Retorna 204 se o prato for removido com sucesso
+        }
+
 
 
 

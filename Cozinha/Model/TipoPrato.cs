@@ -1,3 +1,5 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace Cozinha.Model;
 
 public class TipoPrato {

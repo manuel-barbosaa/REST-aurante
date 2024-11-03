@@ -3,6 +3,7 @@ using System;
 using Cozinha.Model;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace REST_aurante.Cozinha.Migrations
 {
     [DbContext(typeof(CozinhaContext))]
-    partial class CozinhaContextModelSnapshot : ModelSnapshot
+    [Migration("20241103024617_UpdateTipoPratoMappingNew")]
+    partial class UpdateTipoPratoMappingNew
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.10");
@@ -54,10 +57,6 @@ namespace REST_aurante.Cozinha.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Nome")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Receita")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
@@ -142,7 +141,7 @@ namespace REST_aurante.Cozinha.Migrations
             modelBuilder.Entity("Cozinha.Model.Prato", b =>
                 {
                     b.HasOne("Cozinha.Model.TipoPrato", "TipoPrato")
-                        .WithMany()
+                        .WithMany("Pratos")
                         .HasForeignKey("TipoPratoId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -172,6 +171,11 @@ namespace REST_aurante.Cozinha.Migrations
             modelBuilder.Entity("Cozinha.Model.Prato", b =>
                 {
                     b.Navigation("Ingredientes");
+                });
+
+            modelBuilder.Entity("Cozinha.Model.TipoPrato", b =>
+                {
+                    b.Navigation("Pratos");
                 });
 #pragma warning restore 612, 618
         }

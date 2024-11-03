@@ -6,4 +6,6 @@ public class CriarPratoDTO
     public required bool IsAtivo { get; set; }
     public long TipoPratoId { get; set; }
     public List<long> Ingredientes { get; set; } = new List<long>(); 
+    
+    public string Receita { get; set; }
 }

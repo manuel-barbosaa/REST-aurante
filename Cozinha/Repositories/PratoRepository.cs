@@ -12,13 +12,20 @@ namespace Cozinha.Repositories{
 
         //obtem todos os pratos
         public async Task<List<Prato>> GetPrato() {
-            return await _context.Pratos.ToListAsync();
+            return await _context.Pratos.Include(p => p.TipoPrato).
+                                         Include(p => p.Ingredientes).
+                                         ToListAsync();
         }
 
-        //obtem um prato pelo seu id
-        public async Task<Prato?> GetPratoById(long id) {
-            return await _context.Pratos.FindAsync(id);
+// Obtem um prato pelo seu id e carrega as propriedades relacionadas
+        public async Task<Prato?> GetPratoById(long id)
+        {
+            return await _context.Pratos
+                .Include(p => p.TipoPrato)    // Inclui TipoPrato
+                .Include(p => p.Ingredientes) // Inclui Ingredientes
+                .FirstOrDefaultAsync(p => p.Id == id); // Usa FirstOrDefaultAsync para a busca
         }
+
 
         //obtem um prato pelo seu nome
         public async Task<Prato?> GetPratoByNome(string nome) {
@@ -40,10 +47,13 @@ namespace Cozinha.Repositories{
             return await _context.Pratos.Where(p => p.Ingredientes.Any(i => i.Nome.Equals(nome))).ToListAsync();
         }
 
-        //obtem pratos combase no estado (ativos ou inativos
+        //obtem pratos combase no estado (ativos ou inativos)
         public async Task<List<Prato>> GetPratosByState(bool IsAtivo)
         {
-            return await _context.Pratos.Where(i => i.IsAtivo == IsAtivo).ToListAsync();
+            return await _context.Pratos.Where(i => i.IsAtivo == IsAtivo).
+                Include(p => p.TipoPrato).    // Inclui TipoPrato
+                Include(p => p.Ingredientes).
+                ToListAsync();
         } 
 
         //atualiza um prato no banco de dados

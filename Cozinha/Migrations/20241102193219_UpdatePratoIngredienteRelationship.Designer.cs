@@ -3,6 +3,7 @@ using System;
 using Cozinha.Model;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace REST_aurante.Cozinha.Migrations
 {
     [DbContext(typeof(CozinhaContext))]
-    partial class CozinhaContextModelSnapshot : ModelSnapshot
+    [Migration("20241102193219_UpdatePratoIngredienteRelationship")]
+    partial class UpdatePratoIngredienteRelationship
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.10");
@@ -34,12 +37,7 @@ namespace REST_aurante.Cozinha.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<long?>("PratoId")
-                        .HasColumnType("INTEGER");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("PratoId");
 
                     b.ToTable("Ingredientes");
                 });
@@ -47,7 +45,6 @@ namespace REST_aurante.Cozinha.Migrations
             modelBuilder.Entity("Cozinha.Model.Prato", b =>
                 {
                     b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
                     b.Property<bool>("IsAtivo")
@@ -57,11 +54,7 @@ namespace REST_aurante.Cozinha.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Receita")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<long>("TipoPratoId")
+                    b.Property<long?>("TipoPratoId")
                         .HasColumnType("INTEGER");
 
                     b.HasKey("Id");
@@ -132,20 +125,32 @@ namespace REST_aurante.Cozinha.Migrations
                     b.ToTable("TipoRefeicao");
                 });
 
-            modelBuilder.Entity("Cozinha.Model.Ingrediente", b =>
+            modelBuilder.Entity("PratoIngrediente", b =>
                 {
-                    b.HasOne("Cozinha.Model.Prato", null)
-                        .WithMany("Ingredientes")
-                        .HasForeignKey("PratoId");
+                    b.Property<long>("IngredienteId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<long>("PratoId")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("IngredienteId", "PratoId");
+
+                    b.HasIndex("PratoId");
+
+                    b.ToTable("PratoIngrediente");
                 });
 
             modelBuilder.Entity("Cozinha.Model.Prato", b =>
                 {
                     b.HasOne("Cozinha.Model.TipoPrato", "TipoPrato")
                         .WithMany()
-                        .HasForeignKey("TipoPratoId")
+                        .HasForeignKey("Id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.HasOne("Cozinha.Model.TipoPrato", null)
+                        .WithMany("Pratos")
+                        .HasForeignKey("TipoPratoId");
 
                     b.Navigation("TipoPrato");
                 });
@@ -169,9 +174,24 @@ namespace REST_aurante.Cozinha.Migrations
                     b.Navigation("TipoRefeicao");
                 });
 
-            modelBuilder.Entity("Cozinha.Model.Prato", b =>
+            modelBuilder.Entity("PratoIngrediente", b =>
                 {
-                    b.Navigation("Ingredientes");
+                    b.HasOne("Cozinha.Model.Ingrediente", null)
+                        .WithMany()
+                        .HasForeignKey("IngredienteId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Cozinha.Model.Prato", null)
+                        .WithMany()
+                        .HasForeignKey("PratoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Cozinha.Model.TipoPrato", b =>
+                {
+                    b.Navigation("Pratos");
                 });
 #pragma warning restore 612, 618
         }

@@ -1,7 +1,10 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace Cozinha.Model;
 
     public class Prato
     {
+        [Key]
         public long Id { get; set; }
         public required string Nome { get; set; }
 
@@ -13,6 +16,6 @@ namespace Cozinha.Model;
         public virtual required List<Ingrediente> Ingredientes { get; set; }
 
         // Receita
-        //virtual public Receita Receita { get; set; }
+        public string Receita { get; set; }
     }
 

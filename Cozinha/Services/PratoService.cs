@@ -52,6 +52,7 @@ namespace Cozinha.Services {
                 throw new Exception("TipoPratoId must be provided and greater than 0.");
             }
 
+            // Verifica se o TipoPrato existe
             TipoPrato tipoPrato = await _context.TiposPrato.FindAsync(info.TipoPratoId);
             if (tipoPrato == null)
             {
@@ -60,6 +61,7 @@ namespace Cozinha.Services {
 
             List<Ingrediente> ingredientesToSave = new List<Ingrediente>();
 
+            // Verifica se os ingredientes existem
             if (info.Ingredientes.Any())
             {
                 foreach (var existingId in info.Ingredientes)
@@ -80,24 +82,29 @@ namespace Cozinha.Services {
                 throw new Exception("ExistingIngredientIds must be provided");
             }
 
+            // Cria o prato incluindo a receita
             Prato newPrato = new Prato
             {
                 Nome = info.Nome,
                 IsAtivo = info.IsAtivo,
                 TipoPrato = tipoPrato,
-                Ingredientes = ingredientesToSave 
+                Ingredientes = ingredientesToSave,
+                Receita = info.Receita // Adiciona a receita ao prato
             };
 
             return PratoDetail(await _repo.AddPrato(newPrato));
         }
 
+
         //converte um objeto Prato em ListarPratoDTO para retornar apenas informações resumidas
         private ListarPratoDTO PratoListItem(Prato p) {
             return new ListarPratoDTO {
+                Id = p.Id,
                 Nome = p.Nome,
                 IsAtivo = p.IsAtivo,
                 TipoPrato = p.TipoPrato,
                 Ingredientes = p.Ingredientes,
+                Receita = p.Receita
             };
         }
 
@@ -110,7 +117,8 @@ namespace Cozinha.Services {
                 Nome = p.Nome,
                 IsAtivo = p.IsAtivo,
                 TipoPrato = p.TipoPrato,
-                Ingredientes = p.Ingredientes
+                Ingredientes = p.Ingredientes,
+                Receita = p.Receita
             };
         }
 
@@ -154,6 +162,27 @@ namespace Cozinha.Services {
 
             await _repo.AtivarIngrediente(ingrediente); //chama o método do repositório para ativar o ingrediente
         }
+        
+        public async Task<bool> DeletePrato(long id)
+        {
+            // Busca o prato pelo ID
+            var prato = await _context.Pratos.FindAsync(id);
+
+            // Verifica se o prato existe
+            if (prato == null)
+            {
+                return false; // Retorna false se o prato não for encontrado
+            }
+
+            // Remove o prato do contexto
+            _context.Pratos.Remove(prato);
+
+            // Salva as alterações no banco de dados
+            await _context.SaveChangesAsync();
+
+            return true; // Retorna true indicando que o prato foi removido
+        }
+
 
 
 
