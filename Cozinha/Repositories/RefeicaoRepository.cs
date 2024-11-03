@@ -19,11 +19,11 @@ namespace Cozinha.Repositories{
         }
         //obtem todas as refeições
         public async Task<List<Refeicao>> GetRefeicoes() {
-            return await _context.Refeicao.ToListAsync();
+            return await _context.Refeicao.Include(p => p.Prato).Include(p => p.TipoRefeicao).ToListAsync();
         }
         //obtem uma refeição pelo seu id
         public async Task<Refeicao?> GetRefeicaoById(long id) {
-            return await _context.Refeicao.FindAsync(id);
+            return await _context.Refeicao.Include(p => p.Prato).Include(p => p.TipoRefeicao).FirstOrDefaultAsync(p => p.Id == id);;
         }
         //obtem Refeicao pelo tipo de refeicao 
         public async Task<List<Refeicao>> GetRefeicaoByTipoRefeicao(TipoRefeicao tipoRefeicao) {
