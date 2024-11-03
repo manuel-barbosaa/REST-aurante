@@ -43,6 +43,12 @@ namespace Cozinha.Repositories{
             await _context.SaveChangesAsync();
             return refeicao;
         }
+        //Delete all refeicoes
+        public async Task DeleteAll()
+        {
+            _context.Refeicao.RemoveRange(_context.Refeicao);
+            await _context.SaveChangesAsync();
+        }
         
         public async Task<List<Refeicao>> GetEmentaDisponivel(DateTime data, long tipoRefeicaoId)
         {
