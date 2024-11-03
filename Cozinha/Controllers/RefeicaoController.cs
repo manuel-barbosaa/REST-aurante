@@ -35,7 +35,7 @@ namespace Cozinha.Controllers{
         // Método GET para retornar uma refeição específica pelo ID
         // Rota: api/Refeicao/{id}
         [HttpGet("{id}")]
-        public async Task<ActionResult<ListarRefeicaoDTO>> GetRefeicao(long id)
+        public async Task<ActionResult<ListarRefeicaoDTO>> GetRefeicaoById(int id)
         {
             var refeicao = await _service.GetRefeicao(id);
             if (refeicao == null)
@@ -54,7 +54,7 @@ namespace Cozinha.Controllers{
         }
         // US014 - Servir refeição (decrementa quantidade)
         [HttpPut("{id}/servir")]
-        public async Task<ActionResult<ListarRefeicaoDTO>> ServirRefeicao(long id)
+        public async Task<ActionResult<ListarRefeicaoDTO>> ServirRefeicao(int id)
         {
             try
             {
@@ -67,8 +67,8 @@ namespace Cozinha.Controllers{
         }
 
         // US015 - Remover refeição futura
-        [HttpDelete("{id}/remove-future")]
-        public async Task<IActionResult> RemoverRefeicaoFutura(long id)
+        [HttpDelete("{id}/remover")]
+        public async Task<IActionResult> RemoverRefeicaoFutura(int id)
         {
             try
             {

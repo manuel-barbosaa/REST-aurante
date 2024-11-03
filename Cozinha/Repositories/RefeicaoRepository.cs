@@ -22,7 +22,7 @@ namespace Cozinha.Repositories{
             return await _context.Refeicao.ToListAsync();
         }
         //obtem uma refeição pelo seu id
-        public async Task<Refeicao?> GetRefeicaoById(long id) {
+        public async Task<Refeicao?> GetRefeicaoById(int id) {
             return await _context.Refeicao.FindAsync(id);
         }
         //obtem Refeicao pelo tipo de refeicao 

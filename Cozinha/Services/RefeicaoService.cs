@@ -71,7 +71,7 @@ namespace Cozinha.Services {
             return Refeicoes.Select(x => RefeicaoListItem(x)).ToList();
         }
         //Retorna uma refeição específica pelo seu id; lança uma exceção se a refeição não for encontrada
-        public async Task<ListarRefeicaoDTO> GetRefeicao(long id) {
+        public async Task<ListarRefeicaoDTO> GetRefeicao(int id) {
             Refeicao ?r = await _repo.GetRefeicaoById(id);
             if (r == null)
             {
@@ -80,7 +80,7 @@ namespace Cozinha.Services {
             return RefeicaoDetail(r);
         }
         //Servir uma refeição (decrementar quantidade)
-        public async Task<ListarRefeicaoDTO> ServirRefeicao(long refeicaoId)
+        public async Task<ListarRefeicaoDTO> ServirRefeicao(int refeicaoId)
         {
             var refeicao = await _repo.GetRefeicaoById(refeicaoId);
             if (refeicao == null)
@@ -106,7 +106,7 @@ namespace Cozinha.Services {
             };
         }
         //Remover uma refeição futura
-        public async Task RemoverRefeicaoFutura(long refeicaoId)
+        public async Task RemoverRefeicaoFutura(int refeicaoId)
         {
             var refeicao = await _repo.GetRefeicaoById(refeicaoId);
             if (refeicao == null)
