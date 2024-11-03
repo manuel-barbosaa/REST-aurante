@@ -50,14 +50,7 @@ namespace Cozinha.Repositories{
             await _context.SaveChangesAsync();
         }
         
-        public async Task<List<Refeicao>> GetEmentaDisponivel(DateTime data, long tipoRefeicaoId)
-        {
-            return await _context.Refeicao
-                .Include(r => r.Prato)
-                .Include(r => r.TipoRefeicao)
-                .Where(r => r.Data.Date == data.Date && r.TipoRefeicao.Id == tipoRefeicaoId && r.Quantidade > 0)
-                .ToListAsync();
-        }
+       
 
     }
 }

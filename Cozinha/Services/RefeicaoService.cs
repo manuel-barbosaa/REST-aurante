@@ -150,21 +150,6 @@ namespace Cozinha.Services {
             await _repo.DeleteAll();
         }
 
-        public async Task<ListarEmentaDTO> GetEmentaDisponivel(DateTime data, long tipoRefeicaoId)
-        {
-            var refeicoes = await _repo.GetEmentaDisponivel(data, tipoRefeicaoId);
-
-            var listaRefeicoes = refeicoes.Select(r => new ListarRefeicaoDTO
-            {
-                Id = r.Id,
-                Prato = r.Prato,
-                TipoRefeicao = r.TipoRefeicao,
-                Quantidade = r.Quantidade,
-                Data = r.Data
-            }).ToList();
-
-            return new ListarEmentaDTO{ Refeicoes = listaRefeicoes};
-        }
         
     }
 }

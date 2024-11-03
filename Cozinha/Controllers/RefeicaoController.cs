@@ -103,12 +103,6 @@ namespace Cozinha.Controllers{
             return NoContent();
         }
     
-        //Método get ementa disponivel
-        [HttpGet("EmentaDisponivel")]
-        public async Task<ActionResult<IEnumerable<ListarEmentaDTO>>> GetEmentaDisponivel([FromQuery] DateTime data, [FromQuery] long tipoRefeicaoId)
-        {
-            var ementa = await _service.GetEmentaDisponivel(data, tipoRefeicaoId);
-            return Ok(ementa);
-        }
+        
     }
 }
