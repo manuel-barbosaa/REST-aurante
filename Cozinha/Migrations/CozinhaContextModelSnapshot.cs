@@ -19,15 +19,9 @@ namespace REST_aurante.Cozinha.Migrations
 
             modelBuilder.Entity("Cozinha.Model.Ementa", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
-
-                    b.Property<DateTime>("DataFim")
-                        .HasColumnType("TEXT");
-
-                    b.Property<DateTime>("DataInicio")
-                        .HasColumnType("TEXT");
 
                     b.Property<string>("Frequencia")
                         .IsRequired()
@@ -101,7 +95,7 @@ namespace REST_aurante.Cozinha.Migrations
                     b.Property<DateTime>("Data")
                         .HasColumnType("TEXT");
 
-                    b.Property<int?>("EmentaId")
+                    b.Property<long?>("EmentaId")
                         .HasColumnType("INTEGER");
 
                     b.Property<long>("PratoId")

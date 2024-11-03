@@ -11,14 +11,29 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace REST_aurante.Cozinha.Migrations
 {
     [DbContext(typeof(CozinhaContext))]
-    [Migration("20241103033838_UpdatePratoReceitaa")]
-    partial class UpdatePratoReceitaa
+    [Migration("20241103215249_CozinhaCreation")]
+    partial class CozinhaCreation
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.10");
+
+            modelBuilder.Entity("Cozinha.Model.Ementa", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Frequencia")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Ementas");
+                });
 
             modelBuilder.Entity("Cozinha.Model.Ingrediente", b =>
                 {
@@ -76,12 +91,15 @@ namespace REST_aurante.Cozinha.Migrations
 
             modelBuilder.Entity("Cozinha.Model.Refeicao", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("Data")
                         .HasColumnType("TEXT");
+
+                    b.Property<long?>("EmentaId")
+                        .HasColumnType("INTEGER");
 
                     b.Property<long>("PratoId")
                         .HasColumnType("INTEGER");
@@ -93,6 +111,8 @@ namespace REST_aurante.Cozinha.Migrations
                         .HasColumnType("INTEGER");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("EmentaId");
 
                     b.HasIndex("PratoId");
 
@@ -155,6 +175,10 @@ namespace REST_aurante.Cozinha.Migrations
 
             modelBuilder.Entity("Cozinha.Model.Refeicao", b =>
                 {
+                    b.HasOne("Cozinha.Model.Ementa", null)
+                        .WithMany("Refeicoes")
+                        .HasForeignKey("EmentaId");
+
                     b.HasOne("Cozinha.Model.Prato", "Prato")
                         .WithMany()
                         .HasForeignKey("PratoId")
@@ -170,6 +194,11 @@ namespace REST_aurante.Cozinha.Migrations
                     b.Navigation("Prato");
 
                     b.Navigation("TipoRefeicao");
+                });
+
+            modelBuilder.Entity("Cozinha.Model.Ementa", b =>
+                {
+                    b.Navigation("Refeicoes");
                 });
 
             modelBuilder.Entity("Cozinha.Model.Prato", b =>

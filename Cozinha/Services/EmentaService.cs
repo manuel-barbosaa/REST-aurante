@@ -1,95 +1,135 @@
 using Cozinha.Model.DTO;
 using Cozinha.Model;
 using Cozinha.Repositories;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace Cozinha.Services
 {
     public class EmentaService
     {
         private readonly EmentaRepository _repo;
+        private CozinhaContext _context;
 
-        public EmentaService(EmentaRepository repo)
-        {
-            _repo = repo;
+        public EmentaService(CozinhaContext context) {
+            _context = context;
+            _repo = new EmentaRepository(_context);
         }
 
-        // Método para buscar uma ementa pelo ID
-        public async Task<ListarEmentaDTO?> GetEmentaDisponivelById(long id)
-        {
-            var ementa = await _repo.GetEmentaById(id);
+        public async Task<List<ListarEmentaDTO>> GetEmentas() {
+            List<Ementa> Ementas = await _repo.GetEmentas();
 
-            if (ementa == null) return null;
+            return Ementas.Select(x => EmentaListItem(x)).ToList();
+        }
 
-            return new ListarEmentaDTO
+        public async Task<ListarEmentaDTO> GetEmentaById(long id) {
+            Ementa? e = await _repo.GetEmentaById(id);
+            if (e == null)
             {
-                Id = ementa.Id,
-                Frequencia = ementa.Frequencia,
-                DataInicio = ementa.DataInicio,
-                DataFim = ementa.DataFim,
-                TipoRefeicao = ementa.TipoRefeicao,
-                Quantidade = ementa.Quantidade
-            };
+                throw new Exception("Ementa not found");
+            }
+            return EmentaListItem(e);
         }
 
-        // // Método para buscar ementas disponíveis para um tipo de refeição, quantidade > 0 e data específica
-        // public async Task<List<ListarEmentaDTO>> GetEmentaDisponivel(long tipoRefeicaoId, DateTime data)
-        // {
-        //     var ementas = await _repo.GetEmentaByTipoQuantidadeData(tipoRefeicaoId, data);
+public async Task<ListarEmentaDTO> CreateNewEmenta(CriarEmentaDTO info)
+{
+    // Check for provided Refeicoes in the request
+    if (info.Refeicoes == null || !info.Refeicoes.Any())
+    {
+        throw new Exception("ExistingRefeicaoIds must be provided");
+    }
 
-        //     return ementas.Select(e => new ListarEmentaDTO
+    List<Refeicao> refeicoes = new List<Refeicao>();
+
+    // Fetch and add each Refeicao based on provided IDs
+    foreach (var id in info.Refeicoes)
+    {
+        var refeicaoAux = await _context.Refeicao
+            .Include(r => r.Prato) // Ensure Prato is included
+            .Include(r => r.TipoRefeicao) // Ensure TipoRefeicao is included
+            .FirstOrDefaultAsync(r => r.Id == id);
+
+        if (refeicaoAux != null)
+        {
+            // Make sure we are not modifying the original Refeicao
+            // Add the fetched Refeicao
+            refeicoes.Add(refeicaoAux);
+        }
+        else
+        {
+            throw new Exception($"Refeicao with Id {id} not found");
+        }
+    }
+
+    // Create a new Ementa with the fetched Refeicoes
+    Ementa ementa = new Ementa
+    {
+        Frequencia = info.Frequencia,
+        Refeicoes = refeicoes // Here, we're reusing the existing Refeicao instances
+    };
+
+    // Add the Ementa to the database
+    // Save changes will be called later to ensure it's added correctly
+    var createdEmenta = await _repo.AddEmenta(ementa);
+
+    // Return the DTO for the created Ementa
+    return EmentaListItem(createdEmenta);
+}
+
+// Assuming EmentaListItem correctly converts to ListarEmentaDTO
+private ListarEmentaDTO EmentaListItem(Ementa e)
+{
+    return new ListarEmentaDTO
+    {
+        Id = e.Id,
+        Frequencia = e.Frequencia,
+        Refeicoes = e.Refeicoes.Select(r => new ListarRefeicaoDTO
+        {
+            Id = r.Id,
+            Prato = r.Prato, // Ensure this is not null
+            TipoRefeicao = r.TipoRefeicao, // Ensure this is not null
+            Quantidade = r.Quantidade,
+            Data = r.Data
+        }).ToList()
+    };
+}
+
+
+        // private ListarEmentaDTO EmentaListItem(Ementa e) {
+        //     return new ListarEmentaDTO {
+        //         Id = e.Id,
+        //         Frequencia = e.Frequencia,
+        //         Refeicoes = e.Refeicoes
+        //     };
+        // }
+
+
+        // private ListarEmentaDTO EmentaListItem(Ementa e)
+        // {
+        //     return new ListarEmentaDTO
         //     {
         //         Id = e.Id,
         //         Frequencia = e.Frequencia,
-        //         DataInicio = e.DataInicio,
-        //         DataFim = e.DataFim,
-        //         TipoRefeicao = e.TipoRefeicao,
-        //         Quantidade = e.Quantidade
-        //     }).ToList();
+        //         Refeicoes = e.Refeicoes.Select(r => new ListarRefeicaoDTO
+        //         {
+        //             Id = r.Id,
+        //             Prato = r.Prato,  // Safely access the Prato's name
+        //             TipoRefeicao = r.TipoRefeicao, // Safely access the TipoRefeicao's name
+        //             Quantidade = r.Quantidade,
+        //             Data = r.Data
+        //         }).ToList()
+        //     };
         // }
-    
 
-        // Método para adicionar uma nova ementa
-        public async Task<ListarEmentaDTO> AddEmenta(CriarEmentaDTO dto)
+            public async Task<bool> DeleteEmenta(long id)
         {
-            var novaEmenta = new Ementa
+            var ementa = await _context.Ementas.FindAsync(id);
+            if (ementa == null)
             {
-                Frequencia = dto.Frequencia,
-                DataInicio = dto.DataInicio,
-                DataFim = dto.DataFim,
-                TipoRefeicao = dto.TipoRefeicao,
-                Quantidade = dto.Quantidade
-            };
-
-            var addedEmenta = await _repo.AddEmenta(novaEmenta);
-            return new ListarEmentaDTO
-            {
-                Id = addedEmenta.Id,
-                Frequencia = addedEmenta.Frequencia,
-                DataInicio = addedEmenta.DataInicio,
-                DataFim = addedEmenta.DataFim,
-                TipoRefeicao = addedEmenta.TipoRefeicao,
-                Quantidade = addedEmenta.Quantidade
-            };
-        }
-
-
-        public async Task<bool> DeleteEmenta(long id)
-        {
-            var ementa = await _repo.GetEmentaById(id);
-            if (ementa == null) return false;
-
-            await _repo.RemoveEmenta(ementa);
+                return false;
+            }
+            _context.Ementas.Remove(ementa);
+            await _context.SaveChangesAsync();
             return true;
         }
-
-
     }
-
-
-
-
 }
