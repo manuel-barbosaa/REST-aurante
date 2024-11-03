@@ -100,7 +100,7 @@ namespace Cozinha.Controllers{
             }
         }
         // DELETE: api/Refeicao/all
-        [HttpDelete("all")]
+        [HttpDelete("deleteAll")]
         public async Task<IActionResult> DeleteAllRefeicoes()
         {
             await _service.DeleteAllRefeicoes();
