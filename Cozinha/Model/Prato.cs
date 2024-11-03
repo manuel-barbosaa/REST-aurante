@@ -16,6 +16,6 @@ namespace Cozinha.Model;
         public virtual required List<Ingrediente> Ingredientes { get; set; }
 
         // Receita
-        // public string Receita { get; set; }
+        public required string Receita { get; set; }
     }
 
