@@ -67,7 +67,7 @@ namespace Cozinha.Controllers{
         }
 
         // US015 - Remover refeição futura
-        [HttpDelete("{id}/remove-future")]
+        [HttpDelete("{id}/remover")]
         public async Task<IActionResult> RemoverRefeicaoFutura(int id)
         {
             try
