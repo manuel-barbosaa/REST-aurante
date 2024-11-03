@@ -11,5 +11,11 @@ public class CozinhaContext : DbContext
 
     public DbSet<TipoRefeicao> TipoRefeicao{get; set;}
     public DbSet<Refeicao> Refeicao{get;set;}
+    public DbSet<Ementa> Ementa{get;set;}
+    
+    
+
+
+
     
 }
