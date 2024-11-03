@@ -53,7 +53,7 @@ namespace Cozinha.Services {
             }
 
             // Verifica se o TipoPrato existe
-            TipoPrato tipoPrato = await _context.TiposPrato.FindAsync(info.TipoPratoId);
+            TipoPrato? tipoPrato = await _context.TiposPrato.FindAsync(info.TipoPratoId);
             if (tipoPrato == null)
             {
                 throw new Exception("TipoPrato not found");
@@ -89,7 +89,7 @@ namespace Cozinha.Services {
                 IsAtivo = info.IsAtivo,
                 TipoPrato = tipoPrato,
                 Ingredientes = ingredientesToSave,
-                Receita = info.Receita // Adiciona a receita ao prato
+                // Receita = info.Receita // Adiciona a receita ao prato
             };
 
             return PratoDetail(await _repo.AddPrato(newPrato));
@@ -104,7 +104,7 @@ namespace Cozinha.Services {
                 IsAtivo = p.IsAtivo,
                 TipoPrato = p.TipoPrato,
                 Ingredientes = p.Ingredientes,
-                Receita = p.Receita
+                // Receita = p.Receita
             };
         }
 
@@ -118,7 +118,7 @@ namespace Cozinha.Services {
                 IsAtivo = p.IsAtivo,
                 TipoPrato = p.TipoPrato,
                 Ingredientes = p.Ingredientes,
-                Receita = p.Receita
+                // Receita = p.Receita
             };
         }
 
