@@ -145,6 +145,10 @@ namespace Cozinha.Services {
                 Quantidade = refeicao.Quantidade
             };
         }
+        public async Task DeleteAllRefeicoes()
+        {
+            await _repo.DeleteAll();
+        }
 
         
     }

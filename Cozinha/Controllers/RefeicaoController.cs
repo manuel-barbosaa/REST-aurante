@@ -95,6 +95,13 @@ namespace Cozinha.Controllers{
                 return BadRequest(ex.Message);
             }
         }
+        // DELETE: api/Refeicao/all
+        [HttpDelete("all")]
+        public async Task<IActionResult> DeleteAllRefeicoes()
+        {
+            await _service.DeleteAllRefeicoes();
+            return NoContent();
+        }
     
         
     }
