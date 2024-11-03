@@ -38,6 +38,14 @@ namespace Cozinha.Repositories{
             _context.Entry(tipoRefeicao).State = EntityState.Modified;
             await _context.SaveChangesAsync();
         }
+
+
+          public async Task<bool> RemoveTipoRefeicao(TipoRefeicao tr)
+        {
+            _context.TipoRefeicao.Remove(tr);
+            await _context.SaveChangesAsync();
+            return true;
+        }
     }
     } 
     

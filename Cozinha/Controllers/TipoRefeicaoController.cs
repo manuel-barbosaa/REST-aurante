@@ -54,6 +54,15 @@ namespace Cozinha.Controllers
             var tipoRefeicaoAtualizado = await _service.UpdateTipoRefeicao(id, dto);
             return tipoRefeicaoAtualizado == null ? NotFound() : Ok(tipoRefeicaoAtualizado);
         }
+
+           // DELETE: api/TipoPrato/1
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteTipoRefeicao(long id)
+        {
+            bool deleteAction = await _service.DeleteTipoRefeicao(id);
+
+            return deleteAction? Ok() : NotFound();
+        }
     }
 
 

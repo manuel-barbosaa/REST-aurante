@@ -19,10 +19,10 @@ namespace Cozinha.Services{
             return TiposRefeicao.Select(x => TipoRefeicaoListItem(x)).ToList();
         }
 
- private ListarTipoRefeicaoDTO TipoRefeicaoListItem(TipoRefeicao tp) {
+ private ListarTipoRefeicaoDTO TipoRefeicaoListItem(TipoRefeicao tr) {
             return new ListarTipoRefeicaoDTO {
-                Id = tp.Id,
-                Nome = tp.Nome
+                Id = tr.Id,
+                Nome = tr.Nome
 
             };
         }
@@ -98,6 +98,20 @@ public async Task<ListarTipoRefeicaoDTO> DefinirTipoRefeicao(long id, DefinirTip
                 Nome = tipoRefeicao.Nome,
               
             };
+        }
+
+
+         public async Task<bool> DeleteTipoRefeicao(long id)
+        {
+            var tr = await _repo.GetTipoRefeicaoById(id);
+            if (tr == null)
+            {
+                return false;
+            }
+
+            await _repo.RemoveTipoRefeicao(tr);
+
+            return true;
         }
     }
     }
