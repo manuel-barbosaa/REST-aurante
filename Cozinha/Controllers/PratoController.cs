@@ -102,8 +102,8 @@ namespace Cozinha.Controllers
             return NoContent();
         }
         
-        // DELETE: api/Prato/{id}
-        [HttpDelete("{id}")]
+        // DELETE: api/Prato/delete/{id}
+        [HttpDelete("delete/{id}")]
         public async Task<IActionResult> DeletePrato(long id)
         {
             var deleted = await _service.DeletePrato(id);
