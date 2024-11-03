@@ -1,7 +1,7 @@
 namespace Cozinha.Model.DTO;
 
 public class CriarRefeicaoDTO {
-    public int Id { get; set;}
+    public long Id { get; set;}
     public required long Prato { get; set;}
     public required long TipoRefeicao { get; set;}
     public int Quantidade { get; set;}

@@ -106,7 +106,7 @@ namespace Cozinha.Services {
             };
         }
         //Remover uma refeição futura
-        public async Task RemoverRefeicaoFutura(int refeicaoId)
+        public async Task RemoverRefeicaoFutura(long refeicaoId)
         {
             var refeicao = await _repo.GetRefeicaoById(refeicaoId);
             if (refeicao == null)
