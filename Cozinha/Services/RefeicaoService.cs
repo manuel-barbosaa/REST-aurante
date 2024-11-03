@@ -1,6 +1,7 @@
 using Cozinha.Model;
 using Cozinha.Model.DTO;
 using Cozinha.Repositories;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.EntityFrameworkCore;
 
 namespace Cozinha.Services {
@@ -8,34 +9,36 @@ namespace Cozinha.Services {
 
         private  CozinhaContext _context;
         private  RefeicaoRepository _repo;
-        private  PratoRepository _pratoRepo;
 
         public RefeicaoService(CozinhaContext context) {
             _context = context;
             _repo = new RefeicaoRepository(_context);
-            _pratoRepo = new PratoRepository(_context); 
         }
         public async Task<ListarRefeicaoDTO> AddRefeicao(CriarRefeicaoDTO info)
         {
-           // Verificar se o prato existe e está ativo
-            var prato = await _pratoRepo.GetPratoById(info.Id);
-            if (prato == null || !prato.IsAtivo)
+            // Verifica se o TipoPrato existe
+            Prato? prato = await _context.Pratos.FindAsync(info.Prato);
+            if (prato == null)
             {
-                throw new Exception("O prato selecionado não existe ou está inativo.");
+                throw new Exception("Prato não encontrado");
+            } else if (!prato.IsAtivo) {
+                throw new Exception("Prato inativo");
+            }
+
+            TipoRefeicao? tipoRefeicao = await _context.TipoRefeicao.FindAsync(info.TipoRefeicao);
+            if (tipoRefeicao == null) {
+                throw new Exception("Tipo de refeição não encontrado");
             }
 
             // Criação da nova refeição
             var newRefeicao = new Refeicao
             {
-                Id = info.Id,
-                Data = info.data,                    
-                TipoRefeicao = info.tipo,
-                Quantidade = 1,
-                Prato = prato
+                Id = info.Id,                
+                Prato = prato,
+                TipoRefeicao = tipoRefeicao,
+                Quantidade = info.Quantidade,                
+                Data = info.Data,                    
             };
-
-            // Adiciona a refeição ao banco de dados através do repositório
-            var refeicaoCriada = await _repo.AddRefeicao(newRefeicao);
 
             // Converte para DTO para retornar a resposta
             return RefeicaoDetail(await _repo.AddRefeicao(newRefeicao));
