@@ -1,3 +1,31 @@
+commit 581007316e6fdc73634233511bc87100985365a6	refs/heads/main
+Author: manuel barbosa <1220973@isep.ipp.pt>
+Date:   Sun Nov 3 22:50:49 2024 +0000
+
+    correção da logica da ementa
+
+M	Cozinha/Controllers/EmentaController.cs
+M	Cozinha/Database/CozinhaDB
+D	Cozinha/Migrations/20241031115717_CozinhaCreation.Designer.cs
+D	Cozinha/Migrations/20241102193219_UpdatePratoIngredienteRelationship.Designer.cs
+D	Cozinha/Migrations/20241102193219_UpdatePratoIngredienteRelationship.cs
+D	Cozinha/Migrations/20241103024617_UpdateTipoPratoMappingNew.Designer.cs
+D	Cozinha/Migrations/20241103024617_UpdateTipoPratoMappingNew.cs
+D	Cozinha/Migrations/20241103033838_UpdatePratoReceitaa.Designer.cs
+D	Cozinha/Migrations/20241103033838_UpdatePratoReceitaa.cs
+D	Cozinha/Migrations/20241103034612_UpdatePratoReceitaaa.Designer.cs
+D	Cozinha/Migrations/20241103034612_UpdatePratoReceitaaa.cs
+D	Cozinha/Migrations/20241103175154_AddEmentaIdToRefeicao.cs
+R094	Cozinha/Migrations/20241103175154_AddEmentaIdToRefeicao.Designer.cs	Cozinha/Migrations/20241103215249_CozinhaCreation.Designer.cs
+R057	Cozinha/Migrations/20241031115717_CozinhaCreation.cs	Cozinha/Migrations/20241103215249_CozinhaCreation.cs
+M	Cozinha/Migrations/CozinhaContextModelSnapshot.cs
+M	Cozinha/Model/DTO/CriarEmentaDTO.cs
+M	Cozinha/Model/DTO/ListarEmentaDTO.cs
+M	Cozinha/Model/Ementa.cs
+M	Cozinha/Repositories/EmentaRepository.cs
+M	Cozinha/Services/EmentaService.cs
+M	Cozinha/Services/PratoService.cs
+
 commit abf610ec9ed9b6570f8f841ead53d85f3da5d0e4	refs/heads/main
 Author: manuel barbosa <1220973@isep.ipp.pt>
 Date:   Sun Nov 3 19:31:07 2024 +0000

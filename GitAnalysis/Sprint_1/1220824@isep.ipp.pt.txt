@@ -1,4 +1,4 @@
-commit 5cc494aed4e1490aedf4b129de373231086ead93	refs/heads/main (HEAD -> main, origin/main)
+commit 5cc494aed4e1490aedf4b129de373231086ead93	refs/heads/main
 Author: beamsteixeira <1220824@isep.ipp.pt>
 Date:   Sun Nov 3 20:28:23 2024 +0000
 
