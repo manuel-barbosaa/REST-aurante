@@ -1,4 +1,4 @@
-commit c627a59c7d1e39ccc742923b422fc0aa4513adfe	refs/heads/main
+commit c627a59c7d1e39ccc742923b422fc0aa4513adfe	refs/tags/v1.0.0
 Author: Franciscs Soares <1221180@isep.ipp.pt>
 Date:   Sun Nov 3 18:25:12 2024 +0000
 
@@ -6,7 +6,7 @@ Date:   Sun Nov 3 18:25:12 2024 +0000
 
 M	Cozinha/Controllers/IngredienteController.cs
 
-commit 956b6d1388eb65d7831361e076ac43d27d558186	refs/heads/main
+commit 956b6d1388eb65d7831361e076ac43d27d558186	refs/tags/v1.0.0
 Author: Franciscs Soares <1221180@isep.ipp.pt>
 Date:   Sat Nov 2 16:09:04 2024 +0000
 
@@ -14,7 +14,7 @@ Date:   Sat Nov 2 16:09:04 2024 +0000
 
 M	Cozinha/Controllers/IngredienteController.cs
 
-commit 080b4c2aeea213db7ad3206207dcb089901b3689	refs/heads/main
+commit 080b4c2aeea213db7ad3206207dcb089901b3689	refs/tags/v1.0.0
 Author: Franciscs Soares <1221180@isep.ipp.pt>
 Date:   Sat Nov 2 16:06:48 2024 +0000
 
@@ -22,7 +22,7 @@ Date:   Sat Nov 2 16:06:48 2024 +0000
 
 M	Cozinha/Controllers/IngredienteController.cs
 
-commit b4008419d950964146b1b617579a63a5d69a3aa4	refs/heads/main
+commit b4008419d950964146b1b617579a63a5d69a3aa4	refs/tags/v1.0.0
 Author: Franciscs Soares <1221180@isep.ipp.pt>
 Date:   Sat Nov 2 16:02:44 2024 +0000
 
@@ -32,7 +32,7 @@ M	Cozinha/Controllers/IngredienteController.cs
 M	Cozinha/Repositories/IngredienteRepository.cs
 M	Cozinha/Services/Ingrediente/IngredienteService.cs
 
-commit a16e26277441eee0680d2443d7a72a72af125e45	refs/heads/main
+commit a16e26277441eee0680d2443d7a72a72af125e45	refs/tags/v1.0.0
 Author: Franciscs Soares <1221180@isep.ipp.pt>
 Date:   Sat Nov 2 15:06:49 2024 +0000
 
@@ -40,7 +40,7 @@ Date:   Sat Nov 2 15:06:49 2024 +0000
 
 M	Cozinha/Model/DTO/CriarIngredienteDTO.cs
 
-commit e957f3d657ebed7038a8c746f659b61791e9a968	refs/heads/main
+commit e957f3d657ebed7038a8c746f659b61791e9a968	refs/tags/v1.0.0
 Author: Franciscs Soares <1221180@isep.ipp.pt>
 Date:   Fri Nov 1 21:27:09 2024 +0000
 
@@ -48,7 +48,7 @@ Date:   Fri Nov 1 21:27:09 2024 +0000
 
 M	Cozinha/Services/Ingrediente/IngredienteService.cs
 
-commit 6a61d2ea6ec2e5940778b9ec748a6ef3b98a2333	refs/heads/main
+commit 6a61d2ea6ec2e5940778b9ec748a6ef3b98a2333	refs/tags/v1.0.0
 Author: Franciscs Soares <1221180@isep.ipp.pt>
 Date:   Fri Nov 1 21:27:03 2024 +0000
 
@@ -56,7 +56,7 @@ Date:   Fri Nov 1 21:27:03 2024 +0000
 
 M	Cozinha/Repositories/IngredienteRepository.cs
 
-commit fd88e393d2ff8856c08a73f30cf394cf64c44dcb	refs/heads/main
+commit fd88e393d2ff8856c08a73f30cf394cf64c44dcb	refs/tags/v1.0.0
 Author: Franciscs Soares <1221180@isep.ipp.pt>
 Date:   Fri Nov 1 21:27:00 2024 +0000
 
@@ -64,7 +64,7 @@ Date:   Fri Nov 1 21:27:00 2024 +0000
 
 M	Cozinha/Controllers/IngredienteController.cs
 
-commit 80eef0180d2a12ca2f672f916fd090222b88a16c	refs/heads/main
+commit 80eef0180d2a12ca2f672f916fd090222b88a16c	refs/tags/v1.0.0
 Author: Franciscs Soares <1221180@isep.ipp.pt>
 Date:   Fri Nov 1 21:19:24 2024 +0000
 
@@ -72,7 +72,7 @@ Date:   Fri Nov 1 21:19:24 2024 +0000
 
 M	Cozinha/Program.cs
 
-commit 119d4080b8634bb6af711651795572303a3fb196	refs/heads/main
+commit 119d4080b8634bb6af711651795572303a3fb196	refs/tags/v1.0.0
 Author: Franciscs Soares <1221180@isep.ipp.pt>
 Date:   Fri Nov 1 17:59:54 2024 +0000
 
@@ -82,7 +82,7 @@ M	Cozinha/Model/DTO/CriarIngredienteDTO.cs
 M	Cozinha/Model/DTO/ListarIngredienteDTO.cs
 M	Cozinha/Model/Ingrediente.cs
 
-commit 7c6d009ad809f26b21032f8fb7456ebb508def02	refs/heads/main
+commit 7c6d009ad809f26b21032f8fb7456ebb508def02	refs/tags/v1.0.0
 Author: Franciscs Soares <1221180@isep.ipp.pt>
 Date:   Thu Oct 31 11:51:07 2024 +0000
 
@@ -91,7 +91,7 @@ Date:   Thu Oct 31 11:51:07 2024 +0000
 M	Cozinha/Repositories/IngredienteRepository.cs
 M	Cozinha/Services/Ingrediente/IngredienteService.cs
 
-commit bfbe625297fc7150366f5ce311bb2c463fb2bfcc	refs/heads/main
+commit bfbe625297fc7150366f5ce311bb2c463fb2bfcc	refs/tags/v1.0.0
 Author: Franciscs Soares <1221180@isep.ipp.pt>
 Date:   Thu Oct 31 11:50:44 2024 +0000
 
@@ -99,7 +99,7 @@ Date:   Thu Oct 31 11:50:44 2024 +0000
 
 M	Cozinha/Controllers/IngredienteController.cs
 
-commit deb33128ed35b4082f20d1d5cbc951965ae9dae4	refs/heads/main
+commit deb33128ed35b4082f20d1d5cbc951965ae9dae4	refs/tags/v1.0.0
 Author: Franciscs Soares <1221180@isep.ipp.pt>
 Date:   Thu Oct 31 11:50:24 2024 +0000
 
@@ -107,7 +107,7 @@ Date:   Thu Oct 31 11:50:24 2024 +0000
 
 M	Cozinha/Model/Ingrediente.cs
 
-commit 45aa6c377af42bda4917e094d5d559529fbad091	refs/heads/main
+commit 45aa6c377af42bda4917e094d5d559529fbad091	refs/tags/v1.0.0
 Author: Franciscs Soares <1221180@isep.ipp.pt>
 Date:   Thu Oct 31 11:49:59 2024 +0000
 
@@ -116,7 +116,7 @@ Date:   Thu Oct 31 11:49:59 2024 +0000
 M	Cozinha/Model/DTO/CriarIngredienteDTO.cs
 M	Cozinha/Model/DTO/ListarIngredienteDTO.cs
 
-commit 05f6747ae5353821a28436919cac4dbe09e0e8eb	refs/heads/main
+commit 05f6747ae5353821a28436919cac4dbe09e0e8eb	refs/tags/v1.0.0
 Author: Franciscs Soares <1221180@isep.ipp.pt>
 Date:   Thu Oct 31 11:24:47 2024 +0000
 
@@ -124,7 +124,7 @@ Date:   Thu Oct 31 11:24:47 2024 +0000
 
 M	Cozinha/Services/Ingrediente/IngredienteService.cs
 
-commit 70363cf813f4b26684f1af1eb635768b86e5b9cd	refs/heads/main
+commit 70363cf813f4b26684f1af1eb635768b86e5b9cd	refs/tags/v1.0.0
 Author: Franciscs Soares <1221180@isep.ipp.pt>
 Date:   Wed Oct 30 15:16:53 2024 +0000
 
@@ -132,7 +132,7 @@ Date:   Wed Oct 30 15:16:53 2024 +0000
 
 M	Cozinha/Controllers/IngredienteController.cs
 
-commit 9ab40dad3a9ed5828689c4151e23058218757909	refs/heads/main
+commit 9ab40dad3a9ed5828689c4151e23058218757909	refs/tags/v1.0.0
 Author: Franciscs Soares <1221180@isep.ipp.pt>
 Date:   Wed Oct 30 10:17:55 2024 +0000
 
@@ -140,7 +140,7 @@ Date:   Wed Oct 30 10:17:55 2024 +0000
 
 M	Cozinha/Model/DTO/ListarIngredienteDTO.cs
 
-commit 3fe61a6a97e63c3c2f472bb8d4f87807f5cefdbf	refs/heads/main
+commit 3fe61a6a97e63c3c2f472bb8d4f87807f5cefdbf	refs/tags/v1.0.0
 Author: Franciscs Soares <1221180@isep.ipp.pt>
 Date:   Wed Oct 30 10:17:34 2024 +0000
 
@@ -148,7 +148,7 @@ Date:   Wed Oct 30 10:17:34 2024 +0000
 
 M	Cozinha/Model/DTO/CriarIngredienteDTO.cs
 
-commit c4e4b99f8520d7aad17401959868f3cec607f040	refs/heads/main
+commit c4e4b99f8520d7aad17401959868f3cec607f040	refs/tags/v1.0.0
 Author: Franciscs Soares <1221180@isep.ipp.pt>
 Date:   Wed Oct 30 10:16:58 2024 +0000
 
@@ -156,7 +156,7 @@ Date:   Wed Oct 30 10:16:58 2024 +0000
 
 M	Cozinha/Model/Ingrediente.cs
 
-commit 6c960a802781f20dc6a6a6e436ac618df48cd848	refs/heads/main
+commit 6c960a802781f20dc6a6a6e436ac618df48cd848	refs/tags/v1.0.0
 Author: Franciscs Soares <1221180@isep.ipp.pt>
 Date:   Tue Oct 29 23:36:06 2024 +0000
 
@@ -164,7 +164,7 @@ Date:   Tue Oct 29 23:36:06 2024 +0000
 
 M	Cozinha/Services/Ingrediente/IngredienteService.cs
 
-commit e680834ca88da84744167c4fcfecd0a601c30ffe	refs/heads/main
+commit e680834ca88da84744167c4fcfecd0a601c30ffe	refs/tags/v1.0.0
 Author: Franciscs Soares <1221180@isep.ipp.pt>
 Date:   Tue Oct 29 23:35:44 2024 +0000
 
@@ -172,7 +172,7 @@ Date:   Tue Oct 29 23:35:44 2024 +0000
 
 M	Cozinha/Repositories/IngredienteRepository.cs
 
-commit efffd2e417b0f982946a2adde12b2e258c3993cb	refs/heads/main
+commit efffd2e417b0f982946a2adde12b2e258c3993cb	refs/tags/v1.0.0
 Author: Franciscs Soares <1221180@isep.ipp.pt>
 Date:   Tue Oct 29 23:35:27 2024 +0000
 
@@ -180,7 +180,7 @@ Date:   Tue Oct 29 23:35:27 2024 +0000
 
 M	Cozinha/Model/DTO/ListarIngredienteDTO.cs
 
-commit a40f9c373e15282478b2911b38ef6438374866bf	refs/heads/main
+commit a40f9c373e15282478b2911b38ef6438374866bf	refs/tags/v1.0.0
 Author: Franciscs Soares <1221180@isep.ipp.pt>
 Date:   Tue Oct 29 23:35:08 2024 +0000
 
@@ -188,7 +188,7 @@ Date:   Tue Oct 29 23:35:08 2024 +0000
 
 M	Cozinha/Model/Ingrediente.cs
 
-commit 2571b3eed7ff7a8a1115d6e61af30e5a7d0a9253	refs/heads/main
+commit 2571b3eed7ff7a8a1115d6e61af30e5a7d0a9253	refs/tags/v1.0.0
 Author: Franciscs Soares <1221180@isep.ipp.pt>
 Date:   Tue Oct 29 23:34:54 2024 +0000
 
@@ -196,7 +196,7 @@ Date:   Tue Oct 29 23:34:54 2024 +0000
 
 M	Cozinha/Controllers/IngredienteController.cs
 
-commit f38a161c7e6302a96d80a8fb6c55985d1a5db7b8	refs/heads/main
+commit f38a161c7e6302a96d80a8fb6c55985d1a5db7b8	refs/tags/v1.0.0
 Author: Franciscs Soares <1221180@isep.ipp.pt>
 Date:   Tue Oct 29 15:29:00 2024 +0000
 
@@ -204,7 +204,7 @@ Date:   Tue Oct 29 15:29:00 2024 +0000
 
 M	Cozinha/Repositories/IngredienteRepository.cs
 
-commit 71e9a07516302de1e12a4bc7c0020621226d665d	refs/heads/main
+commit 71e9a07516302de1e12a4bc7c0020621226d665d	refs/tags/v1.0.0
 Author: Franciscs Soares <1221180@isep.ipp.pt>
 Date:   Tue Oct 29 15:27:38 2024 +0000
 
@@ -212,7 +212,7 @@ Date:   Tue Oct 29 15:27:38 2024 +0000
 
 M	Cozinha/Controllers/IngredienteController.cs
 
-commit c4b46f75fb3600f418155f48b23aff40018afb77	refs/heads/main
+commit c4b46f75fb3600f418155f48b23aff40018afb77	refs/tags/v1.0.0
 Author: Franciscs Soares <1221180@isep.ipp.pt>
 Date:   Tue Oct 29 15:26:30 2024 +0000
 
@@ -220,7 +220,7 @@ Date:   Tue Oct 29 15:26:30 2024 +0000
 
 M	Cozinha/Repositories/IngredienteRepository.cs
 
-commit fb1ce71e17737304ebdf7daa882ef408f4680d63	refs/heads/main
+commit fb1ce71e17737304ebdf7daa882ef408f4680d63	refs/tags/v1.0.0
 Author: Franciscs Soares <1221180@isep.ipp.pt>
 Date:   Tue Oct 29 15:25:37 2024 +0000
 
@@ -228,7 +228,7 @@ Date:   Tue Oct 29 15:25:37 2024 +0000
 
 M	Cozinha/Services/Ingrediente/IngredienteService.cs
 
-commit 282fdd8e0c7ffb5e8098adb36b790c251c7ee659	refs/heads/main
+commit 282fdd8e0c7ffb5e8098adb36b790c251c7ee659	refs/tags/v1.0.0
 Author: Franciscs Soares <1221180@isep.ipp.pt>
 Date:   Tue Oct 29 15:12:08 2024 +0000
 
@@ -236,7 +236,7 @@ Date:   Tue Oct 29 15:12:08 2024 +0000
 
 M	Cozinha/Model/DTO/ListarIngredienteDTO.cs
 
-commit 4cdc27c24dbc7880a41fb701cdd7579dc466a05c	refs/heads/main
+commit 4cdc27c24dbc7880a41fb701cdd7579dc466a05c	refs/tags/v1.0.0
 Author: Franciscs Soares <1221180@isep.ipp.pt>
 Date:   Tue Oct 29 15:06:28 2024 +0000
 
@@ -244,7 +244,7 @@ Date:   Tue Oct 29 15:06:28 2024 +0000
 
 M	Cozinha/Model/DTO/ListarIngredienteDTO.cs
 
-commit 19c02d6ad3aedf3ec14a0445415154106e7376d5	refs/heads/main
+commit 19c02d6ad3aedf3ec14a0445415154106e7376d5	refs/tags/v1.0.0
 Author: Franciscs Soares <1221180@isep.ipp.pt>
 Date:   Tue Oct 29 14:50:41 2024 +0000
 
@@ -252,7 +252,7 @@ Date:   Tue Oct 29 14:50:41 2024 +0000
 
 M	Cozinha/Controllers/IngredienteController.cs
 
-commit 0faea9cc39935dd2f5dba82caa8d3b7a1135b7b1	refs/heads/main
+commit 0faea9cc39935dd2f5dba82caa8d3b7a1135b7b1	refs/tags/v1.0.0
 Author: Franciscs Soares <1221180@isep.ipp.pt>
 Date:   Tue Oct 29 14:48:06 2024 +0000
 
@@ -260,7 +260,7 @@ Date:   Tue Oct 29 14:48:06 2024 +0000
 
 M	Cozinha/Model/Ingrediente.cs
 
-commit e0be6154a29093ae80d119bac0c3da8f5dbc1e63	refs/heads/main
+commit e0be6154a29093ae80d119bac0c3da8f5dbc1e63	refs/tags/v1.0.0
 Author: Franciscs Soares <1221180@isep.ipp.pt>
 Date:   Sun Oct 27 00:04:21 2024 +0100
 
@@ -268,7 +268,7 @@ Date:   Sun Oct 27 00:04:21 2024 +0100
 
 D	Cozinha/Controllers/WeatherForecastController.cs
 
-commit 65fb7bf73beebe80ad08ad09aa5c9a5d741bfe48	refs/heads/main
+commit 65fb7bf73beebe80ad08ad09aa5c9a5d741bfe48	refs/tags/v1.0.0
 Author: Franciscs Soares <1221180@isep.ipp.pt>
 Date:   Sun Oct 27 00:04:12 2024 +0100
 
@@ -276,7 +276,7 @@ Date:   Sun Oct 27 00:04:12 2024 +0100
 
 M	Cozinha/Cozinha.csproj
 
-commit 21bcbc267cf519b23352f619d59e01a401f41bf4	refs/heads/main
+commit 21bcbc267cf519b23352f619d59e01a401f41bf4	refs/tags/v1.0.0
 Author: Franciscs Soares <1221180@isep.ipp.pt>
 Date:   Sun Oct 27 00:03:46 2024 +0100
 
@@ -284,7 +284,7 @@ Date:   Sun Oct 27 00:03:46 2024 +0100
 
 M	Cozinha/Controllers/IngredienteController.cs
 
-commit 2a547f9fbdefd33d9554da78be0f4ab84951ce89	refs/heads/main
+commit 2a547f9fbdefd33d9554da78be0f4ab84951ce89	refs/tags/v1.0.0
 Author: Franciscs Soares <1221180@isep.ipp.pt>
 Date:   Sun Oct 27 00:03:19 2024 +0100
 
@@ -292,7 +292,7 @@ Date:   Sun Oct 27 00:03:19 2024 +0100
 
 M	Cozinha/Model/DTO/CriarIngredienteDTO.cs
 
-commit c466833119a78d3fc58f099718ec503a2c6a3526	refs/heads/main
+commit c466833119a78d3fc58f099718ec503a2c6a3526	refs/tags/v1.0.0
 Author: Franciscs Soares <1221180@isep.ipp.pt>
 Date:   Sun Oct 27 00:02:56 2024 +0100
 
@@ -300,7 +300,7 @@ Date:   Sun Oct 27 00:02:56 2024 +0100
 
 M	Cozinha/Model/DTO/ListarIngredienteDTO.cs
 
-commit 251aca687e0fb2fbe08349675a650e10647b05fb	refs/heads/main
+commit 251aca687e0fb2fbe08349675a650e10647b05fb	refs/tags/v1.0.0
 Author: Franciscs Soares <1221180@isep.ipp.pt>
 Date:   Sun Oct 27 00:02:31 2024 +0100
 
@@ -308,7 +308,7 @@ Date:   Sun Oct 27 00:02:31 2024 +0100
 
 M	Cozinha/Repositories/IngredienteRepository.cs
 
-commit 25ab2922fc872dfb03cf521d03927d1e8b57ebac	refs/heads/main
+commit 25ab2922fc872dfb03cf521d03927d1e8b57ebac	refs/tags/v1.0.0
 Author: Franciscs Soares <1221180@isep.ipp.pt>
 Date:   Sun Oct 27 00:02:09 2024 +0100
 
@@ -316,7 +316,7 @@ Date:   Sun Oct 27 00:02:09 2024 +0100
 
 M	Cozinha/Services/Ingrediente/IngredienteService.cs
 
-commit 34a1bf656344aff727708444aad5a29752223fb4	refs/heads/main
+commit 34a1bf656344aff727708444aad5a29752223fb4	refs/tags/v1.0.0
 Author: Franciscs Soares <1221180@isep.ipp.pt>
 Date:   Mon Oct 21 16:07:20 2024 +0100
 
@@ -324,7 +324,7 @@ Date:   Mon Oct 21 16:07:20 2024 +0100
 
 A	Cozinha/Controllers/IngredienteController.cs
 
-commit 82d1cc6c00717b775437fda72836a70cdf22fa98	refs/heads/main
+commit 82d1cc6c00717b775437fda72836a70cdf22fa98	refs/tags/v1.0.0
 Author: Franciscs Soares <1221180@isep.ipp.pt>
 Date:   Sat Oct 19 22:41:10 2024 +0100
 
@@ -332,7 +332,7 @@ Date:   Sat Oct 19 22:41:10 2024 +0100
 
 A	Cozinha/Repositories/IngredienteRepository.cs
 
-commit be5fd469c7e13c711c93f58a4681b93302d21373	refs/heads/main
+commit be5fd469c7e13c711c93f58a4681b93302d21373	refs/tags/v1.0.0
 Author: Franciscs Soares <1221180@isep.ipp.pt>
 Date:   Sat Oct 19 22:40:52 2024 +0100
 
@@ -341,7 +341,7 @@ Date:   Sat Oct 19 22:40:52 2024 +0100
 A	Cozinha/Model/DTO/CriarIngredienteDTO.cs
 A	Cozinha/Model/DTO/ListarIngredienteDTO.cs
 
-commit 2050ebab42971b1032b094d7347ddb2590b47cb1	refs/heads/main
+commit 2050ebab42971b1032b094d7347ddb2590b47cb1	refs/tags/v1.0.0
 Author: Franciscs Soares <1221180@isep.ipp.pt>
 Date:   Sat Oct 19 22:39:28 2024 +0100
 
@@ -350,7 +350,7 @@ Date:   Sat Oct 19 22:39:28 2024 +0100
 A	Cozinha/Model/IngredienteContext.cs
 A	Cozinha/Services/Ingrediente/IngredienteService.cs
 
-commit c8bfaa8c572c790fd181781792675639128545c7	refs/heads/main
+commit c8bfaa8c572c790fd181781792675639128545c7	refs/tags/v1.0.0
 Author: Franciscs Soares <1221180@isep.ipp.pt>
 Date:   Sat Oct 19 22:38:27 2024 +0100
 

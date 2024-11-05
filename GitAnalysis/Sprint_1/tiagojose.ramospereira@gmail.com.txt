@@ -1,4 +1,4 @@
-commit cae54d49c2efc39c15626d596049efb602d1612d	refs/heads/main
+commit cae54d49c2efc39c15626d596049efb602d1612d	refs/tags/v1.0.0
 Author: TigasCOD <tiagojose.ramospereira@gmail.com>
 Date:   Wed Oct 23 15:27:38 2024 +0100
 

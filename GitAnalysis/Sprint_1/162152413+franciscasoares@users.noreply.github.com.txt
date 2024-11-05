@@ -1,4 +1,4 @@
-commit 45a300cdbaad920c600ca6dd51c3d72cad7f4c17	refs/heads/main (HEAD -> main, tag: v1.0.0, origin/main)
+commit 45a300cdbaad920c600ca6dd51c3d72cad7f4c17	refs/tags/v1.0.0 (tag: v1.0.0)
 Author: franciscasoares <162152413+franciscasoares@users.noreply.github.com>
 Date:   Mon Nov 4 01:41:29 2024 +0000
 
@@ -9,7 +9,7 @@ Date:   Mon Nov 4 01:41:29 2024 +0000
 A	REST-aurante.postman_collection.json
 A	REST-aurante.postman_test_run.json
 
-commit 622adadab768c3e63872f97ca29d9242ec90810c	refs/heads/main
+commit 622adadab768c3e63872f97ca29d9242ec90810c	refs/tags/v1.0.0
 Author: franciscasoares <162152413+franciscasoares@users.noreply.github.com>
 Date:   Sun Oct 27 16:29:11 2024 +0000
 
@@ -26,7 +26,7 @@ A	Sprint_1_REST-AURANTE/Commits.csv
 A	Sprint_1_REST-AURANTE/report_2024-10-26.html
 A	Sprint_1_REST-AURANTE/tiagojose.ramospereira@gmail.com.txt
 
-commit 96441c414490c367d3d54cc419d8b4e3f8c89f8d	refs/heads/main
+commit 96441c414490c367d3d54cc419d8b4e3f8c89f8d	refs/tags/v1.0.0
 Author: franciscasoares <162152413+franciscasoares@users.noreply.github.com>
 Date:   Wed Oct 23 16:40:51 2024 +0100
 

@@ -1,4 +1,4 @@
-commit 581007316e6fdc73634233511bc87100985365a6	refs/heads/main
+commit 581007316e6fdc73634233511bc87100985365a6	refs/tags/v1.0.0
 Author: manuel barbosa <1220973@isep.ipp.pt>
 Date:   Sun Nov 3 22:50:49 2024 +0000
 
@@ -26,7 +26,7 @@ M	Cozinha/Repositories/EmentaRepository.cs
 M	Cozinha/Services/EmentaService.cs
 M	Cozinha/Services/PratoService.cs
 
-commit abf610ec9ed9b6570f8f841ead53d85f3da5d0e4	refs/heads/main
+commit abf610ec9ed9b6570f8f841ead53d85f3da5d0e4	refs/tags/v1.0.0
 Author: manuel barbosa <1220973@isep.ipp.pt>
 Date:   Sun Nov 3 19:31:07 2024 +0000
 
@@ -39,7 +39,7 @@ M	Cozinha/Repositories/EmentaRepository.cs
 M	Cozinha/Services/EmentaService.cs
 M	Cozinha/Services/PratoService.cs
 
-commit b208d3412f4914b3c62559a1476f62ff25482883	refs/heads/main
+commit b208d3412f4914b3c62559a1476f62ff25482883	refs/tags/v1.0.0
 Author: manuel barbosa <1220973@isep.ipp.pt>
 Date:   Sun Nov 3 14:06:23 2024 +0000
 
@@ -51,7 +51,7 @@ M	Cozinha/Model/DTO/ListarPratoDTO.cs
 M	Cozinha/Model/Prato.cs
 M	Cozinha/Services/PratoService.cs
 
-commit 90c5292aa50872cad11ddd4c43ad1a8d9aac1bac	refs/heads/main
+commit 90c5292aa50872cad11ddd4c43ad1a8d9aac1bac	refs/tags/v1.0.0
 Author: manuel barbosa <1220973@isep.ipp.pt>
 Date:   Sun Nov 3 12:16:56 2024 +0000
 
@@ -61,7 +61,7 @@ M	Cozinha/Database/CozinhaDB
 M	Cozinha/Model/DTO/CriarRefeicaoDTO.cs
 M	Cozinha/Services/RefeicaoService.cs
 
-commit 3a486dce0bae23a8b81eb0023fc55d47224563a1	refs/heads/main
+commit 3a486dce0bae23a8b81eb0023fc55d47224563a1	refs/tags/v1.0.0
 Author: manuel barbosa <1220973@isep.ipp.pt>
 Date:   Sun Nov 3 11:45:32 2024 +0000
 
@@ -74,7 +74,7 @@ M	Cozinha/Model/Prato.cs
 D	Cozinha/Model/Receita.cs
 M	Cozinha/Services/PratoService.cs
 
-commit bc256f98da44377f1bec4ef1b5e7710c12ab6b9a	refs/heads/main
+commit bc256f98da44377f1bec4ef1b5e7710c12ab6b9a	refs/tags/v1.0.0
 Author: manuel barbosa <1220973@isep.ipp.pt>
 Date:   Sat Nov 2 16:50:12 2024 +0000
 
@@ -87,7 +87,7 @@ M	Cozinha/Model/DTO/CriarPratoDTO.cs
 M	Cozinha/Model/DTO/ListarPratoDTO.cs
 M	Cozinha/Services/PratoService.cs
 
-commit fdb5b5e739880bf5d6f5857d27a91ae1becdd8a4	refs/heads/main
+commit fdb5b5e739880bf5d6f5857d27a91ae1becdd8a4	refs/tags/v1.0.0
 Author: manuel barbosa <1220973@isep.ipp.pt>
 Date:   Sat Nov 2 15:45:31 2024 +0000
 
@@ -95,7 +95,7 @@ Date:   Sat Nov 2 15:45:31 2024 +0000
 
 M	Cozinha/.gitignore
 
-commit 2a718671a4a2bb837478dbfedb540f64019311db	refs/heads/main
+commit 2a718671a4a2bb837478dbfedb540f64019311db	refs/tags/v1.0.0
 Author: manuel barbosa <1220973@isep.ipp.pt>
 Date:   Sat Nov 2 15:43:45 2024 +0000
 
@@ -104,7 +104,7 @@ Date:   Sat Nov 2 15:43:45 2024 +0000
 M	Cozinha/Controllers/IngredienteController.cs
 M	Cozinha/Controllers/RefeicaoController.cs
 
-commit abda982e8da1cccb45660326823ebe002eaf9d27	refs/heads/main
+commit abda982e8da1cccb45660326823ebe002eaf9d27	refs/tags/v1.0.0
 Author: manuel barbosa <1220973@isep.ipp.pt>
 Date:   Thu Oct 31 12:01:18 2024 +0000
 
@@ -118,7 +118,7 @@ A	Cozinha/Migrations/20241031115717_CozinhaCreation.Designer.cs
 A	Cozinha/Migrations/20241031115717_CozinhaCreation.cs
 A	Cozinha/Migrations/CozinhaContextModelSnapshot.cs
 
-commit c68a23d35dc2fc83b8f5616ef89fa149f5c6b3ac	refs/heads/main
+commit c68a23d35dc2fc83b8f5616ef89fa149f5c6b3ac	refs/tags/v1.0.0
 Author: manuel barbosa <1220973@isep.ipp.pt>
 Date:   Thu Oct 31 10:21:30 2024 +0000
 
@@ -128,7 +128,7 @@ M	Cozinha/Controllers/TipoPratoController.cs
 M	Cozinha/Repositories/TipoPratoRepository.cs
 M	Cozinha/Services/TipoPratoService.cs
 
-commit 3e6d02da0d3dddd9edb9ae2df36b0a4a0f580b16	refs/heads/main
+commit 3e6d02da0d3dddd9edb9ae2df36b0a4a0f580b16	refs/tags/v1.0.0
 Author: manuel barbosa <1220973@isep.ipp.pt>
 Date:   Thu Oct 31 10:06:47 2024 +0000
 
@@ -140,7 +140,7 @@ R077	Cozinha/Model/DTO/ListarTipoPratoDTO.cs	Cozinha/Model/DTO/TipoPratoDTO.cs
 M	Cozinha/Repositories/TipoPratoRepository.cs
 M	Cozinha/Services/TipoPratoService.cs
 
-commit 94876d7ca2ab60e4261d7c6e5933f31143fdad4e	refs/heads/main
+commit 94876d7ca2ab60e4261d7c6e5933f31143fdad4e	refs/tags/v1.0.0
 Author: manuel barbosa <1220973@isep.ipp.pt>
 Date:   Fri Oct 25 20:29:14 2024 +0100
 
@@ -154,7 +154,7 @@ M	Cozinha/Model/TipoPrato.cs
 A	Cozinha/Repositories/TipoPratoRepository.cs
 A	Cozinha/Services/TipoPratoService.cs
 
-commit 557182e8e586c6a8f5014b24db41c9dc9b68b1d0	refs/heads/main
+commit 557182e8e586c6a8f5014b24db41c9dc9b68b1d0	refs/tags/v1.0.0
 Author: manuel barbosa <1220973@isep.ipp.pt>
 Date:   Fri Oct 25 19:45:32 2024 +0100
 
@@ -163,7 +163,7 @@ Date:   Fri Oct 25 19:45:32 2024 +0100
 A	Cozinha/Model/DTO/DetalharTipoPratoDTO.cs
 A	Cozinha/Model/DTO/ListarTipoPratoDTO.cs
 
-commit 3fc2b5ab87824252da0f5baae272d88cac4958a0	refs/heads/main
+commit 3fc2b5ab87824252da0f5baae272d88cac4958a0	refs/tags/v1.0.0
 Author: manuel barbosa <1220973@isep.ipp.pt>
 Date:   Fri Oct 25 19:44:34 2024 +0100
 
@@ -171,7 +171,7 @@ Date:   Fri Oct 25 19:44:34 2024 +0100
 
 A	Cozinha/Model/TipoPrato.cs
 
-commit 9204b1b58e95a7061f163d650aea0f4c77c20c7e	refs/heads/main
+commit 9204b1b58e95a7061f163d650aea0f4c77c20c7e	refs/tags/v1.0.0
 Author: manuel barbosa <1220973@isep.ipp.pt>
 Date:   Sat Oct 19 16:41:46 2024 +0100
 
