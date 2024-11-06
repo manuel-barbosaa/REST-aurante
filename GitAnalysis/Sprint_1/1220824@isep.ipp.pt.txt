@@ -1,4 +1,4 @@
-commit 5cc494aed4e1490aedf4b129de373231086ead93	refs/heads/main (HEAD -> main, origin/main)
+commit 5cc494aed4e1490aedf4b129de373231086ead93	refs/tags/v1.0.0
 Author: beamsteixeira <1220824@isep.ipp.pt>
 Date:   Sun Nov 3 20:28:23 2024 +0000
 
@@ -6,7 +6,7 @@ Date:   Sun Nov 3 20:28:23 2024 +0000
 
 M	Cozinha/Controllers/PratoController.cs
 
-commit fc561e73a915b12efcf999cb749e5dcbc57e8e7f	refs/heads/main
+commit fc561e73a915b12efcf999cb749e5dcbc57e8e7f	refs/tags/v1.0.0
 Author: beamsteixeira <1220824@isep.ipp.pt>
 Date:   Sun Nov 3 03:53:26 2024 +0000
 
@@ -42,7 +42,7 @@ A	Sprint_1_REST-AURANTE/.idea/encodings.xml
 A	Sprint_1_REST-AURANTE/.idea/indexLayout.xml
 A	Sprint_1_REST-AURANTE/.idea/vcs.xml
 
-commit 7fde1497ec2143d672e665fe21bfc00a04d4b70a	refs/heads/main
+commit 7fde1497ec2143d672e665fe21bfc00a04d4b70a	refs/tags/v1.0.0
 Author: beamsteixeira <1220824@isep.ipp.pt>
 Date:   Tue Oct 29 00:00:38 2024 +0000
 
@@ -52,7 +52,7 @@ M	Cozinha/Controllers/PratoController.cs
 M	Cozinha/Repositories/PratoRepository.cs
 M	Cozinha/Services/PratoService.cs
 
-commit ae06738760a034bfbd297fa2f6444400eebffa18	refs/heads/main
+commit ae06738760a034bfbd297fa2f6444400eebffa18	refs/tags/v1.0.0
 Author: beamsteixeira <1220824@isep.ipp.pt>
 Date:   Mon Oct 28 20:36:03 2024 +0000
 
@@ -63,7 +63,7 @@ M	Cozinha/Cozinha.csproj
 M	Cozinha/Program.cs
 M	Cozinha/Services/PratoService.cs
 
-commit bda4ba75dab6141b1286c46162019fb4777b5fb1	refs/heads/main
+commit bda4ba75dab6141b1286c46162019fb4777b5fb1	refs/tags/v1.0.0
 Author: beamsteixeira <1220824@isep.ipp.pt>
 Date:   Mon Oct 28 19:58:06 2024 +0000
 
@@ -71,7 +71,7 @@ Date:   Mon Oct 28 19:58:06 2024 +0000
 
 M	Cozinha/Services/PratoService.cs
 
-commit c433f4945ed3f065233e2952a7689ee51f361463	refs/heads/main
+commit c433f4945ed3f065233e2952a7689ee51f361463	refs/tags/v1.0.0
 Author: beamsteixeira <1220824@isep.ipp.pt>
 Date:   Mon Oct 28 19:46:56 2024 +0000
 
@@ -79,7 +79,7 @@ Date:   Mon Oct 28 19:46:56 2024 +0000
 
 M	Cozinha/Repositories/PratoRepository.cs
 
-commit 2f714987514dcd0d88b177f132a6c6871c1c0ec0	refs/heads/main
+commit 2f714987514dcd0d88b177f132a6c6871c1c0ec0	refs/tags/v1.0.0
 Author: beamsteixeira <1220824@isep.ipp.pt>
 Date:   Mon Oct 28 19:36:08 2024 +0000
 
@@ -87,7 +87,7 @@ Date:   Mon Oct 28 19:36:08 2024 +0000
 
 A	Cozinha/Model/DTO/CriarPratoDTO.cs
 
-commit b5580e0dfe330b00664b0090fd42869550d5a2e8	refs/heads/main
+commit b5580e0dfe330b00664b0090fd42869550d5a2e8	refs/tags/v1.0.0
 Author: beamsteixeira <1220824@isep.ipp.pt>
 Date:   Sat Oct 26 21:00:04 2024 +0100
 
@@ -101,7 +101,7 @@ A	Cozinha/Model/Prato.cs
 A	Cozinha/Repositories/PratoRepository.cs
 A	Cozinha/Services/PratoService.cs
 
-commit d5e5e6b0b0fe5887b7b0d9acad9db9bf76e01d8d	refs/heads/main
+commit d5e5e6b0b0fe5887b7b0d9acad9db9bf76e01d8d	refs/tags/v1.0.0
 Author: beamsteixeira <1220824@isep.ipp.pt>
 Date:   Thu Oct 24 01:13:51 2024 +0100
 

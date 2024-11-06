@@ -1,0 +1,1432 @@
+{
+	"info": {
+		"_postman_id": "bb8409f7-e5aa-4b3b-9da1-8b814a2cb828",
+		"name": "REST-aurante",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "38431759"
+	},
+	"item": [
+		{
+			"name": "PostIngrediente",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});",
+							"",
+							"",
+							"pm.test(\"Response time is less than 500ms\", function () {",
+							"  pm.expect(pm.response.responseTime).to.be.below(500);",
+							"});",
+							"",
+							"",
+							"pm.test(\"Response has the required fields\", function () {",
+							"    const responseData = pm.response.json();",
+							"    ",
+							"    pm.expect(responseData).to.be.an('object');",
+							"    pm.expect(responseData).to.have.property('id');",
+							"    pm.expect(responseData).to.have.property('nome');",
+							"    pm.expect(responseData).to.have.property('categoriaAlimenticia');",
+							"    pm.expect(responseData).to.have.property('ativo');",
+							"});",
+							"",
+							"",
+							"pm.test(\"ID is a non-negative integer\", function () {",
+							"    const responseData = pm.response.json();",
+							"    ",
+							"    pm.expect(responseData.id).to.be.a('number');",
+							"    pm.expect(responseData.id).to.be.at.least(0);",
+							"",
+							"     pm.collectionVariables.set(\"id\", responseData.id);",
+							"});",
+							"",
+							"",
+							"pm.test(\"Nome and categoriaAlimenticia must be non-empty strings\", function () {",
+							"  const responseData = pm.response.json();",
+							"  ",
+							"  pm.expect(responseData).to.be.an('object');",
+							"  pm.expect(responseData.nome).to.be.a('string').and.to.have.lengthOf.at.least(1, \"Nome should not be empty\");",
+							"  pm.expect(responseData.categoriaAlimenticia).to.be.a('string').and.to.have.lengthOf.at.least(1, \"Categoria alimenticia should not be empty\");",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"nome\": \"banana\",\n  \"categoriaAlimenticia\": \"fruta\",\n  \"ativo\": false\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5230/api/Ingrediente/create"
+			},
+			"response": []
+		},
+		{
+			"name": "GetIngredienteById",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"",
+							"pm.test(\"Response time is less than 500ms\", function () {",
+							"  pm.expect(pm.response.responseTime).to.be.below(500);",
+							"});",
+							"",
+							"",
+							"",
+							"",
+							"pm.test(\"Ensure that the 'id' is a non-negative integer\", function () {",
+							"    const responseData = pm.response.json();",
+							"    ",
+							"    pm.expect(responseData.id).to.exist.and.to.be.a('number').and.to.satisfy((id) => id >= 0, \"ID must be a non-negative integer\");",
+							"});",
+							"",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5230/api/Ingrediente/{{id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "PutIngredienteUnavailableById",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"",
+							"",
+							"pm.test(\"Response time is less than 500ms\", function () {",
+							"  pm.expect(pm.response.responseTime).to.be.below(500);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": "http://localhost:5230/api/Ingrediente/{{id}}/unavailable"
+			},
+			"response": []
+		},
+		{
+			"name": "GetIngredienteUnavailable",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"",
+							"pm.test(\"Response time is less than 500ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:5230/api/Ingrediente/unavailable"
+			},
+			"response": []
+		},
+		{
+			"name": "GetIngredienteAll",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Response should be an array\", function () {",
+							"    pm.expect(pm.response.json()).to.be.an(\"array\");",
+							"});",
+							"",
+							"pm.test(\"Response has the required fields\", function () {",
+							"    const responseData = pm.response.json();",
+							"    ",
+							"    responseData.forEach(item => {",
+							"        pm.expect(item).to.have.property(\"id\");",
+							"        pm.expect(item).to.have.property(\"nome\");",
+							"        pm.expect(item).to.have.property(\"categoriaAlimenticia\");",
+							"        pm.expect(item).to.have.property(\"ativo\");",
+							"    });",
+							"});",
+							"",
+							"",
+							"pm.test(\"Response time is less than 500ms\", function () {",
+							"  pm.expect(pm.response.responseTime).to.be.below(500);",
+							"});",
+							"",
+							"pm.test(\"Content-Type is application/json\", function () {",
+							"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:5230/api/Ingrediente/all"
+			},
+			"response": []
+		},
+		{
+			"name": "PutIngredienteByIdAvailable",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"",
+							"",
+							"pm.test(\"Response time is less than 500ms\", function () {",
+							"  pm.expect(pm.response.responseTime).to.be.below(500);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": "http://localhost:5230/api/Ingrediente/{{id}}/available"
+			},
+			"response": []
+		},
+		{
+			"name": "GetIngredienteAvailable",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"",
+							"pm.test(\"Response time is less than 500ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:5230/api/Ingrediente/available"
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteIngredienteById",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"",
+							"pm.test(\"Response time is less than 500ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);",
+							"});",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:5230/api/Ingrediente/delete/{{id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "PostTipoPrato",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"",
+							"pm.test(\"Response time is less than 500ms\", function () {",
+							"  pm.expect(pm.response.responseTime).to.be.below(500);",
+							"});",
+							"",
+							"",
+							"pm.test(\"Response has the required fields\", function () {",
+							"    const responseData = pm.response.json();",
+							"    ",
+							"    pm.expect(responseData).to.be.an('object');",
+							"    pm.expect(responseData).to.have.property('nome').that.is.a('string');",
+							"});",
+							"",
+							"",
+							"",
+							"",
+							"",
+							"pm.test(\"ID is a non-negative integer\", function () {",
+							"    const responseData = pm.response.json();",
+							"    ",
+							"    pm.expect(responseData.id).to.be.a('number');",
+							"    pm.expect(responseData.id).to.be.at.least(0);",
+							"",
+							"     pm.collectionVariables.set(\"id\", responseData.id);",
+							"});",
+							"",
+							"",
+							"",
+							"",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n  \"nome\": \"bacalhau à brás\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5230/api/TipoPrato"
+			},
+			"response": []
+		},
+		{
+			"name": "GetTipoPratoById",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"",
+							"pm.test(\"Response time is less than 500ms\", function () {",
+							"  pm.expect(pm.response.responseTime).to.be.below(500);",
+							"});",
+							"",
+							"",
+							"",
+							"",
+							"pm.test(\"Ensure that the 'id' is a non-negative integer\", function () {",
+							"    const responseData = pm.response.json();",
+							"    ",
+							"    pm.expect(responseData.id).to.exist.and.to.be.a('number').and.to.satisfy((id) => id >= 0, \"ID must be a non-negative integer\");",
+							"});",
+							"",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:5230/api/TipoPrato/{{id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteTipoPratoById",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"",
+							"pm.test(\"Response time is less than 500ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);",
+							"});",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:5230/api/TipoPrato/{{id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "GetTipoPrato",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Response should be an array\", function () {",
+							"    pm.expect(pm.response.json()).to.be.an(\"array\");",
+							"});",
+							"",
+							"pm.test(\"Response has the required fields\", function () {",
+							"    const responseData = pm.response.json();",
+							"    ",
+							"    pm.expect(responseData).to.be.an('array');",
+							"    ",
+							"    responseData.forEach(item => {",
+							"        pm.expect(item).to.be.an('object');",
+							"        pm.expect(item).to.have.property('nome').that.is.a('string');",
+							"    });",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 500ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);",
+							"});",
+							"",
+							"pm.test(\"Content-Type is application/json\", function () {",
+							"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:5230/api/TipoPrato"
+			},
+			"response": []
+		},
+		{
+			"name": "PostPrato",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Snippet Postman para PostPrato\r",
+							"pm.test(\"Status code is 200 Created\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// Valida o schema da resposta\r",
+							"const schema = {\r",
+							"    \"type\": \"object\",\r",
+							"    \"properties\": {\r",
+							"        \r",
+							"        \"nome\": { \"type\": \"string\" },\r",
+							"        \"isAtivo\": { \"type\": \"boolean\" },\r",
+							"        \"tipoPrato\": { \"type\": \"object\" },\r",
+							"        \"ingredientes\": { \"type\": \"array\" },\r",
+							"        \"receita\": { \"type\": \"string\" }\r",
+							"    },\r",
+							"    \"required\": [ \"nome\", \"isAtivo\", \"tipoPrato\", \"ingredientes\", \"receita\"]\r",
+							"};\r",
+							"\r",
+							"pm.test(\"Response schema is valid\", function () {\r",
+							"    pm.expect(tv4.validate(pm.response.json(), schema)).to.be.true;\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n    \"nome\": \"Cebola Frita\",  \r\n    \"isAtivo\": true,  \r\n    \"tipoPrato\": 2,  \r\n    \"ingredientes\": [\r\n        2\r\n    ],\r\n    \"receita\": \"Fritar cebolas\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5230/api/Prato"
+			},
+			"response": []
+		},
+		{
+			"name": "GetPratoById",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Snippet Postman para GetPrato\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// Verifica o tipo de conteúdo\r",
+							"pm.test(\"Content-Type is application/json\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\", \"application/json; charset=utf-8\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response contains prato data with correct properties\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData).to.have.property(\"id\").that.is.a(\"number\");\r",
+							"    pm.expect(jsonData).to.have.property(\"nome\").that.is.a(\"string\");\r",
+							"    pm.expect(jsonData).to.have.property(\"isAtivo\").that.is.a(\"boolean\");\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:5230/api/Prato/4"
+			},
+			"response": []
+		},
+		{
+			"name": "PutPratoActivate",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Snippet Postman para ActivatePrato\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// Valida contra um valor salvo para verificar consistência (Id salvo previamente)\r",
+							"pm.test(\"Prato ID matches saved value\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.Id).to.eql(pm.environment.get(\"pratoId\"));\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Prato is activated\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.isAtivo).to.be.true;\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": "http://localhost:5230/api/Prato/prato/4/activate"
+			},
+			"response": []
+		},
+		{
+			"name": "GetPratoAvailable",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Snippet Postman para GetAvailablePratos\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// Testa se o tempo de resposta está dentro de um intervalo aceitável (500 ms, por exemplo)\r",
+							"pm.test(\"Response time is within acceptable range\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response contains only active pratos\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    jsonData.forEach(prato => pm.expect(prato.isAtivo).to.be.true);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:5230/api/Prato/available"
+			},
+			"response": []
+		},
+		{
+			"name": "PutPratoDeactivateIngrediente",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Snippet Postman para DeactivateIngrediente\r",
+							"pm.test(\"Status code is 204 No Content\", function () {\r",
+							"    pm.response.to.have.status(204);\r",
+							"});\r",
+							"\r",
+							"// Verifica se o tempo de resposta está dentro do intervalo aceitável\r",
+							"pm.test(\"Response time is within acceptable range\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": "http://localhost:5230/api/Prato/ingrediente/Tomate/deactivate"
+			},
+			"response": []
+		},
+		{
+			"name": "GetPratoAll",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Snippet Postman para GetPratos\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response contains array of pratos\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData).to.be.an(\"array\");\r",
+							"});\r",
+							"\r",
+							"// Verifica o comprimento dos dados (pode ser alterado conforme esperado)\r",
+							"pm.test(\"Data length is greater than 0\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.length).to.be.greaterThan(0);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:5230/api/Prato/all"
+			},
+			"response": []
+		},
+		{
+			"name": "DeletePratoById",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Snippet Postman para DeletePrato\r",
+							"pm.test(\"Status code is 204 No Content\", function () {\r",
+							"    pm.response.to.have.status(204);\r",
+							"});\r",
+							"\r",
+							"// Confirma que o prato foi realmente deletado ao verificar a resposta de um GET subsequente\r",
+							"pm.sendRequest({\r",
+							"    url: pm.environment.get(\"baseUrl\") + \"/api/Prato/\" + pm.variables.get(\"pratoId\"),\r",
+							"    method: \"GET\"\r",
+							"}, function (err, response) {\r",
+							"    pm.test(\"Prato no longer exists\", function () {\r",
+							"        pm.expect(response.status).to.eql(404);\r",
+							"    });\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:5230/api/Prato/delete/1"
+			},
+			"response": []
+		},
+		{
+			"name": "PostTipoRefeicao",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"",
+							"pm.test(\"Response time is less than 500ms\", function () {",
+							"  pm.expect(pm.response.responseTime).to.be.below(500);",
+							"});",
+							"",
+							"",
+							"pm.test(\"Response has the required fields\", function () {",
+							"    const responseData = pm.response.json();",
+							"    ",
+							"    pm.expect(responseData).to.be.an('object');",
+							"    pm.expect(responseData).to.have.property('nome');",
+							"    if (responseData.hasOwnProperty('descricao')) {",
+							"        pm.expect(responseData.descricao).to.be.a('string');",
+							"    }",
+							"});",
+							"",
+							"",
+							"",
+							"pm.test(\"ID is a non-negative integer\", function () {",
+							"    const responseData = pm.response.json();",
+							"    ",
+							"    pm.expect(responseData.id).to.be.a('number');",
+							"    pm.expect(responseData.id).to.be.at.least(0);",
+							"",
+							"     pm.collectionVariables.set(\"id\", responseData.id);",
+							"});",
+							"",
+							"",
+							"",
+							"",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"nome\": \"jantar\",\n  \"descricao\": \"jantar de dieta\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5230/api/TipoRefeicao"
+			},
+			"response": []
+		},
+		{
+			"name": "GetTipoRefeicaoById",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"",
+							"pm.test(\"Response time is less than 500ms\", function () {",
+							"  pm.expect(pm.response.responseTime).to.be.below(500);",
+							"});",
+							"",
+							"",
+							"",
+							"",
+							"pm.test(\"Ensure that the 'id' is a non-negative integer\", function () {",
+							"    const responseData = pm.response.json();",
+							"    ",
+							"    pm.expect(responseData.id).to.exist.and.to.be.a('number').and.to.satisfy((id) => id >= 0, \"ID must be a non-negative integer\");",
+							"});",
+							"",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:5230/api/TipoRefeicao/{{id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteTipoRefeicaoById",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"",
+							"pm.test(\"Response time is less than 500ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);",
+							"});",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:5230/api/TipoRefeicao/{{id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "GetTipoRefeicao",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Response should be an array\", function () {",
+							"    pm.expect(pm.response.json()).to.be.an(\"array\");",
+							"});",
+							"",
+							"pm.test(\"Response has the required fields\", function () {",
+							"    const responseData = pm.response.json();",
+							"    ",
+							"    pm.expect(responseData).to.be.an('array');",
+							"    ",
+							"    responseData.forEach(item => {",
+							"        pm.expect(item).to.have.property(\"nome\");",
+							"",
+							"        // Verifique `descricao` apenas se existir",
+							"        if (item.hasOwnProperty(\"descricao\")) {",
+							"            pm.expect(item.descricao).to.be.a('string');",
+							"        }",
+							"    });",
+							"});",
+							"",
+							"",
+							"",
+							"",
+							"pm.test(\"Response time is less than 500ms\", function () {",
+							"  pm.expect(pm.response.responseTime).to.be.below(500);",
+							"});",
+							"",
+							"pm.test(\"Content-Type is application/json\", function () {",
+							"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:5230/api/TipoRefeicao"
+			},
+			"response": []
+		},
+		{
+			"name": "PostRefeicao",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Successful POST request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+							"});",
+							"",
+							"pm.test(\"Response status code is 200 or 201\", function () {",
+							"    pm.expect(pm.response.to.have.status(200) || pm.response.to.have.status(201));",
+							"});",
+							"",
+							"",
+							"pm.test(\"Response time is less than 2000ms\", function () {",
+							"  pm.expect(pm.response.responseTime).to.be.below(2000);",
+							"});",
+							"",
+							"pm.test(\"Presence of Content-Type header in the response\", function () {",
+							"    pm.expect(pm.response.headers.has(\"Content-Type\")).to.be.true;",
+							"});",
+							"",
+							"",
+							"pm.test(\"Content-Type header is set to application/json\", function () {",
+							"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");",
+							"});",
+							"",
+							"",
+							"pm.test(\"Prato object structure and content validation\", function () {",
+							"    const responseData = pm.response.json();",
+							"    ",
+							"    pm.expect(responseData).to.be.an('object');",
+							"    pm.expect(responseData.prato).to.be.an('object');",
+							"    pm.expect(responseData.prato.id).to.be.a('number');",
+							"    pm.expect(responseData.prato.nome).to.be.a('string');",
+							"    pm.expect(responseData.prato.isAtivo).to.be.a('boolean');",
+							"    pm.expect(responseData.prato.tipoPrato).to.be.null;",
+							"    pm.expect(responseData.prato.ingredientes).to.be.null;",
+							"    pm.expect(responseData.prato.receita).to.be.a('string');",
+							"});",
+							"",
+							"",
+							"pm.test(\"TipoRefeicao object is present and contains expected properties\", function () {",
+							"    const responseData = pm.response.json();",
+							"    ",
+							"    pm.expect(responseData).to.be.an('object');",
+							"    pm.expect(responseData.tipoRefeicao).to.exist;",
+							"    pm.expect(responseData.tipoRefeicao).to.have.property('id');",
+							"    pm.expect(responseData.tipoRefeicao).to.have.property('nome');",
+							"    pm.expect(responseData.tipoRefeicao).to.have.property('descricao');",
+							"});",
+							"",
+							"",
+							"pm.test(\"Data field is in a valid date format\", function () {",
+							"    const responseData = pm.response.json();",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"prato\": 4 ,\n    \"tipoRefeicao\": 4,\n    \"quantidade\": 4,\n    \"data\": \"2024-11-03T16:20:45\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5230/api/Refeicao",
+				"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+			},
+			"response": []
+		},
+		{
+			"name": "GetRefeicaoAll",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response time is less than 600ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(600);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Content-Type header is application/json\", function () {\r",
+							"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Response has the required fields - id, prato, tipoRefeicao, quantidade, and data\", function () {\r",
+							"    const responseData = pm.response.json();\r",
+							"    \r",
+							"    pm.expect(responseData).to.be.an('array');\r",
+							"    responseData.forEach(item => {\r",
+							"        pm.expect(item).to.have.property('id');\r",
+							"        pm.expect(item).to.have.property('prato');\r",
+							"        pm.expect(item).to.have.property('tipoRefeicao');\r",
+							"        pm.expect(item).to.have.property('quantidade');\r",
+							"        pm.expect(item).to.have.property('data');\r",
+							"    });\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Date is in a valid date format\", function () {\r",
+							"    const responseData = pm.response.json();\r",
+							"});\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:5230/api/Refeicao/all"
+			},
+			"response": []
+		},
+		{
+			"name": "GetRefeicaoById",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 2000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response has the required fields\", function () {\r",
+							"    const responseData = pm.response.json();\r",
+							"\r",
+							"    pm.expect(responseData).to.have.property('id');\r",
+							"    pm.expect(responseData).to.have.property('prato');\r",
+							"    pm.expect(responseData).to.have.property('tipoRefeicao');\r",
+							"    pm.expect(responseData).to.have.property('quantidade');\r",
+							"    pm.expect(responseData).to.have.property('data');\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Prato and tipoRefeicao objects have the required fields\", function () {\r",
+							"    const responseData = pm.response.json();\r",
+							"    \r",
+							"    pm.expect(responseData.prato).to.be.an('object');\r",
+							"    pm.expect(responseData.prato.id).to.exist;\r",
+							"    pm.expect(responseData.prato.nome).to.exist;\r",
+							"    \r",
+							"    pm.expect(responseData.tipoRefeicao).to.be.an('object');\r",
+							"    pm.expect(responseData.tipoRefeicao.id).to.exist;\r",
+							"    pm.expect(responseData.tipoRefeicao.nome).to.exist;\r",
+							"    pm.expect(responseData.tipoRefeicao.descricao).to.exist;\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Date is in a valid date format\", function () {\r",
+							"    const responseData = pm.response.json();\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Response time is less than 2000ms\", function () {\r",
+							"  pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:5230/api/Refeicao/7"
+			},
+			"response": []
+		},
+		{
+			"name": "PutRefeiçãoById",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Successful PUT request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 201, 204]);",
+							"});",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});",
+							"",
+							"pm.test(\"Response has the required fields\", function () {",
+							"    const responseData = pm.response.json();",
+							"",
+							"    pm.expect(responseData).to.be.an('object');",
+							"    pm.expect(responseData.id).to.exist;",
+							"    pm.expect(responseData.prato).to.exist;",
+							"    pm.expect(responseData.tipoRefeicao).to.exist;",
+							"    pm.expect(responseData.quantidade).to.exist;",
+							"    pm.expect(responseData.data).to.exist;",
+							"});",
+							"",
+							"",
+							"pm.test(\"Prato object contains required fields\", function () {",
+							"    const responseData = pm.response.json();",
+							"    ",
+							"    pm.expect(responseData.prato).to.be.an('object');",
+							"    pm.expect(responseData.prato).to.include.all.keys('id', 'nome', 'isAtivo', 'tipoPrato', 'ingredientes', 'receita');",
+							"});",
+							"",
+							"",
+							"pm.test(\"Data is in a valid date format\", function () {",
+							"    const responseData = pm.response.json();",
+							"});",
+							"",
+							"",
+							"pm.test(\"Content-Type is application/json\", function () {",
+							"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");",
+							"});",
+							"",
+							"",
+							"pm.test(\"TipoRefeicao object has required fields - id, nome, and descricao\", function () {",
+							"    const responseData = pm.response.json();",
+							"    ",
+							"    pm.expect(responseData).to.be.an('object');",
+							"    pm.expect(responseData.tipoRefeicao.id).to.exist;",
+							"    pm.expect(responseData.tipoRefeicao.nome).to.exist;",
+							"    pm.expect(responseData.tipoRefeicao.descricao).to.exist;",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Add your name in the body\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5230/api/Refeicao/7/servir",
+				"description": "This is a PUT request and it is used to overwrite an existing piece of data. For instance, after you create an entity with a POST request, you may want to modify that later. You can do that using a PUT request. You typically identify the entity being updated by including an identifier in the URL (eg. `id=1`).\n\nA successful PUT request typically returns a `200 OK`, `201 Created`, or `204 No Content` response code."
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteRefeiçãoFutura",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Successful DELETE request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 202, 204]);",
+							"});",
+							"pm.test(\"Status code is 204\", function () {",
+							"    pm.response.to.have.status(204);",
+							"});",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5230/api/Refeicao/4/remover",
+				"description": "This is a DELETE request, and it is used to delete data that was previously created via a POST request. You typically identify the entity being updated by including an identifier in the URL (eg. `id=1`).\n\nA successful DELETE request typically returns a `200 OK`, `202 Accepted`, or `204 No Content` response code."
+			},
+			"response": []
+		},
+		{
+			"name": "PostEmenta",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response status code is 200\", function () {",
+							"    pm.expect(pm.response.code).to.equal(200);",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 500ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);",
+							"});",
+							"",
+							"pm.test(\"Response schema has required fields and data types\", function () {",
+							"    const responseData = pm.response.json();",
+							"    console.log(responseData); // Verifique o conteúdo da resposta",
+							"",
+							"    pm.expect(responseData).to.be.an('object');",
+							"    pm.expect(responseData).to.have.property('id').that.is.a('number');",
+							"    pm.expect(responseData).to.have.property('frequencia').that.is.a('string');",
+							"",
+							"    // Verifique se 'refeicao' existe antes de asserir seu tipo",
+							"    if (responseData.hasOwnProperty('refeicao')) {",
+							"        pm.expect(responseData.refeicao).to.be.a('string');",
+							"    } else {",
+							"        console.warn(\"Propriedade 'refeicao' não encontrada na resposta.\");",
+							"    }",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"frequencia\": \"string\",\n  \"refeicoes\": [\n    7\n  ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5230/api/Ementa"
+			},
+			"response": []
+		},
+		{
+			"name": "GetEmentaById",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response status code is 200\", function () {",
+							"    pm.expect(pm.response.code).to.equal(200);",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 500ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);",
+							"});",
+							"",
+							"pm.test(\"Response schema has required fields and data types\", function () {",
+							"    const responseData = pm.response.json();",
+							"    console.log(responseData); // Imprima a resposta para ver o conteúdo",
+							"",
+							"    pm.expect(responseData).to.be.an('object');",
+							"    pm.expect(responseData).to.have.property('id').that.is.a('number');",
+							"    pm.expect(responseData).to.have.property('frequencia').that.is.a('string');",
+							"",
+							"    // Verifique a propriedade 'name' e ajuste conforme necessário",
+							"    if (responseData.hasOwnProperty('name')) {",
+							"        pm.expect(responseData.name).to.be.a('string');",
+							"    } else {",
+							"        console.warn(\"Propriedade 'name' não encontrada na resposta.\");",
+							"    }",
+							"",
+							"    // Verifique se há uma propriedade alternativa se 'name' não existir",
+							"    if (responseData.hasOwnProperty('descricao')) {",
+							"        pm.expect(responseData.descricao).to.be.a('string');",
+							"    } else {",
+							"        console.warn(\"Propriedade 'descricao' não encontrada na resposta.\");",
+							"    }",
+							"    ",
+							"  ",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:5230/api/Ementa/15"
+			},
+			"response": []
+		},
+		{
+			"name": "GetEmentaAll",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response status code is 200\", function () {",
+							"    pm.expect(pm.response.code).to.equal(200);",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});",
+							"",
+							"pm.test(\"Content-Type is application/json\", function () {",
+							"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:5230/api/Ementa/all"
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "id",
+			"value": ""
+		}
+	]
+}

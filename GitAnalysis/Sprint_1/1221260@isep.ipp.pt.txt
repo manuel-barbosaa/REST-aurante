@@ -1,4 +1,4 @@
-commit 385959f685736379f4df2bb6fcfaa298ce5c4a86	refs/heads/main
+commit 385959f685736379f4df2bb6fcfaa298ce5c4a86	refs/tags/v1.0.0
 Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
 Date:   Sun Nov 3 20:19:12 2024 +0000
 
@@ -11,7 +11,7 @@ M	Cozinha/Model/Ementa.cs
 M	Cozinha/Repositories/EmentaRepository.cs
 M	Cozinha/Services/EmentaService.cs
 
-commit b53f56fdff7c2361d62e25299da4b5bb6a833dcd	refs/heads/main
+commit b53f56fdff7c2361d62e25299da4b5bb6a833dcd	refs/tags/v1.0.0
 Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
 Date:   Sun Nov 3 14:57:54 2024 +0000
 
@@ -20,7 +20,7 @@ Date:   Sun Nov 3 14:57:54 2024 +0000
 M	Cozinha/Model/CozinhaContext.cs
 M	Cozinha/Repositories/EmentaRepository.cs
 
-commit 6d6826f5ce38f6b547e91669636b16a90ab5a34e	refs/heads/main
+commit 6d6826f5ce38f6b547e91669636b16a90ab5a34e	refs/tags/v1.0.0
 Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
 Date:   Sun Nov 3 14:49:55 2024 +0000
 
@@ -29,7 +29,7 @@ Date:   Sun Nov 3 14:49:55 2024 +0000
 M	Cozinha/Controllers/EmentaController.cs
 M	Cozinha/Services/EmentaService.cs
 
-commit 0f583f9a5454b5f57ab91cffb677d400dbb24de8	refs/heads/main
+commit 0f583f9a5454b5f57ab91cffb677d400dbb24de8	refs/tags/v1.0.0
 Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
 Date:   Sun Nov 3 14:32:15 2024 +0000
 
@@ -37,7 +37,7 @@ Date:   Sun Nov 3 14:32:15 2024 +0000
 
 M	Cozinha/Services/RefeicaoService.cs
 
-commit 4efbe25490a28f04a7b0b6c87af12d29dd20dfd4	refs/heads/main
+commit 4efbe25490a28f04a7b0b6c87af12d29dd20dfd4	refs/tags/v1.0.0
 Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
 Date:   Sun Nov 3 14:31:50 2024 +0000
 
@@ -45,7 +45,7 @@ Date:   Sun Nov 3 14:31:50 2024 +0000
 
 A	Cozinha/Services/EmentaService.cs
 
-commit 03d466dcb400d88b0ab72c03ef1e4ecdf0c5e319	refs/heads/main
+commit 03d466dcb400d88b0ab72c03ef1e4ecdf0c5e319	refs/tags/v1.0.0
 Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
 Date:   Sun Nov 3 14:31:40 2024 +0000
 
@@ -53,7 +53,7 @@ Date:   Sun Nov 3 14:31:40 2024 +0000
 
 M	Cozinha/Repositories/RefeicaoRepository.cs
 
-commit 167d5d8c56c94f98ef57d6e813713b1535a79d85	refs/heads/main
+commit 167d5d8c56c94f98ef57d6e813713b1535a79d85	refs/tags/v1.0.0
 Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
 Date:   Sun Nov 3 14:31:10 2024 +0000
 
@@ -61,7 +61,7 @@ Date:   Sun Nov 3 14:31:10 2024 +0000
 
 A	Cozinha/Repositories/EmentaRepository.cs
 
-commit eb46aab72de5395715f7215c41e9fb728ab27741	refs/heads/main
+commit eb46aab72de5395715f7215c41e9fb728ab27741	refs/tags/v1.0.0
 Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
 Date:   Sun Nov 3 14:31:00 2024 +0000
 
@@ -69,7 +69,7 @@ Date:   Sun Nov 3 14:31:00 2024 +0000
 
 M	Cozinha/Model/DTO/ListarEmentaDTO.cs
 
-commit 316b3f6c25bb16a1d0472690d9bb9595415a67bf	refs/heads/main
+commit 316b3f6c25bb16a1d0472690d9bb9595415a67bf	refs/tags/v1.0.0
 Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
 Date:   Sun Nov 3 14:30:49 2024 +0000
 
@@ -77,7 +77,7 @@ Date:   Sun Nov 3 14:30:49 2024 +0000
 
 A	Cozinha/Model/Ementa.cs
 
-commit 4478ed47fbfcc4515ddfe2529691311860da824f	refs/heads/main
+commit 4478ed47fbfcc4515ddfe2529691311860da824f	refs/tags/v1.0.0
 Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
 Date:   Sun Nov 3 14:30:33 2024 +0000
 
@@ -85,7 +85,7 @@ Date:   Sun Nov 3 14:30:33 2024 +0000
 
 M	Cozinha/Model/CozinhaContext.cs
 
-commit 3ea427b71fdb245a7ccd88300d26388d70747ec9	refs/heads/main
+commit 3ea427b71fdb245a7ccd88300d26388d70747ec9	refs/tags/v1.0.0
 Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
 Date:   Sun Nov 3 14:29:57 2024 +0000
 
@@ -93,7 +93,7 @@ Date:   Sun Nov 3 14:29:57 2024 +0000
 
 M	Cozinha/Controllers/RefeicaoController.cs
 
-commit 7c7cc2912e2662082c556794771dcfc5c8cdfb2a	refs/heads/main
+commit 7c7cc2912e2662082c556794771dcfc5c8cdfb2a	refs/tags/v1.0.0
 Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
 Date:   Sun Nov 3 14:29:22 2024 +0000
 
@@ -101,7 +101,7 @@ Date:   Sun Nov 3 14:29:22 2024 +0000
 
 A	Cozinha/Controllers/EmentaController.cs
 
-commit c9904a3588beadc1f9495eecf16e0c314d6744cd	refs/heads/main
+commit c9904a3588beadc1f9495eecf16e0c314d6744cd	refs/tags/v1.0.0
 Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
 Date:   Sun Nov 3 13:41:18 2024 +0000
 
@@ -111,7 +111,7 @@ M	Cozinha/Controllers/TipoRefeicaoController.cs
 M	Cozinha/Repositories/TipoRefeicaoRepository.cs
 M	Cozinha/Services/TipoRefeicaoService.cs
 
-commit 858521520aa9f5ea52b0f6d1b3b416977bde2fbe	refs/heads/main
+commit 858521520aa9f5ea52b0f6d1b3b416977bde2fbe	refs/tags/v1.0.0
 Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
 Date:   Fri Nov 1 14:21:48 2024 +0000
 
@@ -119,7 +119,7 @@ Date:   Fri Nov 1 14:21:48 2024 +0000
 
 M	Cozinha/Controllers/TipoRefeicaoController.cs
 
-commit 4505222dd94780c9bf3708a311f94201456f4b7f	refs/heads/main
+commit 4505222dd94780c9bf3708a311f94201456f4b7f	refs/tags/v1.0.0
 Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
 Date:   Fri Nov 1 14:21:35 2024 +0000
 
@@ -129,7 +129,7 @@ M	Cozinha/Database/CozinhaDB-shm
 M	Cozinha/Database/CozinhaDB-wal
 A	Cozinha/Model/DTO/ListarEmentaDTO.cs
 
-commit f8ebc5b389105b0cbe02bc9cc0621ef6f2e5a671	refs/heads/main
+commit f8ebc5b389105b0cbe02bc9cc0621ef6f2e5a671	refs/tags/v1.0.0
 Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
 Date:   Fri Nov 1 14:21:10 2024 +0000
 
@@ -139,7 +139,7 @@ M	Cozinha/Controllers/RefeicaoController.cs
 M	Cozinha/Repositories/RefeicaoRepository.cs
 M	Cozinha/Services/RefeicaoService.cs
 
-commit 3766f9ee011d259e0450ea2c66ebef2b07c29c24	refs/heads/main
+commit 3766f9ee011d259e0450ea2c66ebef2b07c29c24	refs/tags/v1.0.0
 Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
 Date:   Thu Oct 31 19:16:54 2024 +0000
 
@@ -147,7 +147,7 @@ Date:   Thu Oct 31 19:16:54 2024 +0000
 
 M	Cozinha/Controllers/TipoRefeicaoController.cs
 
-commit 951821e2a0bd159691d908457084c852f716c85f	refs/heads/main
+commit 951821e2a0bd159691d908457084c852f716c85f	refs/tags/v1.0.0
 Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
 Date:   Thu Oct 31 19:05:21 2024 +0000
 
@@ -155,7 +155,7 @@ Date:   Thu Oct 31 19:05:21 2024 +0000
 
 M	Cozinha/Services/RefeicaoService.cs
 
-commit cac1705445f002cc1c58a79add41f004b4ef3aa8	refs/heads/main
+commit cac1705445f002cc1c58a79add41f004b4ef3aa8	refs/tags/v1.0.0
 Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
 Date:   Thu Oct 31 19:05:01 2024 +0000
 
@@ -163,7 +163,7 @@ Date:   Thu Oct 31 19:05:01 2024 +0000
 
 M	Cozinha/Repositories/RefeicaoRepository.cs
 
-commit d807b0914ff999f2caa35378e66d2192c5f26779	refs/heads/main
+commit d807b0914ff999f2caa35378e66d2192c5f26779	refs/tags/v1.0.0
 Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
 Date:   Thu Oct 31 19:04:50 2024 +0000
 
@@ -171,7 +171,7 @@ Date:   Thu Oct 31 19:04:50 2024 +0000
 
 M	Cozinha/Controllers/RefeicaoController.cs
 
-commit 842404059d2a9d9dd05f8749163692dace1d8ca2	refs/heads/main
+commit 842404059d2a9d9dd05f8749163692dace1d8ca2	refs/tags/v1.0.0
 Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
 Date:   Wed Oct 30 10:10:18 2024 +0000
 
@@ -181,7 +181,7 @@ M	Cozinha/Controllers/TipoRefeicaoController.cs
 M	Cozinha/Repositories/TipoRefeicaoRepository.cs
 M	Cozinha/Services/TipoRefeicaoService.cs
 
-commit d56df8c893ffe7eea112b011a65a1cc068b64a4c	refs/heads/main
+commit d56df8c893ffe7eea112b011a65a1cc068b64a4c	refs/tags/v1.0.0
 Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
 Date:   Tue Oct 29 15:54:07 2024 +0000
 
@@ -189,7 +189,7 @@ Date:   Tue Oct 29 15:54:07 2024 +0000
 
 A	Cozinha/Services/TipoRefeicaoService.cs
 
-commit d3c2a2ed00bb4c8b165daa804e8ca8a92aedcb33	refs/heads/main
+commit d3c2a2ed00bb4c8b165daa804e8ca8a92aedcb33	refs/tags/v1.0.0
 Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
 Date:   Tue Oct 29 15:53:41 2024 +0000
 
@@ -197,7 +197,7 @@ Date:   Tue Oct 29 15:53:41 2024 +0000
 
 A	Cozinha/Repositories/TipoRefeicaoRepository.cs
 
-commit a5258f9a9fc0a78153c369c6fd6854c87dddd334	refs/heads/main
+commit a5258f9a9fc0a78153c369c6fd6854c87dddd334	refs/tags/v1.0.0
 Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
 Date:   Tue Oct 29 15:53:27 2024 +0000
 
@@ -205,7 +205,7 @@ Date:   Tue Oct 29 15:53:27 2024 +0000
 
 A	Cozinha/Controllers/TipoRefeicaoController.cs
 
-commit 82b310bdf6c4a05883a877137057f5651255bd21	refs/heads/main
+commit 82b310bdf6c4a05883a877137057f5651255bd21	refs/tags/v1.0.0
 Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
 Date:   Tue Oct 29 15:53:06 2024 +0000
 
@@ -213,7 +213,7 @@ Date:   Tue Oct 29 15:53:06 2024 +0000
 
 A	Cozinha/Model/DTO/DefinirTipoRefeicaoDTO.cs
 
-commit 6f44b4bc079cd7aec3321fbb8e6b2437bb9cfaaf	refs/heads/main
+commit 6f44b4bc079cd7aec3321fbb8e6b2437bb9cfaaf	refs/tags/v1.0.0
 Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
 Date:   Tue Oct 29 15:52:47 2024 +0000
 
@@ -221,7 +221,7 @@ Date:   Tue Oct 29 15:52:47 2024 +0000
 
 A	Cozinha/Model/DTO/ListarTipoRefeicaoDTO.cs
 
-commit 0b4d70773c0ed077418baecea2fc7c967214fcae	refs/heads/main
+commit 0b4d70773c0ed077418baecea2fc7c967214fcae	refs/tags/v1.0.0
 Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
 Date:   Tue Oct 29 15:52:12 2024 +0000
 
@@ -229,7 +229,7 @@ Date:   Tue Oct 29 15:52:12 2024 +0000
 
 M	Cozinha/Model/CozinhaContext.cs
 
-commit ddf31e253880af3676093028a90faee30735090c	refs/heads/main
+commit ddf31e253880af3676093028a90faee30735090c	refs/tags/v1.0.0
 Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
 Date:   Tue Oct 29 15:51:20 2024 +0000
 
@@ -237,7 +237,7 @@ Date:   Tue Oct 29 15:51:20 2024 +0000
 
 A	Cozinha/Model/TipoRefeicao.cs
 
-commit 690f39eb5b580ee683d074ce57cef2b8e8f5bb51	refs/heads/main
+commit 690f39eb5b580ee683d074ce57cef2b8e8f5bb51	refs/tags/v1.0.0
 Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
 Date:   Wed Oct 23 16:25:25 2024 +0100
 

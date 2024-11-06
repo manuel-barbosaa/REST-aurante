@@ -1,0 +1,1439 @@
+{
+	"id": "f22642b8-3ed1-4c5c-a932-cc6e5f84eeb0",
+	"name": "REST-aurante",
+	"timestamp": "2024-11-04T01:39:09.850Z",
+	"collection_id": "38431759-bb8409f7-e5aa-4b3b-9da1-8b814a2cb828",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 105,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-11-04T01:39:08.909Z",
+	"totalFail": 4,
+	"results": [
+		{
+			"id": "c9bf6d38-bade-425c-8b17-de43c466869c",
+			"name": "PostIngrediente",
+			"url": "http://localhost:5230/api/Ingrediente/create",
+			"time": 23,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201": true,
+				"Response time is less than 500ms": true,
+				"Response has the required fields": true,
+				"ID is a non-negative integer": true,
+				"Nome and categoriaAlimenticia must be non-empty strings": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required fields": {
+					"pass": 1,
+					"fail": 0
+				},
+				"ID is a non-negative integer": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Nome and categoriaAlimenticia must be non-empty strings": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				23
+			],
+			"allTests": [
+				{
+					"Status code is 201": true,
+					"Response time is less than 500ms": true,
+					"Response has the required fields": true,
+					"ID is a non-negative integer": true,
+					"Nome and categoriaAlimenticia must be non-empty strings": true
+				}
+			]
+		},
+		{
+			"id": "2a8778c0-8bda-41b3-b76b-9ad72930c242",
+			"name": "GetIngredienteById",
+			"url": "http://localhost:5230/api/Ingrediente/5",
+			"time": 8,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response time is less than 500ms": true,
+				"Ensure that the 'id' is a non-negative integer": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Ensure that the 'id' is a non-negative integer": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				8
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response time is less than 500ms": true,
+					"Ensure that the 'id' is a non-negative integer": true
+				}
+			]
+		},
+		{
+			"id": "2559a5f7-a13a-46e3-af10-51b6559d097a",
+			"name": "PutIngredienteUnavailableById",
+			"url": "http://localhost:5230/api/Ingrediente/5/unavailable",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response time is less than 500ms": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response time is less than 500ms": true
+				}
+			]
+		},
+		{
+			"id": "c9ec3c9b-b819-4a91-bc04-973656afcc27",
+			"name": "GetIngredienteUnavailable",
+			"url": "http://localhost:5230/api/Ingrediente/unavailable",
+			"time": 6,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response time is less than 500ms": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response time is less than 500ms": true
+				}
+			]
+		},
+		{
+			"id": "c4d1d674-9dbd-4261-8a56-044d90860a36",
+			"name": "GetIngredienteAll",
+			"url": "http://localhost:5230/api/Ingrediente/all",
+			"time": 2,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response should be an array": true,
+				"Response has the required fields": true,
+				"Response time is less than 500ms": true,
+				"Content-Type is application/json": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response should be an array": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required fields": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is application/json": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				2
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response should be an array": true,
+					"Response has the required fields": true,
+					"Response time is less than 500ms": true,
+					"Content-Type is application/json": true
+				}
+			]
+		},
+		{
+			"id": "e12b9b44-24ef-4b9c-8d94-f406a10a16ae",
+			"name": "PutIngredienteByIdAvailable",
+			"url": "http://localhost:5230/api/Ingrediente/5/available",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response time is less than 500ms": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response time is less than 500ms": true
+				}
+			]
+		},
+		{
+			"id": "5f9a522c-0253-4c1b-b4bb-a9c415446a4b",
+			"name": "GetIngredienteAvailable",
+			"url": "http://localhost:5230/api/Ingrediente/available",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response time is less than 500ms": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response time is less than 500ms": true
+				}
+			]
+		},
+		{
+			"id": "ee8f7665-fb70-44ce-ac4d-6f7f7b95710e",
+			"name": "DeleteIngredienteById",
+			"url": "http://localhost:5230/api/Ingrediente/delete/5",
+			"time": 26,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 500ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				26
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 500ms": true
+				}
+			]
+		},
+		{
+			"id": "19be386b-ff56-469d-8976-bbc7afb517e6",
+			"name": "PostTipoPrato",
+			"url": "http://localhost:5230/api/TipoPrato",
+			"time": 5,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 500ms": true,
+				"Response has the required fields": true,
+				"ID is a non-negative integer": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required fields": {
+					"pass": 1,
+					"fail": 0
+				},
+				"ID is a non-negative integer": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 500ms": true,
+					"Response has the required fields": true,
+					"ID is a non-negative integer": true
+				}
+			]
+		},
+		{
+			"id": "a1b66090-4648-43b2-8a53-e2f68ab36bcb",
+			"name": "GetTipoPratoById",
+			"url": "http://localhost:5230/api/TipoPrato/5",
+			"time": 2,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response time is less than 500ms": true,
+				"Ensure that the 'id' is a non-negative integer": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Ensure that the 'id' is a non-negative integer": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				2
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response time is less than 500ms": true,
+					"Ensure that the 'id' is a non-negative integer": true
+				}
+			]
+		},
+		{
+			"id": "b6694b64-73a4-40ce-8bc7-50dd3f24d6c3",
+			"name": "DeleteTipoPratoById",
+			"url": "http://localhost:5230/api/TipoPrato/5",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 500ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 500ms": true
+				}
+			]
+		},
+		{
+			"id": "0123eb7f-599c-4566-801f-ac7ef6954544",
+			"name": "GetTipoPrato",
+			"url": "http://localhost:5230/api/TipoPrato",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response should be an array": true,
+				"Response has the required fields": true,
+				"Response time is less than 500ms": true,
+				"Content-Type is application/json": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response should be an array": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required fields": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is application/json": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response should be an array": true,
+					"Response has the required fields": true,
+					"Response time is less than 500ms": true,
+					"Content-Type is application/json": true
+				}
+			]
+		},
+		{
+			"id": "6fcad19d-15b9-4e87-bc8d-1e72ef3e2bed",
+			"name": "PostPrato",
+			"url": "http://localhost:5230/api/Prato",
+			"time": 7,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200 Created": true,
+				"Response schema is valid": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200 Created": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response schema is valid": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				7
+			],
+			"allTests": [
+				{
+					"Status code is 200 Created": true,
+					"Response schema is valid": true
+				}
+			]
+		},
+		{
+			"id": "480a7ee3-938a-459f-b287-8f92715295a3",
+			"name": "GetPratoById",
+			"url": "http://localhost:5230/api/Prato/4",
+			"time": 2,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Content-Type is application/json": true,
+				"Response contains prato data with correct properties": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains prato data with correct properties": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				2
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Content-Type is application/json": true,
+					"Response contains prato data with correct properties": true
+				}
+			]
+		},
+		{
+			"id": "337edaa1-fc90-47ab-bbbf-c8b74189c143",
+			"name": "PutPratoActivate",
+			"url": "http://localhost:5230/api/Prato/prato/4/activate",
+			"time": 5,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Prato ID matches saved value": true,
+				"Prato is activated": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Prato ID matches saved value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Prato is activated": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Prato ID matches saved value": true,
+					"Prato is activated": true
+				}
+			]
+		},
+		{
+			"id": "50fa55e3-a633-4b52-bd2c-0bdb7bcaeea0",
+			"name": "GetPratoAvailable",
+			"url": "http://localhost:5230/api/Prato/available",
+			"time": 7,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is within acceptable range": true,
+				"Response contains only active pratos": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is within acceptable range": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains only active pratos": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				7
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is within acceptable range": true,
+					"Response contains only active pratos": true
+				}
+			]
+		},
+		{
+			"id": "28b76586-7ea3-402b-92ba-81d94dc01c15",
+			"name": "PutPratoDeactivateIngrediente",
+			"url": "http://localhost:5230/api/Prato/ingrediente/Tomate/deactivate",
+			"time": 4,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {
+				"Status code is 204 No Content": true,
+				"Response time is within acceptable range": true
+			},
+			"testPassFailCounts": {
+				"Status code is 204 No Content": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is within acceptable range": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Status code is 204 No Content": true,
+					"Response time is within acceptable range": true
+				}
+			]
+		},
+		{
+			"id": "a79847fb-5c7b-4fe3-a019-c22d20097a74",
+			"name": "GetPratoAll",
+			"url": "http://localhost:5230/api/Prato/all",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response contains array of pratos": true,
+				"Data length is greater than 0": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains array of pratos": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Data length is greater than 0": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response contains array of pratos": true,
+					"Data length is greater than 0": true
+				}
+			]
+		},
+		{
+			"id": "852d4d13-b261-4401-8abf-caede6e55485",
+			"name": "DeletePratoById",
+			"url": "http://localhost:5230/api/Prato/delete/1",
+			"time": 20,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Status code is 204 No Content": false,
+				"Prato no longer exists": false
+			},
+			"testPassFailCounts": {
+				"Status code is 204 No Content": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Prato no longer exists": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				20
+			],
+			"allTests": [
+				{
+					"Status code is 204 No Content": false,
+					"Prato no longer exists": false
+				}
+			]
+		},
+		{
+			"id": "8a8f192e-b140-44b4-9c30-36aeeed997ed",
+			"name": "PostTipoRefeicao",
+			"url": "http://localhost:5230/api/TipoRefeicao",
+			"time": 3,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 500ms": true,
+				"Response has the required fields": true,
+				"ID is a non-negative integer": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required fields": {
+					"pass": 1,
+					"fail": 0
+				},
+				"ID is a non-negative integer": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 500ms": true,
+					"Response has the required fields": true,
+					"ID is a non-negative integer": true
+				}
+			]
+		},
+		{
+			"id": "09aa5647-2733-47b3-bcbd-985382f3e6ac",
+			"name": "GetTipoRefeicaoById",
+			"url": "http://localhost:5230/api/TipoRefeicao/5",
+			"time": 3,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response time is less than 500ms": true,
+				"Ensure that the 'id' is a non-negative integer": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Ensure that the 'id' is a non-negative integer": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response time is less than 500ms": true,
+					"Ensure that the 'id' is a non-negative integer": true
+				}
+			]
+		},
+		{
+			"id": "70f042a1-3165-4b07-b62f-c97e7a775986",
+			"name": "DeleteTipoRefeicaoById",
+			"url": "http://localhost:5230/api/TipoRefeicao/5",
+			"time": 11,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 500ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				11
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 500ms": true
+				}
+			]
+		},
+		{
+			"id": "bae9d564-165b-4a89-a3fb-4152bcba68bc",
+			"name": "GetTipoRefeicao",
+			"url": "http://localhost:5230/api/TipoRefeicao",
+			"time": 3,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response should be an array": true,
+				"Response has the required fields": true,
+				"Response time is less than 500ms": true,
+				"Content-Type is application/json": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response should be an array": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required fields": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is application/json": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response should be an array": true,
+					"Response has the required fields": true,
+					"Response time is less than 500ms": true,
+					"Content-Type is application/json": true
+				}
+			]
+		},
+		{
+			"id": "f0b34134-3774-459f-af19-85fe79c659d1",
+			"name": "PostRefeicao",
+			"url": "http://localhost:5230/api/Refeicao",
+			"time": 5,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Successful POST request": true,
+				"Response status code is 200 or 201": true,
+				"Response time is less than 2000ms": true,
+				"Presence of Content-Type header in the response": true,
+				"Content-Type header is set to application/json": true,
+				"Prato object structure and content validation": true,
+				"TipoRefeicao object is present and contains expected properties": true,
+				"Data field is in a valid date format": true
+			},
+			"testPassFailCounts": {
+				"Successful POST request": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response status code is 200 or 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 2000ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Presence of Content-Type header in the response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is set to application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Prato object structure and content validation": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TipoRefeicao object is present and contains expected properties": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Data field is in a valid date format": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Successful POST request": true,
+					"Response status code is 200 or 201": true,
+					"Response time is less than 2000ms": true,
+					"Presence of Content-Type header in the response": true,
+					"Content-Type header is set to application/json": true,
+					"Prato object structure and content validation": true,
+					"TipoRefeicao object is present and contains expected properties": true,
+					"Data field is in a valid date format": true
+				}
+			]
+		},
+		{
+			"id": "de42f89e-9db1-467e-91aa-9f5a2225e52a",
+			"name": "GetRefeicaoAll",
+			"url": "http://localhost:5230/api/Refeicao/all",
+			"time": 3,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response time is less than 600ms": true,
+				"Response status code is 200": true,
+				"Content-Type header is application/json": true,
+				"Response has the required fields - id, prato, tipoRefeicao, quantidade, and data": true,
+				"Date is in a valid date format": true
+			},
+			"testPassFailCounts": {
+				"Response time is less than 600ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required fields - id, prato, tipoRefeicao, quantidade, and data": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Date is in a valid date format": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"Response time is less than 600ms": true,
+					"Response status code is 200": true,
+					"Content-Type header is application/json": true,
+					"Response has the required fields - id, prato, tipoRefeicao, quantidade, and data": true,
+					"Date is in a valid date format": true
+				}
+			]
+		},
+		{
+			"id": "752db0c4-f286-4ee5-b19b-8619eb5e04a3",
+			"name": "GetRefeicaoById",
+			"url": "http://localhost:5230/api/Refeicao/7",
+			"time": 5,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 2000ms": true,
+				"Response has the required fields": true,
+				"Prato and tipoRefeicao objects have the required fields": true,
+				"Date is in a valid date format": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 2000ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required fields": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Prato and tipoRefeicao objects have the required fields": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Date is in a valid date format": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 2000ms": true,
+					"Response has the required fields": true,
+					"Prato and tipoRefeicao objects have the required fields": true,
+					"Date is in a valid date format": true
+				}
+			]
+		},
+		{
+			"id": "4b976aa6-d02a-410a-b97e-cec8298a73b3",
+			"name": "PutRefeiçãoById",
+			"url": "http://localhost:5230/api/Refeicao/7/servir",
+			"time": 5,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Successful PUT request": true,
+				"Status code is 200": true,
+				"Response time is less than 200ms": true,
+				"Response has the required fields": true,
+				"Prato object contains required fields": true,
+				"Data is in a valid date format": true,
+				"Content-Type is application/json": true,
+				"TipoRefeicao object has required fields - id, nome, and descricao": true
+			},
+			"testPassFailCounts": {
+				"Successful PUT request": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required fields": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Prato object contains required fields": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Data is in a valid date format": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TipoRefeicao object has required fields - id, nome, and descricao": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Successful PUT request": true,
+					"Status code is 200": true,
+					"Response time is less than 200ms": true,
+					"Response has the required fields": true,
+					"Prato object contains required fields": true,
+					"Data is in a valid date format": true,
+					"Content-Type is application/json": true,
+					"TipoRefeicao object has required fields - id, nome, and descricao": true
+				}
+			]
+		},
+		{
+			"id": "9ec35d94-d8ad-486d-ae5d-eaf376f5f15c",
+			"name": "DeleteRefeiçãoFutura",
+			"url": "http://localhost:5230/api/Refeicao/4/remover",
+			"time": 4,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Successful DELETE request": false,
+				"Status code is 204": false,
+				"Response time is less than 200ms": true
+			},
+			"testPassFailCounts": {
+				"Successful DELETE request": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Status code is 204": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Successful DELETE request": false,
+					"Status code is 204": false,
+					"Response time is less than 200ms": true
+				}
+			]
+		},
+		{
+			"id": "477e6111-dacc-4daf-b638-3f3ced35f609",
+			"name": "PostEmenta",
+			"url": "http://localhost:5230/api/Ementa",
+			"time": 7,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response time is less than 500ms": true,
+				"Response schema has required fields and data types": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response schema has required fields and data types": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				7
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response time is less than 500ms": true,
+					"Response schema has required fields and data types": true
+				}
+			]
+		},
+		{
+			"id": "2e08bac6-4206-452e-83a6-176fd692bd45",
+			"name": "GetEmentaById",
+			"url": "http://localhost:5230/api/Ementa/15",
+			"time": 2,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response time is less than 500ms": true,
+				"Response schema has required fields and data types": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response schema has required fields and data types": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				2
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response time is less than 500ms": true,
+					"Response schema has required fields and data types": true
+				}
+			]
+		},
+		{
+			"id": "9b0305e8-3e69-4173-ab66-c8ada1751bd1",
+			"name": "GetEmentaAll",
+			"url": "http://localhost:5230/api/Ementa/all",
+			"time": 7,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response time is less than 200ms": true,
+				"Content-Type is application/json": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is application/json": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				7
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response time is less than 200ms": true,
+					"Content-Type is application/json": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 199,
+	"collection": {
+		"requests": [
+			{
+				"id": "c9bf6d38-bade-425c-8b17-de43c466869c",
+				"method": "POST"
+			},
+			{
+				"id": "2a8778c0-8bda-41b3-b76b-9ad72930c242",
+				"method": "GET"
+			},
+			{
+				"id": "2559a5f7-a13a-46e3-af10-51b6559d097a",
+				"method": "PUT"
+			},
+			{
+				"id": "c9ec3c9b-b819-4a91-bc04-973656afcc27",
+				"method": "GET"
+			},
+			{
+				"id": "c4d1d674-9dbd-4261-8a56-044d90860a36",
+				"method": "GET"
+			},
+			{
+				"id": "e12b9b44-24ef-4b9c-8d94-f406a10a16ae",
+				"method": "PUT"
+			},
+			{
+				"id": "5f9a522c-0253-4c1b-b4bb-a9c415446a4b",
+				"method": "GET"
+			},
+			{
+				"id": "ee8f7665-fb70-44ce-ac4d-6f7f7b95710e",
+				"method": "DELETE"
+			},
+			{
+				"id": "19be386b-ff56-469d-8976-bbc7afb517e6",
+				"method": "POST"
+			},
+			{
+				"id": "a1b66090-4648-43b2-8a53-e2f68ab36bcb",
+				"method": "GET"
+			},
+			{
+				"id": "b6694b64-73a4-40ce-8bc7-50dd3f24d6c3",
+				"method": "DELETE"
+			},
+			{
+				"id": "0123eb7f-599c-4566-801f-ac7ef6954544",
+				"method": "GET"
+			},
+			{
+				"id": "6fcad19d-15b9-4e87-bc8d-1e72ef3e2bed",
+				"method": "POST"
+			},
+			{
+				"id": "480a7ee3-938a-459f-b287-8f92715295a3",
+				"method": "GET"
+			},
+			{
+				"id": "337edaa1-fc90-47ab-bbbf-c8b74189c143",
+				"method": "PUT"
+			},
+			{
+				"id": "50fa55e3-a633-4b52-bd2c-0bdb7bcaeea0",
+				"method": "GET"
+			},
+			{
+				"id": "28b76586-7ea3-402b-92ba-81d94dc01c15",
+				"method": "PUT"
+			},
+			{
+				"id": "a79847fb-5c7b-4fe3-a019-c22d20097a74",
+				"method": "GET"
+			},
+			{
+				"id": "852d4d13-b261-4401-8abf-caede6e55485",
+				"method": "DELETE"
+			},
+			{
+				"id": "8a8f192e-b140-44b4-9c30-36aeeed997ed",
+				"method": "POST"
+			},
+			{
+				"id": "09aa5647-2733-47b3-bcbd-985382f3e6ac",
+				"method": "GET"
+			},
+			{
+				"id": "70f042a1-3165-4b07-b62f-c97e7a775986",
+				"method": "DELETE"
+			},
+			{
+				"id": "bae9d564-165b-4a89-a3fb-4152bcba68bc",
+				"method": "GET"
+			},
+			{
+				"id": "f0b34134-3774-459f-af19-85fe79c659d1",
+				"method": "POST"
+			},
+			{
+				"id": "de42f89e-9db1-467e-91aa-9f5a2225e52a",
+				"method": "GET"
+			},
+			{
+				"id": "752db0c4-f286-4ee5-b19b-8619eb5e04a3",
+				"method": "GET"
+			},
+			{
+				"id": "4b976aa6-d02a-410a-b97e-cec8298a73b3",
+				"method": "PUT"
+			},
+			{
+				"id": "9ec35d94-d8ad-486d-ae5d-eaf376f5f15c",
+				"method": "DELETE"
+			},
+			{
+				"id": "477e6111-dacc-4daf-b638-3f3ced35f609",
+				"method": "POST"
+			},
+			{
+				"id": "2e08bac6-4206-452e-83a6-176fd692bd45",
+				"method": "GET"
+			},
+			{
+				"id": "9b0305e8-3e69-4173-ab66-c8ada1751bd1",
+				"method": "GET"
+			}
+		]
+	}
+}

@@ -1,4 +1,4 @@
-commit e2c3fd4e2d67d23232731cab390746504ce7b7b7	refs/heads/main
+commit e2c3fd4e2d67d23232731cab390746504ce7b7b7	refs/tags/v1.0.0
 Author: Tiago Pereira <1221034@isep.ipp.pt>
 Date:   Sun Nov 3 18:39:56 2024 +0000
 
@@ -6,7 +6,7 @@ Date:   Sun Nov 3 18:39:56 2024 +0000
 
 M	Cozinha/Controllers/RefeicaoController.cs
 
-commit ad4dfa817e6a8459c0394832181638e08ce1664a	refs/heads/main
+commit ad4dfa817e6a8459c0394832181638e08ce1664a	refs/tags/v1.0.0
 Author: Tiago Pereira <1221034@isep.ipp.pt>
 Date:   Sun Nov 3 18:27:24 2024 +0000
 
@@ -14,7 +14,7 @@ Date:   Sun Nov 3 18:27:24 2024 +0000
 
 M	Cozinha/Repositories/RefeicaoRepository.cs
 
-commit 1c811e39c58bc284ba32509659e6855c4b4766d4	refs/heads/main
+commit 1c811e39c58bc284ba32509659e6855c4b4766d4	refs/tags/v1.0.0
 Author: Tiago Pereira <1221034@isep.ipp.pt>
 Date:   Sun Nov 3 18:06:47 2024 +0000
 
@@ -22,7 +22,7 @@ Date:   Sun Nov 3 18:06:47 2024 +0000
 
 M	Cozinha/Controllers/RefeicaoController.cs
 
-commit 0634d944901dc2ba19e4cdd71d293cb07a3c4436	refs/heads/main
+commit 0634d944901dc2ba19e4cdd71d293cb07a3c4436	refs/tags/v1.0.0
 Author: Tiago Pereira <1221034@isep.ipp.pt>
 Date:   Sun Nov 3 17:53:51 2024 +0000
 
@@ -33,7 +33,7 @@ A	Cozinha/Migrations/20241103175154_AddEmentaIdToRefeicao.Designer.cs
 A	Cozinha/Migrations/20241103175154_AddEmentaIdToRefeicao.cs
 M	Cozinha/Migrations/CozinhaContextModelSnapshot.cs
 
-commit dfd2e754397cbb776d5dae08fd8bdb786edd3b7c	refs/heads/main
+commit dfd2e754397cbb776d5dae08fd8bdb786edd3b7c	refs/tags/v1.0.0
 Author: Tiago Pereira <1221034@isep.ipp.pt>
 Date:   Sun Nov 3 17:47:56 2024 +0000
 
@@ -45,7 +45,7 @@ M	Cozinha/Model/Refeicao.cs
 M	Cozinha/Repositories/RefeicaoRepository.cs
 M	Cozinha/Services/RefeicaoService.cs
 
-commit b04299717ae166f5fc0585377dd5a7a9c4b382fa	refs/heads/main
+commit b04299717ae166f5fc0585377dd5a7a9c4b382fa	refs/tags/v1.0.0
 Author: Tiago Pereira <1221034@isep.ipp.pt>
 Date:   Sun Nov 3 14:54:11 2024 +0000
 
@@ -54,7 +54,7 @@ Date:   Sun Nov 3 14:54:11 2024 +0000
 M	Cozinha/Controllers/RefeicaoController.cs
 M	Cozinha/Database/CozinhaDB
 
-commit 913921cbe962a325b3231c1c9c8dbe1c153549ac	refs/heads/main
+commit 913921cbe962a325b3231c1c9c8dbe1c153549ac	refs/tags/v1.0.0
 Author: Tiago Pereira <1221034@isep.ipp.pt>
 Date:   Sun Nov 3 14:36:30 2024 +0000
 
@@ -64,7 +64,7 @@ M	Cozinha/Controllers/RefeicaoController.cs
 M	Cozinha/Repositories/RefeicaoRepository.cs
 M	Cozinha/Services/RefeicaoService.cs
 
-commit b99829e61dde9441a0a96314be6bda8a315b7ffc	refs/heads/main
+commit b99829e61dde9441a0a96314be6bda8a315b7ffc	refs/tags/v1.0.0
 Author: Tiago Pereira <1221034@isep.ipp.pt>
 Date:   Sun Nov 3 14:01:42 2024 +0000
 
@@ -74,7 +74,7 @@ M	Cozinha/Controllers/RefeicaoController.cs
 M	Cozinha/Repositories/RefeicaoRepository.cs
 M	Cozinha/Services/RefeicaoService.cs
 
-commit 1d882935f2ee4e8a174b279dfff4ac0aa78aea63	refs/heads/main
+commit 1d882935f2ee4e8a174b279dfff4ac0aa78aea63	refs/tags/v1.0.0
 Author: Tiago Pereira <1221034@isep.ipp.pt>
 Date:   Fri Nov 1 16:31:03 2024 +0000
 
@@ -84,7 +84,7 @@ M	Cozinha/Controllers/RefeicaoController.cs
 M	Cozinha/Repositories/RefeicaoRepository.cs
 M	Cozinha/Services/RefeicaoService.cs
 
-commit 1ecb032aae8b6cd68cc7b4ac3314e514d0a434ec	refs/heads/main
+commit 1ecb032aae8b6cd68cc7b4ac3314e514d0a434ec	refs/tags/v1.0.0
 Author: Tiago Pereira <1221034@isep.ipp.pt>
 Date:   Thu Oct 31 15:49:16 2024 +0000
 
@@ -96,7 +96,7 @@ M	Cozinha/Model/Refeicao.cs
 M	Cozinha/Repositories/RefeicaoRepository.cs
 M	Cozinha/Services/RefeicaoService.cs
 
-commit cc9ed06f317394dbf606e62a39fa9399cfddb0d7	refs/heads/main
+commit cc9ed06f317394dbf606e62a39fa9399cfddb0d7	refs/tags/v1.0.0
 Author: Tiago Pereira <1221034@isep.ipp.pt>
 Date:   Thu Oct 31 15:08:58 2024 +0000
 
@@ -108,7 +108,7 @@ A	Cozinha/Model/DTO/CriarRefeicaoDTO.cs
 A	Cozinha/Model/Refeicao.cs
 M	Cozinha/Repositories/RefeicaoRepository.cs
 
-commit 4c9e7489afb4f9ef3130672b91eed5d0c5e7f282	refs/heads/main
+commit 4c9e7489afb4f9ef3130672b91eed5d0c5e7f282	refs/tags/v1.0.0
 Author: Tiago Pereira <1221034@isep.ipp.pt>
 Date:   Thu Oct 31 12:21:42 2024 +0000
 
@@ -117,7 +117,7 @@ Date:   Thu Oct 31 12:21:42 2024 +0000
 A	Cozinha/Repositories/RefeicaoRepository.cs
 A	Cozinha/Services/RefeicaoService.cs
 
-commit e387852725c3af96082cbae19332de167fc912b8	refs/heads/main
+commit e387852725c3af96082cbae19332de167fc912b8	refs/tags/v1.0.0
 Author: TiagoPereira32 <1221034@isep.ipp.pt>
 Date:   Wed Oct 23 14:57:36 2024 +0100
 
