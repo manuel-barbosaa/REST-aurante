@@ -4,7 +4,7 @@ var app = express();
 // Persistence
 var mongoose = require('mongoose');
 mongoose.set('strictQuery', true);
-mongoose.connect('mongodb+srv://<username>:<password>@cluster0.mongodb.net/?retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://admin:sinf2@restaurante.wnyvm.mongodb.net/?retryWrites=true&w=majority&appName=RESTaurante', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
