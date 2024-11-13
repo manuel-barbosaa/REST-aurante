@@ -1,5 +1,5 @@
  
-const Cliente = require('../models/cliente');
+const Cliente = require('../Model/cliente');
 
 // Função para validar a existência de um cliente pelo NIF - UC3
 const validarClientePorNif = async (nif) => {
