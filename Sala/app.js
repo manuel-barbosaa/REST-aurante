@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express();
 
-// Persistence
+// Persistence================================================================
 var mongoose = require('mongoose');
 mongoose.set('strictQuery', true);
 mongoose.connect('mongodb+srv://admin:sinf2@restaurante.wnyvm.mongodb.net/?retryWrites=true&w=majority&appName=RESTaurante', {
@@ -12,21 +12,24 @@ mongoose.connect('mongodb+srv://admin:sinf2@restaurante.wnyvm.mongodb.net/?retry
 .catch(error => console.log('Erro ao conectar ao MongoDB:', error));
 
 
-// Parser 
+// Parser=====================================================================
 var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 
-// Middleware
+// Middleware=================================================================
 var mWare = require('./middleware');
 app.use(mWare);
 
+// Routing ===============================================
+var clientRouter = require('./routes/clienteRoutes');
+app.use('/api/clientes', clientRouter);
+
 var port = 8080;
-app.listen(port);
-console.log('---------------' + '\nUsing port ' + port + '\n---------------');
+app.listen(port, () => {
+    console.log('---------------' + '\nUsing port ' + port + '\n---------------');
+});
 
 module.exports = app;
 
-const adminRoutes = require('./routes/admin');
-app.use('/api/admin', adminRoutes);
 

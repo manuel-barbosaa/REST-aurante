@@ -1,4 +1,8 @@
 var express = require('express');
 var router = express.Router();
 
-const ctr = require('../controllers/clienteController');
+const clienteController = require('../controllers/clienteController');
+
+router.post('/', clienteController.createCliente);
+
+module.exports = router;
