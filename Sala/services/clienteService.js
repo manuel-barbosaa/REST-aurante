@@ -35,5 +35,8 @@ exports.getClienteSaldo = async function (nif) {
 }
 
 exports.deposit = async function (clienteId, quantia) {
+    if (quantia <= 0) {
+        return false;
+    }
     return await ClienteRepo.updateSaldo(clienteId, quantia);
-} 
+}
