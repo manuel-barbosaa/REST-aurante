@@ -17,6 +17,16 @@ exports.createCliente= async function (req, res){
     }
 }
 
+exports.getClienteByNIF = async function (req, res) {
+    const result = await ClienteService.getClienteByNIF(req.params.nif);
+
+    if (!result) {
+        res.status(204).json({ error: 'Cliente não encontrado' });
+    } else {
+        res.status(200).json(result);
+    }
+}
+
 exports.deposit = async function (req, res) {
     const { id } = req.params;
     const { quantia } = req.body;
