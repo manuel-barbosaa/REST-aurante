@@ -1,4 +1,5 @@
 const ClienteModel = require('../models/cliente');
+const { getClienteByNIF } = require('../services/clienteService');
 
 exports.getClientes = async function() {
     return ClienteModel.find();
@@ -23,16 +24,23 @@ exports.getClienteSaldo = async function (nif) {
     return cliente ? { saldo: cliente.saldo } : null;
 }
 
-exports.updateSaldo = async function(clienteId, quantia) {
+exports.updateSaldo = async function (clienteNIF, quantia) {
     try {
-        const result = await ClienteModel.findByIdAndUpdate(
-            clienteId,
-            { $inc: { saldo: quantia } },
-            { new: true }
-        );
+        // Usando o método getClienteByNIF para buscar o cliente
+        const cliente = await this.getClienteByNIF(clienteNIF);
+        
+        if (!cliente) {
+            return false;
+        }
 
-        return result !== null;
+
+        cliente.saldo += quantia;
+
+        
+        await cliente.save();
+
+        return cliente; 
     } catch (err) {
-        return false;
+       return false;
     }
 }
