@@ -8,11 +8,9 @@ exports.getClientes = async function () {
     allClientes.forEach(
         (i) => {
             iList.push({
-                'id': i._id,
                 'nome': i.nome,
                 'nif': i.nif,
                 'email': i.email,
-                'saldo': i.saldo
             })
         }
     );
