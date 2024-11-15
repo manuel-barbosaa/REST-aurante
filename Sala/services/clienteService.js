@@ -30,6 +30,10 @@ exports.getClienteByNIF = async function (nif) {
     return await ClienteRepo.getClienteByNIF(nif);
 }
 
+exports.getClienteSaldo = async function (nif) {
+    return await ClienteRepo.getClienteSaldo(nif);
+}
+
 exports.deposit = async function (clienteId, quantia) {
     return await ClienteRepo.updateSaldo(clienteId, quantia);
 } 
