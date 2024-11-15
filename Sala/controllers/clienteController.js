@@ -38,9 +38,9 @@ exports.getClienteSaldo = async function (req, res) {
 }
 
 exports.deposit = async function (req, res) {
-    const { id } = req.params;
+    const {nif} = req.params;
     const { quantia } = req.body;
-    const result = await ClienteService.deposit(id, parseFloat(quantia));
+    const result = await ClienteService.deposit(nif, parseFloat(quantia));
 
     if (result) {
         return res.status(200).json({ message: 'Depósito efetuado com sucesso' });
