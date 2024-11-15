@@ -1,7 +1,7 @@
 const ClienteModel = require('../models/cliente');
 
 exports.getClientes = async function() {
-    return await ClienteModel.find({}, 'nome nif email');
+    return ClienteModel.find();
 }
 
 exports.createCliente = async function (clienteData){
