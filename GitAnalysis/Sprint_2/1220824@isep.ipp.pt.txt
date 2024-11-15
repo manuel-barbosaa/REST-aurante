@@ -1,0 +1,48 @@
+commit 41d74ef9c5e9cb77316e9c42c8775de269c6aa21	refs/heads/main
+Author: beamsteixeira <1220824@isep.ipp.pt>
+Date:   Wed Nov 13 23:06:58 2024 +0000
+
+    feat: criação do controller, model, repository, routes, service do cliente. Implementação do US001(Criar Cliente)
+
+M	Sala/app.js
+M	Sala/controllers/clienteController.js
+M	Sala/models/cliente.js
+M	Sala/repositories/clienteRepository.js
+M	Sala/routes/clienteRoutes.js
+M	Sala/services/clienteService.js
+
+commit 33069cfee318840624591f46d9d7bac38b295b94	refs/heads/main
+Author: beamsteixeira <1220824@isep.ipp.pt>
+Date:   Tue Nov 12 14:43:04 2024 +0000
+
+    feat: mongodb connection string e dependencia
+
+M	Sala/app.js
+M	Sala/package-lock.json
+M	Sala/package.json
+
+commit 28d8cef01997bfe3c373eef44dd529da70799abe	refs/heads/main
+Author: beamsteixeira <1220824@isep.ipp.pt>
+Date:   Mon Nov 11 23:40:44 2024 +0000
+
+    feat: endpoint para registar um novo cliente(US001)
+
+M	Sala/routes/admin.js
+
+commit 2c29f30e8a6fd3cb919b8ea6a6caa45a1b76a03e	refs/heads/main
+Author: beamsteixeira <1220824@isep.ipp.pt>
+Date:   Mon Nov 11 23:35:24 2024 +0000
+
+    feat:criação do models/cliente.js, lógica conexão ao MongoDB, criação do routes/admin.js, importação do router no app.js
+
+A	Cozinha/Migrations/20241103205344_UpdatePratoRefeicao.Designer.cs
+A	Cozinha/Migrations/20241103205344_UpdatePratoRefeicao.cs
+A	Cozinha/Migrations/20241103210728_UpdatePratoRefeicaoppp.Designer.cs
+A	Cozinha/Migrations/20241103210728_UpdatePratoRefeicaoppp.cs
+A	Cozinha/Migrations/20241103212032_UpdatePratoRefeicaopppijuhby.Designer.cs
+A	Cozinha/Migrations/20241103212032_UpdatePratoRefeicaopppijuhby.cs
+A	Cozinha/Migrations/20241103212937_UpdatePratoRefeicaopppijuhbyjh.Designer.cs
+A	Cozinha/Migrations/20241103212937_UpdatePratoRefeicaopppijuhbyjh.cs
+A	Sala/Model/cliente.js
+M	Sala/app.js
+A	Sala/routes/admin.js

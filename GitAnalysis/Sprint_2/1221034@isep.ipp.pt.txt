@@ -1,0 +1,8 @@
+commit 2ff43d0e69ed72452c504fa8302fae14c3a57d8c	refs/heads/main
+Author: Tiago Pereira <1221034@isep.ipp.pt>
+Date:   Wed Nov 13 15:42:03 2024 +0000
+
+    Criação de ficheiros funcionário
+
+A	Sala/Model/funcionario.js
+A	Sala/routes/funcionario.js

@@ -1,0 +1,23 @@
+commit 5bc6127605977cc1a9208db4ecbd071a6bc018de	refs/heads/main
+Author: Franciscs Soares <1221180@isep.ipp.pt>
+Date:   Wed Nov 13 00:39:58 2024 +0000
+
+    Validar o cliente pelo nif e ter acesso às suas informações
+
+A	Sala/routes/cliente.js
+
+commit c39ba64ef71b27cb9286eb1a99715f5a87b9f0c4	refs/heads/main
+Author: Franciscs Soares <1221180@isep.ipp.pt>
+Date:   Wed Nov 13 00:39:12 2024 +0000
+
+    correção caminho Model
+
+M	Sala/Controller/clienteController.js
+
+commit 160914a4ccde170d66d7258e7cc52363daeea4a6	refs/heads/main
+Author: Franciscs Soares <1221180@isep.ipp.pt>
+Date:   Wed Nov 13 00:35:55 2024 +0000
+
+    validar a existência de um cliente pelo nif e obter as suas informações
+
+A	Sala/Controller/clienteController.js
