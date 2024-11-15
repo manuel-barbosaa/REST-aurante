@@ -27,6 +27,16 @@ exports.getClienteByNIF = async function (req, res) {
     }
 }
 
+exports.getClienteSaldo = async function (req, res) {
+    const result = await ClienteService.getClienteSaldo(req.params.nif);
+
+    if (!result) {
+        res.status(204).json({ error: 'Cliente não encontrado' });
+    } else {
+        res.status(200).json(result);
+    }
+}
+
 exports.deposit = async function (req, res) {
     const { id } = req.params;
     const { quantia } = req.body;
