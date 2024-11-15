@@ -6,7 +6,7 @@ const clienteController = require('../controllers/clienteController');
 router.post('/clientes', clienteController.createCliente);
 router.patch('/clientes/:nif/deposit', clienteController.deposit)
 router.get('/clientes/', clienteController.getClientes);
-router.get('/:nif', clienteController.getClienteByNIF);
-router.get('/:nif/saldo', clienteController.getClienteSaldo);
+router.get('clientes/:nif', clienteController.getClienteByNIF);
+router.get('clientes/:nif/saldo', clienteController.getClienteSaldo);
 
 module.exports = router;
