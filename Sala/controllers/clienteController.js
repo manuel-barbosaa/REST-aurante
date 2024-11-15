@@ -18,6 +18,8 @@ exports.createCliente= async function (req, res){
 }
 
 exports.getClienteByNIF = async function (req, res) {
+    console.log("NIF recebido:", req.params.nif); // Log do parâmetro
+    try{
     const result = await ClienteService.getClienteByNIF(req.params.nif);
 
     if (!result) {
@@ -25,7 +27,11 @@ exports.getClienteByNIF = async function (req, res) {
     } else {
         res.status(200).json(result);
     }
+} catch (err) {
+    console.error('Erro no controller:', err);
+    res.status(500).json({ error: 'Erro interno' });
 }
+};
 
 exports.getClienteSaldo = async function (req, res) {
     const result = await ClienteService.getClienteSaldo(req.params.nif);
