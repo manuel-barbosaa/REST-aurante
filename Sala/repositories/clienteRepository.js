@@ -18,6 +18,11 @@ exports.getClienteByNIF = async function (nif) {
     return await ClienteModel.findOne({ nif });
 }
 
+exports.getClienteSaldo = async function (nif) {
+    const cliente = await ClienteModel.findOne({ nif });
+    return cliente ? { saldo: cliente.saldo } : null;
+}
+
 exports.updateSaldo = async function(clienteId, quantia) {
     try {
         const result = await ClienteModel.findByIdAndUpdate(
