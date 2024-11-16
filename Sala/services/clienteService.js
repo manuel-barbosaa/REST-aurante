@@ -26,6 +26,17 @@ exports.createCliente = async function (clienteDTO){
     });
 }
 
+exports.getClienteByNIF = async function (nif) {
+    return await ClienteRepo.getClienteByNIF(nif);
+}
+
+exports.getClienteSaldo = async function (nif) {
+    return await ClienteRepo.getClienteSaldo(nif);
+}
+
 exports.deposit = async function (clienteId, quantia) {
+    if (quantia <= 0) {
+        return false;
+    }
     return await ClienteRepo.updateSaldo(clienteId, quantia);
-} 
+}
