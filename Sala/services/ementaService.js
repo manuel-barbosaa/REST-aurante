@@ -16,18 +16,17 @@ exports.createEmenta = async function (ementaDTO){
     const refeicaoId = ementaDTO.refeicaoId;
     const preco = ementaDTO.preco;
 
+
     const ementaCozinha = await exports.getEmentaCozinha(ementaId);
 
     const refeicao = ementaCozinha.refeicoes.filter(refeicao => refeicao.id === refeicaoId)[0];
-    
-    const prato = refeicao.prato;
-    console.log(prato);
-    console.log(refeicao);
-    console.log(ementaCozinha);
+
+    const prato = refeicao.prato.nome;
+
 
     return await ementaRepository.createEmenta({
         prato: prato,
-        refeicao: refeicaoId,
+        refeicaoId: refeicaoId,
         preco: preco
     });
 }
