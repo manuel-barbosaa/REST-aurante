@@ -1,3 +1,18 @@
+commit 63c50ffdeaa24d949c4c62b513a605fb7e573c82	refs/heads/main (HEAD -> main, origin/main)
+Author: Paulo Proenca <prp@isep.ipp.pt>
+Date:   Sun Nov 17 14:33:25 2024 +0000
+
+    Repository Analysis
+
+M	GitAnalysis/Sprint_2/1220824@isep.ipp.pt.txt
+M	GitAnalysis/Sprint_2/1220973@isep.ipp.pt.txt
+M	GitAnalysis/Sprint_2/1221034@isep.ipp.pt.txt
+M	GitAnalysis/Sprint_2/1221180@isep.ipp.pt.txt
+M	GitAnalysis/Sprint_2/1221260@isep.ipp.pt.txt
+M	GitAnalysis/Sprint_2/Commits.csv
+M	GitAnalysis/Sprint_2/prp@isep.ipp.pt.txt
+A	GitAnalysis/Sprint_2/report_2024-11-17.html
+
 commit 782604bcd23c0d02be2a1c3229b681490a0ab840	refs/heads/main
 Author: Paulo Proenca <prp@isep.ipp.pt>
 Date:   Fri Nov 15 11:24:12 2024 +0000

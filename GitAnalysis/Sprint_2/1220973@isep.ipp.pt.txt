@@ -1,4 +1,4 @@
-commit 9828d5b58f4947198306c36f2e736fac0d425aa9	refs/heads/main (HEAD -> main, origin/main)
+commit 9828d5b58f4947198306c36f2e736fac0d425aa9	refs/heads/main
 Author: manuel barbosa <1220973@isep.ipp.pt>
 Date:   Sat Nov 16 14:50:41 2024 +0000
 
