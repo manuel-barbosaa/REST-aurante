@@ -1,90 +1,36 @@
-commit fd8da4e5fd8097683c74171a817a6334965b8105	refs/heads/main (HEAD -> main, origin/main)
+commit 9828d5b58f4947198306c36f2e736fac0d425aa9	refs/heads/main (HEAD -> main, origin/main)
 Author: manuel barbosa <1220973@isep.ipp.pt>
-Date:   Fri Nov 15 09:32:54 2024 +0000
+Date:   Sat Nov 16 14:50:41 2024 +0000
 
-    user storie 5: carregar o saldo da conta do cliente (PATCH) e obter lista de todos os clientes (GET)
+    correção de erros para o funcionamento do US006
 
-M	Sala/controllers/clienteController.js
-M	Sala/models/cliente.js
-M	Sala/repositories/clienteRepository.js
-M	Sala/routes/clienteRoutes.js
-M	Sala/services/clienteService.js
+M	Sala/repositories/ementaRepository.js
+M	Sala/services/ementaService.js
 
-commit 004b6b4ce0dd1f5343992cd0d0a2f6191fe86d3d	refs/heads/main
+commit ae33f02307889a6238f8717f75a57a6f97d245e8	refs/heads/main
 Author: manuel barbosa <1220973@isep.ipp.pt>
-Date:   Wed Nov 13 16:22:46 2024 +0000
+Date:   Sat Nov 16 14:09:02 2024 +0000
 
-    criação de ficheiros incompletos para cliente
+    implementação do Cors na web api de .NET
 
-A	Sala/controllers/clienteController.js
-A	Sala/models/cliente.js
-A	Sala/repositories/clienteRepository.js
-A	Sala/routes/clienteRoutes.js
-A	Sala/services/clienteService.js
+M	Cozinha/Cozinha.csproj
+M	Cozinha/Program.cs
 
-commit 09844a70690c2fad3fed81cbb68985c7cca81a22	refs/heads/main
+commit 90cc9133d06e154b02c82cec80515410674ad982	refs/heads/main
 Author: manuel barbosa <1220973@isep.ipp.pt>
-Date:   Wed Nov 13 16:08:01 2024 +0000
+Date:   Fri Nov 15 15:50:09 2024 +0000
 
-    reset sala files
+    correção da ordem das routes
 
-D	Sala/controllers/clienteController.js
-D	Sala/models/cliente.js
-D	Sala/models/funcionario.js
-D	Sala/repositories/clienteRepository.js
-D	Sala/routes/admin.js
-D	Sala/routes/cliente.js
-D	Sala/routes/funcionario.js
-D	Sala/services/clienteService.js
+M	Sala/routes/salaRoutes.js
 
-commit 6e00d6b2b89351f7934f2b6d1c19c4c1229fff73	refs/heads/main
+commit 35c8eb83a4e30c7461dc4e6640f61c2bd1c9cd8a	refs/heads/main
 Author: manuel barbosa <1220973@isep.ipp.pt>
-Date:   Wed Nov 13 16:05:34 2024 +0000
+Date:   Fri Nov 15 14:29:00 2024 +0000
 
-    Revert "reset sala files"
-    
-    This reverts commit 00f3551f013ccc43605b9e75de766f39656cf353.
+    alteracao de funcionamento do routing e adicao de node_modules novamente
 
-A	Sala/controllers/clienteController.js
-A	Sala/models/cliente.js
-A	Sala/repositories/clienteRepository.js
-A	Sala/routes/admin.js
-A	Sala/routes/cliente.js
-A	Sala/services/clienteService.js
-
-commit 00f3551f013ccc43605b9e75de766f39656cf353	refs/heads/main
-Author: manuel barbosa <1220973@isep.ipp.pt>
-Date:   Wed Nov 13 16:04:05 2024 +0000
-
-    reset sala files
-
-D	Sala/controllers/clienteController.js
-D	Sala/models/cliente.js
-D	Sala/repositories/clienteRepository.js
-D	Sala/routes/admin.js
-D	Sala/routes/cliente.js
-D	Sala/services/clienteService.js
-
-commit 76f59a9192146f29c0d76ffa52a2c49e5c302385	refs/heads/main
-Author: manuel barbosa <1220973@isep.ipp.pt>
-Date:   Wed Nov 13 15:41:34 2024 +0000
-
-    atualização das pastas do projeto
-
-R094	Sala/Controller/clienteController.js	Sala/controllers/clienteController.js
-R100	Sala/Model/cliente.js	Sala/models/cliente.js
-A	Sala/repositories/clienteRepository.js
-A	Sala/services/clienteService.js
-
-commit c6b1189a75490768197d07d5a9db9b5806d73393	refs/heads/main
-Author: manuel barbosa <1220973@isep.ipp.pt>
-Date:   Wed Nov 6 13:20:21 2024 +0000
-
-    setup do projeto da 2ª iteração "Sala" em NodeJS
-
-M	Cozinha/Database/CozinhaDB
-A	Sala/app.js
-A	Sala/middleware.js
+M	Sala/app.js
 A	Sala/node_modules/.bin/mime
 A	Sala/node_modules/.bin/mime.cmd
 A	Sala/node_modules/.bin/mime.ps1
@@ -2789,5 +2735,83 @@ A	Sala/node_modules/whatwg-url/lib/urlencoded.js
 A	Sala/node_modules/whatwg-url/lib/utils.js
 A	Sala/node_modules/whatwg-url/package.json
 A	Sala/node_modules/whatwg-url/webidl2js-wrapper.js
-A	Sala/package-lock.json
-A	Sala/package.json
+D	Sala/routes/clienteRoutes.js
+A	Sala/routes/salaRoutes.js
+
+commit fd8da4e5fd8097683c74171a817a6334965b8105	refs/heads/main
+Author: manuel barbosa <1220973@isep.ipp.pt>
+Date:   Fri Nov 15 09:32:54 2024 +0000
+
+    user storie 5: carregar o saldo da conta do cliente (PATCH) e obter lista de todos os clientes (GET)
+
+M	Sala/controllers/clienteController.js
+M	Sala/models/cliente.js
+M	Sala/repositories/clienteRepository.js
+M	Sala/routes/clienteRoutes.js
+M	Sala/services/clienteService.js
+
+commit 004b6b4ce0dd1f5343992cd0d0a2f6191fe86d3d	refs/heads/main
+Author: manuel barbosa <1220973@isep.ipp.pt>
+Date:   Wed Nov 13 16:22:46 2024 +0000
+
+    criação de ficheiros incompletos para cliente
+
+A	Sala/controllers/clienteController.js
+A	Sala/models/cliente.js
+A	Sala/repositories/clienteRepository.js
+A	Sala/routes/clienteRoutes.js
+A	Sala/services/clienteService.js
+
+commit 09844a70690c2fad3fed81cbb68985c7cca81a22	refs/heads/main
+Author: manuel barbosa <1220973@isep.ipp.pt>
+Date:   Wed Nov 13 16:08:01 2024 +0000
+
+    reset sala files
+
+D	Sala/controllers/clienteController.js
+D	Sala/models/cliente.js
+D	Sala/models/funcionario.js
+D	Sala/repositories/clienteRepository.js
+D	Sala/routes/admin.js
+D	Sala/routes/cliente.js
+D	Sala/routes/funcionario.js
+D	Sala/services/clienteService.js
+
+commit 6e00d6b2b89351f7934f2b6d1c19c4c1229fff73	refs/heads/main
+Author: manuel barbosa <1220973@isep.ipp.pt>
+Date:   Wed Nov 13 16:05:34 2024 +0000
+
+    Revert "reset sala files"
+    
+    This reverts commit 00f3551f013ccc43605b9e75de766f39656cf353.
+
+A	Sala/controllers/clienteController.js
+A	Sala/models/cliente.js
+A	Sala/repositories/clienteRepository.js
+A	Sala/routes/admin.js
+A	Sala/routes/cliente.js
+A	Sala/services/clienteService.js
+
+commit 00f3551f013ccc43605b9e75de766f39656cf353	refs/heads/main
+Author: manuel barbosa <1220973@isep.ipp.pt>
+Date:   Wed Nov 13 16:04:05 2024 +0000
+
+    reset sala files
+
+D	Sala/controllers/clienteController.js
+D	Sala/models/cliente.js
+D	Sala/repositories/clienteRepository.js
+D	Sala/routes/admin.js
+D	Sala/routes/cliente.js
+D	Sala/services/clienteService.js
+
+commit 76f59a9192146f29c0d76ffa52a2c49e5c302385	refs/heads/main
+Author: manuel barbosa <1220973@isep.ipp.pt>
+Date:   Wed Nov 13 15:41:34 2024 +0000
+
+    atualização das pastas do projeto
+
+R094	Sala/Controller/clienteController.js	Sala/controllers/clienteController.js
+R100	Sala/Model/cliente.js	Sala/models/cliente.js
+A	Sala/repositories/clienteRepository.js
+A	Sala/services/clienteService.js

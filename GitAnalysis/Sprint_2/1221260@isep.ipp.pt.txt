@@ -1,0 +1,32 @@
+commit 30a628c4f66d47b40d419871c10aa944e4ec44d5	refs/heads/main
+Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
+Date:   Fri Nov 15 15:32:33 2024 +0000
+
+    service: verificar se a quantia é positiva
+
+M	Sala/services/clienteService.js
+
+commit 80b8c0b16684a91791e81c59492c73121321bd30	refs/heads/main
+Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
+Date:   Fri Nov 15 15:31:31 2024 +0000
+
+    alteração do routes
+
+M	Sala/routes/salaRoutes.js
+
+commit cea05489b2e41c54b0d44a6e61f62dcd350da297	refs/heads/main
+Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
+Date:   Fri Nov 15 15:31:21 2024 +0000
+
+    controller: alteração de id para nif
+
+M	Sala/controllers/clienteController.js
+
+commit d722fc017f70dd93a8e4d54ecbbfe6675ba878a9	refs/heads/main
+Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
+Date:   Fri Nov 15 15:30:53 2024 +0000
+
+    controller: update saldo
+
+M	Sala/models/cliente.js
+M	Sala/repositories/clienteRepository.js

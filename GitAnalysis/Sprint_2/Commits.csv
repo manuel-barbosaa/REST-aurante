@@ -1,3 +1,35 @@
+9828d5b,2024-11-16 14:50:41 +0000,manuel barbosa,1220973@isep.ipp.pt,correção de erros para o funcionamento do US006
+ae33f02,2024-11-16 14:09:02 +0000,manuel barbosa,1220973@isep.ipp.pt,implementação do Cors na web api de .NET
+6aecbdf,2024-11-16 13:00:41 +0000,Tiago Pereira,1221034@isep.ipp.pt,Atualizações axios
+d73bffb,2024-11-16 13:00:07 +0000,Tiago Pereira,1221034@isep.ipp.pt,Ementa repository para criar ementa
+0768cb3,2024-11-16 12:59:45 +0000,Tiago Pereira,1221034@isep.ipp.pt,Ementa controller para criar ementa
+206b75d,2024-11-16 12:59:25 +0000,Tiago Pereira,1221034@isep.ipp.pt,Atualização do service criar ementa
+b99a59d,2024-11-16 12:58:58 +0000,Tiago Pereira,1221034@isep.ipp.pt,Update routes sala
+5d76ad1,2024-11-16 11:50:26 +0000,Tiago Pereira,1221034@isep.ipp.pt,Criação do model da ementa sala
+222b8ab,2024-11-16 11:20:14 +0000,Tiago Pereira,1221034@isep.ipp.pt,Criação de ementa service
+90cc913,2024-11-15 15:50:09 +0000,manuel barbosa,1220973@isep.ipp.pt,correção da ordem das routes
+30a628c,2024-11-15 15:32:33 +0000,Tatiana Patricia Loureiro Teixeira,1221260@isep.ipp.pt,service: verificar se a quantia é positiva
+80b8c0b,2024-11-15 15:31:31 +0000,Tatiana Patricia Loureiro Teixeira,1221260@isep.ipp.pt,alteração do routes
+cea0548,2024-11-15 15:31:21 +0000,Tatiana Patricia Loureiro Teixeira,1221260@isep.ipp.pt,controller: alteração de id para nif
+0732cab,2024-11-15 15:30:55 +0000,beamsteixeira,1220824@isep.ipp.pt,fix: controller- getClienteByNIF
+d722fc0,2024-11-15 15:30:53 +0000,Tatiana Patricia Loureiro Teixeira,1221260@isep.ipp.pt,controller: update saldo
+6d4b977,2024-11-15 15:19:20 +0000,Franciscs Soares,1221180@isep.ipp.pt,alteração router - get cliente by nif e get cliente saldo
+5ee49a2,2024-11-15 15:15:17 +0000,Franciscs Soares,1221180@isep.ipp.pt,alteração número do erro controller cliente
+38248c2,2024-11-15 14:55:24 +0000,beamsteixeira,1220824@isep.ipp.pt,fix: eliminar id
+70a3a62,2024-11-15 14:55:06 +0000,beamsteixeira,1220824@isep.ipp.pt,router- getClienteSaldo
+d082174,2024-11-15 14:53:17 +0000,beamsteixeira,1220824@isep.ipp.pt,controller- método getClienteSaldo
+ad1c9c6,2024-11-15 14:52:56 +0000,beamsteixeira,1220824@isep.ipp.pt,service- método getClienteSaldo
+1d15994,2024-11-15 14:52:20 +0000,beamsteixeira,1220824@isep.ipp.pt,repository- método getClienteSaldo
+0e90179,2024-11-15 14:41:09 +0000,Franciscs Soares,1221180@isep.ipp.pt,router - nif
+1b0a3c6,2024-11-15 14:40:59 +0000,Franciscs Soares,1221180@isep.ipp.pt,service - get cliente by nif
+f178c74,2024-11-15 14:40:42 +0000,Franciscs Soares,1221180@isep.ipp.pt,repositorio - get cliente by nif
+267496e,2024-11-15 14:40:08 +0000,Franciscs Soares,1221180@isep.ipp.pt,controller - get cliente by nif
+d507d25,2024-11-15 14:33:59 +0000,Franciscs Soares,1221180@isep.ipp.pt,alteração do return no repositorio
+a0f73a0,2024-11-15 14:33:48 +0000,Franciscs Soares,1221180@isep.ipp.pt,alteração das variaveis a mostrar do cliente no service
+35c8eb8,2024-11-15 14:29:00 +0000,manuel barbosa,1220973@isep.ipp.pt,alteracao de funcionamento do routing e adicao de node_modules novamente
+0f9cb64,2024-11-15 14:26:10 +0000,Franciscs Soares,1221180@isep.ipp.pt,alteração return get cliente - repositorio
+5ad4f1d,2024-11-15 14:21:11 +0000,Franciscs Soares,1221180@isep.ipp.pt,apagar o node modules
+782604b,2024-11-15 11:24:12 +0000,Paulo Proenca,prp@isep.ipp.pt,Repository Analysis
 fd8da4e,2024-11-15 09:32:54 +0000,manuel barbosa,1220973@isep.ipp.pt,user storie 5: carregar o saldo da conta do cliente (PATCH) e obter lista de todos os clientes (GET)
 41d74ef,2024-11-13 23:06:58 +0000,beamsteixeira,1220824@isep.ipp.pt,feat: criação do controller, model, repository, routes, service do cliente. Implementação do US001(Criar Cliente)
 004b6b4,2024-11-13 16:22:46 +0000,manuel barbosa,1220973@isep.ipp.pt,criação de ficheiros incompletos para cliente
@@ -12,4 +44,3 @@ c39ba64,2024-11-13 00:39:12 +0000,Franciscs Soares,1221180@isep.ipp.pt,correção 
 33069cf,2024-11-12 14:43:04 +0000,beamsteixeira,1220824@isep.ipp.pt,feat: mongodb connection string e dependencia
 28d8cef,2024-11-11 23:40:44 +0000,beamsteixeira,1220824@isep.ipp.pt,feat: endpoint para registar um novo cliente(US001)
 2c29f30,2024-11-11 23:35:24 +0000,beamsteixeira,1220824@isep.ipp.pt,feat:criação do models/cliente.js, lógica conexão ao MongoDB, criação do routes/admin.js, importação do router no app.js
-c6b1189,2024-11-06 13:20:21 +0000,manuel barbosa,1220973@isep.ipp.pt,setup do projeto da 2ª iteração "Sala" em NodeJS

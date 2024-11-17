@@ -1,3 +1,51 @@
+commit 0732cab7da5650f2f919d0e72b5ca317a8516b76	refs/heads/main
+Author: beamsteixeira <1220824@isep.ipp.pt>
+Date:   Fri Nov 15 15:30:55 2024 +0000
+
+    fix: controller- getClienteByNIF
+
+M	Sala/controllers/clienteController.js
+
+commit 38248c2c1fe632f132ecab43f248362d93f11fff	refs/heads/main
+Author: beamsteixeira <1220824@isep.ipp.pt>
+Date:   Fri Nov 15 14:55:24 2024 +0000
+
+    fix: eliminar id
+
+M	Sala/models/cliente.js
+
+commit 70a3a6237b8ede3e23de93db1be660ade7b275a5	refs/heads/main
+Author: beamsteixeira <1220824@isep.ipp.pt>
+Date:   Fri Nov 15 14:55:06 2024 +0000
+
+    router- getClienteSaldo
+
+M	Sala/routes/salaRoutes.js
+
+commit d082174bbeec5ebb3d8f244fcd65f26ae461059b	refs/heads/main
+Author: beamsteixeira <1220824@isep.ipp.pt>
+Date:   Fri Nov 15 14:53:17 2024 +0000
+
+    controller- método getClienteSaldo
+
+M	Sala/controllers/clienteController.js
+
+commit ad1c9c6a3d91c125eadf44dffdc3c25831398bfa	refs/heads/main
+Author: beamsteixeira <1220824@isep.ipp.pt>
+Date:   Fri Nov 15 14:52:56 2024 +0000
+
+    service- método getClienteSaldo
+
+M	Sala/services/clienteService.js
+
+commit 1d159944c460970f821fe09e459be115dbe13782	refs/heads/main
+Author: beamsteixeira <1220824@isep.ipp.pt>
+Date:   Fri Nov 15 14:52:20 2024 +0000
+
+    repository- método getClienteSaldo
+
+M	Sala/repositories/clienteRepository.js
+
 commit 41d74ef9c5e9cb77316e9c42c8775de269c6aa21	refs/heads/main
 Author: beamsteixeira <1220824@isep.ipp.pt>
 Date:   Wed Nov 13 23:06:58 2024 +0000
