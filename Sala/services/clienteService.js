@@ -40,3 +40,11 @@ exports.deposit = async function (clienteId, quantia) {
     }
     return await ClienteRepo.updateSaldo(clienteId, quantia);
 }
+
+exports.deleteClienteByNIF = async function (nif) {
+    return await ClienteRepo.deleteClienteByNIF(nif);
+};
+
+exports.deleteAllClientes = async function () {
+    return await ClienteRepo.deleteAllClientes();
+};
