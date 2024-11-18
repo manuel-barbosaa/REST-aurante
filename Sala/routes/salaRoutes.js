@@ -11,6 +11,9 @@ router.post('/clientes', clienteController.createCliente);
 router.patch('/clientes/:nif/deposit', clienteController.deposit);
 router.get('/clientes/:nif/saldo', clienteController.getClienteSaldo);
 router.post("/ementa", ementaController.createEmenta);
+router.get("/ementa/:refeicaoId", ementaController.listarRefeicoesEmenta);
+
+
 
 
 module.exports = router;
