@@ -44,3 +44,27 @@ exports.updateSaldo = async function (clienteNIF, quantia) {
        return false;
     }
 }
+
+
+exports.deleteClienteByNIF = async function (nif) {
+    try {
+        const result = await ClienteModel.deleteOne({ nif });
+        return result.deletedCount > 0;
+    } catch (error) {
+        console.error('Erro ao deletar cliente pelo NIF:', error);
+        return false;
+    }
+};
+
+
+exports.deleteAllClientes = async function () {
+    try {
+        await ClienteModel.deleteMany({});
+        return true;
+    } catch (error) {
+        console.error('Erro ao deletar todos os clientes:', error);
+        return false;
+    }
+};
+
+
