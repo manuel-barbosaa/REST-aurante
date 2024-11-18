@@ -54,3 +54,27 @@ exports.deposit = async function (req, res) {
         return res.status(400).json({ message: 'Falha ao efetuar depósito. O cliente não foi encontrado ou ocorreu um erro.' });
     }
 }
+
+
+
+exports.deleteClienteByNIF = async function (req, res) {
+    const { nif } = req.params;
+    const result = await ClienteService.deleteClienteByNIF(nif);
+
+    if (result) {
+        res.status(200).json({ message: 'Cliente apagado com sucesso' });
+    } else {
+        res.status(400).json({ error: 'Cliente não encontrado ou erro ao apagar' });
+    }
+};
+
+
+exports.deleteAllClientes = async function (req, res) {
+    const result = await ClienteService.deleteAllClientes();
+
+    if (result) {
+        res.status(200).json({ message: 'Todos os clientes foram apagadps com sucesso' });
+    } else {
+        res.status(500).json({ error: 'Erro ao apagar todos os clientes' });
+    }
+};
