@@ -1,258 +1,64 @@
-commit 385959f685736379f4df2bb6fcfaa298ce5c4a86	refs/tags/v1.0.0
+commit 181a0cef687c90c9b8d0a9e964a0bc374fe83166	refs/heads/main
 Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
-Date:   Sun Nov 3 20:19:12 2024 +0000
+Date:   Mon Nov 18 11:48:29 2024 +0000
 
-    fix: método get
+    feat: Sala routes
 
-M	Cozinha/Controllers/EmentaController.cs
-M	Cozinha/Model/DTO/CriarEmentaDTO.cs
-M	Cozinha/Model/DTO/ListarEmentaDTO.cs
-M	Cozinha/Model/Ementa.cs
-M	Cozinha/Repositories/EmentaRepository.cs
-M	Cozinha/Services/EmentaService.cs
+M	Sala/routes/salaRoutes.js
 
-commit b53f56fdff7c2361d62e25299da4b5bb6a833dcd	refs/tags/v1.0.0
+commit 1e87f370b6650cd6870fa5a02e161af7d61eb12b	refs/heads/main
 Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
-Date:   Sun Nov 3 14:57:54 2024 +0000
+Date:   Mon Nov 18 11:47:03 2024 +0000
 
-    fix: nome do db ementa
+    feat: Ementa controller lisarRefeicoesEmenta
 
-M	Cozinha/Model/CozinhaContext.cs
-M	Cozinha/Repositories/EmentaRepository.cs
+M	Sala/controllers/ementaController.js
 
-commit 6d6826f5ce38f6b547e91669636b16a90ab5a34e	refs/tags/v1.0.0
+commit 29d8f60becc21bb5d51c17cf100fa2d8747656f2	refs/heads/main
 Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
-Date:   Sun Nov 3 14:49:55 2024 +0000
+Date:   Mon Nov 18 11:46:39 2024 +0000
 
-    fix: correção do context
+    feat: Ementa Service listarRefeicoesEmenta
 
-M	Cozinha/Controllers/EmentaController.cs
-M	Cozinha/Services/EmentaService.cs
+M	Sala/services/ementaService.js
 
-commit 0f583f9a5454b5f57ab91cffb677d400dbb24de8	refs/tags/v1.0.0
+commit ab801213bbe0c0d51553676cc181189a770c9aba	refs/heads/main
 Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
-Date:   Sun Nov 3 14:32:15 2024 +0000
+Date:   Mon Nov 18 11:45:06 2024 +0000
 
-    fix: remoção do método getEmenta do service da refeição
+    feat: Ementa repository-US007 getEmentaByRefeicaoId
 
-M	Cozinha/Services/RefeicaoService.cs
+M	Sala/repositories/ementaRepository.js
 
-commit 4efbe25490a28f04a7b0b6c87af12d29dd20dfd4	refs/tags/v1.0.0
+commit 30a628c4f66d47b40d419871c10aa944e4ec44d5	refs/heads/main
 Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
-Date:   Sun Nov 3 14:31:50 2024 +0000
+Date:   Fri Nov 15 15:32:33 2024 +0000
 
-    feat: service Ementa
+    service: verificar se a quantia é positiva
 
-A	Cozinha/Services/EmentaService.cs
+M	Sala/services/clienteService.js
 
-commit 03d466dcb400d88b0ab72c03ef1e4ecdf0c5e319	refs/tags/v1.0.0
+commit 80b8c0b16684a91791e81c59492c73121321bd30	refs/heads/main
 Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
-Date:   Sun Nov 3 14:31:40 2024 +0000
+Date:   Fri Nov 15 15:31:31 2024 +0000
 
-    fix: remoção do get ementa no repository da Refeicao
+    alteração do routes
 
-M	Cozinha/Repositories/RefeicaoRepository.cs
+M	Sala/routes/salaRoutes.js
 
-commit 167d5d8c56c94f98ef57d6e813713b1535a79d85	refs/tags/v1.0.0
+commit cea05489b2e41c54b0d44a6e61f62dcd350da297	refs/heads/main
 Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
-Date:   Sun Nov 3 14:31:10 2024 +0000
+Date:   Fri Nov 15 15:31:21 2024 +0000
 
-    feat: repository Ementa
+    controller: alteração de id para nif
 
-A	Cozinha/Repositories/EmentaRepository.cs
+M	Sala/controllers/clienteController.js
 
-commit eb46aab72de5395715f7215c41e9fb728ab27741	refs/tags/v1.0.0
+commit d722fc017f70dd93a8e4d54ecbbfe6675ba878a9	refs/heads/main
 Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
-Date:   Sun Nov 3 14:31:00 2024 +0000
+Date:   Fri Nov 15 15:30:53 2024 +0000
 
-    feat: DTO Listar ementa
+    controller: update saldo
 
-M	Cozinha/Model/DTO/ListarEmentaDTO.cs
-
-commit 316b3f6c25bb16a1d0472690d9bb9595415a67bf	refs/tags/v1.0.0
-Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
-Date:   Sun Nov 3 14:30:49 2024 +0000
-
-    feat: Ementa
-
-A	Cozinha/Model/Ementa.cs
-
-commit 4478ed47fbfcc4515ddfe2529691311860da824f	refs/tags/v1.0.0
-Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
-Date:   Sun Nov 3 14:30:33 2024 +0000
-
-    feat: adição da ementa no context
-
-M	Cozinha/Model/CozinhaContext.cs
-
-commit 3ea427b71fdb245a7ccd88300d26388d70747ec9	refs/tags/v1.0.0
-Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
-Date:   Sun Nov 3 14:29:57 2024 +0000
-
-    fix: remoção do método getEmentaDisponivel
-
-M	Cozinha/Controllers/RefeicaoController.cs
-
-commit 7c7cc2912e2662082c556794771dcfc5c8cdfb2a	refs/tags/v1.0.0
-Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
-Date:   Sun Nov 3 14:29:22 2024 +0000
-
-    feat: Controller Ementa
-
-A	Cozinha/Controllers/EmentaController.cs
-
-commit c9904a3588beadc1f9495eecf16e0c314d6744cd	refs/tags/v1.0.0
-Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
-Date:   Sun Nov 3 13:41:18 2024 +0000
-
-    feat: Método DELETE no tipo de refeição
-
-M	Cozinha/Controllers/TipoRefeicaoController.cs
-M	Cozinha/Repositories/TipoRefeicaoRepository.cs
-M	Cozinha/Services/TipoRefeicaoService.cs
-
-commit 858521520aa9f5ea52b0f6d1b3b416977bde2fbe	refs/tags/v1.0.0
-Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
-Date:   Fri Nov 1 14:21:48 2024 +0000
-
-    fix: controller tipo refeição
-
-M	Cozinha/Controllers/TipoRefeicaoController.cs
-
-commit 4505222dd94780c9bf3708a311f94201456f4b7f	refs/tags/v1.0.0
-Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
-Date:   Fri Nov 1 14:21:35 2024 +0000
-
-    feat: DTO listar ementa
-
-M	Cozinha/Database/CozinhaDB-shm
-M	Cozinha/Database/CozinhaDB-wal
-A	Cozinha/Model/DTO/ListarEmentaDTO.cs
-
-commit f8ebc5b389105b0cbe02bc9cc0621ef6f2e5a671	refs/tags/v1.0.0
-Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
-Date:   Fri Nov 1 14:21:10 2024 +0000
-
-    fix: alteração do listar ementa
-
-M	Cozinha/Controllers/RefeicaoController.cs
-M	Cozinha/Repositories/RefeicaoRepository.cs
-M	Cozinha/Services/RefeicaoService.cs
-
-commit 3766f9ee011d259e0450ea2c66ebef2b07c29c24	refs/tags/v1.0.0
-Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
-Date:   Thu Oct 31 19:16:54 2024 +0000
-
-    fix: método post no tipo de refeição
-
-M	Cozinha/Controllers/TipoRefeicaoController.cs
-
-commit 951821e2a0bd159691d908457084c852f716c85f	refs/tags/v1.0.0
-Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
-Date:   Thu Oct 31 19:05:21 2024 +0000
-
-    feat: service para listar ementa US16
-
-M	Cozinha/Services/RefeicaoService.cs
-
-commit cac1705445f002cc1c58a79add41f004b4ef3aa8	refs/tags/v1.0.0
-Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
-Date:   Thu Oct 31 19:05:01 2024 +0000
-
-    feat: repo para listar ementa
-
-M	Cozinha/Repositories/RefeicaoRepository.cs
-
-commit d807b0914ff999f2caa35378e66d2192c5f26779	refs/tags/v1.0.0
-Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
-Date:   Thu Oct 31 19:04:50 2024 +0000
-
-    feat: controller para listar a ementa
-
-M	Cozinha/Controllers/RefeicaoController.cs
-
-commit 842404059d2a9d9dd05f8749163692dace1d8ca2	refs/tags/v1.0.0
-Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
-Date:   Wed Oct 30 10:10:18 2024 +0000
-
-    feat: método GET e POST
-
-M	Cozinha/Controllers/TipoRefeicaoController.cs
-M	Cozinha/Repositories/TipoRefeicaoRepository.cs
-M	Cozinha/Services/TipoRefeicaoService.cs
-
-commit d56df8c893ffe7eea112b011a65a1cc068b64a4c	refs/tags/v1.0.0
-Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
-Date:   Tue Oct 29 15:54:07 2024 +0000
-
-    feat: service Tipo de refeição
-
-A	Cozinha/Services/TipoRefeicaoService.cs
-
-commit d3c2a2ed00bb4c8b165daa804e8ca8a92aedcb33	refs/tags/v1.0.0
-Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
-Date:   Tue Oct 29 15:53:41 2024 +0000
-
-    feat: repositorio tipo de refeição
-
-A	Cozinha/Repositories/TipoRefeicaoRepository.cs
-
-commit a5258f9a9fc0a78153c369c6fd6854c87dddd334	refs/tags/v1.0.0
-Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
-Date:   Tue Oct 29 15:53:27 2024 +0000
-
-    feat: controller Tipo de refeição
-
-A	Cozinha/Controllers/TipoRefeicaoController.cs
-
-commit 82b310bdf6c4a05883a877137057f5651255bd21	refs/tags/v1.0.0
-Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
-Date:   Tue Oct 29 15:53:06 2024 +0000
-
-    feat:  DTO definir tipon de refeição
-
-A	Cozinha/Model/DTO/DefinirTipoRefeicaoDTO.cs
-
-commit 6f44b4bc079cd7aec3321fbb8e6b2437bb9cfaaf	refs/tags/v1.0.0
-Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
-Date:   Tue Oct 29 15:52:47 2024 +0000
-
-    feat: DTO listar tipo de refeição
-
-A	Cozinha/Model/DTO/ListarTipoRefeicaoDTO.cs
-
-commit 0b4d70773c0ed077418baecea2fc7c967214fcae	refs/tags/v1.0.0
-Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
-Date:   Tue Oct 29 15:52:12 2024 +0000
-
-    feat:  dbset tipo de refeição
-
-M	Cozinha/Model/CozinhaContext.cs
-
-commit ddf31e253880af3676093028a90faee30735090c	refs/tags/v1.0.0
-Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
-Date:   Tue Oct 29 15:51:20 2024 +0000
-
-    feat: tipo de refeição
-
-A	Cozinha/Model/TipoRefeicao.cs
-
-commit 690f39eb5b580ee683d074ce57cef2b8e8f5bb51	refs/tags/v1.0.0
-Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
-Date:   Wed Oct 23 16:25:25 2024 +0100
-
-    SQlite Database
-
-M	Cozinha/Cozinha.csproj
-R055	Cozinha/Model/IngredienteContext.cs	Cozinha/Model/CozinhaContext.cs
-M	Cozinha/Program.cs
-M	Cozinha/obj/Cozinha.csproj.nuget.dgspec.json
-M	Cozinha/obj/Cozinha.csproj.nuget.g.props
-M	Cozinha/obj/Cozinha.csproj.nuget.g.targets
-M	Cozinha/obj/Debug/net8.0/Cozinha.AssemblyInfo.cs
-M	Cozinha/obj/Debug/net8.0/Cozinha.AssemblyInfoInputs.cache
-M	Cozinha/obj/Debug/net8.0/Cozinha.GeneratedMSBuildEditorConfig.editorconfig
-M	Cozinha/obj/Debug/net8.0/Cozinha.assets.cache
-M	Cozinha/obj/Debug/net8.0/Cozinha.csproj.AssemblyReference.cache
-M	Cozinha/obj/project.assets.json
-M	Cozinha/obj/project.nuget.cache
+M	Sala/models/cliente.js
+M	Sala/repositories/clienteRepository.js
