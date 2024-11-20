@@ -1,126 +1,204 @@
-commit e2c3fd4e2d67d23232731cab390746504ce7b7b7	refs/tags/v1.0.0
+commit 6aecbdff10bab762784880c3dd7a029e728f3579	refs/heads/main
 Author: Tiago Pereira <1221034@isep.ipp.pt>
-Date:   Sun Nov 3 18:39:56 2024 +0000
+Date:   Sat Nov 16 13:00:41 2024 +0000
 
-    Alteração do deleteAll
+    Atualizações axios
 
-M	Cozinha/Controllers/RefeicaoController.cs
+M	Sala/node_modules/.package-lock.json
+A	Sala/node_modules/asynckit/LICENSE
+A	Sala/node_modules/asynckit/README.md
+A	Sala/node_modules/asynckit/bench.js
+A	Sala/node_modules/asynckit/index.js
+A	Sala/node_modules/asynckit/lib/abort.js
+A	Sala/node_modules/asynckit/lib/async.js
+A	Sala/node_modules/asynckit/lib/defer.js
+A	Sala/node_modules/asynckit/lib/iterate.js
+A	Sala/node_modules/asynckit/lib/readable_asynckit.js
+A	Sala/node_modules/asynckit/lib/readable_parallel.js
+A	Sala/node_modules/asynckit/lib/readable_serial.js
+A	Sala/node_modules/asynckit/lib/readable_serial_ordered.js
+A	Sala/node_modules/asynckit/lib/state.js
+A	Sala/node_modules/asynckit/lib/streamify.js
+A	Sala/node_modules/asynckit/lib/terminator.js
+A	Sala/node_modules/asynckit/package.json
+A	Sala/node_modules/asynckit/parallel.js
+A	Sala/node_modules/asynckit/serial.js
+A	Sala/node_modules/asynckit/serialOrdered.js
+A	Sala/node_modules/asynckit/stream.js
+A	Sala/node_modules/axios/CHANGELOG.md
+A	Sala/node_modules/axios/LICENSE
+A	Sala/node_modules/axios/MIGRATION_GUIDE.md
+A	Sala/node_modules/axios/README.md
+A	Sala/node_modules/axios/SECURITY.md
+A	Sala/node_modules/axios/dist/axios.js
+A	Sala/node_modules/axios/dist/axios.js.map
+A	Sala/node_modules/axios/dist/axios.min.js
+A	Sala/node_modules/axios/dist/axios.min.js.map
+A	Sala/node_modules/axios/dist/browser/axios.cjs
+A	Sala/node_modules/axios/dist/browser/axios.cjs.map
+A	Sala/node_modules/axios/dist/esm/axios.js
+A	Sala/node_modules/axios/dist/esm/axios.js.map
+A	Sala/node_modules/axios/dist/esm/axios.min.js
+A	Sala/node_modules/axios/dist/esm/axios.min.js.map
+A	Sala/node_modules/axios/dist/node/axios.cjs
+A	Sala/node_modules/axios/dist/node/axios.cjs.map
+A	Sala/node_modules/axios/index.d.cts
+A	Sala/node_modules/axios/index.d.ts
+A	Sala/node_modules/axios/index.js
+A	Sala/node_modules/axios/lib/adapters/README.md
+A	Sala/node_modules/axios/lib/adapters/adapters.js
+A	Sala/node_modules/axios/lib/adapters/fetch.js
+A	Sala/node_modules/axios/lib/adapters/http.js
+A	Sala/node_modules/axios/lib/adapters/xhr.js
+A	Sala/node_modules/axios/lib/axios.js
+A	Sala/node_modules/axios/lib/cancel/CancelToken.js
+A	Sala/node_modules/axios/lib/cancel/CanceledError.js
+A	Sala/node_modules/axios/lib/cancel/isCancel.js
+A	Sala/node_modules/axios/lib/core/Axios.js
+A	Sala/node_modules/axios/lib/core/AxiosError.js
+A	Sala/node_modules/axios/lib/core/AxiosHeaders.js
+A	Sala/node_modules/axios/lib/core/InterceptorManager.js
+A	Sala/node_modules/axios/lib/core/README.md
+A	Sala/node_modules/axios/lib/core/buildFullPath.js
+A	Sala/node_modules/axios/lib/core/dispatchRequest.js
+A	Sala/node_modules/axios/lib/core/mergeConfig.js
+A	Sala/node_modules/axios/lib/core/settle.js
+A	Sala/node_modules/axios/lib/core/transformData.js
+A	Sala/node_modules/axios/lib/defaults/index.js
+A	Sala/node_modules/axios/lib/defaults/transitional.js
+A	Sala/node_modules/axios/lib/env/README.md
+A	Sala/node_modules/axios/lib/env/classes/FormData.js
+A	Sala/node_modules/axios/lib/env/data.js
+A	Sala/node_modules/axios/lib/helpers/AxiosTransformStream.js
+A	Sala/node_modules/axios/lib/helpers/AxiosURLSearchParams.js
+A	Sala/node_modules/axios/lib/helpers/HttpStatusCode.js
+A	Sala/node_modules/axios/lib/helpers/README.md
+A	Sala/node_modules/axios/lib/helpers/ZlibHeaderTransformStream.js
+A	Sala/node_modules/axios/lib/helpers/bind.js
+A	Sala/node_modules/axios/lib/helpers/buildURL.js
+A	Sala/node_modules/axios/lib/helpers/callbackify.js
+A	Sala/node_modules/axios/lib/helpers/combineURLs.js
+A	Sala/node_modules/axios/lib/helpers/composeSignals.js
+A	Sala/node_modules/axios/lib/helpers/cookies.js
+A	Sala/node_modules/axios/lib/helpers/deprecatedMethod.js
+A	Sala/node_modules/axios/lib/helpers/formDataToJSON.js
+A	Sala/node_modules/axios/lib/helpers/formDataToStream.js
+A	Sala/node_modules/axios/lib/helpers/fromDataURI.js
+A	Sala/node_modules/axios/lib/helpers/isAbsoluteURL.js
+A	Sala/node_modules/axios/lib/helpers/isAxiosError.js
+A	Sala/node_modules/axios/lib/helpers/isURLSameOrigin.js
+A	Sala/node_modules/axios/lib/helpers/null.js
+A	Sala/node_modules/axios/lib/helpers/parseHeaders.js
+A	Sala/node_modules/axios/lib/helpers/parseProtocol.js
+A	Sala/node_modules/axios/lib/helpers/progressEventReducer.js
+A	Sala/node_modules/axios/lib/helpers/readBlob.js
+A	Sala/node_modules/axios/lib/helpers/resolveConfig.js
+A	Sala/node_modules/axios/lib/helpers/speedometer.js
+A	Sala/node_modules/axios/lib/helpers/spread.js
+A	Sala/node_modules/axios/lib/helpers/throttle.js
+A	Sala/node_modules/axios/lib/helpers/toFormData.js
+A	Sala/node_modules/axios/lib/helpers/toURLEncodedForm.js
+A	Sala/node_modules/axios/lib/helpers/trackStream.js
+A	Sala/node_modules/axios/lib/helpers/validator.js
+A	Sala/node_modules/axios/lib/platform/browser/classes/Blob.js
+A	Sala/node_modules/axios/lib/platform/browser/classes/FormData.js
+A	Sala/node_modules/axios/lib/platform/browser/classes/URLSearchParams.js
+A	Sala/node_modules/axios/lib/platform/browser/index.js
+A	Sala/node_modules/axios/lib/platform/common/utils.js
+A	Sala/node_modules/axios/lib/platform/index.js
+A	Sala/node_modules/axios/lib/platform/node/classes/FormData.js
+A	Sala/node_modules/axios/lib/platform/node/classes/URLSearchParams.js
+A	Sala/node_modules/axios/lib/platform/node/index.js
+A	Sala/node_modules/axios/lib/utils.js
+A	Sala/node_modules/axios/package.json
+A	Sala/node_modules/combined-stream/License
+A	Sala/node_modules/combined-stream/Readme.md
+A	Sala/node_modules/combined-stream/lib/combined_stream.js
+A	Sala/node_modules/combined-stream/package.json
+A	Sala/node_modules/combined-stream/yarn.lock
+A	Sala/node_modules/delayed-stream/.npmignore
+A	Sala/node_modules/delayed-stream/License
+A	Sala/node_modules/delayed-stream/Makefile
+A	Sala/node_modules/delayed-stream/Readme.md
+A	Sala/node_modules/delayed-stream/lib/delayed_stream.js
+A	Sala/node_modules/delayed-stream/package.json
+A	Sala/node_modules/follow-redirects/LICENSE
+A	Sala/node_modules/follow-redirects/README.md
+A	Sala/node_modules/follow-redirects/debug.js
+A	Sala/node_modules/follow-redirects/http.js
+A	Sala/node_modules/follow-redirects/https.js
+A	Sala/node_modules/follow-redirects/index.js
+A	Sala/node_modules/follow-redirects/package.json
+A	Sala/node_modules/form-data/License
+A	Sala/node_modules/form-data/Readme.md
+A	Sala/node_modules/form-data/index.d.ts
+A	Sala/node_modules/form-data/lib/browser.js
+A	Sala/node_modules/form-data/lib/form_data.js
+A	Sala/node_modules/form-data/lib/populate.js
+A	Sala/node_modules/form-data/package.json
+A	Sala/node_modules/proxy-from-env/.eslintrc
+A	Sala/node_modules/proxy-from-env/.travis.yml
+A	Sala/node_modules/proxy-from-env/LICENSE
+A	Sala/node_modules/proxy-from-env/README.md
+A	Sala/node_modules/proxy-from-env/index.js
+A	Sala/node_modules/proxy-from-env/package.json
+A	Sala/node_modules/proxy-from-env/test.js
+M	Sala/package-lock.json
+M	Sala/package.json
 
-commit ad4dfa817e6a8459c0394832181638e08ce1664a	refs/tags/v1.0.0
+commit d73bffb58307cd0b2a4ee2ebba94f8670650b554	refs/heads/main
 Author: Tiago Pereira <1221034@isep.ipp.pt>
-Date:   Sun Nov 3 18:27:24 2024 +0000
+Date:   Sat Nov 16 13:00:07 2024 +0000
 
-    Fix dos get null
+    Ementa repository para criar ementa
 
-M	Cozinha/Repositories/RefeicaoRepository.cs
+A	Sala/repositories/ementaRepository.js
 
-commit 1c811e39c58bc284ba32509659e6855c4b4766d4	refs/tags/v1.0.0
+commit 0768cb3254de531e85a9a052dd3b1840a67072fb	refs/heads/main
 Author: Tiago Pereira <1221034@isep.ipp.pt>
-Date:   Sun Nov 3 18:06:47 2024 +0000
+Date:   Sat Nov 16 12:59:45 2024 +0000
 
-    fix do produzir refeição
+    Ementa controller para criar ementa
 
-M	Cozinha/Controllers/RefeicaoController.cs
+A	Sala/controllers/ementaController.js
 
-commit 0634d944901dc2ba19e4cdd71d293cb07a3c4436	refs/tags/v1.0.0
+commit 206b75db7577305b2f67bc08c1f350dbb6c12c6c	refs/heads/main
 Author: Tiago Pereira <1221034@isep.ipp.pt>
-Date:   Sun Nov 3 17:53:51 2024 +0000
+Date:   Sat Nov 16 12:59:25 2024 +0000
 
-    Criação de migrations para adcionar ementa à refeição
+    Atualização do service criar ementa
 
-M	Cozinha/Database/CozinhaDB
-A	Cozinha/Migrations/20241103175154_AddEmentaIdToRefeicao.Designer.cs
-A	Cozinha/Migrations/20241103175154_AddEmentaIdToRefeicao.cs
-M	Cozinha/Migrations/CozinhaContextModelSnapshot.cs
+M	Sala/services/ementaService.js
 
-commit dfd2e754397cbb776d5dae08fd8bdb786edd3b7c	refs/tags/v1.0.0
+commit b99a59d7e7171fe5f7efdba3925536086c3c9382	refs/heads/main
 Author: Tiago Pereira <1221034@isep.ipp.pt>
-Date:   Sun Nov 3 17:47:56 2024 +0000
+Date:   Sat Nov 16 12:58:58 2024 +0000
 
-    Id long refeição
+    Update routes sala
 
-M	Cozinha/Model/DTO/CriarRefeicaoDTO.cs
-M	Cozinha/Model/DTO/ListarRefeicaoDTO.cs
-M	Cozinha/Model/Refeicao.cs
-M	Cozinha/Repositories/RefeicaoRepository.cs
-M	Cozinha/Services/RefeicaoService.cs
+M	Sala/routes/salaRoutes.js
 
-commit b04299717ae166f5fc0585377dd5a7a9c4b382fa	refs/tags/v1.0.0
+commit 5d76ad13deae8c398d2e65ce6a3224cc8ab6296d	refs/heads/main
 Author: Tiago Pereira <1221034@isep.ipp.pt>
-Date:   Sun Nov 3 14:54:11 2024 +0000
+Date:   Sat Nov 16 11:50:26 2024 +0000
 
-    Atualização remover refeição
+    Criação do model da ementa sala
 
-M	Cozinha/Controllers/RefeicaoController.cs
-M	Cozinha/Database/CozinhaDB
+A	Sala/models/ementa.js
 
-commit 913921cbe962a325b3231c1c9c8dbe1c153549ac	refs/tags/v1.0.0
+commit 222b8aba1b4734f2b2669cc6f97ed9ae262fc1c5	refs/heads/main
 Author: Tiago Pereira <1221034@isep.ipp.pt>
-Date:   Sun Nov 3 14:36:30 2024 +0000
+Date:   Sat Nov 16 11:20:14 2024 +0000
 
-    fix getRefeicaoById
+    Criação de ementa service
 
-M	Cozinha/Controllers/RefeicaoController.cs
-M	Cozinha/Repositories/RefeicaoRepository.cs
-M	Cozinha/Services/RefeicaoService.cs
+A	Sala/services/ementaService.js
 
-commit b99829e61dde9441a0a96314be6bda8a315b7ffc	refs/tags/v1.0.0
+commit 2ff43d0e69ed72452c504fa8302fae14c3a57d8c	refs/heads/main
 Author: Tiago Pereira <1221034@isep.ipp.pt>
-Date:   Sun Nov 3 14:01:42 2024 +0000
+Date:   Wed Nov 13 15:42:03 2024 +0000
 
-    Criação do Delete all Refeições
+    Criação de ficheiros funcionário
 
-M	Cozinha/Controllers/RefeicaoController.cs
-M	Cozinha/Repositories/RefeicaoRepository.cs
-M	Cozinha/Services/RefeicaoService.cs
-
-commit 1d882935f2ee4e8a174b279dfff4ac0aa78aea63	refs/tags/v1.0.0
-Author: Tiago Pereira <1221034@isep.ipp.pt>
-Date:   Fri Nov 1 16:31:03 2024 +0000
-
-    Atualização da criação de refeição, servir e remover
-
-M	Cozinha/Controllers/RefeicaoController.cs
-M	Cozinha/Repositories/RefeicaoRepository.cs
-M	Cozinha/Services/RefeicaoService.cs
-
-commit 1ecb032aae8b6cd68cc7b4ac3314e514d0a434ec	refs/tags/v1.0.0
-Author: Tiago Pereira <1221034@isep.ipp.pt>
-Date:   Thu Oct 31 15:49:16 2024 +0000
-
-    Desenvolvimento do AddRefeicao
-
-M	Cozinha/Controllers/RefeicaoController.cs
-A	Cozinha/Model/DTO/ListarRefeicaoDTO.cs
-M	Cozinha/Model/Refeicao.cs
-M	Cozinha/Repositories/RefeicaoRepository.cs
-M	Cozinha/Services/RefeicaoService.cs
-
-commit cc9ed06f317394dbf606e62a39fa9399cfddb0d7	refs/tags/v1.0.0
-Author: Tiago Pereira <1221034@isep.ipp.pt>
-Date:   Thu Oct 31 15:08:58 2024 +0000
-
-    Criação de Model e DTO e desenvolvimento do US013
-
-A	Cozinha/Controllers/RefeicaoController.cs
-M	Cozinha/Model/CozinhaContext.cs
-A	Cozinha/Model/DTO/CriarRefeicaoDTO.cs
-A	Cozinha/Model/Refeicao.cs
-M	Cozinha/Repositories/RefeicaoRepository.cs
-
-commit 4c9e7489afb4f9ef3130672b91eed5d0c5e7f282	refs/tags/v1.0.0
-Author: Tiago Pereira <1221034@isep.ipp.pt>
-Date:   Thu Oct 31 12:21:42 2024 +0000
-
-    Criação de Refeição Repository e Service
-
-A	Cozinha/Repositories/RefeicaoRepository.cs
-A	Cozinha/Services/RefeicaoService.cs
-
-commit e387852725c3af96082cbae19332de167fc912b8	refs/tags/v1.0.0
-Author: TiagoPereira32 <1221034@isep.ipp.pt>
-Date:   Wed Oct 23 14:57:36 2024 +0100
-
-    Create .gitignore
-
-A	.gitignore
+A	Sala/Model/funcionario.js
+A	Sala/routes/funcionario.js

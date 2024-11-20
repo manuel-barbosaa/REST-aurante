@@ -1,110 +1,96 @@
-commit 5cc494aed4e1490aedf4b129de373231086ead93	refs/tags/v1.0.0
+commit 0732cab7da5650f2f919d0e72b5ca317a8516b76	refs/heads/main
 Author: beamsteixeira <1220824@isep.ipp.pt>
-Date:   Sun Nov 3 20:28:23 2024 +0000
+Date:   Fri Nov 15 15:30:55 2024 +0000
 
-    fix: delete endpoint Prato
+    fix: controller- getClienteByNIF
 
-M	Cozinha/Controllers/PratoController.cs
+M	Sala/controllers/clienteController.js
 
-commit fc561e73a915b12efcf999cb749e5dcbc57e8e7f	refs/tags/v1.0.0
+commit 38248c2c1fe632f132ecab43f248362d93f11fff	refs/heads/main
 Author: beamsteixeira <1220824@isep.ipp.pt>
-Date:   Sun Nov 3 03:53:26 2024 +0000
+Date:   Fri Nov 15 14:55:24 2024 +0000
 
-    fix: update classe Prato para incluir tipoPrato e Ingredientes; adicionar receita
+    fix: eliminar id
 
-A	Cozinha/.idea/.idea.Cozinha/.idea/.gitignore
-A	Cozinha/.idea/.idea.Cozinha/.idea/encodings.xml
-A	Cozinha/.idea/.idea.Cozinha/.idea/indexLayout.xml
-A	Cozinha/.idea/.idea.Cozinha/.idea/vcs.xml
-M	Cozinha/Controllers/PratoController.cs
-M	Cozinha/Cozinha.csproj
-M	Cozinha/Database/CozinhaDB
-D	Cozinha/Database/CozinhaDB-shm
-D	Cozinha/Database/CozinhaDB-wal
-A	Cozinha/Migrations/20241102193219_UpdatePratoIngredienteRelationship.Designer.cs
-A	Cozinha/Migrations/20241102193219_UpdatePratoIngredienteRelationship.cs
-A	Cozinha/Migrations/20241103024617_UpdateTipoPratoMappingNew.Designer.cs
-A	Cozinha/Migrations/20241103024617_UpdateTipoPratoMappingNew.cs
-A	Cozinha/Migrations/20241103033838_UpdatePratoReceitaa.Designer.cs
-A	Cozinha/Migrations/20241103033838_UpdatePratoReceitaa.cs
-A	Cozinha/Migrations/20241103034612_UpdatePratoReceitaaa.Designer.cs
-A	Cozinha/Migrations/20241103034612_UpdatePratoReceitaaa.cs
-M	Cozinha/Migrations/CozinhaContextModelSnapshot.cs
-M	Cozinha/Model/DTO/CriarPratoDTO.cs
-M	Cozinha/Model/DTO/ListarPratoDTO.cs
-M	Cozinha/Model/Prato.cs
-A	Cozinha/Model/Receita.cs
-M	Cozinha/Model/TipoPrato.cs
-M	Cozinha/Repositories/PratoRepository.cs
-M	Cozinha/Services/PratoService.cs
-A	Sprint_1_REST-AURANTE/.idea/.gitignore
-A	Sprint_1_REST-AURANTE/.idea/encodings.xml
-A	Sprint_1_REST-AURANTE/.idea/indexLayout.xml
-A	Sprint_1_REST-AURANTE/.idea/vcs.xml
+M	Sala/models/cliente.js
 
-commit 7fde1497ec2143d672e665fe21bfc00a04d4b70a	refs/tags/v1.0.0
+commit 70a3a6237b8ede3e23de93db1be660ade7b275a5	refs/heads/main
 Author: beamsteixeira <1220824@isep.ipp.pt>
-Date:   Tue Oct 29 00:00:38 2024 +0000
+Date:   Fri Nov 15 14:55:06 2024 +0000
 
-    fix: controller, repository e service do prato; ativar/inativar um prato; inativar e ativar ingrediente
+    router- getClienteSaldo
 
-M	Cozinha/Controllers/PratoController.cs
-M	Cozinha/Repositories/PratoRepository.cs
-M	Cozinha/Services/PratoService.cs
+M	Sala/routes/salaRoutes.js
 
-commit ae06738760a034bfbd297fa2f6444400eebffa18	refs/tags/v1.0.0
+commit d082174bbeec5ebb3d8f244fcd65f26ae461059b	refs/heads/main
 Author: beamsteixeira <1220824@isep.ipp.pt>
-Date:   Mon Oct 28 20:36:03 2024 +0000
+Date:   Fri Nov 15 14:53:17 2024 +0000
 
-    fix: prato controller
+    controller- método getClienteSaldo
 
-M	Cozinha/Controllers/PratoController.cs
-M	Cozinha/Cozinha.csproj
-M	Cozinha/Program.cs
-M	Cozinha/Services/PratoService.cs
+M	Sala/controllers/clienteController.js
 
-commit bda4ba75dab6141b1286c46162019fb4777b5fb1	refs/tags/v1.0.0
+commit ad1c9c6a3d91c125eadf44dffdc3c25831398bfa	refs/heads/main
 Author: beamsteixeira <1220824@isep.ipp.pt>
-Date:   Mon Oct 28 19:58:06 2024 +0000
+Date:   Fri Nov 15 14:52:56 2024 +0000
 
-    feat: prato service
+    service- método getClienteSaldo
 
-M	Cozinha/Services/PratoService.cs
+M	Sala/services/clienteService.js
 
-commit c433f4945ed3f065233e2952a7689ee51f361463	refs/tags/v1.0.0
+commit 1d159944c460970f821fe09e459be115dbe13782	refs/heads/main
 Author: beamsteixeira <1220824@isep.ipp.pt>
-Date:   Mon Oct 28 19:46:56 2024 +0000
+Date:   Fri Nov 15 14:52:20 2024 +0000
 
-    feat: prato repository
+    repository- método getClienteSaldo
 
-M	Cozinha/Repositories/PratoRepository.cs
+M	Sala/repositories/clienteRepository.js
 
-commit 2f714987514dcd0d88b177f132a6c6871c1c0ec0	refs/tags/v1.0.0
+commit 41d74ef9c5e9cb77316e9c42c8775de269c6aa21	refs/heads/main
 Author: beamsteixeira <1220824@isep.ipp.pt>
-Date:   Mon Oct 28 19:36:08 2024 +0000
+Date:   Wed Nov 13 23:06:58 2024 +0000
 
-    feat: criar prato dto
+    feat: criação do controller, model, repository, routes, service do cliente. Implementação do US001(Criar Cliente)
 
-A	Cozinha/Model/DTO/CriarPratoDTO.cs
+M	Sala/app.js
+M	Sala/controllers/clienteController.js
+M	Sala/models/cliente.js
+M	Sala/repositories/clienteRepository.js
+M	Sala/routes/clienteRoutes.js
+M	Sala/services/clienteService.js
 
-commit b5580e0dfe330b00664b0090fd42869550d5a2e8	refs/tags/v1.0.0
+commit 33069cfee318840624591f46d9d7bac38b295b94	refs/heads/main
 Author: beamsteixeira <1220824@isep.ipp.pt>
-Date:   Sat Oct 26 21:00:04 2024 +0100
+Date:   Tue Nov 12 14:43:04 2024 +0000
 
-    feat: model e repository do prato; DTO para listagem do prato
+    feat: mongodb connection string e dependencia
 
-A	Cozinha/Controllers/PratoController.cs
-M	Cozinha/Model/CozinhaContext.cs
-A	Cozinha/Model/DTO/ListarPratoDTO.cs
-M	Cozinha/Model/Ingrediente.cs
-A	Cozinha/Model/Prato.cs
-A	Cozinha/Repositories/PratoRepository.cs
-A	Cozinha/Services/PratoService.cs
+M	Sala/app.js
+M	Sala/package-lock.json
+M	Sala/package.json
 
-commit d5e5e6b0b0fe5887b7b0d9acad9db9bf76e01d8d	refs/tags/v1.0.0
+commit 28d8cef01997bfe3c373eef44dd529da70799abe	refs/heads/main
 Author: beamsteixeira <1220824@isep.ipp.pt>
-Date:   Thu Oct 24 01:13:51 2024 +0100
+Date:   Mon Nov 11 23:40:44 2024 +0000
 
-    feat: esboço diagrama UML
+    feat: endpoint para registar um novo cliente(US001)
 
-A	DiagramaUML.jpg
+M	Sala/routes/admin.js
+
+commit 2c29f30e8a6fd3cb919b8ea6a6caa45a1b76a03e	refs/heads/main
+Author: beamsteixeira <1220824@isep.ipp.pt>
+Date:   Mon Nov 11 23:35:24 2024 +0000
+
+    feat:criação do models/cliente.js, lógica conexão ao MongoDB, criação do routes/admin.js, importação do router no app.js
+
+A	Cozinha/Migrations/20241103205344_UpdatePratoRefeicao.Designer.cs
+A	Cozinha/Migrations/20241103205344_UpdatePratoRefeicao.cs
+A	Cozinha/Migrations/20241103210728_UpdatePratoRefeicaoppp.Designer.cs
+A	Cozinha/Migrations/20241103210728_UpdatePratoRefeicaoppp.cs
+A	Cozinha/Migrations/20241103212032_UpdatePratoRefeicaopppijuhby.Designer.cs
+A	Cozinha/Migrations/20241103212032_UpdatePratoRefeicaopppijuhby.cs
+A	Cozinha/Migrations/20241103212937_UpdatePratoRefeicaopppijuhbyjh.Designer.cs
+A	Cozinha/Migrations/20241103212937_UpdatePratoRefeicaopppijuhbyjh.cs
+A	Sala/Model/cliente.js
+M	Sala/app.js
+A	Sala/routes/admin.js

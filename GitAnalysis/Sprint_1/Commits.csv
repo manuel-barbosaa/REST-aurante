@@ -1,120 +1,57 @@
-db7bee6,2024-11-05 22:30:14 +0000,Paulo Proenca,prp@isep.ipp.pt,Repository Analysis
-2baee0f,2024-11-05 22:08:00 +0000,Paulo Proenca,prp@isep.ipp.pt,Repository Analysis
-b6340f1,2024-11-05 20:54:57 +0000,Paulo Proenca,prp@isep.ipp.pt,Repository Analysis
-92da0f7,2024-11-05 16:43:16 +0000,Paulo Proenca,prp@isep.ipp.pt,Repository Analysis
-45a300c,2024-11-04 01:41:29 +0000,franciscasoares,162152413+franciscasoares@users.noreply.github.com,Add files via upload
-5810073,2024-11-03 22:50:49 +0000,manuel barbosa,1220973@isep.ipp.pt,correção da logica da ementa
-bd4b7cb,2024-11-03 21:00:49 +0000,Paulo Proenca,prp@isep.ipp.pt,Repository Analysis
-5cc494a,2024-11-03 20:28:23 +0000,beamsteixeira,1220824@isep.ipp.pt,fix: delete endpoint Prato
-385959f,2024-11-03 20:19:12 +0000,Tatiana Patricia Loureiro Teixeira,1221260@isep.ipp.pt,fix: método get
-abf610e,2024-11-03 19:31:07 +0000,manuel barbosa,1220973@isep.ipp.pt,alterações na lógica de funcionamento da ementa
-e2c3fd4,2024-11-03 18:39:56 +0000,Tiago Pereira,1221034@isep.ipp.pt,Alteração do deleteAll
-ad4dfa8,2024-11-03 18:27:24 +0000,Tiago Pereira,1221034@isep.ipp.pt,Fix dos get null
-c627a59,2024-11-03 18:25:12 +0000,Franciscs Soares,1221180@isep.ipp.pt,alteração dos endereços
-1c811e3,2024-11-03 18:06:47 +0000,Tiago Pereira,1221034@isep.ipp.pt,fix do produzir refeição
-0634d94,2024-11-03 17:53:51 +0000,Tiago Pereira,1221034@isep.ipp.pt,Criação de migrations para adcionar ementa à refeição
-dfd2e75,2024-11-03 17:47:56 +0000,Tiago Pereira,1221034@isep.ipp.pt,Id long refeição
-b53f56f,2024-11-03 14:57:54 +0000,Tatiana Patricia Loureiro Teixeira,1221260@isep.ipp.pt,fix: nome do db ementa
-b042997,2024-11-03 14:54:11 +0000,Tiago Pereira,1221034@isep.ipp.pt,Atualização remover refeição
-6d6826f,2024-11-03 14:49:55 +0000,Tatiana Patricia Loureiro Teixeira,1221260@isep.ipp.pt,fix: correção do context
-913921c,2024-11-03 14:36:30 +0000,Tiago Pereira,1221034@isep.ipp.pt,fix getRefeicaoById
-0f583f9,2024-11-03 14:32:15 +0000,Tatiana Patricia Loureiro Teixeira,1221260@isep.ipp.pt,fix: remoção do método getEmenta do service da refeição
-4efbe25,2024-11-03 14:31:50 +0000,Tatiana Patricia Loureiro Teixeira,1221260@isep.ipp.pt,feat: service Ementa
-03d466d,2024-11-03 14:31:40 +0000,Tatiana Patricia Loureiro Teixeira,1221260@isep.ipp.pt,fix: remoção do get ementa no repository da Refeicao
-167d5d8,2024-11-03 14:31:10 +0000,Tatiana Patricia Loureiro Teixeira,1221260@isep.ipp.pt,feat: repository Ementa
-eb46aab,2024-11-03 14:31:00 +0000,Tatiana Patricia Loureiro Teixeira,1221260@isep.ipp.pt,feat: DTO Listar ementa
-316b3f6,2024-11-03 14:30:49 +0000,Tatiana Patricia Loureiro Teixeira,1221260@isep.ipp.pt,feat: Ementa
-4478ed4,2024-11-03 14:30:33 +0000,Tatiana Patricia Loureiro Teixeira,1221260@isep.ipp.pt,feat: adição da ementa no context
-3ea427b,2024-11-03 14:29:57 +0000,Tatiana Patricia Loureiro Teixeira,1221260@isep.ipp.pt,fix: remoção do método getEmentaDisponivel
-7c7cc29,2024-11-03 14:29:22 +0000,Tatiana Patricia Loureiro Teixeira,1221260@isep.ipp.pt,feat: Controller Ementa
-b208d34,2024-11-03 14:06:23 +0000,manuel barbosa,1220973@isep.ipp.pt,implementação da receita no prato
-b99829e,2024-11-03 14:01:42 +0000,Tiago Pereira,1221034@isep.ipp.pt,Criação do Delete all Refeições
-c9904a3,2024-11-03 13:41:18 +0000,Tatiana Patricia Loureiro Teixeira,1221260@isep.ipp.pt,feat: Método DELETE no tipo de refeição
-90c5292,2024-11-03 12:16:56 +0000,manuel barbosa,1220973@isep.ipp.pt,correção da lógica de criação da refeicao
-3a486dc,2024-11-03 11:45:32 +0000,manuel barbosa,1220973@isep.ipp.pt,correção de lógica de funcionamento dos pratos
-fc561e7,2024-11-03 03:53:26 +0000,beamsteixeira,1220824@isep.ipp.pt,fix: update classe Prato para incluir tipoPrato e Ingredientes; adicionar receita
-bc256f9,2024-11-02 16:50:12 +0000,manuel barbosa,1220973@isep.ipp.pt,correção do metodo POST do prato para aceitar apenas ingredientes e tipos de pratos existentes e por ID
-956b6d1,2024-11-02 16:09:04 +0000,Franciscs Soares,1221180@isep.ipp.pt,mensagem postman delete all
-080b4c2,2024-11-02 16:06:48 +0000,Franciscs Soares,1221180@isep.ipp.pt,mensagem postman metodo get available e unavailable
-b400841,2024-11-02 16:02:44 +0000,Franciscs Soares,1221180@isep.ipp.pt,método delete by id, delete all e put
-fdb5b5e,2024-11-02 15:45:31 +0000,manuel barbosa,1220973@isep.ipp.pt,atualização do git ignore para a pasta da database
-2a71867,2024-11-02 15:43:45 +0000,manuel barbosa,1220973@isep.ipp.pt,correção de erro nos construtores dos controllers do ingrediente e da refeicao
-a16e262,2024-11-02 15:06:49 +0000,Franciscs Soares,1221180@isep.ipp.pt,tirar parâmetro id do post
-e957f3d,2024-11-01 21:27:09 +0000,Franciscs Soares,1221180@isep.ipp.pt,alteração método get by id - variável id (long)
-6a61d2e,2024-11-01 21:27:03 +0000,Franciscs Soares,1221180@isep.ipp.pt,alteração método get by id - variável id (long)
-fd88e39,2024-11-01 21:27:00 +0000,Franciscs Soares,1221180@isep.ipp.pt,alteração método get by id - variável id (long)
-80eef01,2024-11-01 21:19:24 +0000,Franciscs Soares,1221180@isep.ipp.pt,IngredienteService e Repositorio
-119d408,2024-11-01 17:59:54 +0000,Franciscs Soares,1221180@isep.ipp.pt,variável Ativo required
-1d88293,2024-11-01 16:31:03 +0000,Tiago Pereira,1221034@isep.ipp.pt,Atualização da criação de refeição, servir e remover
-8585215,2024-11-01 14:21:48 +0000,Tatiana Patricia Loureiro Teixeira,1221260@isep.ipp.pt,fix: controller tipo refeição
-4505222,2024-11-01 14:21:35 +0000,Tatiana Patricia Loureiro Teixeira,1221260@isep.ipp.pt,feat: DTO listar ementa
-f8ebc5b,2024-11-01 14:21:10 +0000,Tatiana Patricia Loureiro Teixeira,1221260@isep.ipp.pt,fix: alteração do listar ementa
-3766f9e,2024-10-31 19:16:54 +0000,Tatiana Patricia Loureiro Teixeira,1221260@isep.ipp.pt,fix: método post no tipo de refeição
-951821e,2024-10-31 19:05:21 +0000,Tatiana Patricia Loureiro Teixeira,1221260@isep.ipp.pt,feat: service para listar ementa US16
-cac1705,2024-10-31 19:05:01 +0000,Tatiana Patricia Loureiro Teixeira,1221260@isep.ipp.pt,feat: repo para listar ementa
-d807b09,2024-10-31 19:04:50 +0000,Tatiana Patricia Loureiro Teixeira,1221260@isep.ipp.pt,feat: controller para listar a ementa
-1ecb032,2024-10-31 15:49:16 +0000,Tiago Pereira,1221034@isep.ipp.pt,Desenvolvimento do AddRefeicao
-cc9ed06,2024-10-31 15:08:58 +0000,Tiago Pereira,1221034@isep.ipp.pt,Criação de Model e DTO e desenvolvimento do US013
-4c9e748,2024-10-31 12:21:42 +0000,Tiago Pereira,1221034@isep.ipp.pt,Criação de Refeição Repository e Service
-abda982,2024-10-31 12:01:18 +0000,manuel barbosa,1220973@isep.ipp.pt,criação de migrations e implementação da database
-7c6d009,2024-10-31 11:51:07 +0000,Franciscs Soares,1221180@isep.ipp.pt,coerência do repositorio e do service do ingrediente
-bfbe625,2024-10-31 11:50:44 +0000,Franciscs Soares,1221180@isep.ipp.pt,correção erro controller
-deb3312,2024-10-31 11:50:24 +0000,Franciscs Soares,1221180@isep.ipp.pt,ingrediente variáveis
-45aa6c3,2024-10-31 11:49:59 +0000,Franciscs Soares,1221180@isep.ipp.pt,criar e listar ingrediente DTO
-05f6747,2024-10-31 11:24:47 +0000,Franciscs Soares,1221180@isep.ipp.pt,get ingrediente by id na classe ingrediente service
-c68a23d,2024-10-31 10:21:30 +0000,manuel barbosa,1220973@isep.ipp.pt,implementação do método DELETE do tipo de prato
-3e6d02d,2024-10-31 10:06:47 +0000,manuel barbosa,1220973@isep.ipp.pt,correção de ficheiros DTO do tipo de prato e implementação do método POST para o tipo de prato
-70363cf,2024-10-30 15:16:53 +0000,Franciscs Soares,1221180@isep.ipp.pt,correção erro controller
-9ab40da,2024-10-30 10:17:55 +0000,Franciscs Soares,1221180@isep.ipp.pt,alteração da variavel id ao listar ingrediente dto
-3fe61a6,2024-10-30 10:17:34 +0000,Franciscs Soares,1221180@isep.ipp.pt,adicionar id como variável ao criar ingrediente dto
-c4e4b99,2024-10-30 10:16:58 +0000,Franciscs Soares,1221180@isep.ipp.pt,alteração variável id na classe ingrediente
-8424040,2024-10-30 10:10:18 +0000,Tatiana Patricia Loureiro Teixeira,1221260@isep.ipp.pt,feat: método GET e POST
-6c960a8,2024-10-29 23:36:06 +0000,Franciscs Soares,1221180@isep.ipp.pt,adicionar o id aos métodos da classe service
-e680834,2024-10-29 23:35:44 +0000,Franciscs Soares,1221180@isep.ipp.pt,metodo get by id na classe repositorio
-efffd2e,2024-10-29 23:35:27 +0000,Franciscs Soares,1221180@isep.ipp.pt,required id classe DTO
-a40f9c3,2024-10-29 23:35:08 +0000,Franciscs Soares,1221180@isep.ipp.pt,required id na classe ingrediente
-2571b3e,2024-10-29 23:34:54 +0000,Franciscs Soares,1221180@isep.ipp.pt,descomentar metodo get e post do controller
-d56df8c,2024-10-29 15:54:07 +0000,Tatiana Patricia Loureiro Teixeira,1221260@isep.ipp.pt,feat: service Tipo de refeição
-d3c2a2e,2024-10-29 15:53:41 +0000,Tatiana Patricia Loureiro Teixeira,1221260@isep.ipp.pt,feat: repositorio tipo de refeição
-a5258f9,2024-10-29 15:53:27 +0000,Tatiana Patricia Loureiro Teixeira,1221260@isep.ipp.pt,feat: controller Tipo de refeição
-82b310b,2024-10-29 15:53:06 +0000,Tatiana Patricia Loureiro Teixeira,1221260@isep.ipp.pt,feat:  DTO definir tipon de refeição
-6f44b4b,2024-10-29 15:52:47 +0000,Tatiana Patricia Loureiro Teixeira,1221260@isep.ipp.pt,feat: DTO listar tipo de refeição
-0b4d707,2024-10-29 15:52:12 +0000,Tatiana Patricia Loureiro Teixeira,1221260@isep.ipp.pt,feat:  dbset tipo de refeição
-ddf31e2,2024-10-29 15:51:20 +0000,Tatiana Patricia Loureiro Teixeira,1221260@isep.ipp.pt,feat: tipo de refeição
-f38a161,2024-10-29 15:29:00 +0000,Franciscs Soares,1221180@isep.ipp.pt,métodos get id e nome no repositório
-71e9a07,2024-10-29 15:27:38 +0000,Franciscs Soares,1221180@isep.ipp.pt,método POST e GET id no controller
-c4b46f7,2024-10-29 15:26:30 +0000,Franciscs Soares,1221180@isep.ipp.pt,alteração métodos id no controller
-fb1ce71,2024-10-29 15:25:37 +0000,Franciscs Soares,1221180@isep.ipp.pt,adicionar id nos métodos do service
-282fdd8,2024-10-29 15:12:08 +0000,Franciscs Soares,1221180@isep.ipp.pt,id listar ingrediente
-4cdc27c,2024-10-29 15:06:28 +0000,Franciscs Soares,1221180@isep.ipp.pt,alteração variavel Categoria Alimenticia
-19c02d6,2024-10-29 14:50:41 +0000,Franciscs Soares,1221180@isep.ipp.pt,métodos controller
-0faea9c,2024-10-29 14:48:06 +0000,Franciscs Soares,1221180@isep.ipp.pt,id ingrediente
-7fde149,2024-10-29 00:00:38 +0000,beamsteixeira,1220824@isep.ipp.pt,fix: controller, repository e service do prato; ativar/inativar um prato; inativar e ativar ingrediente
-ae06738,2024-10-28 20:36:03 +0000,beamsteixeira,1220824@isep.ipp.pt,fix: prato controller
-bda4ba7,2024-10-28 19:58:06 +0000,beamsteixeira,1220824@isep.ipp.pt,feat: prato service
-c433f49,2024-10-28 19:46:56 +0000,beamsteixeira,1220824@isep.ipp.pt,feat: prato repository
-2f71498,2024-10-28 19:36:08 +0000,beamsteixeira,1220824@isep.ipp.pt,feat: criar prato dto
-622adad,2024-10-27 16:29:11 +0000,franciscasoares,162152413+franciscasoares@users.noreply.github.com,Add files via upload
-e0be615,2024-10-27 00:04:21 +0100,Franciscs Soares,1221180@isep.ipp.pt,eliminar
-65fb7bf,2024-10-27 00:04:12 +0100,Franciscs Soares,1221180@isep.ipp.pt,fixar estrutura
-21bcbc2,2024-10-27 00:03:46 +0100,Franciscs Soares,1221180@isep.ipp.pt,controller ingrediente
-2a547f9,2024-10-27 00:03:19 +0100,Franciscs Soares,1221180@isep.ipp.pt,DTO criar ingrediente
-c466833,2024-10-27 00:02:56 +0100,Franciscs Soares,1221180@isep.ipp.pt,DTO listar ingrediente
-251aca6,2024-10-27 00:02:31 +0100,Franciscs Soares,1221180@isep.ipp.pt,repositorio ingrediente
-25ab292,2024-10-27 00:02:09 +0100,Franciscs Soares,1221180@isep.ipp.pt,ingrediente service
-b5580e0,2024-10-26 21:00:04 +0100,beamsteixeira,1220824@isep.ipp.pt,feat: model e repository do prato; DTO para listagem do prato
-94876d7,2024-10-25 20:29:14 +0100,manuel barbosa,1220973@isep.ipp.pt,feat: repository, service e controller do tipo de prato
-557182e,2024-10-25 19:45:32 +0100,manuel barbosa,1220973@isep.ipp.pt,criação dos ficheiros DTO para a listagem e a obtenção de informação detalhada de tipos de prato
-3fc2b5a,2024-10-25 19:44:34 +0100,manuel barbosa,1220973@isep.ipp.pt,criação do ficheiro model do tipo de prato
-d5e5e6b,2024-10-24 01:13:51 +0100,beamsteixeira,1220824@isep.ipp.pt,feat: esboço diagrama UML
-96441c4,2024-10-23 16:40:51 +0100,franciscasoares,162152413+franciscasoares@users.noreply.github.com,apagar obj directory
-690f39e,2024-10-23 16:25:25 +0100,Tatiana Patricia Loureiro Teixeira,1221260@isep.ipp.pt,SQlite Database
-cae54d4,2024-10-23 15:27:38 +0100,TigasCOD,tiagojose.ramospereira@gmail.com,Update do Gitignore
-e387852,2024-10-23 14:57:36 +0100,TiagoPereira32,1221034@isep.ipp.pt,Create .gitignore
-34a1bf6,2024-10-21 16:07:20 +0100,Franciscs Soares,1221180@isep.ipp.pt,Controller Ingrediente
-82d1cc6,2024-10-19 22:41:10 +0100,Franciscs Soares,1221180@isep.ipp.pt,criação do repositório
-be5fd46,2024-10-19 22:40:52 +0100,Franciscs Soares,1221180@isep.ipp.pt,criação dos dtos criar e listar
-2050eba,2024-10-19 22:39:28 +0100,Franciscs Soares,1221180@isep.ipp.pt,criação da classe service para os ingredientes bem como o context
-c8bfaa8,2024-10-19 22:38:27 +0100,Franciscs Soares,1221180@isep.ipp.pt,criar classe ingredientes
-9204b1b,2024-10-19 16:41:46 +0100,manuel barbosa,1220973@isep.ipp.pt,chore: inicializar projeto de Web API em ASP.NET Core
-1f1ae4b,2024-10-16 21:50:17 +0100,manuel-barbosaa,126287678+manuel-barbosaa@users.noreply.github.com,Initial commit
+02ea7c0,2024-11-18 15:13:30 +0000,Franciscs Soares,1221180@isep.ipp.pt,definição das rotas do delete cliente by nif e delete all clientes
+7bde867,2024-11-18 15:13:13 +0000,Franciscs Soares,1221180@isep.ipp.pt,controller - delete cliente by nif e delete all clientes
+9b38c9c,2024-11-18 15:12:54 +0000,Franciscs Soares,1221180@isep.ipp.pt,delete cliente by nif e delete all clientes - service
+bde1646,2024-11-18 15:12:32 +0000,Franciscs Soares,1221180@isep.ipp.pt,delete cliente by nif e delete all clientes
+181a0ce,2024-11-18 11:48:29 +0000,Tatiana Patricia Loureiro Teixeira,1221260@isep.ipp.pt,feat: Sala routes
+1e87f37,2024-11-18 11:47:03 +0000,Tatiana Patricia Loureiro Teixeira,1221260@isep.ipp.pt,feat: Ementa controller lisarRefeicoesEmenta
+29d8f60,2024-11-18 11:46:39 +0000,Tatiana Patricia Loureiro Teixeira,1221260@isep.ipp.pt,feat: Ementa Service listarRefeicoesEmenta
+ab80121,2024-11-18 11:45:06 +0000,Tatiana Patricia Loureiro Teixeira,1221260@isep.ipp.pt,feat: Ementa repository-US007 getEmentaByRefeicaoId
+694d1d6,2024-11-17 15:19:17 +0000,Paulo Proenca,prp@isep.ipp.pt,Repository Analysis
+63c50ff,2024-11-17 14:33:25 +0000,Paulo Proenca,prp@isep.ipp.pt,Repository Analysis
+9828d5b,2024-11-16 14:50:41 +0000,manuel barbosa,1220973@isep.ipp.pt,correção de erros para o funcionamento do US006
+ae33f02,2024-11-16 14:09:02 +0000,manuel barbosa,1220973@isep.ipp.pt,implementação do Cors na web api de .NET
+6aecbdf,2024-11-16 13:00:41 +0000,Tiago Pereira,1221034@isep.ipp.pt,Atualizações axios
+d73bffb,2024-11-16 13:00:07 +0000,Tiago Pereira,1221034@isep.ipp.pt,Ementa repository para criar ementa
+0768cb3,2024-11-16 12:59:45 +0000,Tiago Pereira,1221034@isep.ipp.pt,Ementa controller para criar ementa
+206b75d,2024-11-16 12:59:25 +0000,Tiago Pereira,1221034@isep.ipp.pt,Atualização do service criar ementa
+b99a59d,2024-11-16 12:58:58 +0000,Tiago Pereira,1221034@isep.ipp.pt,Update routes sala
+5d76ad1,2024-11-16 11:50:26 +0000,Tiago Pereira,1221034@isep.ipp.pt,Criação do model da ementa sala
+222b8ab,2024-11-16 11:20:14 +0000,Tiago Pereira,1221034@isep.ipp.pt,Criação de ementa service
+90cc913,2024-11-15 15:50:09 +0000,manuel barbosa,1220973@isep.ipp.pt,correção da ordem das routes
+30a628c,2024-11-15 15:32:33 +0000,Tatiana Patricia Loureiro Teixeira,1221260@isep.ipp.pt,service: verificar se a quantia é positiva
+80b8c0b,2024-11-15 15:31:31 +0000,Tatiana Patricia Loureiro Teixeira,1221260@isep.ipp.pt,alteração do routes
+cea0548,2024-11-15 15:31:21 +0000,Tatiana Patricia Loureiro Teixeira,1221260@isep.ipp.pt,controller: alteração de id para nif
+0732cab,2024-11-15 15:30:55 +0000,beamsteixeira,1220824@isep.ipp.pt,fix: controller- getClienteByNIF
+d722fc0,2024-11-15 15:30:53 +0000,Tatiana Patricia Loureiro Teixeira,1221260@isep.ipp.pt,controller: update saldo
+6d4b977,2024-11-15 15:19:20 +0000,Franciscs Soares,1221180@isep.ipp.pt,alteração router - get cliente by nif e get cliente saldo
+5ee49a2,2024-11-15 15:15:17 +0000,Franciscs Soares,1221180@isep.ipp.pt,alteração número do erro controller cliente
+38248c2,2024-11-15 14:55:24 +0000,beamsteixeira,1220824@isep.ipp.pt,fix: eliminar id
+70a3a62,2024-11-15 14:55:06 +0000,beamsteixeira,1220824@isep.ipp.pt,router- getClienteSaldo
+d082174,2024-11-15 14:53:17 +0000,beamsteixeira,1220824@isep.ipp.pt,controller- método getClienteSaldo
+ad1c9c6,2024-11-15 14:52:56 +0000,beamsteixeira,1220824@isep.ipp.pt,service- método getClienteSaldo
+1d15994,2024-11-15 14:52:20 +0000,beamsteixeira,1220824@isep.ipp.pt,repository- método getClienteSaldo
+0e90179,2024-11-15 14:41:09 +0000,Franciscs Soares,1221180@isep.ipp.pt,router - nif
+1b0a3c6,2024-11-15 14:40:59 +0000,Franciscs Soares,1221180@isep.ipp.pt,service - get cliente by nif
+f178c74,2024-11-15 14:40:42 +0000,Franciscs Soares,1221180@isep.ipp.pt,repositorio - get cliente by nif
+267496e,2024-11-15 14:40:08 +0000,Franciscs Soares,1221180@isep.ipp.pt,controller - get cliente by nif
+d507d25,2024-11-15 14:33:59 +0000,Franciscs Soares,1221180@isep.ipp.pt,alteração do return no repositorio
+a0f73a0,2024-11-15 14:33:48 +0000,Franciscs Soares,1221180@isep.ipp.pt,alteração das variaveis a mostrar do cliente no service
+35c8eb8,2024-11-15 14:29:00 +0000,manuel barbosa,1220973@isep.ipp.pt,alteracao de funcionamento do routing e adicao de node_modules novamente
+0f9cb64,2024-11-15 14:26:10 +0000,Franciscs Soares,1221180@isep.ipp.pt,alteração return get cliente - repositorio
+5ad4f1d,2024-11-15 14:21:11 +0000,Franciscs Soares,1221180@isep.ipp.pt,apagar o node modules
+782604b,2024-11-15 11:24:12 +0000,Paulo Proenca,prp@isep.ipp.pt,Repository Analysis
+fd8da4e,2024-11-15 09:32:54 +0000,manuel barbosa,1220973@isep.ipp.pt,user storie 5: carregar o saldo da conta do cliente (PATCH) e obter lista de todos os clientes (GET)
+41d74ef,2024-11-13 23:06:58 +0000,beamsteixeira,1220824@isep.ipp.pt,feat: criação do controller, model, repository, routes, service do cliente. Implementação do US001(Criar Cliente)
+004b6b4,2024-11-13 16:22:46 +0000,manuel barbosa,1220973@isep.ipp.pt,criação de ficheiros incompletos para cliente
+09844a7,2024-11-13 16:08:01 +0000,manuel barbosa,1220973@isep.ipp.pt,reset sala files
+6e00d6b,2024-11-13 16:05:34 +0000,manuel barbosa,1220973@isep.ipp.pt,Revert "reset sala files"
+00f3551,2024-11-13 16:04:05 +0000,manuel barbosa,1220973@isep.ipp.pt,reset sala files
+2ff43d0,2024-11-13 15:42:03 +0000,Tiago Pereira,1221034@isep.ipp.pt,Criação de ficheiros funcionário
+76f59a9,2024-11-13 15:41:34 +0000,manuel barbosa,1220973@isep.ipp.pt,atualização das pastas do projeto
+5bc6127,2024-11-13 00:39:58 +0000,Franciscs Soares,1221180@isep.ipp.pt,Validar o cliente pelo nif e ter acesso às suas informações
+c39ba64,2024-11-13 00:39:12 +0000,Franciscs Soares,1221180@isep.ipp.pt,correção caminho Model
+160914a,2024-11-13 00:35:55 +0000,Franciscs Soares,1221180@isep.ipp.pt,validar a existência de um cliente pelo nif e obter as suas informações
+33069cf,2024-11-12 14:43:04 +0000,beamsteixeira,1220824@isep.ipp.pt,feat: mongodb connection string e dependencia
+28d8cef,2024-11-11 23:40:44 +0000,beamsteixeira,1220824@isep.ipp.pt,feat: endpoint para registar um novo cliente(US001)
+2c29f30,2024-11-11 23:35:24 +0000,beamsteixeira,1220824@isep.ipp.pt,feat:criação do models/cliente.js, lógica conexão ao MongoDB, criação do routes/admin.js, importação do router no app.js
+c6b1189,2024-11-06 13:20:21 +0000,manuel barbosa,1220973@isep.ipp.pt,setup do projeto da 2ª iteração "Sala" em NodeJS
