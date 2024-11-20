@@ -73,7 +73,7 @@ exports.deleteAllClientes = async function (req, res) {
     const result = await ClienteService.deleteAllClientes();
 
     if (result) {
-        res.status(200).json({ message: 'Todos os clientes foram apagadps com sucesso' });
+        res.status(200).json({ message: 'Todos os clientes foram apagados com sucesso' });
     } else {
         res.status(500).json({ error: 'Erro ao apagar todos os clientes' });
     }
