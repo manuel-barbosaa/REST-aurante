@@ -33,3 +33,25 @@ exports.getEmentaByRefeicaoId = async function (refeicaoId) {
         throw new Error(`Erro a procurar ementa atraves do ID: ${err.message}`);
     }
 };
+
+
+
+
+exports.deleteClienteById = async function (id) {
+    try {
+        const result = await EmentaModel.deleteOne({ _id: id });
+        return result;
+    } catch (error) {
+        console.error('Erro ao eliminar ementa pelo ID:', error);
+        return false;
+    }
+};
+exports.deleteAllEmenta = async function(){
+    try {
+        await EmentaModel.deleteMany({});
+        return true;
+    } catch (error) {
+        console.error('Erro ao eleminar todas as ementas:', error);
+        return false;
+    }
+}

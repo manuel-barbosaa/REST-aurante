@@ -51,7 +51,7 @@ exports.deleteClienteByNIF = async function (nif) {
         const result = await ClienteModel.deleteOne({ nif });
         return result.deletedCount > 0;
     } catch (error) {
-        console.error('Erro ao deletar cliente pelo NIF:', error);
+        console.error('Erro ao eliminar cliente pelo NIF:', error);
         return false;
     }
 };
@@ -62,7 +62,7 @@ exports.deleteAllClientes = async function () {
         await ClienteModel.deleteMany({});
         return true;
     } catch (error) {
-        console.error('Erro ao deletar todos os clientes:', error);
+        console.error('Erro ao eliminar todos os clientes:', error);
         return false;
     }
 };
