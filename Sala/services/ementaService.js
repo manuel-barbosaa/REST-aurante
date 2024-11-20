@@ -42,4 +42,12 @@ exports.listarRefeicoesEmenta = async function ({ refeicaoId }) {
     } catch (err) {
         throw new Error(`Erro a listar ementa do id fornecido: ${err.message}`);
     }
+}
+
+exports.deleteEmentaById = async function (id) {
+    return await ementaRepository.deleteEmentaById(id);
+};
+
+exports.deleteAllEmenta = async function () {
+    return await ementaRepository.deleteAllEmenta();
 };
