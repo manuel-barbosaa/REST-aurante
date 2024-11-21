@@ -22,7 +22,8 @@ namespace Cozinha.Services{
  private ListarTipoRefeicaoDTO TipoRefeicaoListItem(TipoRefeicao tr) {
             return new ListarTipoRefeicaoDTO {
                 Id = tr.Id,
-                Nome = tr.Nome
+                Nome = tr.Nome,
+                Descricao = tr.Descricao
 
             };
         }
@@ -58,6 +59,7 @@ public async Task<ListarTipoRefeicaoDTO> DefinirTipoRefeicao(long id, DefinirTip
             {
                 Id = tipo.Id,
                 Nome = tipo.Nome,
+                Descricao = tipo.Descricao
                
             };
         }
@@ -77,6 +79,7 @@ public async Task<ListarTipoRefeicaoDTO> DefinirTipoRefeicao(long id, DefinirTip
             {
                 Id = novoTipoRefeicao.Id,
                 Nome = novoTipoRefeicao.Nome,
+                Descricao = novoTipoRefeicao.Descricao
              
             };
         }
@@ -96,6 +99,7 @@ public async Task<ListarTipoRefeicaoDTO> DefinirTipoRefeicao(long id, DefinirTip
             {
                 Id = tipoRefeicao.Id,
                 Nome = tipoRefeicao.Nome,
+                Descricao = tipoRefeicao.Descricao
               
             };
         }
