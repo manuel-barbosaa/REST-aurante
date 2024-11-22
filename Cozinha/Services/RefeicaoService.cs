@@ -20,6 +20,7 @@ namespace Cozinha.Services {
             Prato? prato = await _context.Pratos.FindAsync(info.Prato);
             if (prato == null)
             {
+
                 throw new Exception("Prato não encontrado");
             } else if (!prato.IsAtivo) {
                 throw new Exception("Prato inativo");
@@ -33,15 +34,18 @@ namespace Cozinha.Services {
             // Criação da nova refeição
             var newRefeicao = new Refeicao
             {
-                Id = info.Id,                
+                Id = info.Id,
                 Prato = prato,
                 TipoRefeicao = tipoRefeicao,
-                Quantidade = info.Quantidade,                
-                Data = info.Data,                    
+                Quantidade = info.Quantidade,
+                Data = info.Data
             };
 
-            // Converte para DTO para retornar a resposta
-            return RefeicaoDetail(await _repo.AddRefeicao(newRefeicao));
+            // Adiciona a refeição ao banco de dados usando o repositório
+            var refeicaoCriada = await _repo.AddRefeicao(newRefeicao);
+
+            // Converte a entidade para o DTO para retornar a resposta
+            return RefeicaoDetail(refeicaoCriada);
         }
         //converte um objeto Refeicao em ListarRefeicaoDTO para retornar informações detalhadas
         private ListarRefeicaoDTO RefeicaoDetail(Refeicao r)
@@ -55,20 +59,11 @@ namespace Cozinha.Services {
                 Prato = r.Prato
             };
         }
-        //converte um objeto Refeicao em ListarRefeicaoDTO para retornar apenas informações resumidas
-        private ListarRefeicaoDTO RefeicaoListItem(Refeicao r) {
-            return new ListarRefeicaoDTO {
-                Id = r.Id,
-                TipoRefeicao = r.TipoRefeicao,
-                Prato = r.Prato,
-                Quantidade = r.Quantidade,
-                Data = r.Data
-            };
-        }
+        
         public async Task<List<ListarRefeicaoDTO>> GetRefeicoes() {
             List<Refeicao> Refeicoes = await _repo.GetRefeicoes();
 
-            return Refeicoes.Select(x => RefeicaoListItem(x)).ToList();
+            return Refeicoes.Select(x => RefeicaoDetail(x)).ToList();
         }
         //Retorna uma refeição específica pelo seu id; lança uma exceção se a refeição não for encontrada
         public async Task<ListarRefeicaoDTO> GetRefeicao(int id) {
@@ -149,7 +144,5 @@ namespace Cozinha.Services {
         {
             await _repo.DeleteAll();
         }
-
-        
     }
 }

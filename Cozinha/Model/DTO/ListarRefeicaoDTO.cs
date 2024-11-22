@@ -6,6 +6,4 @@ public class ListarRefeicaoDTO {
     public required TipoRefeicao TipoRefeicao { get; set;}
     public int Quantidade { get; set;}
     public DateTime Data{ get; set;}  
-    public required bool IsAtivo { get; set; } = true; 
-
 }
