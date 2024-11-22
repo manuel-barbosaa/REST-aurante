@@ -37,7 +37,7 @@ exports.getEmentaByRefeicaoId = async function (refeicaoId) {
 
 
 
-exports.deleteClienteById = async function (id) {
+exports.deleteEmentaById = async function (id) {
     try {
         const result = await EmentaModel.deleteOne({ _id: id });
         return result;
