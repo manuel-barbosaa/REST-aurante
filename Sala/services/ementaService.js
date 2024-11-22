@@ -20,13 +20,36 @@ exports.createEmenta = async function (ementaDTO){
 
     const refeicao = ementaCozinha.refeicoes.filter(refeicao => refeicao.id === refeicaoId)[0];
 
-    const prato = refeicao.prato.nome;
+    // const prato = refeicao.prato.nome;
+    
+    const prato = {
+        id: refeicao.prato.id,
+        nome: refeicao.prato.nome
+    };
+      
+
 
     return await ementaRepository.createEmenta({
         prato: prato,
         refeicaoId: refeicaoId,
         preco: preco
     });
+}
+
+exports.getEmentas = async function() {
+    const allEmentas = await ementaRepository.getEmentas();
+    iList = new Array();
+    allEmentas.forEach(
+        (i) => {
+            iList.push({
+                'id': i._id,
+                'prato':    i.prato,
+                'refeicaoId': i.refeicaoId,
+                'preco': i.preco
+            })
+        }
+    );
+    return iList
 }
 
 
