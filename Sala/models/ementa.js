@@ -3,7 +3,10 @@ var Schema = mongoose.Schema;
 
 var EmentaSchema = new Schema({
     id : Schema.Types.ObjectId,
-    prato:{type: String, required: true},
+    prato:{
+        id: { type: Number, required: true },
+        nome: { type: String, required: true }
+    },
     refeicaoId: {type: Number, required: true},
     preco: {type: Number, default: 0},
     criadoEm: { type: Date, default: Date.now }
