@@ -29,8 +29,8 @@ exports.createEncomenda = async function(ementaId, clienteNif){
     const prato= ementa.prato.nome;
     const valor= ementa.preco; 
     const cliente= await clienteRepository.getClienteByNIF(clienteNif);
-
     if(cliente.saldo< valor){
+        console.log('ta broke');
        return false;
     
     }
@@ -40,11 +40,11 @@ exports.createEncomenda = async function(ementaId, clienteNif){
     const saldoUpdated = await clienteRepository.updateSaldo(clienteNif, debito);
 
     if (saldoUpdated) {
-
+        console.log('debitou');
         const refeicaoServed = await servirRefeicaoCozinha(ementa.refeicaoId);
 
         if (refeicaoServed) {
-
+            console.log('serviu');
             return await encomendaRepository.createEncomenda({
                 cliente: clienteNif,
                 data: Date.now(),
@@ -56,36 +56,33 @@ exports.createEncomenda = async function(ementaId, clienteNif){
 };
 
 exports.getEncomendasByClienteNIF = async function (nif) {
-    try{
-        
-    const cliente = await clienteRepository.getClienteByNIF(nif);
+    try {
+        // Fetch all encomendas
+        const encomendas = await encomendaRepository.getEncomendas();
 
-    if (!cliente) {
+        // Prepare the result object
+        const groupedByCliente = {};
 
-        throw new Error("Cliente não encontrado.");
+        // Process each encomenda
+        for (const encomenda of encomendas) {
+            const clienteNif = encomenda.cliente;
+
+            if (!groupedByCliente[clienteNif]) {
+                groupedByCliente[clienteNif] = []; 
+            }
+
+            groupedByCliente[clienteNif].push({
+                prato: encomenda.prato,
+                valor: encomenda.valor,
+                data: encomenda.data,
+            });
+        }
+
+        return groupedByCliente;
+    } catch (error) {
+        console.error("Error grouping encomendas by cliente", error);
+        throw new Error("Could not group encomendas by cliente");
     }
-
-    const encomendas = await encomendaRepository.getEncomendasByClienteNIF(nif);
-   
-    if (!encomendas || encomendas.length === 0){
-        
-        return [];
-    }
-
-    return encomendas.map((encomenda) => ({
-
-        data: encomenda.data,
-        prato: encomenda.prato,
-        valor: encomenda.valor
-    }));
-
-}catch (err){
-    
-    console.error("Erro ao listar encomendas", err.message);
-   
-    throw err;
-}
-
 };
 
 exports.getClientesByPrato = async function(){
