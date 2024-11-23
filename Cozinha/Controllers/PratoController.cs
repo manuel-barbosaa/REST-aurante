@@ -115,30 +115,5 @@ namespace Cozinha.Controllers
 
             return NoContent(); // Retorna 204 se o prato for removido com sucesso
         }
-
-
-
-
-
-
-        // PUT: api/Prato/5
-        // [HttpPut("{id}")]
-        // public async Task<ActionResult<ListarPratoDTO>> PutPrato(long id, Prato prato)
-        // {
-        //     if (id != prato.Id)
-        //     {
-        //         return BadRequest();
-        //     }
-
-        //     try
-        //     {
-        //         return await _service.UpdatePrato(prato);
-        //     }
-        //     catch (DbUpdateConcurrencyException)
-        //     {
-        //         throw;
-        //     }
-        // }
-        
     }
 }

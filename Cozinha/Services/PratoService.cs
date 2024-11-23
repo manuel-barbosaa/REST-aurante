@@ -67,14 +67,18 @@ namespace Cozinha.Services {
                 foreach (var existingId in info.Ingredientes)
                 {
                     var existingIngredient = await _context.Ingredientes.FindAsync(existingId);
-                    if (existingIngredient != null)
-                    {
-                        ingredientesToSave.Add(existingIngredient);
-                    }
-                    else
+
+                    if (existingIngredient == null)
                     {
                         throw new Exception($"Ingrediente with Id {existingId} not found");
                     }
+
+                    if (!existingIngredient.Ativo)
+                    {
+                        throw new Exception($"Ingrediente with Id {existingId} is not active");
+                    }
+                    
+                    ingredientesToSave.Add(existingIngredient);
                 }
             }
             else
