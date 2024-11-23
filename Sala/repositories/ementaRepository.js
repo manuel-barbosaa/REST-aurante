@@ -36,7 +36,9 @@ exports.getEmentaByRefeicaoId = async function (refeicaoId) {
     }
 };
 
-
+exports.getEmentaById = async function (id) {
+    return await EmentaModel.findOne({ id });
+}   
 
 
 exports.deleteEmentaById = async function (id) {
