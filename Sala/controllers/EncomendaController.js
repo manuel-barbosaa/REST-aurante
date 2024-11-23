@@ -13,9 +13,8 @@ exports.createEncomenda= async function(req, res){
 
 
 exports.getEncomendasByClienteNIF = async function (req, res) {
-    const { nif } = req.params;
     try {
-        const encomendas = await EncomendaService.getEncomendasByClienteNIF(nif);
+        const encomendas = await EncomendaService.getEncomendasByClienteNIF(req.params.nif);
 
         if (encomendas.length === 0) {
             return res.status(404).json({ message: "Nenhuma encomenda encontrada para este cliente." });
