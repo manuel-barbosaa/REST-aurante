@@ -15,6 +15,15 @@ exports.createEncomenda = async function(encomendaDTO){
     }
 }
 
+exports.getEncomendas = async function () {
+    try {
+        return await EncomendaModel.find();
+    } catch (error) {
+        console.error("Error fetching encomendas", error);
+        throw new Error("Could not fetch encomendas");
+    }
+};
+
 exports.getEncomendasByClienteNIF = async function (nif){
     try{
 
