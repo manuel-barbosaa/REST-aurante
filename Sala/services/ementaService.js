@@ -52,7 +52,9 @@ exports.getEmentas = async function() {
     return iList
 }
 
-
+exports.getEmentaById = async function(id) {
+    return await ementaRepository.getEmentaById(id);
+}
 
 exports.listarRefeicoesEmenta = async function ({ refeicaoId }) {
     try {
