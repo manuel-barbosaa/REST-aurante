@@ -3,7 +3,7 @@ var router = express.Router();
 
 const clienteController = require('../controllers/clienteController');
 const ementaController = require("../controllers/ementaController");
-const encomendaController = require('../controllers/EncomendaController');
+const encomendaController = require('../controllers/encomendaController');
 
 
 
