@@ -1,3 +1,32 @@
+commit 97faed67a84907b5b51b3299f3e0a8e475939eea	refs/heads/main
+Author: Tiago Pereira <1221034@isep.ipp.pt>
+Date:   Fri Nov 22 15:09:34 2024 +0000
+
+    Atualização de verificações do prato ativo na refeição
+
+M	Cozinha/Services/RefeicaoService.cs
+
+commit 1d621b139064ebe14855595ffb8a8f7804bbc8ef	refs/heads/main
+Author: Tiago Pereira <1221034@isep.ipp.pt>
+Date:   Fri Nov 22 14:54:42 2024 +0000
+
+    Atualização do Refeição Service e correção de alterações
+
+M	Cozinha/Model/DTO/CriarRefeicaoDTO.cs
+M	Cozinha/Model/DTO/ListarRefeicaoDTO.cs
+M	Cozinha/Model/Refeicao.cs
+M	Cozinha/Services/RefeicaoService.cs
+
+commit 64a38419ce30c5b435840312f54c68dc2309636a	refs/heads/main
+Author: Tiago Pereira <1221034@isep.ipp.pt>
+Date:   Fri Nov 22 14:41:18 2024 +0000
+
+    Atribuição do atributo IsAtivo à refeição
+
+M	Cozinha/Model/DTO/CriarRefeicaoDTO.cs
+M	Cozinha/Model/DTO/ListarRefeicaoDTO.cs
+M	Cozinha/Model/Refeicao.cs
+
 commit 6aecbdff10bab762784880c3dd7a029e728f3579	refs/heads/main
 Author: Tiago Pereira <1221034@isep.ipp.pt>
 Date:   Sat Nov 16 13:00:41 2024 +0000

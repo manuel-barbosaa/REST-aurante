@@ -1,3 +1,67 @@
+commit cfbfd6fe4a9555089df5adf15828133b9c9e8255	refs/heads/main
+Author: Franciscs Soares <1221180@isep.ipp.pt>
+Date:   Thu Nov 21 21:44:06 2024 +0000
+
+    Alteração dos métodos no service para mostrar a descrição do tipo de refeição
+
+M	Cozinha/Services/TipoRefeicaoService.cs
+
+commit 997db560514740cc9c93da0b2729ac425ae910ef	refs/heads/main
+Author: Franciscs Soares <1221180@isep.ipp.pt>
+Date:   Thu Nov 21 21:43:43 2024 +0000
+
+    Adicionar a variável "Descrição"
+
+M	Cozinha/Model/DTO/ListarTipoRefeicaoDTO.cs
+
+commit 1745b6c6f0494285a12e161fdef0e40367bbf12d	refs/heads/main
+Author: Franciscs Soares <1221180@isep.ipp.pt>
+Date:   Wed Nov 20 14:36:52 2024 +0000
+
+    model encomenda
+
+M	Sala/models/encomenda.js
+
+commit aba34c67dbbb8d4f5d08a1c5dfe91999ee463b7f	refs/heads/main
+Author: Franciscs Soares <1221180@isep.ipp.pt>
+Date:   Wed Nov 20 14:36:03 2024 +0000
+
+    novo modelo para representar as encomendas
+
+A	Sala/models/encomenda.js
+
+commit 02ea7c08a43fb1b1556c0445ab1f81e21cedb201	refs/heads/main
+Author: Franciscs Soares <1221180@isep.ipp.pt>
+Date:   Mon Nov 18 15:13:30 2024 +0000
+
+    definição das rotas do delete cliente by nif e delete all clientes
+
+M	Sala/routes/salaRoutes.js
+
+commit 7bde8675380d1fb88e71dfa5d2f7f0edaa95f7bc	refs/heads/main
+Author: Franciscs Soares <1221180@isep.ipp.pt>
+Date:   Mon Nov 18 15:13:13 2024 +0000
+
+    controller - delete cliente by nif e delete all clientes
+
+M	Sala/controllers/clienteController.js
+
+commit 9b38c9c5570e3193ca3feafac5a41a1eae6f1c4d	refs/heads/main
+Author: Franciscs Soares <1221180@isep.ipp.pt>
+Date:   Mon Nov 18 15:12:54 2024 +0000
+
+    delete cliente by nif e delete all clientes - service
+
+M	Sala/services/clienteService.js
+
+commit bde1646432a19d46712a6f9c97bf6ced2c778b4c	refs/heads/main
+Author: Franciscs Soares <1221180@isep.ipp.pt>
+Date:   Mon Nov 18 15:12:32 2024 +0000
+
+    delete cliente by nif e delete all clientes
+
+M	Sala/repositories/clienteRepository.js
+
 commit 6d4b9771055c9bb8f66c0a0d4d9a49479267fa3c	refs/heads/main
 Author: Franciscs Soares <1221180@isep.ipp.pt>
 Date:   Fri Nov 15 15:19:20 2024 +0000

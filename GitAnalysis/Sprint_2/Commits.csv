@@ -1,3 +1,33 @@
+8b7c305,2024-11-22 15:27:34 +0000,Tatiana Patricia Loureiro Teixeira,1221260@isep.ipp.pt,fix: erros de sintaxe
+9cea83a,2024-11-22 15:21:29 +0000,manuel barbosa,1220973@isep.ipp.pt,Revert "fix: remover model de encomenda"
+427b739,2024-11-22 15:18:36 +0000,manuel barbosa,1220973@isep.ipp.pt,fix: remover model de encomenda
+20742bc,2024-11-22 15:16:44 +0000,manuel barbosa,1220973@isep.ipp.pt,correção de apresentação da variável prato da ementa da sala
+3926138,2024-11-22 15:16:19 +0000,manuel barbosa,1220973@isep.ipp.pt,atualização das routes do projeto (GET ementas)
+0169051,2024-11-22 15:15:59 +0000,manuel barbosa,1220973@isep.ipp.pt,implementação da listagem de todas as ementas da sala no controller
+96b354b,2024-11-22 15:15:26 +0000,manuel barbosa,1220973@isep.ipp.pt,implementação da listagem de todas as ementas da sala e correção de listagem do prato (nome e id) no service
+383497f,2024-11-22 15:14:15 +0000,manuel barbosa,1220973@isep.ipp.pt,implementação da listagem de todas as ementas da sala no controller
+97faed6,2024-11-22 15:09:34 +0000,Tiago Pereira,1221034@isep.ipp.pt,Atualização de verificações do prato ativo na refeição
+1d621b1,2024-11-22 14:54:42 +0000,Tiago Pereira,1221034@isep.ipp.pt,Atualização do Refeição Service e correção de alterações
+64a3841,2024-11-22 14:41:18 +0000,Tiago Pereira,1221034@isep.ipp.pt,Atribuição do atributo IsAtivo à refeição
+cfbfd6f,2024-11-21 21:44:06 +0000,Franciscs Soares,1221180@isep.ipp.pt,Alteração dos métodos no service para mostrar a descrição do tipo de refeição
+997db56,2024-11-21 21:43:43 +0000,Franciscs Soares,1221180@isep.ipp.pt,Adicionar a variável "Descrição"
+7d63fa9,2024-11-20 16:10:06 +0000,manuel barbosa,1220973@isep.ipp.pt,realocação de pastas e ficheiros git ignore
+417349f,2024-11-20 15:42:16 +0000,Tatiana Patricia Loureiro Teixeira,1221260@isep.ipp.pt,feat:  router delete
+2a495dc,2024-11-20 15:41:54 +0000,Tatiana Patricia Loureiro Teixeira,1221260@isep.ipp.pt,feat: service método delete
+8be049d,2024-11-20 15:40:51 +0000,Tatiana Patricia Loureiro Teixeira,1221260@isep.ipp.pt,feat: controller método delete
+44a9085,2024-11-20 15:40:20 +0000,Tatiana Patricia Loureiro Teixeira,1221260@isep.ipp.pt,feat: métodos delete ementa
+1745b6c,2024-11-20 14:36:52 +0000,Franciscs Soares,1221180@isep.ipp.pt,model encomenda
+aba34c6,2024-11-20 14:36:03 +0000,Franciscs Soares,1221180@isep.ipp.pt,novo modelo para representar as encomendas
+cdc752e,2024-11-20 11:57:29 +0000,Paulo Proenca,prp@isep.ipp.pt,Repository Analysis
+02ea7c0,2024-11-18 15:13:30 +0000,Franciscs Soares,1221180@isep.ipp.pt,definição das rotas do delete cliente by nif e delete all clientes
+7bde867,2024-11-18 15:13:13 +0000,Franciscs Soares,1221180@isep.ipp.pt,controller - delete cliente by nif e delete all clientes
+9b38c9c,2024-11-18 15:12:54 +0000,Franciscs Soares,1221180@isep.ipp.pt,delete cliente by nif e delete all clientes - service
+bde1646,2024-11-18 15:12:32 +0000,Franciscs Soares,1221180@isep.ipp.pt,delete cliente by nif e delete all clientes
+181a0ce,2024-11-18 11:48:29 +0000,Tatiana Patricia Loureiro Teixeira,1221260@isep.ipp.pt,feat: Sala routes
+1e87f37,2024-11-18 11:47:03 +0000,Tatiana Patricia Loureiro Teixeira,1221260@isep.ipp.pt,feat: Ementa controller lisarRefeicoesEmenta
+29d8f60,2024-11-18 11:46:39 +0000,Tatiana Patricia Loureiro Teixeira,1221260@isep.ipp.pt,feat: Ementa Service listarRefeicoesEmenta
+ab80121,2024-11-18 11:45:06 +0000,Tatiana Patricia Loureiro Teixeira,1221260@isep.ipp.pt,feat: Ementa repository-US007 getEmentaByRefeicaoId
+694d1d6,2024-11-17 15:19:17 +0000,Paulo Proenca,prp@isep.ipp.pt,Repository Analysis
 63c50ff,2024-11-17 14:33:25 +0000,Paulo Proenca,prp@isep.ipp.pt,Repository Analysis
 9828d5b,2024-11-16 14:50:41 +0000,manuel barbosa,1220973@isep.ipp.pt,correção de erros para o funcionamento do US006
 ae33f02,2024-11-16 14:09:02 +0000,manuel barbosa,1220973@isep.ipp.pt,implementação do Cors na web api de .NET

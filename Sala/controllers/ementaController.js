@@ -10,6 +10,16 @@ exports.createEmenta= async function (req, res){
     }
 }
 
+exports.getEmentas = async function (req, res) {
+    const result = await EmentaService.getEmentas();
+    
+    if(!result){
+        res.status(404).send('Erro ao listar ementas');
+    } else{
+        res.status(201).json(result);
+    }
+}
+
 exports.listarRefeicoesEmenta= async function (req, res){
     const result= await EmentaService.listarRefeicoesEmenta(req.params);
 

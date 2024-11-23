@@ -20,7 +20,6 @@ namespace Cozinha.Services {
             Prato? prato = await _context.Pratos.FindAsync(info.Prato);
             if (prato == null)
             {
-
                 throw new Exception("Prato não encontrado");
             } else if (!prato.IsAtivo) {
                 throw new Exception("Prato inativo");
@@ -82,6 +81,11 @@ namespace Cozinha.Services {
             {
                 throw new Exception("Refeição não encontrada.");
             }
+            // Verifica se o prato associado à refeição está ativo
+            if (!refeicao.Prato.IsAtivo)
+            {
+                throw new Exception("Não é possível servir. O prato associado está inativo.");
+            }
 
             if (refeicao.Quantidade <= 0)
             {
@@ -125,6 +129,11 @@ namespace Cozinha.Services {
             // Obtém a refeição pelo ID
             var refeicao = await _repo.GetRefeicaoById(refeicaoId);
             if (refeicao == null) throw new Exception("Refeição não encontrada.");
+            // Verifica se o prato associado à refeição está ativo
+            if (!refeicao.Prato.IsAtivo)
+            {
+                throw new Exception("Não é possível produzir. O prato associado está inativo.");
+            }
 
             // Incrementa a quantidade e atualiza no banco de dados
             refeicao.Quantidade += quantidadeExtra;
