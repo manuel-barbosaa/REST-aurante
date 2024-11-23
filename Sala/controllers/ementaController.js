@@ -16,7 +16,17 @@ exports.getEmentas = async function (req, res) {
     if(!result){
         res.status(404).send('Erro ao listar ementas');
     } else{
-        res.status(201).json(result);
+        res.status(200).json(result);
+    }
+}
+
+exports.getEmentaById = async function (req,res) {
+    const result = await EmentaService.getEmentaById(req.params);
+
+    if(!result){
+        res.status(404).send('Erro ao listar ementa com o id ', req.params);
+    } else{
+        res.status(200).json(result);
     }
 }
 
