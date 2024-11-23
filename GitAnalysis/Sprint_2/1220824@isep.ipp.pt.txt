@@ -1,3 +1,58 @@
+commit e471f7e7b39c650faa6b17bbdd69ac75c71ff3fa	refs/heads/main
+Author: beamsteixeira <1220824@isep.ipp.pt>
+Date:   Sat Nov 23 17:44:05 2024 +0000
+
+    repository: alteração do método get Encomendas By cliente
+
+M	Sala/repositories/encomendaRepository.js
+M	Sala/services/EncomendaService.js
+
+commit eee8506d6e482e48a29e64c3877bf82303783b9a	refs/heads/main
+Author: beamsteixeira <1220824@isep.ipp.pt>
+Date:   Sat Nov 23 17:22:34 2024 +0000
+
+    Service: criação do método listar encomendas do cliente
+
+M	Sala/services/EncomendaService.js
+
+commit d360294d214cfb09c5330883bc65975380e14f22	refs/heads/main
+Author: beamsteixeira <1220824@isep.ipp.pt>
+Date:   Sat Nov 23 17:19:36 2024 +0000
+
+    repository: criação do método listar encomendas By Cliente
+
+M	Cozinha/Database/CozinhaDB
+A	Sala/.idea/.gitignore
+A	Sala/.idea/encodings.xml
+A	Sala/.idea/indexLayout.xml
+A	Sala/.idea/vcs.xml
+M	Sala/repositories/encomendaRepository.js
+
+commit c2a4de9292e3d0403de60ad71829a48b7bc5997e	refs/heads/main
+Author: beamsteixeira <1220824@isep.ipp.pt>
+Date:   Sat Nov 23 02:41:40 2024 +0000
+
+    fix: atualizar createPrato para impedir criação do prato quando é usado um ingrediente inativo
+
+M	Cozinha/Controllers/PratoController.cs
+M	Cozinha/Services/PratoService.cs
+
+commit 179e1bb845e09c8e2938e718464779a4b8cd45b4	refs/heads/main
+Author: beamsteixeira <1220824@isep.ipp.pt>
+Date:   Sat Nov 23 02:14:31 2024 +0000
+
+    Service: remoção do método de atualizar o estado do ingrediente pelo id
+
+M	Cozinha/Services/Ingrediente/IngredienteService.cs
+
+commit 314a6371714fa6d46acc869d4a5f7ab28ddcdc00	refs/heads/main
+Author: beamsteixeira <1220824@isep.ipp.pt>
+Date:   Sat Nov 23 02:11:55 2024 +0000
+
+    Controller: remoção dos métodos de ativar e desativar ingrediente pelo id
+
+M	Cozinha/Controllers/IngredienteController.cs
+
 commit 0732cab7da5650f2f919d0e72b5ca317a8516b76	refs/heads/main
 Author: beamsteixeira <1220824@isep.ipp.pt>
 Date:   Fri Nov 15 15:30:55 2024 +0000

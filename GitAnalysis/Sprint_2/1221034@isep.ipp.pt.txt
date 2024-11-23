@@ -1,3 +1,42 @@
+commit 88851f267b92af610ab096962840d1463e85c7e1	refs/heads/main (HEAD -> main, origin/main)
+Author: Tiago Pereira <1221034@isep.ipp.pt>
+Date:   Sat Nov 23 21:48:45 2024 +0000
+
+    Correção dos clientes por prato
+
+M	Sala/services/EncomendaService.js
+
+commit 2c12d6ade0ae92e3d062bebe2fd075550697b9ce	refs/heads/main
+Author: Tiago Pereira <1221034@isep.ipp.pt>
+Date:   Sat Nov 23 20:55:19 2024 +0000
+
+    Atualização de lógica
+
+M	Sala/controllers/EncomendaController.js
+M	Sala/models/encomenda.js
+M	Sala/repositories/encomendaRepository.js
+M	Sala/routes/salaRoutes.js
+M	Sala/services/EncomendaService.js
+
+commit 9ce01ea34006a4045744494a436cb03e04ce024a	refs/heads/main
+Author: Tiago Pereira <1221034@isep.ipp.pt>
+Date:   Sat Nov 23 19:56:06 2024 +0000
+
+    US009- listar refeicoes servidas
+
+M	Sala/controllers/EncomendaController.js
+M	Sala/repositories/encomendaRepository.js
+M	Sala/routes/salaRoutes.js
+M	Sala/services/EncomendaService.js
+
+commit 177668305c4b1b5d98ce768de6fd63c65a942320	refs/heads/main
+Author: Tiago Pereira <1221034@isep.ipp.pt>
+Date:   Fri Nov 22 15:17:06 2024 +0000
+
+    Correção na refeição, Include do tipo de prato e ingredientes do prato
+
+M	Cozinha/Repositories/RefeicaoRepository.cs
+
 commit 97faed67a84907b5b51b3299f3e0a8e475939eea	refs/heads/main
 Author: Tiago Pereira <1221034@isep.ipp.pt>
 Date:   Fri Nov 22 15:09:34 2024 +0000

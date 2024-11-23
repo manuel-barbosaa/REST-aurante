@@ -1,3 +1,123 @@
+commit 6b1188ed111cacaad3460de503ada43e06448c84	refs/heads/main
+Author: manuel barbosa <1220973@isep.ipp.pt>
+Date:   Sat Nov 23 21:21:25 2024 +0000
+
+    correção de sintaxe no controller no get encomendas by cliente
+
+M	Sala/controllers/EncomendaController.js
+
+commit 7e4250635c2d22ebc49f53cf969ac516bd4639c5	refs/heads/main
+Author: manuel barbosa <1220973@isep.ipp.pt>
+Date:   Sat Nov 23 21:21:00 2024 +0000
+
+    correção de metodo de get encomendas by cliente
+
+M	Sala/services/EncomendaService.js
+
+commit 5f2307f0959b7f03b211c8dda84461e9ee5ef618	refs/heads/main
+Author: manuel barbosa <1220973@isep.ipp.pt>
+Date:   Sat Nov 23 21:20:35 2024 +0000
+
+    adição de método de get todas as encomendas
+
+M	Sala/repositories/encomendaRepository.js
+
+commit d09601e9efa2a77371b7a512dba451dfd69f7a8a	refs/heads/main
+Author: manuel barbosa <1220973@isep.ipp.pt>
+Date:   Sat Nov 23 21:20:08 2024 +0000
+
+    correção das routes
+
+M	Sala/routes/salaRoutes.js
+
+commit 4d9ab2aa9cc6e6276931964c0b1bbc5104cd356c	refs/heads/main
+Author: manuel barbosa <1220973@isep.ipp.pt>
+Date:   Sat Nov 23 16:56:42 2024 +0000
+
+    atualização e reorganização das routes
+
+M	Sala/routes/salaRoutes.js
+
+commit c96e4b30fd6bd708b61a0c461cb039cc7651736f	refs/heads/main
+Author: manuel barbosa <1220973@isep.ipp.pt>
+Date:   Sat Nov 23 16:56:23 2024 +0000
+
+    correção de erro na inclusão do service da encomenda no seu controller
+
+M	Sala/controllers/EncomendaController.js
+
+commit 21667be8bc4b120953d9fa14bb32ab7e056014ae	refs/heads/main
+Author: manuel barbosa <1220973@isep.ipp.pt>
+Date:   Sat Nov 23 16:55:49 2024 +0000
+
+    implementação do serviço da refeição ao criar encomenda
+
+M	Sala/services/EncomendaService.js
+
+commit 65856b1df94c3488821d87ebaf295928337b7b98	refs/heads/main
+Author: manuel barbosa <1220973@isep.ipp.pt>
+Date:   Sat Nov 23 16:55:23 2024 +0000
+
+    correção de erro no status de resultado do get ementa by id
+
+M	Sala/controllers/ementaController.js
+
+commit 6470a86a2f8309068050f731200ba0050c6f2b2a	refs/heads/main
+Author: manuel barbosa <1220973@isep.ipp.pt>
+Date:   Sat Nov 23 16:54:33 2024 +0000
+
+    correção de erro em ordem de declaração de variáveis no model da encomenda
+
+M	Sala/models/encomenda.js
+
+commit 5b0b9381a39b97a2cf572272745f0b520e7aa6fd	refs/heads/main
+Author: manuel barbosa <1220973@isep.ipp.pt>
+Date:   Sat Nov 23 16:54:02 2024 +0000
+
+    correção de erro no get ementa by id
+
+M	Sala/repositories/ementaRepository.js
+
+commit bea24b79a02863e9c558c2952d6bd6974a263431	refs/heads/main
+Author: manuel barbosa <1220973@isep.ipp.pt>
+Date:   Sat Nov 23 16:50:37 2024 +0000
+
+    remoção de linha sem uso
+
+M	Sala/repositories/clienteRepository.js
+
+commit f46f0f388711051221de4ac44a5a2f3071a281d0	refs/heads/main
+Author: manuel barbosa <1220973@isep.ipp.pt>
+Date:   Sat Nov 23 16:03:43 2024 +0000
+
+    atualização das routes (get Ementa by Id)
+
+M	Sala/routes/salaRoutes.js
+
+commit bba3910f74e49942ec7358a2e95f975aef6740bd	refs/heads/main
+Author: manuel barbosa <1220973@isep.ipp.pt>
+Date:   Sat Nov 23 15:27:48 2024 +0000
+
+    feat: get ementa by id no controller
+
+M	Sala/controllers/ementaController.js
+
+commit 09bc8692169b629fc9291fc0bd95f4263616526a	refs/heads/main
+Author: manuel barbosa <1220973@isep.ipp.pt>
+Date:   Sat Nov 23 15:27:39 2024 +0000
+
+    feat: get ementa by id no service
+
+M	Sala/services/ementaService.js
+
+commit 55b355e24c79203f4c2176a91e12f7ad9988f806	refs/heads/main
+Author: manuel barbosa <1220973@isep.ipp.pt>
+Date:   Sat Nov 23 15:27:30 2024 +0000
+
+    feat: get ementa by id no repository
+
+M	Sala/repositories/ementaRepository.js
+
 commit 9cea83a2b5ec6d8e5f302cf1ccfe5808ea3a2edf	refs/heads/main
 Author: manuel barbosa <1220973@isep.ipp.pt>
 Date:   Fri Nov 22 15:21:29 2024 +0000

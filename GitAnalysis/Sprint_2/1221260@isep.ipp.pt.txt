@@ -1,3 +1,43 @@
+commit 77567517c5bd54369b804d305b0fb9fe9cc0e746	refs/heads/main
+Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
+Date:   Sat Nov 23 16:02:07 2024 +0000
+
+    feat: debito do valor depois de cirar encomenda
+
+M	Sala/services/EncomendaService.js
+
+commit a641665636536e000ff9ae1824a44c173e211c95	refs/heads/main
+Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
+Date:   Sat Nov 23 15:51:01 2024 +0000
+
+    atualização das routes
+
+M	Sala/routes/salaRoutes.js
+
+commit 7ff1346ccfe1cb3e61e6ca319448949961907dac	refs/heads/main
+Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
+Date:   Sat Nov 23 15:50:46 2024 +0000
+
+    feat: controller- criação da encomenda e verificação do saldo
+
+A	Sala/controllers/EncomendaController.js
+
+commit d6cbaf1e533356860cfd585aaabe60efc8d93a2f	refs/heads/main
+Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
+Date:   Sat Nov 23 15:50:28 2024 +0000
+
+    feat: service- criação da ementa e verificação do saldo
+
+A	Sala/services/EncomendaService.js
+
+commit 9177f979b5f4e6814f9c0cb9d4c93531aecf0f0f	refs/heads/main
+Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
+Date:   Sat Nov 23 15:50:01 2024 +0000
+
+    feat: repository- criação da encomenda e verificação do saldo
+
+A	Sala/repositories/encomendaRepository.js
+
 commit 8b7c3056f02201ef7e47b636d5b64ebbe7da42d3	refs/heads/main
 Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
 Date:   Fri Nov 22 15:27:34 2024 +0000

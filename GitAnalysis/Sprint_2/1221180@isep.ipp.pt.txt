@@ -1,3 +1,43 @@
+commit 6fd577ce77b5ad0721a7005f1567d94342fb3f01	refs/heads/main
+Author: Franciscs Soares <1221180@isep.ipp.pt>
+Date:   Sat Nov 23 17:59:07 2024 +0000
+
+    concordância do nome do método getEncomendasByClienteNIF entre o service e o controller
+
+M	Sala/services/EncomendaService.js
+
+commit b9daf657609dee8f0f1a42bddd6869910117059e	refs/heads/main
+Author: Franciscs Soares <1221180@isep.ipp.pt>
+Date:   Sat Nov 23 17:49:15 2024 +0000
+
+    alteração rota procurar encomenda por cliente
+
+M	Sala/routes/salaRoutes.js
+
+commit be37b88f0663a9de929b8b05087b8318fd44b951	refs/heads/main
+Author: Franciscs Soares <1221180@isep.ipp.pt>
+Date:   Sat Nov 23 17:48:56 2024 +0000
+
+    alteração método de procurar encomendas por cliente
+
+M	Sala/controllers/EncomendaController.js
+
+commit 2bd19dd7852b8630db725c9f5f3fdec660966594	refs/heads/main
+Author: Franciscs Soares <1221180@isep.ipp.pt>
+Date:   Sat Nov 23 17:25:52 2024 +0000
+
+    rota listar encomenda cliente
+
+M	Sala/routes/salaRoutes.js
+
+commit ad6e21c8157e9d51a2acc7c258172386ab67c8ee	refs/heads/main
+Author: Franciscs Soares <1221180@isep.ipp.pt>
+Date:   Sat Nov 23 17:25:38 2024 +0000
+
+    listar encomenda cliente controller
+
+M	Sala/controllers/EncomendaController.js
+
 commit cfbfd6fe4a9555089df5adf15828133b9c9e8255	refs/heads/main
 Author: Franciscs Soares <1221180@isep.ipp.pt>
 Date:   Thu Nov 21 21:44:06 2024 +0000

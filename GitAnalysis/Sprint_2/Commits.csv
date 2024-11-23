@@ -1,6 +1,42 @@
+88851f2,2024-11-23 21:48:45 +0000,Tiago Pereira,1221034@isep.ipp.pt,Correção dos clientes por prato
+6b1188e,2024-11-23 21:21:25 +0000,manuel barbosa,1220973@isep.ipp.pt,correção de sintaxe no controller no get encomendas by cliente
+7e42506,2024-11-23 21:21:00 +0000,manuel barbosa,1220973@isep.ipp.pt,correção de metodo de get encomendas by cliente
+5f2307f,2024-11-23 21:20:35 +0000,manuel barbosa,1220973@isep.ipp.pt,adição de método de get todas as encomendas
+d09601e,2024-11-23 21:20:08 +0000,manuel barbosa,1220973@isep.ipp.pt,correção das routes
+2c12d6a,2024-11-23 20:55:19 +0000,Tiago Pereira,1221034@isep.ipp.pt,Atualização de lógica
+9ce01ea,2024-11-23 19:56:06 +0000,Tiago Pereira,1221034@isep.ipp.pt,US009- listar refeicoes servidas
+6fd577c,2024-11-23 17:59:07 +0000,Franciscs Soares,1221180@isep.ipp.pt,concordância do nome do método getEncomendasByClienteNIF entre o service e o controller
+b9daf65,2024-11-23 17:49:15 +0000,Franciscs Soares,1221180@isep.ipp.pt,alteração rota procurar encomenda por cliente
+be37b88,2024-11-23 17:48:56 +0000,Franciscs Soares,1221180@isep.ipp.pt,alteração método de procurar encomendas por cliente
+e471f7e,2024-11-23 17:44:05 +0000,beamsteixeira,1220824@isep.ipp.pt,repository: alteração do método get Encomendas By cliente
+2bd19dd,2024-11-23 17:25:52 +0000,Franciscs Soares,1221180@isep.ipp.pt,rota listar encomenda cliente
+ad6e21c,2024-11-23 17:25:38 +0000,Franciscs Soares,1221180@isep.ipp.pt,listar encomenda cliente controller
+eee8506,2024-11-23 17:22:34 +0000,beamsteixeira,1220824@isep.ipp.pt,Service: criação do método listar encomendas do cliente
+d360294,2024-11-23 17:19:36 +0000,beamsteixeira,1220824@isep.ipp.pt,repository: criação do método listar encomendas By Cliente
+4d9ab2a,2024-11-23 16:56:42 +0000,manuel barbosa,1220973@isep.ipp.pt,atualização e reorganização das routes
+c96e4b3,2024-11-23 16:56:23 +0000,manuel barbosa,1220973@isep.ipp.pt,correção de erro na inclusão do service da encomenda no seu controller
+21667be,2024-11-23 16:55:49 +0000,manuel barbosa,1220973@isep.ipp.pt,implementação do serviço da refeição ao criar encomenda
+65856b1,2024-11-23 16:55:23 +0000,manuel barbosa,1220973@isep.ipp.pt,correção de erro no status de resultado do get ementa by id
+6470a86,2024-11-23 16:54:33 +0000,manuel barbosa,1220973@isep.ipp.pt,correção de erro em ordem de declaração de variáveis no model da encomenda
+5b0b938,2024-11-23 16:54:02 +0000,manuel barbosa,1220973@isep.ipp.pt,correção de erro no get ementa by id
+bea24b7,2024-11-23 16:50:37 +0000,manuel barbosa,1220973@isep.ipp.pt,remoção de linha sem uso
+f46f0f3,2024-11-23 16:03:43 +0000,manuel barbosa,1220973@isep.ipp.pt,atualização das routes (get Ementa by Id)
+7756751,2024-11-23 16:02:07 +0000,Tatiana Patricia Loureiro Teixeira,1221260@isep.ipp.pt,feat: debito do valor depois de cirar encomenda
+a641665,2024-11-23 15:51:01 +0000,Tatiana Patricia Loureiro Teixeira,1221260@isep.ipp.pt,atualização das routes
+7ff1346,2024-11-23 15:50:46 +0000,Tatiana Patricia Loureiro Teixeira,1221260@isep.ipp.pt,feat: controller- criação da encomenda e verificação do saldo
+d6cbaf1,2024-11-23 15:50:28 +0000,Tatiana Patricia Loureiro Teixeira,1221260@isep.ipp.pt,feat: service- criação da ementa e verificação do saldo
+9177f97,2024-11-23 15:50:01 +0000,Tatiana Patricia Loureiro Teixeira,1221260@isep.ipp.pt,feat: repository- criação da encomenda e verificação do saldo
+bba3910,2024-11-23 15:27:48 +0000,manuel barbosa,1220973@isep.ipp.pt,feat: get ementa by id no controller
+09bc869,2024-11-23 15:27:39 +0000,manuel barbosa,1220973@isep.ipp.pt,feat: get ementa by id no service
+55b355e,2024-11-23 15:27:30 +0000,manuel barbosa,1220973@isep.ipp.pt,feat: get ementa by id no repository
+c2a4de9,2024-11-23 02:41:40 +0000,beamsteixeira,1220824@isep.ipp.pt,fix: atualizar createPrato para impedir criação do prato quando é usado um ingrediente inativo
+179e1bb,2024-11-23 02:14:31 +0000,beamsteixeira,1220824@isep.ipp.pt,Service: remoção do método de atualizar o estado do ingrediente pelo id
+314a637,2024-11-23 02:11:55 +0000,beamsteixeira,1220824@isep.ipp.pt,Controller: remoção dos métodos de ativar e desativar ingrediente pelo id
+915fe12,2024-11-22 23:33:51 +0000,Paulo Proenca,prp@isep.ipp.pt,Repository Analysis
 8b7c305,2024-11-22 15:27:34 +0000,Tatiana Patricia Loureiro Teixeira,1221260@isep.ipp.pt,fix: erros de sintaxe
 9cea83a,2024-11-22 15:21:29 +0000,manuel barbosa,1220973@isep.ipp.pt,Revert "fix: remover model de encomenda"
 427b739,2024-11-22 15:18:36 +0000,manuel barbosa,1220973@isep.ipp.pt,fix: remover model de encomenda
+1776683,2024-11-22 15:17:06 +0000,Tiago Pereira,1221034@isep.ipp.pt,Correção na refeição, Include do tipo de prato e ingredientes do prato
 20742bc,2024-11-22 15:16:44 +0000,manuel barbosa,1220973@isep.ipp.pt,correção de apresentação da variável prato da ementa da sala
 3926138,2024-11-22 15:16:19 +0000,manuel barbosa,1220973@isep.ipp.pt,atualização das routes do projeto (GET ementas)
 0169051,2024-11-22 15:15:59 +0000,manuel barbosa,1220973@isep.ipp.pt,implementação da listagem de todas as ementas da sala no controller
