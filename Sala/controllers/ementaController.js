@@ -21,10 +21,10 @@ exports.getEmentas = async function (req, res) {
 }
 
 exports.getEmentaById = async function (req,res) {
-    const result = await EmentaService.getEmentaById(req.params);
+    const result = await EmentaService.getEmentaById(req.params.id);
 
     if(!result){
-        res.status(404).send('Erro ao listar ementa com o id ', req.params);
+        res.status(404).send('A ementa não foi encontrada');
     } else{
         res.status(200).json(result);
     }
