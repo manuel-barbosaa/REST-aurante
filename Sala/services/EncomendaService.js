@@ -57,13 +57,10 @@ exports.createEncomenda = async function(ementaId, clienteNif){
 
 exports.getEncomendasByClienteNIF = async function (nif) {
     try {
-        // Fetch all encomendas
         const encomendas = await encomendaRepository.getEncomendas();
 
-        // Prepare the result object
         const groupedByCliente = {};
 
-        // Process each encomenda
         for (const encomenda of encomendas) {
             const clienteNif = encomenda.cliente;
 
@@ -85,22 +82,32 @@ exports.getEncomendasByClienteNIF = async function (nif) {
     }
 };
 
-exports.getClientesByPrato = async function(){
-    const encomendas = await encomendaRepository.getClientesByPrato();
+exports.getClientesByPrato = async function () {
+    try {
+        const encomendas = await encomendaRepository.getEncomendas();
 
-    const list = {};
+        const groupedByPrato = {};
 
-    encomendas.forEach(({prato, cliente})=>{
-        if(!list[prato]){
-            list[prato] = new Set();
+        for (const encomenda of encomendas) {
+            const prato = encomenda.prato;
+            const clienteNif = encomenda.cliente; 
+            const cliente = await clienteRepository.getClienteByNIF(clienteNif);
+
+            if (!groupedByPrato[prato]) {
+                groupedByPrato[prato] = new Set(); 
+            }
+
+            groupedByPrato[prato].add(cliente.nome);
         }
-        list[prato].add(cliente.nif);
-        list[prato].add(cliente.nome);
-    });
 
-    for(const prato in list){
-        list[prato]= Array.from(list[prato]);
+        const result = {};
+        for (const prato in groupedByPrato) {
+            result[prato] = Array.from(groupedByPrato[prato]);
+        }
+
+        return result;
+    } catch (error) {
+        console.error("Error grouping clientes by prato", error);
+        throw new Error("Could not group clientes by prato");
     }
-
-    return list;
-}
+};
