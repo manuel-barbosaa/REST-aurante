@@ -1,8 +1,8 @@
-
+const EncomendaService = require("../services/EncomendaService");
 
 
 exports.createEncomenda= async function(req, res){
-    const result= await EncomendaService.createEncomenda(req.body, req.params);
+    const result= await EncomendaService.createEncomenda(req.body.ementaId, req.params.nif);
 
     if(!result){
         res.status(404).send('Erro ao criar encomenda');
