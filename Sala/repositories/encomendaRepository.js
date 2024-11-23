@@ -13,3 +13,9 @@ exports.createEncomenda = async function(encomendaDTO){
     }
 }
 
+exports.getEncomendasByCliente = async function (clienteId){
+
+    return await EncomendaModel.find({ cliente: clienteId}).sort({data: -1});
+    
+};
+
