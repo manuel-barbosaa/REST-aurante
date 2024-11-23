@@ -17,6 +17,7 @@ router.get("/ementa/:refeicaoId", ementaController.listarRefeicoesEmenta);
 router.get("/ementa", ementaController.getEmentas);
 router.delete('/ementa/:id', ementaController.deleteEmentaById); 
 router.delete('/ementa', ementaController.deleteAllEmenta);
+router.post('/clientes/:id/encomenda', encomendaController.createEncomenda);
 
 
 
