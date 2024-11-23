@@ -1,3 +1,85 @@
+commit 9cea83a2b5ec6d8e5f302cf1ccfe5808ea3a2edf	refs/heads/main
+Author: manuel barbosa <1220973@isep.ipp.pt>
+Date:   Fri Nov 22 15:21:29 2024 +0000
+
+    Revert "fix: remover model de encomenda"
+    
+    This reverts commit 427b739754adaf1a70280108c28da4cc4b086ad6.
+
+A	Sala/models/encomenda.js
+
+commit 427b739754adaf1a70280108c28da4cc4b086ad6	refs/heads/main
+Author: manuel barbosa <1220973@isep.ipp.pt>
+Date:   Fri Nov 22 15:18:36 2024 +0000
+
+    fix: remover model de encomenda
+
+D	Sala/models/encomenda.js
+
+commit 20742bc15bc8060cfd4697519765b4f7830e26f9	refs/heads/main
+Author: manuel barbosa <1220973@isep.ipp.pt>
+Date:   Fri Nov 22 15:16:44 2024 +0000
+
+    correção de apresentação da variável prato da ementa da sala
+
+M	Sala/models/ementa.js
+
+commit 39261380b98cb737702bcbbc1a9e4fa39fc78f77	refs/heads/main
+Author: manuel barbosa <1220973@isep.ipp.pt>
+Date:   Fri Nov 22 15:16:19 2024 +0000
+
+    atualização das routes do projeto (GET ementas)
+
+M	Sala/routes/salaRoutes.js
+
+commit 0169051c3c06f5f019baa874669d42920f869bad	refs/heads/main
+Author: manuel barbosa <1220973@isep.ipp.pt>
+Date:   Fri Nov 22 15:15:59 2024 +0000
+
+    implementação da listagem de todas as ementas da sala no controller
+
+M	Sala/controllers/ementaController.js
+
+commit 96b354bba9eb09e3f95dffe94574abca6eae8df8	refs/heads/main
+Author: manuel barbosa <1220973@isep.ipp.pt>
+Date:   Fri Nov 22 15:15:26 2024 +0000
+
+    implementação da listagem de todas as ementas da sala e correção de listagem do prato (nome e id) no service
+
+M	Sala/services/ementaService.js
+
+commit 383497f8bdcb1d24c272e8dac98400372f759a17	refs/heads/main
+Author: manuel barbosa <1220973@isep.ipp.pt>
+Date:   Fri Nov 22 15:14:15 2024 +0000
+
+    implementação da listagem de todas as ementas da sala no controller
+
+M	Sala/repositories/ementaRepository.js
+
+commit 7d63fa9c0859b96db26aa04b48269469595ecf69	refs/heads/main
+Author: manuel barbosa <1220973@isep.ipp.pt>
+Date:   Wed Nov 20 16:10:06 2024 +0000
+
+    realocação de pastas e ficheiros git ignore
+
+D	.gitignore
+R100	Sprint_1_REST-AURANTE/.idea/.gitignore	Cozinha/Sprint_1_REST-AURANTE/.idea/.gitignore
+R100	Sprint_1_REST-AURANTE/.idea/encodings.xml	Cozinha/Sprint_1_REST-AURANTE/.idea/encodings.xml
+R100	Sprint_1_REST-AURANTE/.idea/indexLayout.xml	Cozinha/Sprint_1_REST-AURANTE/.idea/indexLayout.xml
+R100	Sprint_1_REST-AURANTE/.idea/vcs.xml	Cozinha/Sprint_1_REST-AURANTE/.idea/vcs.xml
+R100	Sprint_1_REST-AURANTE/1220824@isep.ipp.pt.txt	Cozinha/Sprint_1_REST-AURANTE/1220824@isep.ipp.pt.txt
+R100	Sprint_1_REST-AURANTE/1220973@isep.ipp.pt.txt	Cozinha/Sprint_1_REST-AURANTE/1220973@isep.ipp.pt.txt
+R100	Sprint_1_REST-AURANTE/1221034@isep.ipp.pt.txt	Cozinha/Sprint_1_REST-AURANTE/1221034@isep.ipp.pt.txt
+R100	Sprint_1_REST-AURANTE/1221180@isep.ipp.pt.txt	Cozinha/Sprint_1_REST-AURANTE/1221180@isep.ipp.pt.txt
+R100	Sprint_1_REST-AURANTE/1221260@isep.ipp.pt.txt	Cozinha/Sprint_1_REST-AURANTE/1221260@isep.ipp.pt.txt
+R100	Sprint_1_REST-AURANTE/126287678+manuel-barbosaa@users.noreply.github.com.txt	Cozinha/Sprint_1_REST-AURANTE/126287678+manuel-barbosaa@users.noreply.github.com.txt
+R100	Sprint_1_REST-AURANTE/162152413+franciscasoares@users.noreply.github.com.txt	Cozinha/Sprint_1_REST-AURANTE/162152413+franciscasoares@users.noreply.github.com.txt
+R100	Sprint_1_REST-AURANTE/Commits.csv	Cozinha/Sprint_1_REST-AURANTE/Commits.csv
+R099	Sprint_1_REST-AURANTE/report_2024-10-26.html	Cozinha/Sprint_1_REST-AURANTE/report_2024-10-26.html
+R100	Sprint_1_REST-AURANTE/tiagojose.ramospereira@gmail.com.txt	Cozinha/Sprint_1_REST-AURANTE/tiagojose.ramospereira@gmail.com.txt
+A	Sala/.gitignore
+A	Sala/bin/www
+
 commit 9828d5b58f4947198306c36f2e736fac0d425aa9	refs/heads/main
 Author: manuel barbosa <1220973@isep.ipp.pt>
 Date:   Sat Nov 16 14:50:41 2024 +0000

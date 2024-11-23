@@ -90,29 +90,4 @@ public class IngredienteController : ControllerBase
         await _service.DeleteAllIngredientes();
         return Ok(new { message = "Todos os ingredientes foram eliminados com sucesso." });
     }
-
-
-    // PUT: api/Ingrediente/{id}/available
-    [HttpPut("{id}/available")]
-    public async Task<IActionResult> SetIngredienteAvailable(long id)
-    {
-        var updated = await _service.UpdateIngredienteStatus(id, true);
-        if (updated == null)
-        {
-            return NotFound();
-        }
-        return Ok(updated);
-    }
-
-    // PUT: api/Ingrediente/{id}/unavailable
-    [HttpPut("{id}/unavailable")]
-    public async Task<IActionResult> SetIngredienteUnavailable(long id)
-    {
-        var updated = await _service.UpdateIngredienteStatus(id, false);
-        if (updated == null)
-        {
-            return NotFound();
-        }
-        return Ok(updated);
-    }
 }
