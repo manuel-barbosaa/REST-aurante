@@ -91,3 +91,37 @@ exports.getEncomendasByClienteNIF = async function (nif) {
 }
 
 };
+
+exports.getPratosComClientes = async function () {
+    try {
+        const encomendas = await encomendaRepository.getPratosComClientes();
+
+        if (!encomendas || encomendas.length === 0) {
+            throw new Error("Nenhuma encomenda encontrada.");
+        }
+
+        // Agrupa encomendas por prato
+        const pratosComClientes = encomendas.reduce((acc, encomenda) => {
+            const { prato, cliente } = encomenda;
+
+            if (!acc[prato]) {
+                acc[prato] = []; // Inicia lista de clientes para o prato
+            }
+
+            acc[prato].push(cliente); // Adiciona cliente ao prato
+
+            return acc;
+        }, {});
+
+        // Remove duplicatas e retorna os resultados
+        return Object.entries(pratosComClientes).map(([prato, clientes]) => ({
+            prato,
+            clientes: Array.from(
+                new Set(clientes.map((c) => JSON.stringify(c)))
+            ).map((c) => JSON.parse(c)) // Remove duplicatas de objetos cliente
+        }));
+    } catch (err) {
+        console.error("Erro no service ao buscar pratos com clientes:", err.message);
+        throw err;
+    }
+};

@@ -27,3 +27,14 @@ exports.getEncomendasByClienteNIF = async function (req, res) {
         res.status(500).json({ message: "Erro ao listar encomendas do cliente." });
     }
 };
+
+exports.getPratosComClientes = async function (req, res) {
+    try {
+        const pratosComClientes = await EncomendaService.getPratosComClientes();
+
+        return res.status(200).json(pratosComClientes);
+    } catch (err) {
+        console.error("Erro no controller ao buscar pratos com clientes:", err.message);
+        res.status(500).json({ message: "Erro ao buscar pratos com clientes." });
+    }
+};

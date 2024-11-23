@@ -22,5 +22,6 @@ router.delete('/ementa/:id', ementaController.deleteEmentaById);
 router.delete('/ementa', ementaController.deleteAllEmenta);
 router.post('/clientes/:nif/encomenda', encomendaController.createEncomenda);
 router.get('/clientes/:nif/encomendas', encomendaController.getEncomendasByClienteNIF);
+router.get('/funcinario/encomendas/pratos', encomendaController.getPratosComClientes);
 
 module.exports = router;
