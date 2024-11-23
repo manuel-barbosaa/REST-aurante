@@ -26,7 +26,6 @@ async function servirRefeicaoCozinha(refeicaoId) {
 exports.createEncomenda = async function(ementaId, clienteNif){
     
     const ementa= await ementaRepository.getEmentaById(ementaId);
-    console.log(ementa);
     const prato= ementa.prato.nome;
     const valor= ementa.preco; 
     const cliente= await clienteRepository.getClienteByNIF(clienteNif);
@@ -47,7 +46,7 @@ exports.createEncomenda = async function(ementaId, clienteNif){
         if (refeicaoServed) {
 
             return await encomendaRepository.createEncomenda({
-                cliente: cliente,
+                cliente: clienteNif,
                 data: Date.now(),
                 prato: prato,
                 valor: valor
@@ -55,9 +54,6 @@ exports.createEncomenda = async function(ementaId, clienteNif){
         }
     }
 };
-
-
-
 
 exports.getEncomendasByClienteNIF = async function (nif) {
     try{
@@ -92,36 +88,22 @@ exports.getEncomendasByClienteNIF = async function (nif) {
 
 };
 
-exports.getPratosComClientes = async function () {
-    try {
-        const encomendas = await encomendaRepository.getPratosComClientes();
+exports.getClientesByPrato = async function(){
+    const encomendas = await encomendaRepository.getClientesByPrato();
 
-        if (!encomendas || encomendas.length === 0) {
-            throw new Error("Nenhuma encomenda encontrada.");
+    const list = {};
+
+    encomendas.forEach(({prato, cliente})=>{
+        if(!list[prato]){
+            list[prato] = new Set();
         }
+        list[prato].add(cliente.nif);
+        list[prato].add(cliente.nome);
+    });
 
-        // Agrupa encomendas por prato
-        const pratosComClientes = encomendas.reduce((acc, encomenda) => {
-            const { prato, cliente } = encomenda;
-
-            if (!acc[prato]) {
-                acc[prato] = []; // Inicia lista de clientes para o prato
-            }
-
-            acc[prato].push(cliente); // Adiciona cliente ao prato
-
-            return acc;
-        }, {});
-
-        // Remove duplicatas e retorna os resultados
-        return Object.entries(pratosComClientes).map(([prato, clientes]) => ({
-            prato,
-            clientes: Array.from(
-                new Set(clientes.map((c) => JSON.stringify(c)))
-            ).map((c) => JSON.parse(c)) // Remove duplicatas de objetos cliente
-        }));
-    } catch (err) {
-        console.error("Erro no service ao buscar pratos com clientes:", err.message);
-        throw err;
+    for(const prato in list){
+        list[prato]= Array.from(list[prato]);
     }
-};
+
+    return list;
+}

@@ -4,6 +4,8 @@ const EncomendaModel = require("../models/encomenda");
 
 exports.createEncomenda = async function(encomendaDTO){
     const encomenda  = new EncomendaModel(encomendaDTO);
+    console.log(encomenda);
+    console.log("testN");
     
     try{
         await encomenda.save();
@@ -27,14 +29,12 @@ exports.getEncomendasByClienteNIF = async function (nif){
    
 };
 
-exports.getPratosComClientes = async function () {
+exports.getClientesByPrato = async function () {
     try {
-        // Obtém todas as encomendas e popula os detalhes dos clientes
-        return await EncomendaModel.find({ cliente: { $ne: null } })
-            .populate('cliente', 'nif nome') // Preenche os campos "nif" e "nome" do cliente
-            .exec();
+        const encomendas = await EncomendaModel.find().populate("cliente", "nif nome").exec();
+        return encomendas;
     } catch (err) {
-        console.error("Erro ao buscar pratos com clientes:", err);
+        console.error("Não existem encomendas");
         return null;
     }
 };
