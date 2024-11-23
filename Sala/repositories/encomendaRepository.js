@@ -13,9 +13,17 @@ exports.createEncomenda = async function(encomendaDTO){
     }
 }
 
-exports.getEncomendasByCliente = async function (clienteId){
+exports.getEncomendasByClienteNIF = async function (nif){
+    try{
 
-    return await EncomendaModel.find({ cliente: clienteId}).sort({data: -1});
-    
+        return await EncomendaModel.find({ "cliente.nif": nif}).populate('cliente', 'nif nome').exec();
+
+    } catch (err){
+
+        console.error("Erro a ir buscar encomendar por NIF", err);
+
+        return null;
+    }
+   
 };
 

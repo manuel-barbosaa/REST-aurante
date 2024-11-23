@@ -57,19 +57,24 @@ exports.createEncomenda = async function(ementaId, clienteNif){
 };
 
 
-const encomendaRepository = require("../repositories/encomendaRepository");
-const clienteRepository = require("../repositories/clienteRepository");
 
-exports.listEncomendasCliente = async function (clienteNif) {
 
-    const cliente = await clienteRepository.getClienteByNIF(clienteNif);
+exports.getEncomendaByClienteNIF = async function (nif) {
+    try{
+        
+    const cliente = await clienteRepository.getClienteByNIF(nif);
 
     if (!cliente) {
 
         throw new Error("Cliente não encontrado.");
     }
 
-    const encomendas = await encomendaRepository.getEncomendasByCliente(cliente._id);
+    const encomendas = await encomendaRepository.getEncomendasByClienteNIF(nif);
+   
+    if (!encomendas || encomendas.length === 0){
+        
+        return [];
+    }
 
     return encomendas.map((encomenda) => ({
 
@@ -77,5 +82,12 @@ exports.listEncomendasCliente = async function (clienteNif) {
         prato: encomenda.prato,
         valor: encomenda.valor
     }));
+
+}catch (err){
+    
+    console.error("Erro ao listar encomendas", err.message);
+   
+    throw err;
+}
 
 };
