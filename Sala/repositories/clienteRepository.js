@@ -1,5 +1,4 @@
 const ClienteModel = require('../models/cliente');
-const { getClienteByNIF } = require('../services/clienteService');
 
 exports.getClientes = async function() {
     return ClienteModel.find();
