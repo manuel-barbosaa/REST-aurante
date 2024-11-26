@@ -9,21 +9,20 @@ exports.createEmenta = async function(ementaData){
         await ementa.save();
         return true;
     }catch (err){
-        throw new Error({message: "repo"});
+        throw new Error('Não foi possível criar a ementa. Tente novamente.');
     }
 }
 
 exports.getEmentas = async function () {
-    return EmentaModel.find();
+    try {
+        return EmentaModel.find();
+    } catch(err) {
+        throw new Error('Erro a obter ementas. Tente novamente.')
+    }
 }
 
 exports.getEmentaByRefeicaoId = async function (refeicaoId) {
     try {
-        // Verifica se refeicaoId é um número válido
-        if (isNaN(Number(refeicaoId))) {
-            throw new Error('O ID da refeição deve ser um número válido.');
-        }
-
         const ementa = await EmentaModel.find({ refeicaoId: Number(refeicaoId) });
 
         if (!ementa || ementa.length === 0) {
@@ -32,30 +31,30 @@ exports.getEmentaByRefeicaoId = async function (refeicaoId) {
 
         return ementa;
     } catch (err) {
-        throw new Error(`Erro a procurar ementa atraves do ID: ${err.message}`);
+        throw new Error(`N#ao foi poss]ivel procurar a ementa pelo ID da refeição. Tente novamente.`);
     }
 };
 
 exports.getEmentaById = async function (id) {
-    return await EmentaModel.findOne({ _id: id });
+    try {
+        return await EmentaModel.findOne({ _id: id });
+    } catch(err) {
+        throw new Error('Não foi possível encontrar uma ementa com o ID fornecido. Tente novamente.')
+    }
 }
 
 
 exports.deleteEmentaById = async function (id) {
     try {
-        const result = await EmentaModel.deleteOne({ _id: id });
-        return result;
+        return await EmentaModel.deleteOne({ _id: id });
     } catch (error) {
-        console.error('Erro ao eliminar ementa pelo ID:', error);
-        return false;
+        throw new Error('Erro ao eliminar ementa pelo ID.');
     }
 };
 exports.deleteAllEmenta = async function(){
     try {
-        await EmentaModel.deleteMany({});
-        return true;
+        return await EmentaModel.deleteMany({});
     } catch (error) {
-        console.error('Erro ao eleminar todas as ementas:', error);
-        return false;
+        throw new Error('Erro ao eliminar todas as ementas');
     }
 }
