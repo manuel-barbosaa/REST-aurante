@@ -21,7 +21,7 @@ router.get("/ementa/refeicao/:refeicaoId", ementaController.getEmentaByRefeicao)
 router.delete('/ementa/:id', ementaController.deleteEmentaById); 
 router.delete('/ementa', ementaController.deleteAllEmenta);
 router.post('/encomenda/:nif', encomendaController.createEncomenda);
-router.get('/encomendas/:nif/encomendas', encomendaController.getEncomendasByClienteNIF);
+router.get('/encomendas/cliente/:nif', encomendaController.getEncomendasByClienteNIF);
 router.get('/encomendas/:id', encomendaController.getEncomendaById);
 router.get('/encomendas/pratos', encomendaController.getPratosComClientes);
 router.delete('/encomendas/:id', encomendaController.deleteEncomenda);
