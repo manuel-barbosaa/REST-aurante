@@ -13,6 +13,14 @@ exports.createEncomenda = async function(encomendaDTO){
     }
 }
 
+exports.getEncomendaById = async function(id) {
+    try {
+        return await EncomendaModel.findOne({ _id: id });
+    } catch(err) {
+        throw new Error('Não foi possível encontrar uma encomenda com o ID fornecido.');
+    }
+}
+
 exports.getEncomendas = async function () {
     try {
         return await EncomendaModel.find();
