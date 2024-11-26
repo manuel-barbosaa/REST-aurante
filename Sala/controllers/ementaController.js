@@ -30,8 +30,8 @@ exports.getEmentaById = async function (req,res) {
     }
 }
 
-exports.listarRefeicoesEmenta= async function (req, res){
-    const result= await EmentaService.listarRefeicoesEmenta(req.params);
+exports.getEmentaByRefeicao= async function (req, res){
+    const result= await EmentaService.getEmentaByRefeicao(req.params);
 
     if(!result){
         res.status(404).send('Erro ao listar ementa');
