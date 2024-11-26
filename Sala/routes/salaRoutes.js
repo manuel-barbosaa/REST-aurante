@@ -23,6 +23,7 @@ router.delete('/ementa', ementaController.deleteAllEmenta);
 router.post('/encomenda/:nif', encomendaController.createEncomenda);
 router.get('/encomendas/cliente/:nif', encomendaController.getEncomendasByClienteNIF);
 router.get('/encomendas/:id', encomendaController.getEncomendaById);
+router.get('/encomendas/', encomendaController.getEncomendas);
 router.get('/encomendas/pratos', encomendaController.getPratosComClientes);
 router.delete('/encomendas/:id', encomendaController.deleteEncomenda);
 
