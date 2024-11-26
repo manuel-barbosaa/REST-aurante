@@ -57,6 +57,10 @@ exports.createEncomenda = async function(ementaId, clienteNif){
     }
 };
 
+exports.getEncomendaById = async function(id) {
+    return await encomendaRepository.getEncomendaById(id);
+}
+
 exports.getEncomendasByClienteNIF = async function (nif) {
     try {
         const encomendas = await encomendaRepository.getEncomendas();
