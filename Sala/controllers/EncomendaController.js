@@ -17,7 +17,7 @@ exports.getEncomendas = async function(req, res) {
     if(!result) {
         res.status(404).send('As encomendas não foram encontradas.');
     } else {
-        res.status(200).json(result);
+        res.status(200).json('A encomenda foi criada com sucesso');
     }
 }
 
