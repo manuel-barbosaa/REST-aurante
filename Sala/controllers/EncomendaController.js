@@ -7,10 +7,19 @@ exports.createEncomenda= async function(req, res){
     if(!result){
         res.status(404).send('Erro ao criar encomenda');
     } else{
-        res.status(201).json({message: 'Encomenda criada com sucesso'});
+        res.status(201).json(result);
     }
 }
 
+exports.getEncomendaById = async function(req, res) {
+    const result = await EncomendaService.getEncomendaById(req.params.id);
+
+    if(!result) {
+        res.status(404).send('A encomenda não foi encontrada.');
+    } else {
+        res.status(200).json(result);
+    }
+}
 
 exports.getEncomendasByClienteNIF = async function (req, res) {
     try {
@@ -22,7 +31,6 @@ exports.getEncomendasByClienteNIF = async function (req, res) {
 
         return res.status(200).json(encomendas);
     } catch (err) {
-        console.error("Erro no controller:", err.message);
         res.status(500).json({ message: "Erro ao listar encomendas do cliente." });
     }
 };
@@ -37,3 +45,13 @@ exports.getPratosComClientes = async function (req, res) {
         res.status(500).json({ message: "Erro ao buscar pratos com clientes." });
     }
 };
+
+exports.deleteEncomenda = async function(req, res) {
+    const result = await EncomendaService.deleteEncomenda(req.params.id);
+
+    if(!result) {
+        res.status(400).send('Erro ao apagar encomenda.');
+    } else {
+        res.status(200).json('Encomenda apagada com sucesso.');
+    }
+}
