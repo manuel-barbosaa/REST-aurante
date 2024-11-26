@@ -29,10 +29,9 @@ exports.createEncomenda = async function(ementaId, clienteNif){
     const prato= ementa.prato.nome;
     const valor= ementa.preco; 
     const cliente= await clienteRepository.getClienteByNIF(clienteNif);
-    if(cliente.saldo< valor){
-        console.log('ta broke');
-       return false;
     
+    if(cliente.saldo< valor){
+        throw new Error('O cliente não tem saldo suficiente para a encomenda.');
     }
 
     const debito = -valor; 
@@ -40,18 +39,21 @@ exports.createEncomenda = async function(ementaId, clienteNif){
     const saldoUpdated = await clienteRepository.updateSaldo(clienteNif, debito);
 
     if (saldoUpdated) {
-        console.log('debitou');
+
         const refeicaoServed = await servirRefeicaoCozinha(ementa.refeicaoId);
 
         if (refeicaoServed) {
-            console.log('serviu');
             return await encomendaRepository.createEncomenda({
                 cliente: clienteNif,
                 data: Date.now(),
                 prato: prato,
                 valor: valor
             });
+        } else {
+            throw new Error('O prato não consegue ser servido na cozinha.');
         }
+    } else {
+        throw new Error('Não foi possível debitar a conta do cliente.');
     }
 };
 
@@ -77,12 +79,11 @@ exports.getEncomendasByClienteNIF = async function (nif) {
 
         return groupedByCliente;
     } catch (error) {
-        console.error("Error grouping encomendas by cliente", error);
-        throw new Error("Could not group encomendas by cliente");
+        throw new Error("Não foi possível agrupar encomendas por cliente com o NIF fornecido.");
     }
 };
 
-exports.getClientesByPrato = async function () {
+exports.getPratosComClientes = async function () {
     try {
         const encomendas = await encomendaRepository.getEncomendas();
 
@@ -107,7 +108,10 @@ exports.getClientesByPrato = async function () {
 
         return result;
     } catch (error) {
-        console.error("Error grouping clientes by prato", error);
-        throw new Error("Could not group clientes by prato");
+        throw new Error("Não foi possível agrupar clientes por prato.");
     }
 };
+
+exports.deleteEncomenda = async function (id) {
+    return await encomendaRepository.deleteEncomenda(id);
+}
