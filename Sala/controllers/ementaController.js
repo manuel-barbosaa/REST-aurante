@@ -6,7 +6,7 @@ exports.createEmenta= async function (req, res){
     if(!result){
         res.status(404).send('Erro ao criar ementa');
     } else{
-        res.status(201).json(result);
+        res.status(201).json({message: 'Ementa criada com sucesso'});
     }
 }
 
