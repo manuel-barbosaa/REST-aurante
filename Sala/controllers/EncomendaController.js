@@ -29,7 +29,7 @@ exports.getEncomendasByClienteNIF = async function (req, res) {
 
 exports.getPratosComClientes = async function (req, res) {
     try {
-        const pratosComClientes = await EncomendaService.getClientesByPrato();
+        const pratosComClientes = await EncomendaService.getPratosComClientes();
 
         return res.status(200).json(pratosComClientes);
     } catch (err) {
