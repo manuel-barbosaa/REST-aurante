@@ -29,7 +29,7 @@ exports.createEncomenda = async function(ementaId, clienteNif){
     const prato= ementa.prato.nome;
     const valor= ementa.preco; 
     const cliente= await clienteRepository.getClienteByNIF(clienteNif);
-    
+
     if(cliente.saldo< valor){
         throw new Error('O cliente não tem saldo suficiente para a encomenda.');
     }
@@ -71,6 +71,7 @@ exports.getEncomendasByClienteNIF = async function (nif) {
             }
 
             groupedByCliente[clienteNif].push({
+                id: encomenda._id,
                 prato: encomenda.prato,
                 valor: encomenda.valor,
                 data: encomenda.data,
