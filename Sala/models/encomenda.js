@@ -3,6 +3,7 @@ var Schema = mongoose.Schema;
 
 
 var EncomendaSchema = new Schema({
+    id : Schema.Types.ObjectId,
     cliente: { type: String, required: true },
     data: { type: Date, default: Date.now },
     prato: { type: String, required: true },
