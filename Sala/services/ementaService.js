@@ -2,7 +2,7 @@ const webApiClient = require('axios').default;
 const ementaRepository = require("../repositories/ementaRepository")
 
 exports.getEmentaCozinha = async function (id) {
-    process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = 0;   // Inibe a vericação dos certificados
+    process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = 0;
 
     const cozinhaWebAPIURL = 'http://localhost:5230/api/Ementa/'
 
@@ -18,15 +18,21 @@ exports.createEmenta = async function (ementaDTO){
 
     const ementaCozinha = await exports.getEmentaCozinha(ementaId);
 
+    if(ementaCozinha == null) {
+        throw new error("A ementa não foi encontrada na cozinha.");
+    }
+
     const refeicao = ementaCozinha.refeicoes.filter(refeicao => refeicao.id === refeicaoId)[0];
 
-    // const prato = refeicao.prato.nome;
+    if(refeicao == null) {
+        throw new error("A refeicão não foi encontrado na ementa da cozinha.")
+    } 
     
     const prato = {
         id: refeicao.prato.id,
         nome: refeicao.prato.nome
     };
-      
+    
 
 
     return await ementaRepository.createEmenta({
@@ -56,17 +62,8 @@ exports.getEmentaById = async function(id) {
     return await ementaRepository.getEmentaById(id);
 }
 
-exports.listarRefeicoesEmenta = async function ({ refeicaoId }) {
-    try {
-        //ver se o id é um número válido
-        if (!refeicaoId || isNaN(Number(refeicaoId))) {
-            throw new Error('O ID da refeição fornecido é inválido.');
-        }
-
-        return await ementaRepository.getEmentaByRefeicaoId(refeicaoId);
-    } catch (err) {
-        throw new Error(`Erro a listar ementa do id fornecido: ${err.message}`);
-    }
+exports.getEmentaByRefeicao = async function ({ refeicaoId }) {
+    return await ementaRepository.getEmentaByRefeicaoId(refeicaoId);
 }
 
 exports.deleteEmentaById = async function (id) {
