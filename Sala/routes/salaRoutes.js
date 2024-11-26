@@ -17,11 +17,11 @@ router.delete('/clientes', clienteController.deleteAllClientes);
 router.post("/ementa", ementaController.createEmenta);
 router.get("/ementa/:id", ementaController.getEmentaById);
 router.get("/ementa", ementaController.getEmentas);
-router.get("/ementa/refeicao/:refeicaoId", ementaController.listarRefeicoesEmenta);
+router.get("/ementa/refeicao/:refeicaoId", ementaController.getEmentaByRefeicao);
 router.delete('/ementa/:id', ementaController.deleteEmentaById); 
 router.delete('/ementa', ementaController.deleteAllEmenta);
-router.post('/clientes/:nif/encomenda', encomendaController.createEncomenda);
-router.get('/clientes/:nif/encomendas', encomendaController.getEncomendasByClienteNIF);
-router.get('/funcionario/encomendas', encomendaController.getPratosComClientes);
+router.post('/encomenda/:nif', encomendaController.createEncomenda);
+router.get('/encomendas/:nif/encomendas', encomendaController.getEncomendasByClienteNIF);
+router.get('/encomendas/pratos', encomendaController.getPratosComClientes);
 
 module.exports = router;
