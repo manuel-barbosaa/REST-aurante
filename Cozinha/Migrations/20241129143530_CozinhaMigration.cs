@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace REST_aurante.Cozinha.Migrations
 {
     /// <inheritdoc />
-    public partial class CozinhaCreation : Migration
+    public partial class CozinhaMigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

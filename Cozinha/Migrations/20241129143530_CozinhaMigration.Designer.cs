@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace REST_aurante.Cozinha.Migrations
 {
     [DbContext(typeof(CozinhaContext))]
-    [Migration("20241103212032_UpdatePratoRefeicaopppijuhby")]
-    partial class UpdatePratoRefeicaopppijuhby
+    [Migration("20241129143530_CozinhaMigration")]
+    partial class CozinhaMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -26,25 +26,11 @@ namespace REST_aurante.Cozinha.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<DateTime>("DataFim")
-                        .HasColumnType("TEXT");
-
-                    b.Property<DateTime>("DataInicio")
-                        .HasColumnType("TEXT");
-
                     b.Property<string>("Frequencia")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("Quantidade")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<long>("TipoRefeicaoId")
-                        .HasColumnType("INTEGER");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("TipoRefeicaoId");
 
                     b.ToTable("Ementas");
                 });
@@ -112,6 +98,9 @@ namespace REST_aurante.Cozinha.Migrations
                     b.Property<DateTime>("Data")
                         .HasColumnType("TEXT");
 
+                    b.Property<long?>("EmentaId")
+                        .HasColumnType("INTEGER");
+
                     b.Property<long>("PratoId")
                         .HasColumnType("INTEGER");
 
@@ -122,6 +111,8 @@ namespace REST_aurante.Cozinha.Migrations
                         .HasColumnType("INTEGER");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("EmentaId");
 
                     b.HasIndex("PratoId");
 
@@ -164,17 +155,6 @@ namespace REST_aurante.Cozinha.Migrations
                     b.ToTable("TipoRefeicao");
                 });
 
-            modelBuilder.Entity("Cozinha.Model.Ementa", b =>
-                {
-                    b.HasOne("Cozinha.Model.TipoRefeicao", "TipoRefeicao")
-                        .WithMany()
-                        .HasForeignKey("TipoRefeicaoId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("TipoRefeicao");
-                });
-
             modelBuilder.Entity("Cozinha.Model.Ingrediente", b =>
                 {
                     b.HasOne("Cozinha.Model.Prato", null)
@@ -195,6 +175,10 @@ namespace REST_aurante.Cozinha.Migrations
 
             modelBuilder.Entity("Cozinha.Model.Refeicao", b =>
                 {
+                    b.HasOne("Cozinha.Model.Ementa", null)
+                        .WithMany("Refeicoes")
+                        .HasForeignKey("EmentaId");
+
                     b.HasOne("Cozinha.Model.Prato", "Prato")
                         .WithMany()
                         .HasForeignKey("PratoId")
@@ -210,6 +194,11 @@ namespace REST_aurante.Cozinha.Migrations
                     b.Navigation("Prato");
 
                     b.Navigation("TipoRefeicao");
+                });
+
+            modelBuilder.Entity("Cozinha.Model.Ementa", b =>
+                {
+                    b.Navigation("Refeicoes");
                 });
 
             modelBuilder.Entity("Cozinha.Model.Prato", b =>
