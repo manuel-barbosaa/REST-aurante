@@ -1,5 +1,5 @@
-import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Ementa } from '../Models/ementa';
 
@@ -8,15 +8,15 @@ import { Ementa } from '../Models/ementa';
 })
 export class EmentaService {
 
-  private theServerURL = 'http://localhost:8080/api';
-  private httpOptions = {
+  apiURL = "http://localhost:8080/api/ementas";
+
+  httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
 
-  constructor(private webApiClient: HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-  // Método para obter a ementa de uma refeição, com base no ID da refeição
-  getEmentaByRefeicaoId(refeicaoId: number): Observable<Ementa> {
-    return this.webApiClient.get<Ementa>(`${this.theServerURL}/ementa/${refeicaoId}`);
+  obterEmentaDisponivel(): Observable<Ementa[]> {
+    return this.http.get<Ementa[]>(this.apiURL);
   }
 }
