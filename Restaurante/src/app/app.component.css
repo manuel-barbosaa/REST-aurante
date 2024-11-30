@@ -1,0 +1,18 @@
+.btn {
+  transition-duration: 0.4s;
+  background-color: white;
+  color: black;
+  border: 2px solid navy;
+  width: 200px;
+  height: 40px;
+  font-size: 14pt;
+}
+
+.btn:hover {
+  background-color: green;
+  color: white;
+}
+
+.active {
+  background-color: yellow;
+}
