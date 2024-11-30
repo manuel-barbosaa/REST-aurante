@@ -1,1 +1,12 @@
-<p>consultar-ementa works!</p>
+<table>
+  <tr>
+    <td class="menu">
+      <div *ngFor="let e of ementas">
+        <button class="btn" [routerLink]="['/ementas', e.id]">{{ e.id }} - {{ e.prato.nome }}</button>
+      </div>
+    </td>
+    <td>
+      <router-outlet (deactivate)="reload()"></router-outlet>
+    </td>
+  </tr>
+</table>
