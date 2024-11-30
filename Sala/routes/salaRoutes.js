@@ -16,14 +16,14 @@ router.delete('/clientes/:nif', clienteController.deleteClienteByNIF);
 router.delete('/clientes', clienteController.deleteAllClientes); 
 router.post("/ementa", ementaController.createEmenta);
 router.get("/ementa/:id", ementaController.getEmentaById);
-router.get("/ementa", ementaController.getEmentas);
+router.get("/ementas", ementaController.getEmentas);
 router.get("/ementa/refeicao/:refeicaoId", ementaController.getEmentaByRefeicao);
 router.delete('/ementa/:id', ementaController.deleteEmentaById); 
 router.delete('/ementa', ementaController.deleteAllEmenta);
 router.post('/encomenda/:nif', encomendaController.createEncomenda);
 router.get('/encomendas/cliente/:nif', encomendaController.getEncomendasByClienteNIF);
 router.get('/encomenda/:id', encomendaController.getEncomendaById);
-router.get('/encomendas/', encomendaController.getEncomendas);
+router.get('/encomendas', encomendaController.getEncomendas);
 router.get('/encomendas/pratos', encomendaController.getPratosComClientes);
 router.delete('/encomendas/:id', encomendaController.deleteEncomenda);
 
