@@ -1,1 +1,15 @@
-<p>consultar-saldo works!</p>
+<div class="consultar-cliente-container">
+    <table>
+      <tr>
+        <td class="menu">
+          <!-- Formulário para o cliente introduzir o NIF -->
+          <div class="form-container">
+            <label for="nif">Introduza o NIF do Cliente:</label>
+            <input type="text" id="nif" [(ngModel)]="nif" placeholder="Ex: 123456789" />
+            <button class="btn" (click)="consultarCliente()">Consultar</button>
+          </div>
+  
+          <!-- Exibição dos dados do cliente quando encontrado -->
+          <div *ngIf="cliente">
+            <p><strong>Nom
+  
