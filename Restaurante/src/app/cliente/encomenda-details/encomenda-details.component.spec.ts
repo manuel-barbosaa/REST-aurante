@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { EncomendaDetailComponent } from './encomenda-detail.component';
+import { EncomendaDetailComponent } from './encomenda-details.component';
 
 describe('EncomendaDetailComponent', () => {
   let component: EncomendaDetailComponent;

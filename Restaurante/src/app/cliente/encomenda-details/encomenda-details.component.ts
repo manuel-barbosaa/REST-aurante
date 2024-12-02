@@ -8,8 +8,8 @@ import { NgIf } from '@angular/common';
   selector: 'app-encomenda-detail',
   standalone: true,
   imports: [NgIf],
-  templateUrl: './encomenda-detail.component.html',
-  styleUrls: ['./encomenda-detail.component.css']
+  templateUrl: './encomenda-details.component.html',
+  styleUrls: ['./encomenda-details.component.css']
 })
 export class EncomendaDetailComponent implements OnInit {
 
