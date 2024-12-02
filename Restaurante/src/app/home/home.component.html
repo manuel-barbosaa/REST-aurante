@@ -1,0 +1,39 @@
+<div class="main-container">
+  <h1>Bem-vindo ao Restaurante</h1>
+
+  <!-- Botão de Voltar -->
+  <div class="navigation-buttons">
+    <button class="btn" (click)="goBack()">Voltar à Página Inicial</button>
+  </div>
+
+  <!-- Toggle de Modo Chef/Modo Cliente -->
+  <div class="mode-switch">
+    <label class="switch">
+      <input type="checkbox" (change)="toggleMode($event)">
+      <span class="slider"></span>
+    </label>
+    <span class="mode-label">{{ mode }}</span>
+  </div>
+
+  <!-- Funcionalidades do Chef -->
+  <div *ngIf="mode === 'Modo Chef'" class="us-container">
+    <h2>Funcionalidades do Chef</h2>
+    <ul>
+      <li>US001: Configurar um prato</li>
+      <li>US002: Ativar/Inativar um prato</li>
+      <li>US003: Criar uma refeição</li>
+      <li>US004: Remover uma refeição futura</li>
+    </ul>
+  </div>
+
+  <!-- Funcionalidades do Cliente -->
+  <div *ngIf="mode === 'Modo Cliente'" class="us-container">
+    <h2>Funcionalidades do Cliente</h2>
+    <ul>
+      <li>US005: Carregar conta cliente</li>
+      <li>US006: Consultar a ementa disponível</li>
+      <li>US007: Encomendar um prato</li>
+      <li>US008: Listar todas as encomendas realizadas</li>
+    </ul>
+  </div>
+</div>
