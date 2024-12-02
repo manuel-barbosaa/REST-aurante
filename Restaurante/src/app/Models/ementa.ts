@@ -1,7 +1,4 @@
-export interface Prato {
-  id: number;
-  nome: string;
-}
+import { Prato } from "./prato";
 
 export interface Ementa {
   id: string;
