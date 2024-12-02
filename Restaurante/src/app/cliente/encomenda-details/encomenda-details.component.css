@@ -1,0 +1,28 @@
+.encomenda-id {
+    font-size: x-large;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: fantasy;
+    background-color: darkblue;
+    color: white;
+  }
+  
+  .label {
+    font-weight: bold;
+    font-family: "Gill Sans Extrabold", sans-serif;
+    text-align: right;
+  }
+  
+  .value {
+    width: 100px;
+    font-style: italic;
+    font-family: "Gill Sans Extrabold", sans-serif;
+  }
+  
+  tr {
+    height: 30px;
+  }
+  
+  img {
+    height: 150px;
+  }
