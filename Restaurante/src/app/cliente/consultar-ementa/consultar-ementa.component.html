@@ -1,12 +1,17 @@
-<table>
-  <tr>
-    <td class="menu">
-      <div *ngFor="let e of ementas">
-        <button class="btn" [routerLink]="['/ementas', e.id]">{{ e.id }} - {{ e.prato.nome }}</button>
-      </div>
-    </td>
-    <td>
-      <router-outlet (deactivate)="reload()"></router-outlet>
-    </td>
-  </tr>
-</table>
+<div class="ementas-container">
+  <table>
+    <tr>
+      <td class="menu">
+
+        <div *ngFor="let e of ementas" class="ementa-item">
+          <button class="btn" [title]="'ID: ' + e.id" [routerLink]="['/ementas', e.id]">
+            {{ e.prato.nome }}
+          </button>
+        </div>
+      </td>
+      <td class="content">
+        <router-outlet (deactivate)="reload()"></router-outlet>
+      </td>
+    </tr>
+  </table>
+</div>

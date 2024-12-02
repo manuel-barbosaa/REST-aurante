@@ -1,12 +1,41 @@
+/* Botão da Ementa */
 .btn {
   transition-duration: 0.4s;
   background-color: white;
-  color: black;
+  color: navy;
   border: 2px solid navy;
-  width: 600px;
-  height: 40px;
-  font-size: 14pt;
-  margin-bottom: 5px;
+  width: 90%; /* Reduzimos um pouco para centralizar */
+  height: 50px;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-left: 10%; /* Adiciona deslocamento para a direita */
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* Necessário para o tooltip */
+}
+
+/* Tooltip (ID da Ementa) */
+.btn:hover::after {
+  content: attr(title);
+  position: absolute;
+  bottom: -40px; /* Mais espaço para o tooltip */
+  left: 50%; /* Mantém centralizado */
+  transform: translateX(-50%);
+  background-color: navy;
+  color: white;
+  padding: 5px 15px; /* Mais espaço para texto */
+  border-radius: 5px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  text-align: center; /* Centraliza o texto do tooltip */
+  max-width: 200px; /* Limita largura máxima do tooltip */
+  overflow-wrap: break-word; /* Quebra texto grande */
 }
 
 .btn:hover {
@@ -14,14 +43,12 @@
   color: white;
 }
 
-table {
-  width: 100%;
-}
-
-tr {
-  vertical-align: top;
-}
-
+/* Ajusta layout geral */
 .menu {
-  width: 220px;
+  width: 250px; /* Alarga a coluna dos botões */
+  padding-right: 10px; /* Adiciona espaço entre o menu e o conteúdo */
+}
+
+.content {
+  padding-left: 15px; /* Espaço adicional na segunda coluna */
 }
