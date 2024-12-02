@@ -1,6 +1,9 @@
 export interface Cliente {
-    nif: string;  // NIF do cliente
-    saldo: number; // Saldo do cliente
+  nome: string;
+  nif: string;  // NIF do cliente
+  email: string;
+  saldo: number; // Saldo do cliente
+
   }
 
   
