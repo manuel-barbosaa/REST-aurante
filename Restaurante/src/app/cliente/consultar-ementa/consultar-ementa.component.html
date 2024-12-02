@@ -2,9 +2,12 @@
   <table>
     <tr>
       <td class="menu">
-
         <div *ngFor="let e of ementas" class="ementa-item">
-          <button class="btn" [title]="'ID: ' + e.id" [routerLink]="['/ementas', e.id]">
+          <button
+            class="btn"
+            [attr.title]="'ID: ' + e.id"
+            [routerLink]="['/ementas', e.id]"
+          >
             {{ e.prato.nome }}
           </button>
         </div>

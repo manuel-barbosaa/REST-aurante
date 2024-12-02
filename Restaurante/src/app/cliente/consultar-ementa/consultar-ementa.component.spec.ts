@@ -1,17 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { EmentaComponent } from './consultar-ementa.component';
+import { ConsultarEmentasComponent } from './consultar-ementa.component';
 
-describe('EmentaComponent', () => {
-  let component: EmentaComponent;
-  let fixture: ComponentFixture<EmentaComponent>;
+describe('ConsultarEmentasComponent', () => {
+  let component: ConsultarEmentasComponent;
+  let fixture: ComponentFixture<ConsultarEmentasComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ EmentaComponent ]
-    })
-      .compileComponents();
+      imports: [ConsultarEmentasComponent], // Atualizado para standalone
+    }).compileComponents();
 
-    fixture = TestBed.createComponent(EmentaComponent);
+    fixture = TestBed.createComponent(ConsultarEmentasComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
