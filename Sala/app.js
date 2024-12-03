@@ -7,7 +7,7 @@ var cors = require('cors');
 // Configuração do CORS para permitir acesso da porta 4200 (Angular)
 app.use(cors({
     origin: 'http://localhost:4200',  // Permite apenas o frontend do Angular
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],  // Métodos permitidos
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],  // Métodos permitidos
     allowedHeaders: ['Content-Type', 'Authorization']  // Cabeçalhos permitidos
 }));
 
