@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {  NgFor } from '@angular/common';
-import { ClienteService, Cliente } from '../../services/cliente.service'; 
+import { ClienteService, Cliente } from '../../services/cliente.service';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -8,9 +8,10 @@ import { FormsModule } from '@angular/forms';
 
 
 @Component({
-  imports:[RouterModule, NgFor, CommonModule, FormsModule],
+  imports: [RouterModule, CommonModule, FormsModule],
   selector: 'app-consultar-cliente',
   templateUrl: './consultar-cliente.component.html',
+  standalone: true,
   styleUrls: ['./consultar-cliente.component.css']
 })
 export class ConsultarClienteComponent implements OnInit {
@@ -29,6 +30,8 @@ throw new Error('Method not implemented.');
       this.clienteService.getClienteByNIF(this.nif).subscribe(
         (resp) => {
           this.cliente = resp;
+          localStorage.setItem("clienteNome",this.cliente.nome);
+          localStorage.setItem("clienteNif",this.cliente.nif);
         },
         (error) => {
           alert('Cliente não encontrado ou erro na consulta.');

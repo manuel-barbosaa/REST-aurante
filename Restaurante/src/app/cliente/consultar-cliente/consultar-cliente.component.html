@@ -8,8 +8,19 @@
             <input type="text" id="nif" [(ngModel)]="nif" placeholder="Ex: 123456789" />
             <button class="btn" (click)="consultarCliente()">Consultar</button>
           </div>
-  
+
           <!-- Exibição dos dados do cliente quando encontrado -->
           <div *ngIf="cliente">
-            <p><strong>Nom
-  
+            <p><strong>Nome</strong></p>
+            <p>{{cliente.nome}}</p>
+            <p><strong>Email</strong></p>
+            <p>{{cliente.email}}</p>
+            <p><strong>NIF</strong></p>
+            <p>{{cliente.nif}}</p>
+            <p><strong>Saldo</strong></p>
+            <p>{{cliente.saldo}} €</p>
+          </div>
+        </td>
+      </tr>
+    </table>
+</div>
