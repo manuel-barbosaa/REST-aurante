@@ -13,10 +13,10 @@ export interface Cliente {
   providedIn: 'root'
 })
 export class ClienteService {
-  private apiURL = 'http://localhost:3000/api/clientes'; // URL da API
+  private apiURL = 'http://localhost:8080/api/clientes'; // URL da API
 
   private httpOptions = {
-    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+    headers: new HttpHeaders({ 'Content-Type': 'application/json'})
   };
 
   constructor(private http: HttpClient) {}
