@@ -1,0 +1,36 @@
+.button {
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+
+.alert {
+  padding: 15px;
+  margin-top: 15px;
+  border-radius: 5px;
+  color: white;
+}
+
+.success {
+  background-color: green;
+}
+
+.error {
+  background-color: red;
+}
+
+.container {
+  width: 30%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

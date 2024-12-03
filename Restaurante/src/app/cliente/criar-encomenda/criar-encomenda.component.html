@@ -1,0 +1,19 @@
+
+<div class="container">
+  <p>Utilizador Em Uso: {{localStorage.getItem('clienteNome')}}</p>
+  <h1>Criar Encomenda</h1>
+  <h2>Selecionar Prato</h2>
+  <select name="pratos" id="pratos" [(ngModel)]="selectedEmenta" (change)="update($event)">
+    <option value="default"></option>
+    <option *ngFor="let item of ementas" [ngValue]="item">{{item.prato.nome}}
+                                                        | Preço: {{item.preco}} €</option>
+  </select>
+
+  <p><b>Escolheu o Prato: </b> {{selectedEmenta?.prato?.nome}}</p>
+
+  <button (click)="encomendar()" class="button button1">Encomendar</button>
+
+  <div *ngIf="alertMessage" [ngClass]="alertClass" class="alert">
+    {{ alertMessage }}
+  </div>
+</div>
