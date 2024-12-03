@@ -1,22 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { ClienteService } from '../../services/cliente.service'; 
 import { ActivatedRoute } from '@angular/router';
-import { NgFor } from '@angular/common';
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 
-
-
 @Component({
-  imports: [NgFor, FormsModule,CommonModule, FormsModule],
+  imports: [ FormsModule, CommonModule, FormsModule],
   selector: 'app-carregar-conta-cliente',
   templateUrl: './carregar-conta-cliente.component.html',
+  standalone: true,
   styleUrls: ['./carregar-conta-cliente.component.css']
 })
 export class CarregarContaClienteComponent implements OnInit {
-  nif: string = '';  // NIF do cliente
+  nif : string ="";
   quantia: number = 0;  // Valor a ser adicionado ao saldo
 
   cliente: any;  // Dados do cliente após consulta
@@ -24,12 +21,15 @@ export class CarregarContaClienteComponent implements OnInit {
   constructor(private clienteService: ClienteService, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    this.route.params.subscribe(params => {
-      this.nif = params['nif'];
-      this.clienteService.getClienteByNIF(this.nif).subscribe(resp => {
+    const clienteNif = localStorage.getItem('clienteNif') || '';
+
+    if (!clienteNif) {
+      return;
+    }
+      this.clienteService.getClienteByNIF(clienteNif).subscribe(resp => {
+        this.nif = clienteNif;
         this.cliente = resp;
       });
-    });
   }
 
   carregarConta(): void {
@@ -47,4 +47,6 @@ export class CarregarContaClienteComponent implements OnInit {
       alert('Digite um valor positivo para o depósito.');
     }
   }
+
+  protected readonly localStorage = localStorage;
 }
