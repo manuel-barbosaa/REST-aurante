@@ -1,12 +1,14 @@
 import { Router } from '@angular/router';
-import { NgFor } from '@angular/common';
+import {NgFor, NgIf} from '@angular/common';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [NgFor, RouterOutlet, RouterLink],
+  imports: [
+    NgIf
+  ],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
