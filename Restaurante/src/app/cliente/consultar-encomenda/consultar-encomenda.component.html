@@ -1,0 +1,13 @@
+<table>
+  <tr>
+    <td class="menu">
+      <div *ngFor="let e of encomendas">
+        <button class="btn"><b>Encomenda {{e.id}}</b>
+          <br> Nif Cliente: {{e.cliente}} <br>Prato: {{e.prato}} <br>Data: {{e.data}}</button>
+      </div>
+    </td>
+    <td>
+      <router-outlet (deactivate)="reload()"></router-outlet>
+    </td>
+  </tr>
+</table>

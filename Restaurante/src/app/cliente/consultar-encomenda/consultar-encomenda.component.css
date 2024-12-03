@@ -1,0 +1,30 @@
+.btn {
+  transition-duration: 0.4s;
+  background-color: white;
+  color: black;
+  border: 2px solid navy;
+  width: 800px;
+  height: auto;
+  font-size: 14pt;
+  margin-bottom: 5px;
+}
+
+.btn:hover {
+  background-color: green;
+  color: white;
+}
+
+table {
+  width: 100%;
+}
+
+tr {
+  vertical-align: top;
+}
+
+.menu {
+  width: 220px;
+}
+table{
+margin-left: 21%;
+}
