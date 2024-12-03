@@ -7,7 +7,7 @@ exports.getClientes = async function (req, res) {
     const result = await ClienteService.getClientes();
     res.status(200).json(result);
     }catch(err){
-    console.error('Error ao criar encomenda:', err.message);
+    console.error('Error a ir buscar os clientes:', err.message);
     res.status(500).json({ error: err.message });
 }
 }
@@ -22,7 +22,7 @@ exports.createCliente= async function (req, res){
             res.status(201).json({message: 'Cliente criado com sucesso'});
     }
     }catch(err){
-    console.error('Error ao criar encomenda:', err.message);
+    console.error('Error ao criar cliente:', err.message);
     res.status(500).json({ error: err.message });
 }
 }
@@ -38,8 +38,8 @@ exports.getClienteByNIF = async function (req, res) {
         res.status(200).json(result);
     }
 } catch (err) {
-    console.error('Erro no controller:', err);
-    res.status(500).json({ error: 'Erro interno' });
+    console.error('Erro a ir buscar o cliente pelo NIF:', err);
+    res.status(500).json({ error: err.message });
 }
 };
 
@@ -55,7 +55,7 @@ exports.getClienteSaldo = async function (req, res) {
     }
 
 }catch(err){
-    console.error('Error ao criar encomenda:', err.message);
+    console.error('Error ao ir buscar o saldo do cliente:', err.message);
     res.status(500).json({ error: err.message });
 }
 }
@@ -72,7 +72,7 @@ exports.deposit = async function (req, res) {
         return res.status(400).json({ message: 'Falha ao efetuar depósito. O cliente não foi encontrado ou ocorreu um erro.' });
     }
 }catch(err){
-    console.error('Error ao criar encomenda:', err.message);
+    console.error('Error ao fazer o depósito:', err.message);
     res.status(500).json({ error: err.message });
 }
 }
@@ -93,7 +93,7 @@ exports.deleteClienteByNIF = async function (req, res) {
 
 
     }catch(err){
-    console.error('Error ao criar encomenda:', err.message);
+    console.error('Error ao apagar cliente pelo NIF:', err.message);
     res.status(500).json({ error: err.message });
 }
 };
@@ -113,7 +113,7 @@ exports.deleteAllClientes = async function (req, res) {
 
 
 }catch(err){
-    console.error('Error ao criar encomenda:', err.message);
+    console.error('Error ao apagar clientes:', err.message);
     res.status(500).json({ error: err.message });
 }
 };
