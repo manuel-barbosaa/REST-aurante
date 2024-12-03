@@ -5,15 +5,16 @@ import { ConsultarEncomendasComponent } from './cliente/consultar-encomenda/cons
 import { ConsultarClienteComponent } from './cliente/consultar-cliente/consultar-cliente.component';
 import { CarregarContaClienteComponent } from './cliente/carregar-conta-cliente/carregar-conta-cliente.component';
 import { EncomendaDetailComponent } from './cliente/encomenda-details/encomenda-details.component';
+import {CriarEncomendaComponent} from './cliente/criar-encomenda/criar-encomenda.component';
 
 export const routes: Routes = [
- 
+
   { path: '', component: HomeComponent },  // Rota para a página inicial
   { path: 'ementas', component: ConsultarEmentasComponent },
   { path: 'consultar-cliente', component: ConsultarClienteComponent },
-  { path: 'carregar-conta/:nif', component: CarregarContaClienteComponent },
-  { path: '', redirectTo: '/consultar-cliente', pathMatch: 'full' },
+  { path: 'carregar-conta', component: CarregarContaClienteComponent },
   { path: 'encomendas', component: ConsultarEncomendasComponent, children: [
       { path: 'encomenda/:id', component: EncomendaDetailComponent },
     ] },
+  { path: 'criar-encomenda', component: CriarEncomendaComponent},
 ];
