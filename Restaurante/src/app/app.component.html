@@ -1,6 +1,10 @@
 <nav>
-  <button class="btn" routerLink='ementas'>Ementas</button> &nbsp;
-  <button class="btn" routerLink='encomendas'>Encomendas</button>
+  <button class="btn" routerLink='' routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Página Inicial</button>
+  <button class="btn" routerLink='ementas' routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Ementas</button> &nbsp;
+  <button class="btn" routerLink='encomendas' routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Encomendas</button>
+  <button class="btn" routerLink='criar-encomenda' routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Criar Encomenda</button>
+  <button class="btn" routerLink='consultar-cliente' routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Escolher Cliente</button>
+  <button class="btn" routerLink='carregar-conta' routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Carregar Conta</button>
 </nav>
 <hr>
 <router-outlet></router-outlet>
