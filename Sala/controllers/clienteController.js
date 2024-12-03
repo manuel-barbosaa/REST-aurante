@@ -3,18 +3,28 @@ const ClienteModel = require('../models/cliente');
 const ClienteService = require('../services/clienteService');
 
 exports.getClientes = async function (req, res) {
+    try{
     const result = await ClienteService.getClientes();
     res.status(200).json(result);
+    }catch(err){
+    console.error('Error ao criar encomenda:', err.message);
+    res.status(500).json({ error: err.message });
+}
 }
 
 exports.createCliente= async function (req, res){
-    const result = await ClienteService.createCliente(req.body);
+    try{
+        const result = await ClienteService.createCliente(req.body);
 
-    if(!result){
-        res.status(404).send('Erro ao criar cliente');
+        if(!result){
+            res.status(404).send('Erro ao criar cliente');
     } else{
-        res.status(201).json({message: 'Cliente criado com sucesso'});
+            res.status(201).json({message: 'Cliente criado com sucesso'});
     }
+    }catch(err){
+    console.error('Error ao criar encomenda:', err.message);
+    res.status(500).json({ error: err.message });
+}
 }
 
 exports.getClienteByNIF = async function (req, res) {
@@ -34,6 +44,8 @@ exports.getClienteByNIF = async function (req, res) {
 };
 
 exports.getClienteSaldo = async function (req, res) {
+    try{
+
     const result = await ClienteService.getClienteSaldo(req.params.nif);
 
     if (!result) {
@@ -41,9 +53,15 @@ exports.getClienteSaldo = async function (req, res) {
     } else {
         res.status(200).json(result);
     }
+
+}catch(err){
+    console.error('Error ao criar encomenda:', err.message);
+    res.status(500).json({ error: err.message });
+}
 }
 
 exports.deposit = async function (req, res) {
+    try{
     const {nif} = req.params;
     const { quantia } = req.body;
     const result = await ClienteService.deposit(nif, parseFloat(quantia));
@@ -53,11 +71,17 @@ exports.deposit = async function (req, res) {
     } else {
         return res.status(400).json({ message: 'Falha ao efetuar depósito. O cliente não foi encontrado ou ocorreu um erro.' });
     }
+}catch(err){
+    console.error('Error ao criar encomenda:', err.message);
+    res.status(500).json({ error: err.message });
+}
 }
 
 
 
+
 exports.deleteClienteByNIF = async function (req, res) {
+    try{
     const { nif } = req.params;
     const result = await ClienteService.deleteClienteByNIF(nif);
 
@@ -66,10 +90,19 @@ exports.deleteClienteByNIF = async function (req, res) {
     } else {
         res.status(400).json({ error: 'Cliente não encontrado ou erro ao apagar' });
     }
+
+
+    }catch(err){
+    console.error('Error ao criar encomenda:', err.message);
+    res.status(500).json({ error: err.message });
+}
 };
 
 
 exports.deleteAllClientes = async function (req, res) {
+    try{
+
+
     const result = await ClienteService.deleteAllClientes();
 
     if (result) {
@@ -77,4 +110,10 @@ exports.deleteAllClientes = async function (req, res) {
     } else {
         res.status(500).json({ error: 'Erro ao apagar todos os clientes' });
     }
+
+
+}catch(err){
+    console.error('Error ao criar encomenda:', err.message);
+    res.status(500).json({ error: err.message });
+}
 };
