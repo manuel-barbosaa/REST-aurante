@@ -9,6 +9,7 @@ import {CriarEncomendaComponent} from './cliente/criar-encomenda/criar-encomenda
 import { PratoCreationComponent } from './ChefCozinha/prato-creation/prato-creation.component';
 import { RefeicaoCreationComponent } from './ChefCozinha/refeicao-creation/refeicao-creation.component';
 import { DeleteFutureRefeicaoComponent } from './ChefCozinha/delete-future-refeicao/delete-future-refeicao.component';
+import { ActivatePratoComponent } from './ChefCozinha/activate-prato/activate-prato.component';
 
 export const routes: Routes = [
 
@@ -22,5 +23,6 @@ export const routes: Routes = [
   { path: 'criar-encomenda', component: CriarEncomendaComponent},
   { path: 'criar-prato', component: PratoCreationComponent },
   { path: 'criar-refeicao', component: RefeicaoCreationComponent},
-  { path: 'delete-refeicao', component: DeleteFutureRefeicaoComponent}
+  { path: 'delete-refeicao', component: DeleteFutureRefeicaoComponent},
+  { path: 'modify-prato', component: ActivatePratoComponent}
 ];
