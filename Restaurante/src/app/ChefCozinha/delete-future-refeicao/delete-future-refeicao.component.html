@@ -1,0 +1,12 @@
+<div *ngIf="allRefeicoes && allRefeicoes.length > 0" class="grid-container">
+    <div *ngFor="let i of allRefeicoes" class="refeicao-box">
+      <h3>Refeição #{{ i.id }}</h3>
+      <p><strong>Prato:</strong> {{ i.prato.nome }}</p>
+      <p><strong>Tipo de Refeição:</strong> {{ i.tipoRefeicao.nome }}</p>
+      <p><strong>Quantidade:</strong> {{ i.quantidade }}</p>
+      <p><strong>Data:</strong> {{ i.data }}</p>
+      
+      <button (click)="deleteRefeicao(i.id)" class="delete-btn">Apagar</button>
+    </div>
+  </div>
+  
