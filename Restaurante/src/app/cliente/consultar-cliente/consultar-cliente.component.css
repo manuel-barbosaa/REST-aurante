@@ -58,7 +58,7 @@ button {
   color: white; /* Texto branco */
   border: none; /* Sem borda */
   border-radius: 25px; /* Bordas bem arredondadas */
-  cursor: pointer; /* Mostrar cursor de mão ao passar por cima */
+  cursor: pointer; /* Mostrar cursor ao passar por cima */
   font-size: 16px; /* Tamanho do texto */
   transition: background-color 0.3s ease; /* Efeito suave ao passar o mouse */
   width: 100%; /* Largura total do botão */
