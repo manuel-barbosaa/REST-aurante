@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { EmentaService } from '../../services/ementa.service'; // Adapte com seu serviço
 import { Ementa } from '../../Models/ementa'; // Adapte com seu modelo
-import { NgFor } from '@angular/common';
+import {NgFor, NgIf} from '@angular/common';
 import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-consultar-ementa',
   standalone: true,
-  imports: [NgFor, RouterOutlet, RouterLink],
+  imports: [NgFor, RouterOutlet, RouterLink, NgIf],
   templateUrl: './consultar-ementa.component.html',
   styleUrls: ['./consultar-ementa.component.css']
 })

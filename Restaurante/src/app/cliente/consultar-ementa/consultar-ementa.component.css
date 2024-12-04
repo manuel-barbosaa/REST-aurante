@@ -1,54 +1,54 @@
-/* Botão da Ementa */
-.btn {
-  transition-duration: 0.4s;
-  background-color: white;
-  color: navy;
-  border: 2px solid navy;
-  width: 90%; /* Reduzimos um pouco para centralizar */
-  height: 50px;
-  font-size: 1rem;
-  font-weight: bold;
-  margin-bottom: 10px;
-  margin-left: 10%; /* Adiciona deslocamento para a direita */
-  border-radius: 5px;
-  cursor: pointer;
+/* Container for the grid of refeição boxes */
+.grid-container {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 15px;
+  padding: 20px;
+}
+
+.ementa-box {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  width: 250px;  /* Largura fixa para cada box */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: left;
   position: relative; /* Necessário para o tooltip */
 }
 
-/* Tooltip (ID da Ementa) */
-.btn:hover::after {
-  content: attr(title);
-  position: absolute;
-  bottom: -40px; /* Mais espaço para o tooltip */
-  left: 50%; /* Mantém centralizado */
-  transform: translateX(-50%);
-  background-color: navy;
+/* Estilo do botão da ementa */
+.ementa-box button {
+  background-color: #e74c3c;
   color: white;
-  padding: 5px 15px; /* Mais espaço para texto */
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%; /* O botão ocupa a largura total da caixa */
+}
+
+/* Tooltip escondido por padrão */
+.ementa-id-tooltip {
+  display: none;
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: white;
+  padding: 5px 10px;
   border-radius: 5px;
   font-size: 0.9rem;
   white-space: nowrap;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   z-index: 10;
-  text-align: center; /* Centraliza o texto do tooltip */
-  max-width: 200px; /* Limita largura máxima do tooltip */
-  overflow-wrap: break-word; /* Quebra texto grande */
+  text-align: center;
 }
 
-.btn:hover {
-  background-color: green;
-  color: white;
-}
-
-/* Ajusta layout geral */
-.menu {
-  width: 250px; /* Alarga a coluna dos botões */
-  padding-right: 10px; /* Adiciona espaço entre o menu e o conteúdo */
-}
-
-.content {
-  padding-left: 15px; /* Espaço adicional na segunda coluna */
+/* Exibe o tooltip quando o mouse passa sobre a caixa */
+.ementa-box:hover .ementa-id-tooltip {
+  display: block;
 }
