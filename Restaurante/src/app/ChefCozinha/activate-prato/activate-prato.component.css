@@ -1,0 +1,19 @@
+/* Estilo para a linha selecionada */
+tr.selected {
+    background-color: #d3f9d8;
+  }
+  
+  /* Estilo para o botão */
+  button {
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  

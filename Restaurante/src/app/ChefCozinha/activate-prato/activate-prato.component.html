@@ -1,0 +1,38 @@
+<div class="container">
+    <h2>Gerenciar Pratos</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nome</th>
+          <th>Tipo</th>
+          <th>Ativo</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let prato of allPratos" [class.selected]="selectedPrato?.id === prato.id" (click)="selectPrato(prato)">
+          <td>{{ prato.id }}</td>
+          <td>{{ prato.nome }}</td>
+          <td>{{ prato.tipoPrato.nome }}</td>
+          <td>{{ prato.isAtivo ? 'Sim' : 'Não' }}</td>
+          <td>
+            <button (click)="selectPrato(prato)">Selecionar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div *ngIf="selectedPrato" class="prato-details">
+      <h3>Prato Selecionado</h3>
+      <p><strong>ID:</strong> {{ selectedPrato.id }}</p>
+      <p><strong>Nome:</strong> {{ selectedPrato.nome }}</p>
+      <p><strong>Tipo:</strong> {{ selectedPrato.tipoPrato.nome }}</p>
+      <p><strong>Ativo:</strong> {{ selectedPrato.isAtivo ? 'Sim' : 'Não' }}</p>
+  
+      <button *ngIf="!selectedPrato.isAtivo" (click)="activatePrato(selectedPrato.id)">Ativar</button>
+      <button *ngIf="selectedPrato.isAtivo" (click)="deactivatePrato(selectedPrato.id)">Desativar</button>
+    </div>
+  </div>
+  
