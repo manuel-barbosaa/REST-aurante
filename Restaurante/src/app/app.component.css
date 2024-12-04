@@ -3,9 +3,9 @@
   background-color: white;
   color: black;
   border: 2px solid navy;
-  width: 200px;
+  width: 150px;
   height: 40px;
-  font-size: 14pt;
+  font-size: 12pt;
 }
 
 .btn:hover {
