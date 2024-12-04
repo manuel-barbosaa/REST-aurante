@@ -3,7 +3,6 @@ import { ConsultarEmentasComponent } from './cliente/consultar-ementa/consultar-
 import { ConsultarEncomendasComponent } from './cliente/consultar-encomenda/consultar-encomenda.component';
 import { ConsultarClienteComponent } from './cliente/consultar-cliente/consultar-cliente.component';
 import { CarregarContaClienteComponent } from './cliente/carregar-conta-cliente/carregar-conta-cliente.component';
-import { EncomendaDetailComponent } from './cliente/encomenda-details/encomenda-details.component';
 import {CriarEncomendaComponent} from './cliente/criar-encomenda/criar-encomenda.component';
 import { PratoCreationComponent } from './ChefCozinha/prato-creation/prato-creation.component';
 import { RefeicaoCreationComponent } from './ChefCozinha/refeicao-creation/refeicao-creation.component';
