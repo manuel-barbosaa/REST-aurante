@@ -1,0 +1,24 @@
+<div class="container">
+    <h2>Criar Refeição</h2>
+  
+    <div *ngIf="alertMessage" class="alert" [ngClass]="alertClass">
+      {{ alertMessage }}
+    </div>
+  
+    <form>
+      <label for="pratoId">Id do prato</label>
+      <input type="text" id="pratoId" [(ngModel)]="pratoId" name="pratoId" required />
+  
+      <label for="tipoRefeicao">Id do tipo de refeição</label>
+      <input type="text" id="tipoRefeicao" [(ngModel)]="tipoRefeicaoId" name="tipoRefeicao" required />
+  
+      <label for="quantidade">Quantidade</label>
+      <input type="text" id="quantidade" [(ngModel)]="quantidade" name="quantidade" required />
+      
+      <label for="data">Data</label>
+      <input id="data" type="datetime-local" [(ngModel)]="data" name="data" required />
+
+      <button type="submit" (click)="createRefeicao()" >Criar Prato</button>
+    </form>
+  </div>
+  
