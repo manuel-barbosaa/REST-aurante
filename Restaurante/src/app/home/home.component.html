@@ -14,11 +14,12 @@
   <div class="navigation-buttons">
     <!-- Buttons for Cliente Mode -->
     <div class="btn-container" id="cliente-btns" *ngIf="isClienteMode">
+      <button class="btn" routerLink="consultar-cliente" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Escolher Cliente</button>
+      <button class="btn" routerLink="carregar-conta" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Carregar Conta</button>
       <button class="btn" routerLink="ementas" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Ementas</button>
       <button class="btn" routerLink="encomendas" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Encomendas</button>
       <button class="btn" routerLink="criar-encomenda" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Criar Encomenda</button>
-      <button class="btn" routerLink="consultar-cliente" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Escolher Cliente</button>
-      <button class="btn" routerLink="carregar-conta" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Carregar Conta</button>
+      
     </div>
 
     <!-- Buttons for Chef Mode -->
