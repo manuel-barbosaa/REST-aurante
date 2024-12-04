@@ -6,6 +6,7 @@ import { ConsultarClienteComponent } from './cliente/consultar-cliente/consultar
 import { CarregarContaClienteComponent } from './cliente/carregar-conta-cliente/carregar-conta-cliente.component';
 import { EncomendaDetailComponent } from './cliente/encomenda-details/encomenda-details.component';
 import {CriarEncomendaComponent} from './cliente/criar-encomenda/criar-encomenda.component';
+import { PratoCreationComponent } from './ChefCozinha/prato-creation/prato-creation.component';
 
 export const routes: Routes = [
 
@@ -17,4 +18,5 @@ export const routes: Routes = [
       { path: 'encomenda/:id', component: EncomendaDetailComponent },
     ] },
   { path: 'criar-encomenda', component: CriarEncomendaComponent},
+  { path: 'criar-prato', component: PratoCreationComponent },
 ];
