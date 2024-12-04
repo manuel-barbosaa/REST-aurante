@@ -72,7 +72,8 @@ export class CriarEncomendaComponent implements OnInit{
         this.showAlert('Encomenda efetuada com sucesso!', 'success');
       },
       error: (erro) => {
-        this.showAlert('Erro ao criar encomenda. Tente novamente.', 'error');
+        const errorMessage = erro?.error?.error || 'Erro ao criar encomenda. Tente novamente.';
+        this.showAlert(errorMessage, 'error');
       }
     });
   }
