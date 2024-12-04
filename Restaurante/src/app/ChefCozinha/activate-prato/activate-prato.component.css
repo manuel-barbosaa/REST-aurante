@@ -1,19 +1,71 @@
-/* Estilo para a linha selecionada */
-tr.selected {
-    background-color: #d3f9d8;
-  }
-  
-  /* Estilo para o botão */
-  button {
-    margin: 5px;
-    padding: 10px;
-    border: none;
-    background-color: #007bff;
-    color: white;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
+
+.container {
+  background-color: #f9f9f9; 
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+  border: 1px solid #ddd; 
+  border-radius: 8px;
+  padding: 20px; 
+  margin: 20px auto; 
+  max-width: 80%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.container h2 {
+  text-align: center; 
+  color: #333;
+  font-size: 24px; 
+  font-weight: bold;
+  margin-bottom: 20px; 
+}
+
+.action-button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.action-button.activate {
+  background-color: #28a745;
+}
+
+.action-button.activate:hover {
+  background-color: #218838;
+}
+
+.action-button.deactivate {
+  background-color: #dc3545;
+}
+
+.action-button.deactivate:hover {
+  background-color: #c82333;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px; 
+}
+
+table th,
+table td {
+  padding: 10px;
+  color: #333;
+  border: 1px solid #ddd;
+  text-align: center; 
+}
+
+table th {
+  background-color: #f1f1f1;
+  color: #555;
+  font-weight: bold;
+}
+
+table tr.selected {
+  background-color: #f9f9f9; 
+}
