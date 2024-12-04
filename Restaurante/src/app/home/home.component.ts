@@ -3,9 +3,10 @@ import { Component } from '@angular/core';
 import {RouterLink, RouterLinkActive, RouterOutlet} from '@angular/router';
 
 
+
 @Component({
   selector: 'app-home',
-  imports: [RouterOutlet, RouterLink, RouterLinkActive, NgIf],
+  imports: [RouterOutlet, RouterLink, RouterLinkActive, NgIf,],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
