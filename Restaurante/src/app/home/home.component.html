@@ -2,18 +2,16 @@
   <h1>
     <span [style.color]="isClienteMode ? 'purple' : 'darkcyan'">REST</span>-aurante
   </h1>
-  <!-- Toggle Mode Switch -->
+
   <div class="mode-switch">
     <label class="switch">
-      <input type="checkbox" (change)="toggleMode($event)">
+      <input type="checkbox" [checked]="!isClienteMode" (change)="toggleMode($event)">
       <span class="slider"></span>
     </label>
     <span class="mode-label">{{ mode }}</span>
   </div>
 
-  <!-- Navigation Buttons -->
   <div class="navigation-buttons">
-    <!-- Buttons for Cliente Mode -->
     <div class="btn-container" id="cliente-btns" *ngIf="isClienteMode">
       <button class="btn" routerLink="consultar-cliente" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Escolher Cliente</button>
       <button class="btn" routerLink="carregar-conta" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Carregar Conta</button>
@@ -23,7 +21,6 @@
       
     </div>
 
-    <!-- Buttons for Chef Mode -->
     <div class="btn-container" id="chef-btns" *ngIf="!isClienteMode">
       <button class="btn" routerLink="criar-prato" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Criar Prato</button>
       <button class="btn" routerLink="modificar-prato" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Modificar prato</button>
@@ -32,6 +29,5 @@
     </div>
   </div>
 
-  <!-- Child Routes Will Render Here -->
   <router-outlet></router-outlet>
 </div>

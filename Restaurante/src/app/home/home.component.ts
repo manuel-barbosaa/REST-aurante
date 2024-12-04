@@ -1,7 +1,7 @@
-import { NgIf } from '@angular/common';
 import { Component } from '@angular/core';
-import {RouterLink, RouterLinkActive, RouterOutlet} from '@angular/router';
-
+import { Router } from '@angular/router';
+import { NgIf } from '@angular/common';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 
 
 @Component({
@@ -11,12 +11,26 @@ import {RouterLink, RouterLinkActive, RouterOutlet} from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  mode: string = 'Modo Cliente'; // Default mode
-  isClienteMode: boolean = true; // Default to Cliente mode
+  mode: string;
+  isClienteMode: boolean; 
+
+  constructor(private router: Router) {
+
+    const savedMode = localStorage.getItem('mode');
+    this.isClienteMode = savedMode === 'Modo Cliente' || !savedMode; 
+    this.mode = this.isClienteMode ? 'Modo Cliente' : 'Modo Chef';
+  }
 
   toggleMode(event: Event): void {
     const checkbox = event.target as HTMLInputElement;
-    this.isClienteMode = !checkbox.checked; // If checked, switch to Chef mode
+    this.isClienteMode = !checkbox.checked;
     this.mode = this.isClienteMode ? 'Modo Cliente' : 'Modo Chef';
+    localStorage.setItem('mode', this.mode);
+
+    if (this.isClienteMode) {
+      this.router.navigate(['/ementas']);
+    } else {
+      this.router.navigate(['/criar-prato']);
+    }
   }
 }
