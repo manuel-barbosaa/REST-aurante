@@ -1,3 +1,11 @@
+.main-container {
+  padding: 0px 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 .home-container {
   text-align: center;
   font-family: Arial, sans-serif;
@@ -29,6 +37,12 @@ h1 {
   background-color: #45a049;
 }
 
+.btn-container {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+} 
+
 /* Toggle Switch */
 .toggle-section {
   display: flex;
@@ -57,7 +71,7 @@ h1 {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: purple;
   transition: 0.4s;
   border-radius: 34px;
 }
@@ -75,7 +89,7 @@ h1 {
 }
 
 input:checked + .slider {
-  background-color: green;
+  background-color:darkcyan ;
 }
 
 input:checked + .slider:before {
@@ -87,6 +101,11 @@ input:checked + .slider:before {
   font-size: 18px;
   color: black;
   font-weight: bold;
+}
+
+.mode-switch {
+  display: flex;
+  align-items: center;
 }
 
 /* Lista de funcionalidades */
@@ -107,4 +126,34 @@ input:checked + .slider:before {
 .us-list li {
   font-size: 18px;
   margin: 5px 0;
+}
+
+.btn {
+  transition-duration: 0.4s;
+  background-color: white;
+  color: black;
+  border: 2px solid navy;
+  width: auto;
+  padding: 0px 10px;
+  height: 40px;
+  font-size: 14pt;
+}
+
+.btn:hover {
+  background-color: green;
+  color: white;
+}
+
+.active {
+  background-color: green;
+  color: white;
+}
+
+
+#cliente-btns button {
+  background-color: purple;
+}
+
+#chef-btns button {
+  background-color: darkcyan;
 }

@@ -1,12 +1,7 @@
 <div class="main-container">
-  <h1>Bem-vindo ao Restaurante</h1>
+  <h1>REST-aurante</h1>
 
-  <!-- Botão de Voltar -->
-  <!--div class="navigation-buttons">
-    <button class="btn" (click)="goBack()">Voltar à Página Inicial</button>
-  </div-->
-
-  <!-- Toggle de Modo Chef/Modo Cliente -->
+  <!-- Toggle Mode Switch -->
   <div class="mode-switch">
     <label class="switch">
       <input type="checkbox" (change)="toggleMode($event)">
@@ -15,25 +10,26 @@
     <span class="mode-label">{{ mode }}</span>
   </div>
 
-  <!-- Funcionalidades do Chef -->
-  <div *ngIf="mode === 'Modo Chef'" class="us-container">
-    <h2>Funcionalidades do Chef</h2>
-    <ul>
-      <li>US001: Configurar um prato</li>
-      <li>US002: Ativar/Inativar um prato</li>
-      <li>US003: Criar uma refeição</li>
-      <li>US004: Remover uma refeição futura</li>
-    </ul>
+  <!-- Navigation Buttons -->
+  <div class="navigation-buttons">
+    <!-- Buttons for Cliente Mode -->
+    <div class="btn-container" id="cliente-btns" *ngIf="isClienteMode">
+      <button class="btn" routerLink="ementas" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Ementas</button>
+      <button class="btn" routerLink="encomendas" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Encomendas</button>
+      <button class="btn" routerLink="criar-encomenda" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Criar Encomenda</button>
+      <button class="btn" routerLink="consultar-cliente" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Escolher Cliente</button>
+      <button class="btn" routerLink="carregar-conta" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Carregar Conta</button>
+    </div>
+
+    <!-- Buttons for Chef Mode -->
+    <div class="btn-container" id="chef-btns" *ngIf="!isClienteMode">
+      <button class="btn" routerLink="criar-prato" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Criar Prato</button>
+      <button class="btn" routerLink="modificar-prato" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Modificar prato</button>
+      <button class="btn" routerLink="criar-refeicao" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Criar Refeição</button>
+      <button class="btn" routerLink="delete-refeicao" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Apagar Refeição Futura</button>
+    </div>
   </div>
 
-  <!-- Funcionalidades do Cliente -->
-  <div *ngIf="mode === 'Modo Cliente'" class="us-container">
-    <h2>Funcionalidades do Cliente</h2>
-    <ul>
-      <li>US005: Carregar conta cliente</li>
-      <li>US006: Consultar a ementa disponível</li>
-      <li>US007: Encomendar um prato</li>
-      <li>US008: Listar todas as encomendas realizadas</li>
-    </ul>
-  </div>
+  <!-- Child Routes Will Render Here -->
+  <router-outlet></router-outlet>
 </div>
