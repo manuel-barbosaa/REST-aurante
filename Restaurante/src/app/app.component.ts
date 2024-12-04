@@ -9,8 +9,12 @@ import {RouterLink, RouterLinkActive, RouterOutlet} from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-
+  mode: string = 'Modo Cliente';
+  
   updateClass (){
+  }
 
+  toggleMode(event: any) {
+    this.mode = event.target.checked ? 'Modo Chef' : 'Modo Cliente';
   }
 }
