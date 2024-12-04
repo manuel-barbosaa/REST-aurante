@@ -1,20 +1,10 @@
-<div class="ementas-container">
-  <table>
-    <tr>
-      <td class="menu">
-        <div *ngFor="let e of ementas" class="ementa-item">
-          <button
-            class="btn"
-            [attr.title]="'ID: ' + e.id"
-            [routerLink]="['/ementas', e.id]"
-          >
-            {{ e.prato.nome }}
-          </button>
-        </div>
-      </td>
-      <td class="content">
-        <router-outlet (deactivate)="reload()"></router-outlet>
-      </td>
-    </tr>
-  </table>
+<div *ngIf="ementas && ementas.length > 0" class="grid-container">
+  <div *ngFor="let i of ementas" class="ementa-box">
+    <h3>Ementa</h3>
+    <p><strong>Nome:</strong> {{ i.prato.nome }}</p>
+    <p><strong>Preço:</strong> €{{ i.preco }}</p>
+
+    <!-- Tooltip que mostra o ID ao passar o mouse -->
+    <span class="ementa-id-tooltip">ID: {{ i.id }}</span>
+  </div>
 </div>

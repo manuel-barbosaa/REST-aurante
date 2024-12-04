@@ -7,7 +7,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 @Component({
   selector: 'app-consultar-encomenda',
   standalone: true,
-  imports: [NgFor, RouterOutlet, RouterLink],
+  imports: [NgFor, RouterOutlet],
   templateUrl: './consultar-encomenda.component.html',
   styleUrls: ['./consultar-encomenda.component.css']
 })

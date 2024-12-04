@@ -1,4 +1,9 @@
-/* Estilização do contêiner principal */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 .container {
     max-width: 600px;
     margin: 0 auto;
@@ -8,7 +13,11 @@
     background-color: #f9f9f9;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
-  
+
+  #prato-form {
+    padding: 0px 25px;
+  }
+
   /* Estilização do título */
   h2 {
     text-align: center;
@@ -29,7 +38,9 @@
   /* Estilização dos inputs e textarea */
   input[type='text'],
   textarea,
-  select, input[type='datetime-local'] {
+  select, 
+  input[type='datetime-local']
+  {
     width: 100%;
     padding: 10px;
     margin-bottom: 16px;
@@ -54,15 +65,15 @@
     font-size: 16px;
     font-weight: bold;
     color: #fff;
-    background-color: #007bff;
+    background-color: darkcyan;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
   
   button:hover {
-    background-color: #0056b3;
+    background-color: rgb(1, 102, 102);
   }
   
   /* Estilização do alerta */
@@ -84,20 +95,4 @@
     background-color: #f8d7da;
     color: #721c24;
     border: 1px solid #f5c6cb;
-  }
-  
-  /* Responsividade */
-  @media (max-width: 768px) {
-    .container {
-      padding: 10px;
-    }
-  
-    button {
-      font-size: 14px;
-    }
-  
-    h2 {
-      font-size: 20px;
-    }
-  }
-  
+  }  
