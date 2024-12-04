@@ -1,1 +1,43 @@
-<p>prato-creation works!</p>
+<div class="container">
+    <h2>Criar Novo Prato</h2>
+  
+    <div *ngIf="alertMessage" class="alert" [ngClass]="alertClass">
+      {{ alertMessage }}
+    </div>
+  
+    <form (ngSubmit)="criarPrato()">
+      <label for="nome">Nome do Prato</label>
+      <input type="text" id="nome" [(ngModel)]="nome" name="nome" required />
+
+      <label for="isAtivo">Estado do Prato</label>
+      <select id="isAtivo"
+      [(ngModel)]="isAtivo"
+      name="isAtivo"
+      required>
+        <option [value]="true">Ativo</option>
+        <option [value]="false">Inativo</option>
+      </select>
+  
+      <label for="tipoPrato">Tipo do Prato</label>
+      <input type="text" id="tipoPrato" [(ngModel)]="tipoPrato" name="tipoPrato" required />
+  
+      <label for="ingredientes">Ingredientes</label>
+      <textarea
+        id="ingredientes"
+        [(ngModel)]="ingredientes"
+        name="ingredientes"
+        required
+      ></textarea>
+  
+      <label for="receita">Receita</label>
+      <textarea
+        id="receita"
+        [(ngModel)]="receita"
+        name="receita"
+        required
+      ></textarea>
+    
+      <button type="submit" (click)="criarPrato()" >Criar Prato</button>
+    </form>
+  </div>
+  
