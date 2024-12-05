@@ -15,7 +15,7 @@ export const routes: Routes = [
     path: '',
     component: HomeComponent,
     children: [
-      { path: '', redirectTo: 'ementas', pathMatch: 'full' }, // Default child route
+      { path: '', redirectTo: 'consultar-cliente', pathMatch: 'full' }, // Default child route
       { path: 'ementas', component: ConsultarEmentasComponent },
       { path: 'encomendas', component: ConsultarEncomendasComponent },
       { path: 'criar-encomenda', component: CriarEncomendaComponent },
