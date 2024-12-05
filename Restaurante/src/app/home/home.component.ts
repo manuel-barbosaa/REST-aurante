@@ -8,16 +8,17 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
   selector: 'app-home',
   imports: [RouterOutlet, RouterLink, RouterLinkActive, NgIf,],
   templateUrl: './home.component.html',
+  standalone: true,
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
   mode: string;
-  isClienteMode: boolean; 
+  isClienteMode: boolean;
 
   constructor(private router: Router) {
 
     const savedMode = localStorage.getItem('mode');
-    this.isClienteMode = savedMode === 'Modo Cliente' || !savedMode; 
+    this.isClienteMode = savedMode === 'Modo Cliente' || !savedMode;
     this.mode = this.isClienteMode ? 'Modo Cliente' : 'Modo Chef';
   }
 
@@ -28,7 +29,7 @@ export class HomeComponent {
     localStorage.setItem('mode', this.mode);
 
     if (this.isClienteMode) {
-      this.router.navigate(['/ementas']);
+      this.router.navigate(['/consultar-cliente']);
     } else {
       this.router.navigate(['/criar-prato']);
     }

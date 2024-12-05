@@ -1,7 +1,15 @@
 <div class="main-container">
-  <h1>
-    <span [style.color]="isClienteMode ? 'purple' : 'darkcyan'">REST</span>-aurante
-  </h1>
+  <div class="cnt">
+    <div class="cnt1">
+      <h1>
+        <span [style.color]="isClienteMode ? 'purple' : 'darkcyan'">REST</span>-aurante
+      </h1>
+    </div>
+    <div class="cnt2">
+      <img src="/resta.png" height="120" width="300" alt="Image description">
+    </div>
+
+  </div>
 
   <div class="mode-switch">
     <label class="switch">
@@ -18,7 +26,7 @@
       <button class="btn" routerLink="ementas" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Ementas</button>
       <button class="btn" routerLink="encomendas" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Encomendas</button>
       <button class="btn" routerLink="criar-encomenda" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Criar Encomenda</button>
-      
+
     </div>
 
     <div class="btn-container" id="chef-btns" *ngIf="!isClienteMode">
