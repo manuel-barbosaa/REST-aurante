@@ -38,7 +38,7 @@ export class ActivatePratoComponent implements OnInit {
       },
       error: (err) => {
         console.error('Erro ao ativar prato:', err);
-        alert('Erro ao ativar prato.');
+        alert(err.error);
       },
     });
   }
