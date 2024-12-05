@@ -29,10 +29,10 @@ export class PratoService {
   }
 
   activatePrato(pratoId: any): Observable<any> {
-    return this.http.put(`${this.serverURL}/${pratoId}/activate`, this.httpOptions);
+    return this.http.put(`${this.serverURL}/prato/${pratoId}/activate`, this.httpOptions);
   }
 
   deactivatePrato(pratoId: number): Observable<any> {
-    return this.http.patch<any>(`${this.serverURL}/${pratoId}/deactivate`, this.httpOptions);
+    return this.http.put<any>(`${this.serverURL}/prato/${pratoId}/deactivate`, this.httpOptions);
   }
 }
