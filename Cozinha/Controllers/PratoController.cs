@@ -70,7 +70,15 @@ namespace Cozinha.Controllers
         [HttpPut("prato/{id}/activate")]
         public async Task<ActionResult<ListarPratoDTO>> ActivatePrato(long id)
         {
-            return await _service.AtivarPrato(id);
+            try
+            {
+                await _service.AtivarPrato(id);
+                return await _service.AtivarPrato(id);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         // Método PUT para desativar um prato específico
