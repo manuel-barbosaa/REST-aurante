@@ -132,6 +132,7 @@ namespace Cozinha.Services {
         {
             var prato = await _repo.GetPratoById(id);
             if (prato == null) throw new Exception("Prato not found");
+            if(prato.Ingredientes.Find(x => !x.Ativo) != null) throw new Exception ("Existem Ingredientes inativos, não é possível ativar o prato!");
 
             prato.IsAtivo = true;
             return PratoDetail(await _repo.UpdatePrato(prato));
