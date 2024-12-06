@@ -1,0 +1,166 @@
+commit a343ffc1c00702603cc05536a99b5ab7ea020efb	refs/heads/main
+Author: Tiago Pereira <1221034@isep.ipp.pt>
+Date:   Wed Dec 4 23:15:59 2024 +0000
+
+    Alteração de estilos de modificar pratos
+
+M	Restaurante/src/app/ChefCozinha/activate-prato/activate-prato.component.css
+M	Restaurante/src/app/ChefCozinha/activate-prato/activate-prato.component.html
+
+commit 7c9ff7ef3594fe67decf14f48567a2df2bfc581c	refs/heads/main
+Author: Tiago Pereira <1221034@isep.ipp.pt>
+Date:   Wed Dec 4 17:45:59 2024 +0000
+
+    Desenvolvimento do prato service
+
+M	Restaurante/src/app/services/prato.service.ts
+
+commit 1f4bd6801b7deadba8f8f21fda721983131b1fef	refs/heads/main
+Author: Tiago Pereira <1221034@isep.ipp.pt>
+Date:   Wed Dec 4 17:45:29 2024 +0000
+
+    Desenvolvimento dos ficheiros do component de ativar e desativar prato
+
+A	Restaurante/src/app/ChefCozinha/activate-prato/activate-prato.component.css
+A	Restaurante/src/app/ChefCozinha/activate-prato/activate-prato.component.html
+A	Restaurante/src/app/ChefCozinha/activate-prato/activate-prato.component.spec.ts
+A	Restaurante/src/app/ChefCozinha/activate-prato/activate-prato.component.ts
+
+commit 227fa27538c6854076c8104c640e559efa4bed10	refs/heads/main
+Author: Tiago Pereira <1221034@isep.ipp.pt>
+Date:   Wed Dec 4 17:43:23 2024 +0000
+
+    atualização do model do prato
+
+M	Restaurante/src/app/Models/prato.ts
+
+commit dfecb3fbaf41e1a309cf87c0de1133ffb9fd32c4	refs/heads/main
+Author: Tiago Pereira <1221034@isep.ipp.pt>
+Date:   Wed Dec 4 17:42:55 2024 +0000
+
+    Atualização do app component
+
+M	Restaurante/src/app/app.component.css
+M	Restaurante/src/app/app.component.html
+
+commit 914a0291b277685608ebbda72488b17ed5bbb93a	refs/heads/main
+Author: Tiago Pereira <1221034@isep.ipp.pt>
+Date:   Wed Dec 4 17:42:36 2024 +0000
+
+    Atualização das routes
+
+M	Restaurante/src/app/app.routes.ts
+
+commit ee25c00a307c55ced6cfc80b61d04407d27ec354	refs/heads/main
+Author: Tiago Pereira <1221034@isep.ipp.pt>
+Date:   Wed Dec 4 16:26:35 2024 +0000
+
+    Correção de uma gralha no html do prato creation
+
+M	Restaurante/src/app/ChefCozinha/prato-creation/prato-creation.component.html
+
+commit 72492d85bc6eacbe0e14c1792cfde209f392309e	refs/heads/main
+Author: Tiago Pereira <1221034@isep.ipp.pt>
+Date:   Wed Dec 4 15:43:16 2024 +0000
+
+    Atualização das routes
+
+M	Restaurante/src/app/app.routes.ts
+
+commit 77ebb39bc220ba092f3b6562e4022bd042217a74	refs/heads/main
+Author: Tiago Pereira <1221034@isep.ipp.pt>
+Date:   Wed Dec 4 15:42:52 2024 +0000
+
+    Desenvolvimento do app.component
+
+M	Restaurante/src/app/app.component.html
+
+commit 1233b42c3fdceb537ec6e8b3937413d0377b487d	refs/heads/main
+Author: Tiago Pereira <1221034@isep.ipp.pt>
+Date:   Wed Dec 4 15:42:33 2024 +0000
+
+    Criação e desenvolvimento do prato creation
+
+M	Restaurante/src/app/ChefCozinha/prato-creation/prato-creation.component.css
+M	Restaurante/src/app/ChefCozinha/prato-creation/prato-creation.component.html
+M	Restaurante/src/app/ChefCozinha/prato-creation/prato-creation.component.ts
+
+commit ddd71b5791d1c7a0a2fab8ed2bad74269b2984f5	refs/heads/main
+Author: Tiago Pereira <1221034@isep.ipp.pt>
+Date:   Wed Dec 4 15:41:52 2024 +0000
+
+    Prati service specs
+
+A	Restaurante/src/app/services/prato.service.spec.ts
+
+commit 3b4676e9598c0b45d3d75e071fb05d2f8bfaef1c	refs/heads/main
+Author: Tiago Pereira <1221034@isep.ipp.pt>
+Date:   Wed Dec 4 15:41:29 2024 +0000
+
+     Criação Prato service
+
+A	Restaurante/src/app/services/prato.service.ts
+
+commit 422b6c68716ede2de6c7b16d8cbd879e75fca23a	refs/heads/main
+Author: Tiago Pereira <1221034@isep.ipp.pt>
+Date:   Wed Dec 4 15:21:20 2024 +0000
+
+    Nova atualização de CORS
+
+M	Cozinha/Program.cs
+
+commit 190220315331fddc6a455881baf2801407a0bd30	refs/heads/main
+Author: Tiago Pereira <1221034@isep.ipp.pt>
+Date:   Wed Dec 4 15:12:54 2024 +0000
+
+    Atualização do CORS na cozinha
+
+M	Cozinha/Program.cs
+
+commit 188d2f0d713fba9d4a1894d4a32ef95d4e71a149	refs/tags/v2.0.0
+Author: Tiago Pereira <1221034@isep.ipp.pt>
+Date:   Tue Nov 26 20:56:57 2024 +0000
+
+    Atualização das routes
+
+M	Sala/routes/salaRoutes.js
+
+commit 165c73b26f03c65c789e37df53e4b0dfeb367d9f	refs/tags/v2.0.0
+Author: Tiago Pereira <1221034@isep.ipp.pt>
+Date:   Tue Nov 26 11:32:48 2024 +0000
+
+    Criação do Restaurante_FE em Angular
+
+A	Restaurante/.editorconfig
+A	Restaurante/.vscode/extensions.json
+A	Restaurante/.vscode/launch.json
+A	Restaurante/.vscode/tasks.json
+A	Restaurante/README.md
+A	Restaurante/angular.json
+A	Restaurante/package-lock.json
+A	Restaurante/package.json
+A	Restaurante/public/favicon.ico
+A	Restaurante/src/app/app.component.css
+A	Restaurante/src/app/app.component.html
+A	Restaurante/src/app/app.component.spec.ts
+A	Restaurante/src/app/app.component.ts
+A	Restaurante/src/app/app.config.server.ts
+A	Restaurante/src/app/app.config.ts
+A	Restaurante/src/app/app.routes.server.ts
+A	Restaurante/src/app/app.routes.ts
+A	Restaurante/src/index.html
+A	Restaurante/src/main.server.ts
+A	Restaurante/src/main.ts
+A	Restaurante/src/server.ts
+A	Restaurante/src/styles.css
+A	Restaurante/tsconfig.app.json
+A	Restaurante/tsconfig.json
+A	Restaurante/tsconfig.spec.json
+
+commit 688971db1a4de0cd8a1b4509db401d88b5a8816d	refs/tags/v2.0.0
+Author: Tiago Pereira <1221034@isep.ipp.pt>
+Date:   Tue Nov 26 11:31:40 2024 +0000
+
+    Criação gitignore restaurante
+
+A	Restaurante/.gitignore

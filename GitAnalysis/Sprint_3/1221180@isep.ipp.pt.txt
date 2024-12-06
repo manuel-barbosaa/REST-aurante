@@ -1,0 +1,177 @@
+commit aafb2d82805bd46fe7107da294a736d70e6c8927	refs/heads/main
+Author: Franciscs Soares <1221180@isep.ipp.pt>
+Date:   Wed Dec 4 23:29:48 2024 +0000
+
+    alteração visual da página da ementa
+
+M	Restaurante/src/app/cliente/consultar-ementa/consultar-ementa.component.css
+M	Restaurante/src/app/cliente/consultar-ementa/consultar-ementa.component.html
+M	Restaurante/src/app/cliente/consultar-ementa/consultar-ementa.component.ts
+
+commit bebf796d45ee3dc41dd24c0489f16683f1b782f5	refs/heads/main
+Author: Franciscs Soares <1221180@isep.ipp.pt>
+Date:   Mon Dec 2 22:34:50 2024 +0000
+
+    alteração nome component
+
+R100	Restaurante/src/app/cliente/consultar-saldo/consultar-saldo.component.css	Restaurante/src/app/cliente/consultar-cliente/consultar-cliente.component.css
+R100	Restaurante/src/app/cliente/consultar-saldo/consultar-saldo.component.html	Restaurante/src/app/cliente/consultar-cliente/consultar-cliente.component.html
+R100	Restaurante/src/app/cliente/consultar-saldo/consultar-saldo.component.spec.ts	Restaurante/src/app/cliente/consultar-cliente/consultar-cliente.component.spec.ts
+R100	Restaurante/src/app/cliente/consultar-saldo/consultar-saldo.component.ts	Restaurante/src/app/cliente/consultar-cliente/consultar-cliente.component.ts
+
+commit c6888cf5acc6e860294f60be69ef18a02bfbaa62	refs/heads/main
+Author: Franciscs Soares <1221180@isep.ipp.pt>
+Date:   Mon Dec 2 19:11:23 2024 +0000
+
+    correção consultar ementa component
+
+M	Restaurante/src/app/cliente/consultar-ementa/consultar-ementa.component.html
+M	Restaurante/src/app/cliente/consultar-ementa/consultar-ementa.component.spec.ts
+
+commit ce605c96d27097a2dda3fbfe18811a190f33f98b	refs/heads/main
+Author: Franciscs Soares <1221180@isep.ipp.pt>
+Date:   Mon Dec 2 16:08:46 2024 +0000
+
+    atualização routes
+
+M	Restaurante/src/app/app.routes.ts
+
+commit e7dfd1e5646a4e91f2254cb0b461a1396ee4f02e	refs/heads/main
+Author: Franciscs Soares <1221180@isep.ipp.pt>
+Date:   Mon Dec 2 16:08:32 2024 +0000
+
+    criação página inicial - home
+
+A	Restaurante/src/app/home/home.component.css
+A	Restaurante/src/app/home/home.component.html
+A	Restaurante/src/app/home/home.component.ts
+
+commit b3edd2689aaf13939aa7f48119cd02feb866dfbc	refs/heads/main
+Author: Franciscs Soares <1221180@isep.ipp.pt>
+Date:   Mon Dec 2 15:30:46 2024 +0000
+
+    alteração estética da encomenda
+
+M	Restaurante/src/app/cliente/consultar-ementa/consultar-ementa.component.css
+M	Restaurante/src/app/cliente/consultar-ementa/consultar-ementa.component.html
+
+commit b9bc22b237a60ad884c165a6f3f192f6841ae67e	refs/heads/main
+Author: Franciscs Soares <1221180@isep.ipp.pt>
+Date:   Sat Nov 30 23:13:51 2024 +0000
+
+    adicionei a encomenda e o serviço
+
+A	Restaurante/src/app/Models/encomenda.ts
+A	Restaurante/src/app/services/encomenda.service.spec.ts
+A	Restaurante/src/app/services/encomenda.service.ts
+
+commit ae35624d1dc4a41d1b650ae200ea8a13079b69c3	refs/heads/main
+Author: Franciscs Soares <1221180@isep.ipp.pt>
+Date:   Sat Nov 30 23:11:49 2024 +0000
+
+    adicionei os cors à sala para conseguir aceder a partir do restaurante na porta 4200
+
+M	Sala/package-lock.json
+M	Sala/package.json
+M	Sala/routes/salaRoutes.js
+
+commit 8b8f9f6f05f25f78fd2967eecc79019ecfef6869	refs/heads/main
+Author: Franciscs Soares <1221180@isep.ipp.pt>
+Date:   Sat Nov 30 23:10:07 2024 +0000
+
+    adicionei o serviço e o domain da ementa
+
+M	Restaurante/src/app/Models/ementa.ts
+M	Restaurante/src/app/services/ementa.service.spec.ts
+M	Restaurante/src/app/services/ementa.service.ts
+
+commit 25a757e9f2e268270147e05386e4c5c770f965cc	refs/heads/main
+Author: Franciscs Soares <1221180@isep.ipp.pt>
+Date:   Sat Nov 30 23:08:59 2024 +0000
+
+    configurei a app e as routes
+
+M	Restaurante/src/app/app.config.ts
+M	Restaurante/src/app/app.routes.ts
+M	Sala/app.js
+
+commit f514712f101527578addd50c12053a4e3caca953	refs/heads/main
+Author: Franciscs Soares <1221180@isep.ipp.pt>
+Date:   Sat Nov 30 23:08:48 2024 +0000
+
+    adicionei a consulta da ementa
+
+M	Restaurante/src/app/cliente/consultar-ementa/consultar-ementa.component.css
+M	Restaurante/src/app/cliente/consultar-ementa/consultar-ementa.component.html
+M	Restaurante/src/app/cliente/consultar-ementa/consultar-ementa.component.spec.ts
+M	Restaurante/src/app/cliente/consultar-ementa/consultar-ementa.component.ts
+
+commit d4fc8e7bf2638f1488c5c39fb1cdbd8218f972de	refs/heads/main
+Author: Franciscs Soares <1221180@isep.ipp.pt>
+Date:   Sat Nov 30 23:08:32 2024 +0000
+
+    adicionei o codigo necessario para o componente de angular funcionar consoantes as novas adicções
+
+M	Restaurante/src/app/app.component.css
+M	Restaurante/src/app/app.component.html
+M	Restaurante/src/app/app.component.spec.ts
+M	Restaurante/src/app/app.component.ts
+M	Sala/node_modules/.package-lock.json
+
+commit 44220195937b1cff4de96493fbebd0b8fc467d6d	refs/heads/main
+Author: Franciscs Soares <1221180@isep.ipp.pt>
+Date:   Sat Nov 30 10:29:48 2024 +0000
+
+    ementa service
+
+M	Restaurante/src/app/services/ementa.service.ts
+
+commit 54e64698eeb7ddc72ea2be9208b5a0ee74909672	refs/heads/main
+Author: Franciscs Soares <1221180@isep.ipp.pt>
+Date:   Sat Nov 30 10:29:18 2024 +0000
+
+    atributos ementa - model
+
+M	Restaurante/src/app/Models/ementa.ts
+
+commit 63c9a52dfd065c1bb7ab0786eb7f8604e1bc6ef1	refs/heads/main
+Author: Franciscs Soares <1221180@isep.ipp.pt>
+Date:   Sat Nov 30 09:59:17 2024 +0000
+
+    criação html component de consultar ementa do cliente
+
+A	Restaurante/src/app/cliente/consultar-ementa/consultar-ementa.component.html
+
+commit 4582fdc0a95afa9f3b81ba093703d1e882d2c503	refs/heads/main
+Author: Franciscs Soares <1221180@isep.ipp.pt>
+Date:   Sat Nov 30 09:58:47 2024 +0000
+
+    criação css component de consultar ementa do cliente
+
+A	Restaurante/src/app/cliente/consultar-ementa/consultar-ementa.component.css
+
+commit e9486f66b957deb317bc1dd02a0bcb22e0bbfb94	refs/heads/main
+Author: Franciscs Soares <1221180@isep.ipp.pt>
+Date:   Sat Nov 30 09:58:29 2024 +0000
+
+    ciração ts component de consultar ementa do cliente
+
+A	Restaurante/src/app/cliente/consultar-ementa/consultar-ementa.component.spec.ts
+A	Restaurante/src/app/cliente/consultar-ementa/consultar-ementa.component.ts
+
+commit 11569caf70aa6e761331f709790bfd77b607a91e	refs/heads/main
+Author: Franciscs Soares <1221180@isep.ipp.pt>
+Date:   Sat Nov 30 09:56:14 2024 +0000
+
+    criação ementa service
+
+A	Restaurante/src/app/services/ementa.service.spec.ts
+A	Restaurante/src/app/services/ementa.service.ts
+
+commit 1de0c1a5ec760de715df7e25b87b6c238ccab456	refs/heads/main
+Author: Franciscs Soares <1221180@isep.ipp.pt>
+Date:   Sat Nov 30 09:55:56 2024 +0000
+
+    criação model ementa
+
+A	Restaurante/src/app/Models/ementa.ts
