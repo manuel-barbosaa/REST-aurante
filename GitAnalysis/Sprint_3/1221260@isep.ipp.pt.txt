@@ -1,4 +1,4 @@
-commit 0dfb4252642ac865599249ba27bebda0ffd95158	refs/heads/main
+commit 0dfb4252642ac865599249ba27bebda0ffd95158	refs/tags/v3.0.0
 Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
 Date:   Wed Dec 4 23:48:41 2024 +0000
 
@@ -8,7 +8,7 @@ M	Restaurante/src/app/cliente/carregar-conta-cliente/carregar-conta-cliente.comp
 M	Restaurante/src/app/cliente/consultar-cliente/consultar-cliente.component.css
 M	Restaurante/src/app/home/home.component.ts
 
-commit e8eb17c4e31898c8d5bc4fa920cb23bd5c8fd431	refs/heads/main
+commit e8eb17c4e31898c8d5bc4fa920cb23bd5c8fd431	refs/tags/v3.0.0
 Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
 Date:   Wed Dec 4 23:40:01 2024 +0000
 
@@ -16,7 +16,7 @@ Date:   Wed Dec 4 23:40:01 2024 +0000
 
 M	Restaurante/src/app/cliente/carregar-conta-cliente/carregar-conta-cliente.component.css
 
-commit 17aae4658c95204dd54f3ec1c0fe04a3d1e51185	refs/heads/main
+commit 17aae4658c95204dd54f3ec1c0fe04a3d1e51185	refs/tags/v3.0.0
 Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
 Date:   Wed Dec 4 23:39:50 2024 +0000
 
@@ -24,7 +24,7 @@ Date:   Wed Dec 4 23:39:50 2024 +0000
 
 M	Restaurante/src/app/cliente/consultar-cliente/consultar-cliente.component.css
 
-commit 614c8897110f095119947e9aa639c072e18a07fb	refs/heads/main
+commit 614c8897110f095119947e9aa639c072e18a07fb	refs/tags/v3.0.0
 Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
 Date:   Wed Dec 4 23:39:35 2024 +0000
 
@@ -32,7 +32,7 @@ Date:   Wed Dec 4 23:39:35 2024 +0000
 
 M	Restaurante/src/app/app.routes.ts
 
-commit 214d570922358ca781cfc94dd07595255618d189	refs/heads/main
+commit 214d570922358ca781cfc94dd07595255618d189	refs/tags/v3.0.0
 Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
 Date:   Wed Dec 4 23:19:45 2024 +0000
 
@@ -40,7 +40,7 @@ Date:   Wed Dec 4 23:19:45 2024 +0000
 
 M	Restaurante/src/app/home/home.component.html
 
-commit 9dfa53459675f9bf1198f740f2546036ec98bbda	refs/heads/main
+commit 9dfa53459675f9bf1198f740f2546036ec98bbda	refs/tags/v3.0.0
 Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
 Date:   Wed Dec 4 23:18:27 2024 +0000
 
@@ -51,7 +51,7 @@ D	Restaurante/src/app/cliente/encomenda-details/encomenda-details.component.html
 D	Restaurante/src/app/cliente/encomenda-details/encomenda-details.component.spec.ts
 D	Restaurante/src/app/cliente/encomenda-details/encomenda-details.component.ts
 
-commit 7a9fa87521d013f11338740bb3cbeb6890c281bf	refs/heads/main
+commit 7a9fa87521d013f11338740bb3cbeb6890c281bf	refs/tags/v3.0.0
 Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
 Date:   Tue Dec 3 18:35:44 2024 +0000
 
@@ -60,7 +60,7 @@ Date:   Tue Dec 3 18:35:44 2024 +0000
 M	Sala/controllers/clienteController.js
 M	Sala/controllers/ementaController.js
 
-commit 5b659225e35a2e174fbdd8acde44eed95eb14a61	refs/heads/main
+commit 5b659225e35a2e174fbdd8acde44eed95eb14a61	refs/tags/v3.0.0
 Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
 Date:   Tue Dec 3 15:20:31 2024 +0000
 
@@ -68,7 +68,7 @@ Date:   Tue Dec 3 15:20:31 2024 +0000
 
 M	Sala/controllers/clienteController.js
 
-commit 5b8bcb41de20581e3711f76968b65bb4b9753e56	refs/heads/main
+commit 5b8bcb41de20581e3711f76968b65bb4b9753e56	refs/tags/v3.0.0
 Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
 Date:   Tue Dec 3 14:49:12 2024 +0000
 
@@ -77,7 +77,7 @@ Date:   Tue Dec 3 14:49:12 2024 +0000
 M	Restaurante/src/app/cliente/carregar-conta-cliente/carregar-conta-cliente.component.html
 M	Restaurante/src/app/cliente/carregar-conta-cliente/carregar-conta-cliente.component.ts
 
-commit 316b90d431dd23b8148be2e1b676090e632d8fa6	refs/heads/main
+commit 316b90d431dd23b8148be2e1b676090e632d8fa6	refs/tags/v3.0.0
 Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
 Date:   Mon Dec 2 23:25:37 2024 +0000
 
@@ -85,7 +85,7 @@ Date:   Mon Dec 2 23:25:37 2024 +0000
 
 M	Restaurante/src/app/app.routes.ts
 
-commit 1ae65c583b4259a0b95e718609314e855a0d3e37	refs/heads/main
+commit 1ae65c583b4259a0b95e718609314e855a0d3e37	refs/tags/v3.0.0
 Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
 Date:   Mon Dec 2 23:25:28 2024 +0000
 
@@ -96,7 +96,7 @@ A	Restaurante/src/app/cliente/carregar-conta-cliente/carregar-conta-cliente.comp
 A	Restaurante/src/app/cliente/carregar-conta-cliente/carregar-conta-cliente.component.spec.ts
 A	Restaurante/src/app/cliente/carregar-conta-cliente/carregar-conta-cliente.component.ts
 
-commit 206bdd4aa4b463e5e958c42809025e3e41de00f6	refs/heads/main
+commit 206bdd4aa4b463e5e958c42809025e3e41de00f6	refs/tags/v3.0.0
 Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
 Date:   Mon Dec 2 23:24:38 2024 +0000
 
@@ -107,7 +107,7 @@ M	Restaurante/src/app/cliente/consultar-cliente/consultar-cliente.component.html
 M	Restaurante/src/app/cliente/consultar-cliente/consultar-cliente.component.spec.ts
 M	Restaurante/src/app/cliente/consultar-cliente/consultar-cliente.component.ts
 
-commit a7930e4af2b9e7f0b18293982ea31abf7bfd1522	refs/heads/main
+commit a7930e4af2b9e7f0b18293982ea31abf7bfd1522	refs/tags/v3.0.0
 Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
 Date:   Mon Dec 2 23:24:09 2024 +0000
 
@@ -117,7 +117,7 @@ M	Restaurante/src/app/cliente/encomenda-details/encomenda-details.component.html
 M	Restaurante/src/app/cliente/encomenda-details/encomenda-details.component.spec.ts
 M	Restaurante/src/app/cliente/encomenda-details/encomenda-details.component.ts
 
-commit 6e15645769deaffc01be6f4e332a8c1d5f36f387	refs/heads/main
+commit 6e15645769deaffc01be6f4e332a8c1d5f36f387	refs/tags/v3.0.0
 Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
 Date:   Mon Dec 2 23:23:40 2024 +0000
 
@@ -125,7 +125,7 @@ Date:   Mon Dec 2 23:23:40 2024 +0000
 
 M	Restaurante/src/app/Models/cliente.ts
 
-commit 5746c593ee311a70ca6bc89ed0c693b2d91fed67	refs/heads/main
+commit 5746c593ee311a70ca6bc89ed0c693b2d91fed67	refs/tags/v3.0.0
 Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
 Date:   Mon Dec 2 19:55:59 2024 +0000
 
@@ -134,7 +134,7 @@ Date:   Mon Dec 2 19:55:59 2024 +0000
 M	Restaurante/src/app/services/cliente.service.spec.ts
 M	Restaurante/src/app/services/cliente.service.ts
 
-commit 0197c9e99c63cc482677ccb0d2aef14288f1792a	refs/heads/main
+commit 0197c9e99c63cc482677ccb0d2aef14288f1792a	refs/tags/v3.0.0
 Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
 Date:   Mon Dec 2 19:02:07 2024 +0000
 
@@ -145,7 +145,7 @@ A	Restaurante/src/app/cliente/encomenda-details/encomenda-details.component.html
 A	Restaurante/src/app/cliente/encomenda-details/encomenda-details.component.spec.ts
 A	Restaurante/src/app/cliente/encomenda-details/encomenda-details.component.ts
 
-commit a462a61bbadbde5bbbef1e5232dea047ce5d6663	refs/heads/main
+commit a462a61bbadbde5bbbef1e5232dea047ce5d6663	refs/tags/v3.0.0
 Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
 Date:   Sat Nov 30 10:12:20 2024 +0000
 
@@ -153,7 +153,7 @@ Date:   Sat Nov 30 10:12:20 2024 +0000
 
 M	Restaurante/src/app/Models/cliente.ts
 
-commit c968be44ebef445ec9f4d18cea69f4934683883f	refs/heads/main
+commit c968be44ebef445ec9f4d18cea69f4934683883f	refs/tags/v3.0.0
 Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
 Date:   Sat Nov 30 10:12:14 2024 +0000
 
@@ -161,7 +161,7 @@ Date:   Sat Nov 30 10:12:14 2024 +0000
 
 M	Restaurante/src/app/services/cliente.service.ts
 
-commit 328f6f334d133015b219c4393cd4a20b71906b1d	refs/heads/main
+commit 328f6f334d133015b219c4393cd4a20b71906b1d	refs/tags/v3.0.0
 Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
 Date:   Sat Nov 30 09:44:41 2024 +0000
 
@@ -169,7 +169,7 @@ Date:   Sat Nov 30 09:44:41 2024 +0000
 
 M	Restaurante/angular.json
 
-commit 5d4331b5fd681ef5a01b7adfa31ace1da08f2d58	refs/heads/main
+commit 5d4331b5fd681ef5a01b7adfa31ace1da08f2d58	refs/tags/v3.0.0
 Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
 Date:   Sat Nov 30 09:44:07 2024 +0000
 
@@ -177,7 +177,7 @@ Date:   Sat Nov 30 09:44:07 2024 +0000
 
 A	Restaurante/src/app/cliente/consultar-saldo/consultar-saldo.component.html
 
-commit 9afe75e9378eee618ef1db1611ee64bc9a9f9c93	refs/heads/main
+commit 9afe75e9378eee618ef1db1611ee64bc9a9f9c93	refs/tags/v3.0.0
 Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
 Date:   Sat Nov 30 09:43:46 2024 +0000
 
@@ -185,7 +185,7 @@ Date:   Sat Nov 30 09:43:46 2024 +0000
 
 A	Restaurante/src/app/cliente/consultar-saldo/consultar-saldo.component.css
 
-commit f16539a7c0e7bc42a365231233e850df781505d5	refs/heads/main
+commit f16539a7c0e7bc42a365231233e850df781505d5	refs/tags/v3.0.0
 Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
 Date:   Sat Nov 30 09:43:29 2024 +0000
 
@@ -194,7 +194,7 @@ Date:   Sat Nov 30 09:43:29 2024 +0000
 A	Restaurante/src/app/cliente/consultar-saldo/consultar-saldo.component.spec.ts
 A	Restaurante/src/app/cliente/consultar-saldo/consultar-saldo.component.ts
 
-commit e11c1d7fef970739c2ff608834dba4b0b2b463cf	refs/heads/main
+commit e11c1d7fef970739c2ff608834dba4b0b2b463cf	refs/tags/v3.0.0
 Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
 Date:   Sat Nov 30 09:42:28 2024 +0000
 
@@ -203,7 +203,7 @@ Date:   Sat Nov 30 09:42:28 2024 +0000
 A	Restaurante/src/app/services/cliente.service.spec.ts
 A	Restaurante/src/app/services/cliente.service.ts
 
-commit 68aa30e752dfdefd3896d9537811527f26de9701	refs/heads/main
+commit 68aa30e752dfdefd3896d9537811527f26de9701	refs/tags/v3.0.0
 Author: Tatiana Patricia Loureiro Teixeira <1221260@isep.ipp.pt>
 Date:   Sat Nov 30 09:41:08 2024 +0000
 

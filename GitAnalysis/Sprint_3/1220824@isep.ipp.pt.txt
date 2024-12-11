@@ -1,4 +1,79 @@
-commit b4dd553b9072835da7a722baa514755a307b99be	refs/heads/main
+commit 4ab94943a470613a5259dcfdf9b1c9dda541f951	refs/tags/v3.0.0 (tag: v3.0.0)
+Author: beamsteixeira <1220824@isep.ipp.pt>
+Date:   Thu Dec 5 04:01:13 2024 +0000
+
+    alteração da pagina inicial do modo Cliente
+
+M	Restaurante/src/app/app.routes.ts
+
+commit c292bcbda279567007112ce51ba87b9d106eec0b	refs/tags/v3.0.0
+Author: beamsteixeira <1220824@isep.ipp.pt>
+Date:   Thu Dec 5 04:00:04 2024 +0000
+
+    correção da mensagem de erro ao ativar prato com ingredientes inativos
+
+M	Restaurante/src/app/ChefCozinha/activate-prato/activate-prato.component.ts
+
+commit 131bc04c704aff90df119016069be64c0978f07e	refs/tags/v3.0.0
+Author: beamsteixeira <1220824@isep.ipp.pt>
+Date:   Thu Dec 5 03:58:23 2024 +0000
+
+    Adição do logo e alinhamento do mesmo nas páginas
+
+M	Restaurante/src/app/home/home.component.css
+M	Restaurante/src/app/home/home.component.html
+M	Restaurante/src/app/home/home.component.ts
+
+commit 999dde8640a47a7162eda4da2e3e1a0f766c51b2	refs/tags/v3.0.0
+Author: beamsteixeira <1220824@isep.ipp.pt>
+Date:   Thu Dec 5 03:56:40 2024 +0000
+
+    Adição de imagem para logo e alteração do ícone
+
+M	Restaurante/public/favicon.ico
+A	Restaurante/public/resta.png
+
+commit df82489acc5c686cb469a6b98a23659a42b61baf	refs/tags/v3.0.0
+Author: beamsteixeira <1220824@isep.ipp.pt>
+Date:   Thu Dec 5 03:55:35 2024 +0000
+
+    alteração do css consultar encomenda
+
+M	Restaurante/src/app/cliente/consultar-encomenda/consultar-encomenda.component.css
+
+commit 054a4f432782df74809e2f6201ede3b0069713a9	refs/tags/v3.0.0
+Author: beamsteixeira <1220824@isep.ipp.pt>
+Date:   Thu Dec 5 03:54:17 2024 +0000
+
+    correção do método activatePrato
+
+M	Restaurante/src/app/services/prato.service.ts
+
+commit 8d9c98e39438168cd55a5b53cb6e6bd4cc631c35	refs/tags/v3.0.0
+Author: beamsteixeira <1220824@isep.ipp.pt>
+Date:   Thu Dec 5 03:53:44 2024 +0000
+
+    Tratamento da exceção dos ingredientes inativos
+
+M	Cozinha/Controllers/PratoController.cs
+
+commit a488697c2a4a02af1e4b4607369b18a228f50c0c	refs/tags/v3.0.0
+Author: beamsteixeira <1220824@isep.ipp.pt>
+Date:   Thu Dec 5 03:53:08 2024 +0000
+
+    Correção do método ativar prato para verificar se existem ingredientes inativos
+
+M	Cozinha/Services/PratoService.cs
+
+commit 53fa0219bf7b1798d52947197f43b63bd936669d	refs/tags/v3.0.0
+Author: beamsteixeira <1220824@isep.ipp.pt>
+Date:   Thu Dec 5 01:14:00 2024 +0000
+
+    alteração de estilos criar ementa
+
+M	Restaurante/src/app/cliente/criar-encomenda/criar-encomenda.component.css
+
+commit b4dd553b9072835da7a722baa514755a307b99be	refs/tags/v3.0.0
 Author: beamsteixeira <1220824@isep.ipp.pt>
 Date:   Wed Dec 4 00:20:51 2024 +0000
 
@@ -6,7 +81,7 @@ Date:   Wed Dec 4 00:20:51 2024 +0000
 
 M	Restaurante/src/app/cliente/criar-encomenda/criar-encomenda.component.ts
 
-commit 75b37685490fed59d84e66243f7b15dfeb063d19	refs/heads/main
+commit 75b37685490fed59d84e66243f7b15dfeb063d19	refs/tags/v3.0.0
 Author: beamsteixeira <1220824@isep.ipp.pt>
 Date:   Tue Dec 3 23:29:14 2024 +0000
 
@@ -15,7 +90,7 @@ Date:   Tue Dec 3 23:29:14 2024 +0000
 M	Restaurante/src/app/cliente/criar-encomenda/criar-encomenda.component.css
 M	Restaurante/src/app/cliente/criar-encomenda/criar-encomenda.component.html
 
-commit e0b423e62953526b8a9e95b805a0f69c2f2ff5be	refs/heads/main
+commit e0b423e62953526b8a9e95b805a0f69c2f2ff5be	refs/tags/v3.0.0
 Author: beamsteixeira <1220824@isep.ipp.pt>
 Date:   Tue Dec 3 08:00:58 2024 +0000
 
@@ -23,7 +98,7 @@ Date:   Tue Dec 3 08:00:58 2024 +0000
 
 M	Restaurante/src/app/services/cliente.service.ts
 
-commit 511012af98077375d6caf131123c2d897b3e1aac	refs/heads/main
+commit 511012af98077375d6caf131123c2d897b3e1aac	refs/tags/v3.0.0
 Author: beamsteixeira <1220824@isep.ipp.pt>
 Date:   Tue Dec 3 08:00:09 2024 +0000
 
@@ -33,7 +108,7 @@ M	Restaurante/src/app/app.component.css
 M	Restaurante/src/app/app.component.html
 M	Restaurante/src/app/app.component.ts
 
-commit 4a240f3fa35f3c20d14c611ea0283a1770999837	refs/heads/main
+commit 4a240f3fa35f3c20d14c611ea0283a1770999837	refs/tags/v3.0.0
 Author: beamsteixeira <1220824@isep.ipp.pt>
 Date:   Tue Dec 3 07:59:18 2024 +0000
 
@@ -44,7 +119,7 @@ A	Restaurante/src/app/cliente/consultar-encomenda/consultar-encomenda.component.
 A	Restaurante/src/app/cliente/consultar-encomenda/consultar-encomenda.component.spec.ts
 A	Restaurante/src/app/cliente/consultar-encomenda/consultar-encomenda.component.ts
 
-commit 0da6b3bf0ed61aad2a56c6363a39a108ef82e77d	refs/heads/main
+commit 0da6b3bf0ed61aad2a56c6363a39a108ef82e77d	refs/tags/v3.0.0
 Author: beamsteixeira <1220824@isep.ipp.pt>
 Date:   Tue Dec 3 07:58:08 2024 +0000
 
@@ -53,7 +128,7 @@ Date:   Tue Dec 3 07:58:08 2024 +0000
 M	Restaurante/src/app/home/home.component.html
 M	Restaurante/src/app/home/home.component.ts
 
-commit 3bb76c8bbf955a0bc0ba520585fb8a098e7fa353	refs/heads/main
+commit 3bb76c8bbf955a0bc0ba520585fb8a098e7fa353	refs/tags/v3.0.0
 Author: beamsteixeira <1220824@isep.ipp.pt>
 Date:   Tue Dec 3 07:56:42 2024 +0000
 
@@ -61,7 +136,7 @@ Date:   Tue Dec 3 07:56:42 2024 +0000
 
 M	Restaurante/src/app/Models/encomenda.ts
 
-commit 28b4441e88cbec6e8d36a3d0bcb3b4137e55765d	refs/heads/main
+commit 28b4441e88cbec6e8d36a3d0bcb3b4137e55765d	refs/tags/v3.0.0
 Author: beamsteixeira <1220824@isep.ipp.pt>
 Date:   Tue Dec 3 07:55:48 2024 +0000
 
@@ -72,7 +147,7 @@ A	Restaurante/src/app/cliente/criar-encomenda/criar-encomenda.component.html
 A	Restaurante/src/app/cliente/criar-encomenda/criar-encomenda.component.spec.ts
 A	Restaurante/src/app/cliente/criar-encomenda/criar-encomenda.component.ts
 
-commit 6fa5b817eda7f3a454a2da5ae379fe46c989fe58	refs/heads/main
+commit 6fa5b817eda7f3a454a2da5ae379fe46c989fe58	refs/tags/v3.0.0
 Author: beamsteixeira <1220824@isep.ipp.pt>
 Date:   Tue Dec 3 07:54:13 2024 +0000
 
@@ -81,7 +156,7 @@ Date:   Tue Dec 3 07:54:13 2024 +0000
 M	Restaurante/src/app/cliente/consultar-cliente/consultar-cliente.component.html
 M	Restaurante/src/app/cliente/consultar-cliente/consultar-cliente.component.ts
 
-commit 9d2fcb0a491cd51de391b3a11fd2792ef430c6b8	refs/heads/main
+commit 9d2fcb0a491cd51de391b3a11fd2792ef430c6b8	refs/tags/v3.0.0
 Author: beamsteixeira <1220824@isep.ipp.pt>
 Date:   Tue Dec 3 07:49:57 2024 +0000
 
@@ -89,7 +164,7 @@ Date:   Tue Dec 3 07:49:57 2024 +0000
 
 M	Restaurante/src/app/services/encomenda.service.ts
 
-commit 359722254137b32d90c7c4af0780d4bd67b28231	refs/heads/main
+commit 359722254137b32d90c7c4af0780d4bd67b28231	refs/tags/v3.0.0
 Author: beamsteixeira <1220824@isep.ipp.pt>
 Date:   Tue Dec 3 07:48:38 2024 +0000
 
@@ -97,7 +172,7 @@ Date:   Tue Dec 3 07:48:38 2024 +0000
 
 M	Restaurante/src/app/app.routes.ts
 
-commit f336dd8b24652410f61ac741ab67853ff417dd69	refs/heads/main
+commit f336dd8b24652410f61ac741ab67853ff417dd69	refs/tags/v3.0.0
 Author: beamsteixeira <1220824@isep.ipp.pt>
 Date:   Tue Dec 3 07:43:04 2024 +0000
 
@@ -105,7 +180,7 @@ Date:   Tue Dec 3 07:43:04 2024 +0000
 
 M	Sala/app.js
 
-commit 691aa58ac024c22266ab8898ec90d68c4f098f8b	refs/heads/main
+commit 691aa58ac024c22266ab8898ec90d68c4f098f8b	refs/tags/v3.0.0
 Author: beamsteixeira <1220824@isep.ipp.pt>
 Date:   Tue Dec 3 07:35:21 2024 +0000
 

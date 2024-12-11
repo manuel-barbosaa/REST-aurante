@@ -1,4 +1,4 @@
-commit d07fb89b4568d94f6ec0c4065078597e0440459f	refs/heads/main
+commit d07fb89b4568d94f6ec0c4065078597e0440459f	refs/tags/v3.0.0
 Author: manuel barbosa <1220973@isep.ipp.pt>
 Date:   Wed Dec 4 23:50:02 2024 +0000
 
@@ -6,7 +6,7 @@ Date:   Wed Dec 4 23:50:02 2024 +0000
 
 M	Restaurante/src/app/ChefCozinha/delete-future-refeicao/delete-future-refeicao.component.css
 
-commit 224595d3d0c8cfd86af83abef3c17b6a1fb0615d	refs/heads/main
+commit 224595d3d0c8cfd86af83abef3c17b6a1fb0615d	refs/tags/v3.0.0
 Author: manuel barbosa <1220973@isep.ipp.pt>
 Date:   Wed Dec 4 23:46:43 2024 +0000
 
@@ -15,7 +15,7 @@ Date:   Wed Dec 4 23:46:43 2024 +0000
 M	Restaurante/src/app/home/home.component.html
 M	Restaurante/src/app/home/home.component.ts
 
-commit 26c6081aa6df7333135f4215ff0bb0cb73cc2eb8	refs/heads/main
+commit 26c6081aa6df7333135f4215ff0bb0cb73cc2eb8	refs/tags/v3.0.0
 Author: manuel barbosa <1220973@isep.ipp.pt>
 Date:   Wed Dec 4 23:38:23 2024 +0000
 
@@ -24,7 +24,7 @@ Date:   Wed Dec 4 23:38:23 2024 +0000
 M	Restaurante/src/app/home/home.component.css
 M	Restaurante/src/app/home/home.component.html
 
-commit d3af58ab4f3073de33e882cf15a2c0fa55c6efa1	refs/heads/main
+commit d3af58ab4f3073de33e882cf15a2c0fa55c6efa1	refs/tags/v3.0.0
 Author: manuel barbosa <1220973@isep.ipp.pt>
 Date:   Wed Dec 4 23:38:08 2024 +0000
 
@@ -32,7 +32,7 @@ Date:   Wed Dec 4 23:38:08 2024 +0000
 
 M	Restaurante/src/app/ChefCozinha/delete-future-refeicao/delete-future-refeicao.component.css
 
-commit cf22aedfa846a1022d217d106ecede3740f74c20	refs/heads/main
+commit cf22aedfa846a1022d217d106ecede3740f74c20	refs/tags/v3.0.0
 Author: manuel barbosa <1220973@isep.ipp.pt>
 Date:   Wed Dec 4 23:15:17 2024 +0000
 
@@ -41,7 +41,7 @@ Date:   Wed Dec 4 23:15:17 2024 +0000
 M	Restaurante/src/app/ChefCozinha/refeicao-creation/refeicao-creation.component.css
 M	Restaurante/src/app/ChefCozinha/refeicao-creation/refeicao-creation.component.html
 
-commit bc076386974abdd60df4d47efb779e4a6abcdae7	refs/heads/main
+commit bc076386974abdd60df4d47efb779e4a6abcdae7	refs/tags/v3.0.0
 Author: manuel barbosa <1220973@isep.ipp.pt>
 Date:   Wed Dec 4 23:14:58 2024 +0000
 
@@ -50,7 +50,7 @@ Date:   Wed Dec 4 23:14:58 2024 +0000
 M	Restaurante/src/app/ChefCozinha/prato-creation/prato-creation.component.css
 M	Restaurante/src/app/ChefCozinha/prato-creation/prato-creation.component.html
 
-commit a930d301d0dae52c57604741b477c3d4d7e8ed29	refs/heads/main
+commit a930d301d0dae52c57604741b477c3d4d7e8ed29	refs/tags/v3.0.0
 Author: manuel barbosa <1220973@isep.ipp.pt>
 Date:   Wed Dec 4 22:50:29 2024 +0000
 
@@ -59,7 +59,7 @@ Date:   Wed Dec 4 22:50:29 2024 +0000
 M	Restaurante/src/app/app.component.ts
 M	Restaurante/src/app/cliente/consultar-encomenda/consultar-encomenda.component.ts
 
-commit 7ffffd73fe73f27a7e3262c84f5c29197d8572fb	refs/heads/main
+commit 7ffffd73fe73f27a7e3262c84f5c29197d8572fb	refs/tags/v3.0.0
 Author: manuel barbosa <1220973@isep.ipp.pt>
 Date:   Wed Dec 4 22:41:17 2024 +0000
 
@@ -67,7 +67,7 @@ Date:   Wed Dec 4 22:41:17 2024 +0000
 
 M	Restaurante/src/app/app.routes.ts
 
-commit 8376fbd2d0465f8f5bfbc34c00fea4924fc0fef5	refs/heads/main
+commit 8376fbd2d0465f8f5bfbc34c00fea4924fc0fef5	refs/tags/v3.0.0
 Author: manuel barbosa <1220973@isep.ipp.pt>
 Date:   Wed Dec 4 22:41:10 2024 +0000
 
@@ -77,7 +77,7 @@ M	Restaurante/src/app/app.component.css
 M	Restaurante/src/app/app.component.html
 M	Restaurante/src/app/app.component.ts
 
-commit 90a3c5ec48f3f71b74cd1e286dcd9071eda1dc87	refs/heads/main
+commit 90a3c5ec48f3f71b74cd1e286dcd9071eda1dc87	refs/tags/v3.0.0
 Author: manuel barbosa <1220973@isep.ipp.pt>
 Date:   Wed Dec 4 22:40:50 2024 +0000
 
@@ -87,7 +87,7 @@ M	Restaurante/src/app/home/home.component.css
 M	Restaurante/src/app/home/home.component.html
 M	Restaurante/src/app/home/home.component.ts
 
-commit c93d9b5aa5ea22bccc1852832b9fba370b5419be	refs/heads/main
+commit c93d9b5aa5ea22bccc1852832b9fba370b5419be	refs/tags/v3.0.0
 Author: manuel barbosa <1220973@isep.ipp.pt>
 Date:   Wed Dec 4 17:32:29 2024 +0000
 
@@ -95,7 +95,7 @@ Date:   Wed Dec 4 17:32:29 2024 +0000
 
 M	Restaurante/src/app/app.component.html
 
-commit 05b58ef443bf9639ce36465e2960b6d8437ccf48	refs/heads/main
+commit 05b58ef443bf9639ce36465e2960b6d8437ccf48	refs/tags/v3.0.0
 Author: manuel barbosa <1220973@isep.ipp.pt>
 Date:   Wed Dec 4 17:32:13 2024 +0000
 
@@ -103,7 +103,7 @@ Date:   Wed Dec 4 17:32:13 2024 +0000
 
 M	Restaurante/src/app/app.routes.ts
 
-commit 0296c1e8e374505d88ca91ab85f3e759ee0f494a	refs/heads/main
+commit 0296c1e8e374505d88ca91ab85f3e759ee0f494a	refs/tags/v3.0.0
 Author: manuel barbosa <1220973@isep.ipp.pt>
 Date:   Wed Dec 4 17:31:50 2024 +0000
 
@@ -111,7 +111,7 @@ Date:   Wed Dec 4 17:31:50 2024 +0000
 
 M	Restaurante/src/app/services/refeicao.service.ts
 
-commit d4a1004c17cbc6557b2626afadd9dae111d6bf30	refs/heads/main
+commit d4a1004c17cbc6557b2626afadd9dae111d6bf30	refs/tags/v3.0.0
 Author: manuel barbosa <1220973@isep.ipp.pt>
 Date:   Wed Dec 4 17:31:40 2024 +0000
 
@@ -119,7 +119,7 @@ Date:   Wed Dec 4 17:31:40 2024 +0000
 
 A	Restaurante/src/app/ChefCozinha/delete-future-refeicao/delete-future-refeicao.component.css
 
-commit 8adce15eb65408f5df2e5725173f283d414e6c6b	refs/heads/main
+commit 8adce15eb65408f5df2e5725173f283d414e6c6b	refs/tags/v3.0.0
 Author: manuel barbosa <1220973@isep.ipp.pt>
 Date:   Wed Dec 4 17:31:25 2024 +0000
 
@@ -127,7 +127,7 @@ Date:   Wed Dec 4 17:31:25 2024 +0000
 
 A	Restaurante/src/app/ChefCozinha/delete-future-refeicao/delete-future-refeicao.component.html
 
-commit 4515a288a27ba375ac80abad652ec92f2829b5c9	refs/heads/main
+commit 4515a288a27ba375ac80abad652ec92f2829b5c9	refs/tags/v3.0.0
 Author: manuel barbosa <1220973@isep.ipp.pt>
 Date:   Wed Dec 4 17:31:13 2024 +0000
 
@@ -136,7 +136,7 @@ Date:   Wed Dec 4 17:31:13 2024 +0000
 A	Restaurante/src/app/ChefCozinha/delete-future-refeicao/delete-future-refeicao.component.spec.ts
 A	Restaurante/src/app/ChefCozinha/delete-future-refeicao/delete-future-refeicao.component.ts
 
-commit 1acf1e56d84670f5c9b656d59fbe99c906fa9355	refs/heads/main
+commit 1acf1e56d84670f5c9b656d59fbe99c906fa9355	refs/tags/v3.0.0
 Author: manuel barbosa <1220973@isep.ipp.pt>
 Date:   Wed Dec 4 17:30:34 2024 +0000
 
@@ -144,7 +144,7 @@ Date:   Wed Dec 4 17:30:34 2024 +0000
 
 A	Restaurante/src/app/Models/refeicao.ts
 
-commit c2e0a196dccd1ba811de906da31c9ed40eafdba5	refs/heads/main
+commit c2e0a196dccd1ba811de906da31c9ed40eafdba5	refs/tags/v3.0.0
 Author: manuel barbosa <1220973@isep.ipp.pt>
 Date:   Wed Dec 4 16:40:22 2024 +0000
 
@@ -152,7 +152,7 @@ Date:   Wed Dec 4 16:40:22 2024 +0000
 
 M	Restaurante/src/app/app.component.html
 
-commit a4564822847f36efac558685cc6d515afae4e6a2	refs/heads/main
+commit a4564822847f36efac558685cc6d515afae4e6a2	refs/tags/v3.0.0
 Author: manuel barbosa <1220973@isep.ipp.pt>
 Date:   Wed Dec 4 16:40:00 2024 +0000
 
@@ -160,7 +160,7 @@ Date:   Wed Dec 4 16:40:00 2024 +0000
 
 M	Restaurante/src/app/app.routes.ts
 
-commit 1f681e4625b62fc76a0955230c23237370f27a26	refs/heads/main
+commit 1f681e4625b62fc76a0955230c23237370f27a26	refs/tags/v3.0.0
 Author: manuel barbosa <1220973@isep.ipp.pt>
 Date:   Wed Dec 4 16:39:29 2024 +0000
 
@@ -169,7 +169,7 @@ Date:   Wed Dec 4 16:39:29 2024 +0000
 A	Restaurante/src/app/services/refeicao.service.spec.ts
 A	Restaurante/src/app/services/refeicao.service.ts
 
-commit 6713d22ac082d5872a10e58e0b9572e62d87b6ba	refs/heads/main
+commit 6713d22ac082d5872a10e58e0b9572e62d87b6ba	refs/tags/v3.0.0
 Author: manuel barbosa <1220973@isep.ipp.pt>
 Date:   Wed Dec 4 16:39:09 2024 +0000
 
@@ -177,7 +177,7 @@ Date:   Wed Dec 4 16:39:09 2024 +0000
 
 A	Restaurante/src/app/ChefCozinha/refeicao-creation/refeicao-creation.component.css
 
-commit 5700fe2f7f7c028cf34c71242ec64c73c86ac3d9	refs/heads/main
+commit 5700fe2f7f7c028cf34c71242ec64c73c86ac3d9	refs/tags/v3.0.0
 Author: manuel barbosa <1220973@isep.ipp.pt>
 Date:   Wed Dec 4 16:38:48 2024 +0000
 
@@ -185,7 +185,7 @@ Date:   Wed Dec 4 16:38:48 2024 +0000
 
 A	Restaurante/src/app/ChefCozinha/refeicao-creation/refeicao-creation.component.html
 
-commit bcde418107cbdb7bc28e96a167bc9f2c1280328e	refs/heads/main
+commit bcde418107cbdb7bc28e96a167bc9f2c1280328e	refs/tags/v3.0.0
 Author: manuel barbosa <1220973@isep.ipp.pt>
 Date:   Wed Dec 4 16:38:29 2024 +0000
 
@@ -194,7 +194,7 @@ Date:   Wed Dec 4 16:38:29 2024 +0000
 A	Restaurante/src/app/ChefCozinha/refeicao-creation/refeicao-creation.component.spec.ts
 A	Restaurante/src/app/ChefCozinha/refeicao-creation/refeicao-creation.component.ts
 
-commit 0992ff745c6d381b55cf9bd078e9648f44bbd51b	refs/heads/main
+commit 0992ff745c6d381b55cf9bd078e9648f44bbd51b	refs/tags/v3.0.0
 Author: manuel barbosa <1220973@isep.ipp.pt>
 Date:   Mon Dec 2 14:44:09 2024 +0000
 
@@ -203,7 +203,7 @@ Date:   Mon Dec 2 14:44:09 2024 +0000
 M	Restaurante/src/app/Models/ementa.ts
 A	Restaurante/src/app/Models/prato.ts
 
-commit 1866b891057aac8547eb1e5349892561efa1395c	refs/heads/main
+commit 1866b891057aac8547eb1e5349892561efa1395c	refs/tags/v3.0.0
 Author: manuel barbosa <1220973@isep.ipp.pt>
 Date:   Fri Nov 29 15:55:53 2024 +0000
 
@@ -214,7 +214,7 @@ A	Restaurante/src/app/ChefCozinha/prato-creation/prato-creation.component.html
 A	Restaurante/src/app/ChefCozinha/prato-creation/prato-creation.component.spec.ts
 A	Restaurante/src/app/ChefCozinha/prato-creation/prato-creation.component.ts
 
-commit 7baac0189673906c384430d0ca39176101386564	refs/heads/main
+commit 7baac0189673906c384430d0ca39176101386564	refs/tags/v3.0.0
 Author: manuel barbosa <1220973@isep.ipp.pt>
 Date:   Fri Nov 29 15:32:34 2024 +0000
 
@@ -223,7 +223,7 @@ Date:   Fri Nov 29 15:32:34 2024 +0000
 M	Cozinha/.gitignore
 D	Cozinha/Database/CozinhaDB
 
-commit e57071672d3c9c9964defbf506fec65517ef12d9	refs/heads/main
+commit e57071672d3c9c9964defbf506fec65517ef12d9	refs/tags/v3.0.0
 Author: manuel barbosa <1220973@isep.ipp.pt>
 Date:   Fri Nov 29 15:00:30 2024 +0000
 
@@ -248,181 +248,3 @@ Date:   Tue Nov 26 23:16:19 2024 +0000
     Ficheiro collection do postman para a 2a iteração, Sala.
 
 A	Sala.postman_collection.json
-
-commit 5a90a0074dcb73c943b9e29b18e57d3f800bfb7d	refs/tags/v2.0.0
-Author: manuel barbosa <1220973@isep.ipp.pt>
-Date:   Tue Nov 26 22:27:52 2024 +0000
-
-    correção de erros no controller
-
-M	Sala/controllers/EncomendaController.js
-
-commit 092bbdbb988eff58efe36a3dcb3be6f758f95994	refs/tags/v2.0.0
-Author: manuel barbosa <1220973@isep.ipp.pt>
-Date:   Tue Nov 26 22:21:30 2024 +0000
-
-    correcao de erro no controller da encomenda
-
-M	Sala/controllers/EncomendaController.js
-
-commit d0f96bb1336c02c8cfa33830d6184c11805545a1	refs/tags/v2.0.0
-Author: manuel barbosa <1220973@isep.ipp.pt>
-Date:   Tue Nov 26 22:21:21 2024 +0000
-
-    atualização de routes
-
-M	Sala/routes/salaRoutes.js
-
-commit 3d90634f6a2b8bed72f120ae9fa976897461514d	refs/tags/v2.0.0
-Author: manuel barbosa <1220973@isep.ipp.pt>
-Date:   Tue Nov 26 22:16:42 2024 +0000
-
-    Revert "Correção de detalhe na criacao de ementa"
-    
-    This reverts commit 3b460ee2804d74e14484ee8a5c0bf9c572d7cadc.
-
-M	Sala/controllers/ementaController.js
-
-commit 3b460ee2804d74e14484ee8a5c0bf9c572d7cadc	refs/tags/v2.0.0
-Author: manuel barbosa <1220973@isep.ipp.pt>
-Date:   Tue Nov 26 22:16:01 2024 +0000
-
-    Correção de detalhe na criacao de ementa
-
-M	Sala/controllers/ementaController.js
-
-commit 5e775e556fb147597b8de0e8a3bcc2ba35a3f3fb	refs/tags/v2.0.0
-Author: manuel barbosa <1220973@isep.ipp.pt>
-Date:   Tue Nov 26 22:07:55 2024 +0000
-
-    atualização de routers
-
-M	Sala/routes/salaRoutes.js
-
-commit 63fc8f032dce6f8b3419469e91157c55d344f57a	refs/tags/v2.0.0
-Author: manuel barbosa <1220973@isep.ipp.pt>
-Date:   Tue Nov 26 22:07:07 2024 +0000
-
-    Adição de método get encomendas no controller
-
-M	Sala/controllers/EncomendaController.js
-
-commit 7bf2dcbd4f6886441ec925772fa708bacde3a035	refs/tags/v2.0.0
-Author: manuel barbosa <1220973@isep.ipp.pt>
-Date:   Tue Nov 26 22:06:52 2024 +0000
-
-    Adição de metodo get encomendas no service
-
-M	Sala/services/EncomendaService.js
-
-commit f30c17ca32a7795e33360df60f8ac21e390c1af0	refs/tags/v2.0.0
-Author: manuel barbosa <1220973@isep.ipp.pt>
-Date:   Tue Nov 26 21:58:59 2024 +0000
-
-    Atualização de routes
-
-M	Sala/routes/salaRoutes.js
-
-commit 05fd18bd6efef6b06b1c18dc59bf2af7623697d2	refs/tags/v2.0.0
-Author: manuel barbosa <1220973@isep.ipp.pt>
-Date:   Tue Nov 26 21:57:31 2024 +0000
-
-    Atualização de routes
-
-M	Sala/routes/salaRoutes.js
-
-commit 286c08b383c1ca78ad77c203d8176fbd04f7078c	refs/tags/v2.0.0
-Author: manuel barbosa <1220973@isep.ipp.pt>
-Date:   Tue Nov 26 21:56:21 2024 +0000
-
-    Adição de método de get encomenda by id e delete encomenda no controller
-
-M	Sala/controllers/EncomendaController.js
-
-commit d23fcd224979b8517da13a1b196585152e5f7eb3	refs/tags/v2.0.0
-Author: manuel barbosa <1220973@isep.ipp.pt>
-Date:   Tue Nov 26 21:56:00 2024 +0000
-
-    Adição de método de get encomenda by id no service
-
-M	Sala/services/EncomendaService.js
-
-commit 0912b333c400d7707e730deb344afa58097b1336	refs/tags/v2.0.0
-Author: manuel barbosa <1220973@isep.ipp.pt>
-Date:   Tue Nov 26 21:55:40 2024 +0000
-
-    Adição de método de get encomenda by id no repositório
-
-M	Sala/repositories/encomendaRepository.js
-
-commit 465083064063eda64e2aee590ebaa8c914576f84	refs/tags/v2.0.0
-Author: manuel barbosa <1220973@isep.ipp.pt>
-Date:   Tue Nov 26 21:40:47 2024 +0000
-
-    Correção de nome de método no controller
-
-M	Sala/controllers/EncomendaController.js
-
-commit aebcb9286e25ce0605b1cd106dfb8f987499252e	refs/tags/v2.0.0
-Author: manuel barbosa <1220973@isep.ipp.pt>
-Date:   Tue Nov 26 21:40:10 2024 +0000
-
-    Adição de id a metodo do service da encomenda
-
-M	Sala/services/EncomendaService.js
-
-commit 623cb6cef1e1911788ab1161eabc5fce462d8bbf	refs/tags/v2.0.0
-Author: manuel barbosa <1220973@isep.ipp.pt>
-Date:   Tue Nov 26 21:38:57 2024 +0000
-
-    Adaptação do service das encomendas e modificação do error handling.
-
-M	Sala/services/EncomendaService.js
-
-commit 1de1ce144deb9c2a3d7e38bb2bd15e82adfefca7	refs/tags/v2.0.0
-Author: manuel barbosa <1220973@isep.ipp.pt>
-Date:   Tue Nov 26 21:38:35 2024 +0000
-
-    Adaptação do repositório das encomendas e modificação de error handling.
-
-M	Sala/repositories/encomendaRepository.js
-
-commit 1021401c6a354674d946c011eb04bb7eba01e473	refs/tags/v2.0.0
-Author: manuel barbosa <1220973@isep.ipp.pt>
-Date:   Tue Nov 26 21:38:12 2024 +0000
-
-    Adição de id para as encomendas
-
-M	Sala/models/encomenda.js
-
-commit 1f38b199f624fc6c46c07be8eeebe64452a95532	refs/tags/v2.0.0
-Author: manuel barbosa <1220973@isep.ipp.pt>
-Date:   Tue Nov 26 21:27:18 2024 +0000
-
-    Alteração de nome de método
-
-M	Sala/controllers/ementaController.js
-
-commit 40e6e84da7410ee9df8373aaf3aa80ee3d9af065	refs/tags/v2.0.0
-Author: manuel barbosa <1220973@isep.ipp.pt>
-Date:   Tue Nov 26 21:26:53 2024 +0000
-
-    Adição de error handling no service das ementas.
-
-M	Sala/services/ementaService.js
-
-commit f8fc3de2f97d680eaf1d7563e77cef8668a436f4	refs/tags/v2.0.0
-Author: manuel barbosa <1220973@isep.ipp.pt>
-Date:   Tue Nov 26 21:25:09 2024 +0000
-
-    Adição e modificação de error handling no repositório das ementas.
-
-M	Sala/repositories/ementaRepository.js
-
-commit 57c346ef9b3bb6d7e9ebb098a23a48f57dfd0930	refs/tags/v2.0.0
-Author: manuel barbosa <1220973@isep.ipp.pt>
-Date:   Tue Nov 26 21:18:01 2024 +0000
-
-    atualização de routes
-
-M	Sala/routes/salaRoutes.js

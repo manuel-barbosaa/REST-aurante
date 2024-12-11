@@ -1,3 +1,12 @@
+4ab9494,2024-12-05 04:01:13 +0000,beamsteixeira,1220824@isep.ipp.pt,alteração da pagina inicial do modo Cliente
+c292bcb,2024-12-05 04:00:04 +0000,beamsteixeira,1220824@isep.ipp.pt,correção da mensagem de erro ao ativar prato com ingredientes inativos
+131bc04,2024-12-05 03:58:23 +0000,beamsteixeira,1220824@isep.ipp.pt,Adição do logo e alinhamento do mesmo nas páginas
+999dde8,2024-12-05 03:56:40 +0000,beamsteixeira,1220824@isep.ipp.pt,Adição de imagem para logo e alteração do ícone
+df82489,2024-12-05 03:55:35 +0000,beamsteixeira,1220824@isep.ipp.pt,alteração do css consultar encomenda
+054a4f4,2024-12-05 03:54:17 +0000,beamsteixeira,1220824@isep.ipp.pt,correção do método activatePrato
+8d9c98e,2024-12-05 03:53:44 +0000,beamsteixeira,1220824@isep.ipp.pt,Tratamento da exceção dos ingredientes inativos
+a488697,2024-12-05 03:53:08 +0000,beamsteixeira,1220824@isep.ipp.pt,Correção do método ativar prato para verificar se existem ingredientes inativos
+53fa021,2024-12-05 01:14:00 +0000,beamsteixeira,1220824@isep.ipp.pt,alteração de estilos criar ementa
 d07fb89,2024-12-04 23:50:02 +0000,manuel barbosa,1220973@isep.ipp.pt,alteração de estilos do component de apagar refeição
 0dfb425,2024-12-04 23:48:41 +0000,Tatiana Patricia Loureiro Teixeira,1221260@isep.ipp.pt,erros de sintaxe
 224595d,2024-12-04 23:46:43 +0000,manuel barbosa,1220973@isep.ipp.pt,atualização de aparencia e funcionamento do home component
@@ -96,28 +105,3 @@ e11c1d7,2024-11-30 09:42:28 +0000,Tatiana Patricia Loureiro Teixeira,1221260@ise
 7baac01,2024-11-29 15:32:34 +0000,manuel barbosa,1220973@isep.ipp.pt,correção de gitgnore da cozinha para a sua database
 e570716,2024-11-29 15:00:30 +0000,manuel barbosa,1220973@isep.ipp.pt,atualizacao database da cozinha
 f697bc1,2024-11-26 23:16:19 +0000,manuel barbosa,1220973@isep.ipp.pt,Ficheiro collection do postman para a 2a iteração, Sala.
-5a90a00,2024-11-26 22:27:52 +0000,manuel barbosa,1220973@isep.ipp.pt,correção de erros no controller
-092bbdb,2024-11-26 22:21:30 +0000,manuel barbosa,1220973@isep.ipp.pt,correcao de erro no controller da encomenda
-d0f96bb,2024-11-26 22:21:21 +0000,manuel barbosa,1220973@isep.ipp.pt,atualização de routes
-3d90634,2024-11-26 22:16:42 +0000,manuel barbosa,1220973@isep.ipp.pt,Revert "Correção de detalhe na criacao de ementa"
-3b460ee,2024-11-26 22:16:01 +0000,manuel barbosa,1220973@isep.ipp.pt,Correção de detalhe na criacao de ementa
-5e775e5,2024-11-26 22:07:55 +0000,manuel barbosa,1220973@isep.ipp.pt,atualização de routers
-63fc8f0,2024-11-26 22:07:07 +0000,manuel barbosa,1220973@isep.ipp.pt,Adição de método get encomendas no controller
-7bf2dcb,2024-11-26 22:06:52 +0000,manuel barbosa,1220973@isep.ipp.pt,Adição de metodo get encomendas no service
-f30c17c,2024-11-26 21:58:59 +0000,manuel barbosa,1220973@isep.ipp.pt,Atualização de routes
-05fd18b,2024-11-26 21:57:31 +0000,manuel barbosa,1220973@isep.ipp.pt,Atualização de routes
-286c08b,2024-11-26 21:56:21 +0000,manuel barbosa,1220973@isep.ipp.pt,Adição de método de get encomenda by id e delete encomenda no controller
-d23fcd2,2024-11-26 21:56:00 +0000,manuel barbosa,1220973@isep.ipp.pt,Adição de método de get encomenda by id no service
-0912b33,2024-11-26 21:55:40 +0000,manuel barbosa,1220973@isep.ipp.pt,Adição de método de get encomenda by id no repositório
-4650830,2024-11-26 21:40:47 +0000,manuel barbosa,1220973@isep.ipp.pt,Correção de nome de método no controller
-aebcb92,2024-11-26 21:40:10 +0000,manuel barbosa,1220973@isep.ipp.pt,Adição de id a metodo do service da encomenda
-623cb6c,2024-11-26 21:38:57 +0000,manuel barbosa,1220973@isep.ipp.pt,Adaptação do service das encomendas e modificação do error handling.
-1de1ce1,2024-11-26 21:38:35 +0000,manuel barbosa,1220973@isep.ipp.pt,Adaptação do repositório das encomendas e modificação de error handling.
-1021401,2024-11-26 21:38:12 +0000,manuel barbosa,1220973@isep.ipp.pt,Adição de id para as encomendas
-1f38b19,2024-11-26 21:27:18 +0000,manuel barbosa,1220973@isep.ipp.pt,Alteração de nome de método
-40e6e84,2024-11-26 21:26:53 +0000,manuel barbosa,1220973@isep.ipp.pt,Adição de error handling no service das ementas.
-f8fc3de,2024-11-26 21:25:09 +0000,manuel barbosa,1220973@isep.ipp.pt,Adição e modificação de error handling no repositório das ementas.
-57c346e,2024-11-26 21:18:01 +0000,manuel barbosa,1220973@isep.ipp.pt,atualização de routes
-188d2f0,2024-11-26 20:56:57 +0000,Tiago Pereira,1221034@isep.ipp.pt,Atualização das routes
-165c73b,2024-11-26 11:32:48 +0000,Tiago Pereira,1221034@isep.ipp.pt,Criação do Restaurante_FE em Angular
-688971d,2024-11-26 11:31:40 +0000,Tiago Pereira,1221034@isep.ipp.pt,Criação gitignore restaurante
